@@ -1751,44 +1751,7 @@ $imeKorisnika = $ar[1];
         <h1 id="naslovNarudzbenice">Narudžbenica</h2>
           <hr>
           <?php
-
-          require_once 'connection.php';
-
-          $conn = OpenCon();
-          $IDKorisnika = $_SESSION['prijavljen'];
-          $result = mysqli_query($conn, " select * from narudzbenica where IDKorisnika = $IDKorisnika ");
-
-          echo "<form id='mydata'>
-          <div class='table-wrapper-scroll-y my-custom-scrollbar'>
-          <table class='narudzbenica-tabela' id='narudzbenica'>
-          <thead>
-                <tr>
-                <th class='tg-0lax'>Sifra</th>
-                <th class='tg-0lax'>Naziv</th>
-                <th id='poljeKolicine' class='tg-0lax'>Kolicina</th>
-                <th class='tg-0lax'>Napomena</th>
-                <th class='tg-0lax'></th>
-                </tr>
-                </thead>
-                <tbody>";
-
-          while ($row = mysqli_fetch_object($result)) {
-
-            echo "<tr>";
-            echo "<td><input name='sifra' type='text' class='form-control' disabled value='" . $row->sifra . "'></td>";
-            echo "<td><input name='naziv' type='text' class='form-control' disabled value='" . $row->naziv . "'></td>";
-            echo "<td><input name='kolicina' type='text' class='form-control' disabled value=" . $row->kolicina . "></td>";
-            echo "<td><input name='napomena' type='text' class='form-control'></td>";
-            echo "<td><input name='napomena2' type='text' class='form-control'></td>";
-            echo "<td><a class='stavkaNarudzbenice' href='deleteRow.php?stavka={$row->ID}'><i class='fas fa-trash'></i></td>";
-            echo "</tr>";
-          }
-          echo "</tbody>";
-          echo "</table>";
-          echo  "<button type='button' id='dugmeNaruci' class='btn btn-success' onclick='showTableData()'>Naruči</button>";
-          echo "</form>";
-
-          CloseCon($conn);
+          include 'narudzbenica.php';
           ?>
 
       </div>
@@ -1846,8 +1809,8 @@ $imeKorisnika = $ar[1];
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript">
     //Funckija koja uzima vrijednosti iz polja tabele narudzbenica
     function showTableData() {
