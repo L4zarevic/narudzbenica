@@ -165,7 +165,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect1">Od / Os / Ou</label>
-                <select class="form-control" id="select1">
+                <select title="Od - za desno oko, Os - za lijevo oko , Ou - ako je obostrano isto" class="form-control" id="select1">
                   <option value="0"></option>
                   <option value="1">Od</option>
                   <option value="2">Os</option>
@@ -176,7 +176,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect1">Vrsta sočiva</label>
-                <select class="form-control" id="select1">
+                <select title="Unesite vrstu sočiva" class="form-control" id="select1">
                   <option value="0"></option>
                   <option value="1">Monofokal</option>
                   <option value="2">Lentikular</option>
@@ -402,7 +402,7 @@ $imeKorisnika = $ar[1];
                   <option value="0">75</option>
                 </select>
                 <select class="form-control" id="exampleFormControlSelect1">
-                <option value="0"></option>
+                  <option value="0"></option>
                   <option value="0">50</option>
                   <option value="0">51</option>
                   <option value="0">52</option>
@@ -438,7 +438,151 @@ $imeKorisnika = $ar[1];
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">SPH</label>
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="popravka">Single</option>
+                  <option value="0"></option>
+                  <option value="0">0.25</option>
+                  <option value="0">0.50</option>
+                  <option value="0">0.75</option>
+                  <option value="0">1.00</option>
+                  <option value="0">1.25</option>
+                  <option value="0">1.50</option>
+                  <option value="0">1.75</option>
+                  <option value="0">2.00</option>
+                  <option value="0">2.25</option>
+                  <option value="0">2.50</option>
+                  <option value="0">2.75</option>
+                  <option value="0">3.00</option>
+                  <option value="0">3.25</option>
+                  <option value="0">3.50</option>
+                  <option value="0">3.75</option>
+                  <option value="0">4.00</option>
+                  <option value="0">4.25</option>
+                  <option value="0">4.50</option>
+                  <option value="0">4.75</option>
+                  <option value="0">5.00</option>
+                  <option value="0">5.25</option>
+                  <option value="0">5.50</option>
+                  <option value="0">5.75</option>
+                  <option value="0">6.00</option>
+                  <option value="0">6.25</option>
+                  <option value="0">6.50</option>
+                  <option value="0">6.75</option>
+                  <option value="0">7.00</option>
+                  <option value="0">7.25</option>
+                  <option value="0">7.50</option>
+                  <option value="0">7.75</option>
+                  <option value="0">8.00</option>
+                  <option value="0">8.25</option>
+                  <option value="0">8.50</option>
+                  <option value="0">8.75</option>
+                  <option value="0">9.00</option>
+                  <option value="0">9.25</option>
+                  <option value="0">9.50</option>
+                  <option value="0">9.75</option>
+                  <option value="0">10.00</option>
+                  <option value="0">10.25</option>
+                  <option value="0">10.50</option>
+                  <option value="0">10.75</option>
+                  <option value="0">11.00</option>
+                  <option value="0">11.25</option>
+                  <option value="0">11.50</option>
+                  <option value="0">11.75</option>
+                  <option value="0">12.00</option>
+                  <option value="0">12.50</option>
+                  <option value="0">13.00</option>
+                  <option value="0">13.50</option>
+                  <option value="0">14.00</option>
+                  <option value="0">14.50</option>
+                  <option value="0">15.00</option>
+                  <option value="0">15.50</option>
+                  <option value="0">16.00</option>
+                  <option value="0">-0.25</option>
+                  <option value="0">-0.50</option>
+                  <option value="0">-0.75</option>
+                  <option value="0">-1.00</option>
+                  <option value="0">-1.25</option>
+                  <option value="0">-1.50</option>
+                  <option value="0">-1.75</option>
+                  <option value="0">-2.00</option>
+                  <option value="0">-2.25</option>
+                  <option value="0">-2.50</option>
+                  <option value="0">-2.75</option>
+                  <option value="0">-3.00</option>
+                  <option value="0">-3.25</option>
+                  <option value="0">-3.50</option>
+                  <option value="0">-3.75</option>
+                  <option value="0">-4.00</option>
+                  <option value="0">-4.25</option>
+                  <option value="0">-4.50</option>
+                  <option value="0">-4.75</option>
+                  <option value="0">-5.00</option>
+                  <option value="0">-5.25</option>
+                  <option value="0">-5.50</option>
+                  <option value="0">-5.75</option>
+                  <option value="0">-6.00</option>
+                  <option value="0">-6.25</option>
+                  <option value="0">-6.50</option>
+                  <option value="0">-6.75</option>
+                  <option value="0">-7.00</option>
+                  <option value="0">-7.25</option>
+                  <option value="0">-7.50</option>
+                  <option value="0">-7.75</option>
+                  <option value="0">-8.00</option>
+                  <option value="0">-8.25</option>
+                  <option value="0">-8.50</option>
+                  <option value="0">-8.75</option>
+                  <option value="0">-9.00</option>
+                  <option value="0">-9.25</option>
+                  <option value="0">-9.50</option>
+                  <option value="0">-9.75</option>
+                  <option value="0">-10.00</option>
+                  <option value="0">-10.25</option>
+                  <option value="0">-10.50</option>
+                  <option value="0">-10.75</option>
+                  <option value="0">-11.00</option>
+                  <option value="0">-11.25</option>
+                  <option value="0">-11.50</option>
+                  <option value="0">-11.75</option>
+                  <option value="0">-12.00</option>
+                  <option value="0">-12.25</option>
+                  <option value="0">-12.50</option>
+                  <option value="0">-12.75</option>
+                  <option value="0">-13.00</option>
+                  <option value="0">-13.25</option>
+                  <option value="0">-13.50</option>
+                  <option value="0">-13.75</option>
+                  <option value="0">-14.00</option>
+                  <option value="0">-14.25</option>
+                  <option value="0">-14.50</option>
+                  <option value="0">-14.75</option>
+                  <option value="0">-15.00</option>
+                  <option value="0">-15.25</option>
+                  <option value="0">-15.50</option>
+                  <option value="0">-15.75</option>
+                  <option value="0">-16.00</option>
+                  <option value="0">-16.25</option>
+                  <option value="0">-16.50</option>
+                  <option value="0">-16.75</option>
+                  <option value="0">-17.00</option>
+                  <option value="0">-17.25</option>
+                  <option value="0">-17.50</option>
+                  <option value="0">-17.75</option>
+                  <option value="0">-18.00</option>
+                  <option value="0">-18.50</option>
+                  <option value="0">-19.00</option>
+                  <option value="0">-19.50</option>
+                  <option value="0">-20.00</option>
+                  <option value="0">-20.50</option>
+                  <option value="0">-21.00</option>
+                  <option value="0">-21.50</option>
+                  <option value="0">-22.00</option>
+                  <option value="0">-23.00</option>
+                  <option value="0">-24.00</option>
+                  <option value="0">-25.00</option>
+                  <option value="0">-26.00</option>
+                  <option value="0">-27.00</option>
+                  <option value="0">-28.00</option>
+                  <option value="0">-29.00</option>
+                  <option value="0">-30.00</option>
                 </select>
               </div>
             </div>
@@ -448,7 +592,55 @@ $imeKorisnika = $ar[1];
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">CYL</label>
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="popravka">Single</option>
+                  <option value="0"></option>
+                  <option value="0">0.25</option>
+                  <option value="0">0.50</option>
+                  <option value="0">0.75</option>
+                  <option value="0">1.00</option>
+                  <option value="0">1.25</option>
+                  <option value="0">1.50</option>
+                  <option value="0">1.75</option>
+                  <option value="0">2.00</option>
+                  <option value="0">2.25</option>
+                  <option value="0">2.50</option>
+                  <option value="0">2.75</option>
+                  <option value="0">3.00</option>
+                  <option value="0">3.25</option>
+                  <option value="0">3.50</option>
+                  <option value="0">3.75</option>
+                  <option value="0">4.00</option>
+                  <option value="0">4.25</option>
+                  <option value="0">4.50</option>
+                  <option value="0">4.75</option>
+                  <option value="0">5.00</option>
+                  <option value="0">5.25</option>
+                  <option value="0">5.50</option>
+                  <option value="0">5.75</option>
+                  <option value="0">6.00</option>
+                  <option value="0">-0.25</option>
+                  <option value="0">-0.50</option>
+                  <option value="0">-0.75</option>
+                  <option value="0">-1.00</option>
+                  <option value="0">-1.25</option>
+                  <option value="0">-1.50</option>
+                  <option value="0">-1.75</option>
+                  <option value="0">-2.00</option>
+                  <option value="0">-2.25</option>
+                  <option value="0">-2.50</option>
+                  <option value="0">-2.75</option>
+                  <option value="0">-3.00</option>
+                  <option value="0">-3.25</option>
+                  <option value="0">-3.50</option>
+                  <option value="0">-3.75</option>
+                  <option value="0">-4.00</option>
+                  <option value="0">-4.25</option>
+                  <option value="0">-4.50</option>
+                  <option value="0">-4.75</option>
+                  <option value="0">-5.00</option>
+                  <option value="0">-5.25</option>
+                  <option value="0">-5.50</option>
+                  <option value="0">-5.75</option>
+                  <option value="0">-6.00</option>
                 </select>
               </div>
             </div>
@@ -457,9 +649,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Ax</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="popravka">Single</option>
-                </select>
+                <input type="text" class="form-control" id="inputText">
               </div>
             </div>
 
@@ -468,7 +658,21 @@ $imeKorisnika = $ar[1];
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Add / Dig.</label>
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="popravka">Single</option>
+                  <option value="0"></option>
+                  <option value="0">+0.75</option>
+                  <option value="0">+1.00</option>
+                  <option value="0">+1.25</option>
+                  <option value="0">+1.50</option>
+                  <option value="0">+1.75</option>
+                  <option value="0">+2.00</option>
+                  <option value="0">+2.25</option>
+                  <option value="0">+2.50</option>
+                  <option value="0">+2.75</option>
+                  <option value="0">+3.00</option>
+                  <option value="0">+3.25</option>
+                  <option value="0">+3.50</option>
+                  <option value="0">+3.75</option>
+                  <option value="0">+4.00</option>
                 </select>
               </div>
             </div>
@@ -477,7 +681,15 @@ $imeKorisnika = $ar[1];
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Jedinica mjere</label>
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="popravka">Single</option>
+                  <option value="0">kom</option>
+                  <option value="0">kut</option>
+                  <option value="0">kut-2</option>
+                  <option value="0">kut-3</option>
+                  <option value="0">kut-4</option>
+                  <option value="0">kut-6</option>
+                  <option value="0">kut-30</option>
+                  <option value="0">paklo-10</option>
+                  <option value="0">paklo-100</option>
                 </select>
               </div>
             </div>
@@ -493,21 +705,65 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Tretman1</label>
-                <input type="text" class="form-control" id="inputText">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option value="0"></option>
+                  <option value="0">HC</option>
+                  <option value="0">MultiPlus</option>
+                  <option value="0">UltraGlide</option>
+                  <option value="0">NanoGlide</option>
+                  <option value="0">PolarGlide</option>
+                  <option value="0">BlueGlide</option>
+                  <option value="0">PureGLide</option>
+                  <option value="0">UGBackside</option>
+                  <option value="0">Mirror/UltraBS</option>
+                  <option value="0">Bojenje</option>
+                  <option value="0">Boj.Vis.Index</option>
+                  <option value="0">Boj.Uzorka</option>
+                  <option value="0">Boj.Uzor.Vis.Ind</option>
+                  <option value="0">Gradient</option>
+                  <option value="0">Grad.Vis.Ind</option>
+                  <option value="0">UVProtektor</option>
+                  <option value="0">BlueBlocker</option>
+                  <option value="0">Prizme do 5D</option>
+                  <option value="0">Prizme 5-12D</option>
+                  <option value="0">Cylin. 6.25-12D</option>
+                </select>
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Tretman2</label>
-                <input type="text" class="form-control" id="inputText">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option value="0"></option>
+                  <option value="0">HC</option>
+                  <option value="0">MultiPlus</option>
+                  <option value="0">UltraGlide</option>
+                  <option value="0">NanoGlide</option>
+                  <option value="0">PolarGlide</option>
+                  <option value="0">BlueGlide</option>
+                  <option value="0">PureGLide</option>
+                  <option value="0">UGBackside</option>
+                  <option value="0">Mirror/UltraBS</option>
+                  <option value="0">Bojenje</option>
+                  <option value="0">Boj.Vis.Index</option>
+                  <option value="0">Boj.Uzorka</option>
+                  <option value="0">Boj.Uzor.Vis.Ind</option>
+                  <option value="0">Gradient</option>
+                  <option value="0">Grad.Vis.Ind</option>
+                  <option value="0">UVProtektor</option>
+                  <option value="0">BlueBlocker</option>
+                  <option value="0">Prizme do 5D</option>
+                  <option value="0">Prizme 5-12D</option>
+                  <option value="0">Cylin. 6.25-12D</option>
+                </select>
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Napomena</label>
-                <input type="text" class="form-control" id="inputText">
+                <input type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Ime i prezime; Vrijeme isporuke itd." class="form-control" id="inputText">
               </div>
             </div>
 
@@ -747,8 +1003,8 @@ $imeKorisnika = $ar[1];
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript">
     // $(document).ready(function() {
     //   $("#select1").change(function() {
