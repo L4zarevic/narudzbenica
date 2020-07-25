@@ -21,7 +21,8 @@ echo "<form id='mydata'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
 <thead>
     <tr>
-    <th class='tg-0lax'>Naziv</th>
+    <th class='tg-0lax'>Lager-Specijala</th>
+    <th class='tg-0lax'>Vrsta materijala</th>
     <th id='poljeKolicine' class='tg-0lax'>Količina</th>
     <th class='tg-0lax'>Napomena</th>
     <th class='tg-0lax'></th>
@@ -31,6 +32,7 @@ echo "<form id='mydata'>
 
 while ($row = mysqli_fetch_object($result)) {
   echo "<tr>";
+  echo "<td><input name='lag-spec' type='text' class='form-control' disabled value='" . $row->lag_spec . "'></td>";
   echo "<td><input name='naziv' type='text' class='form-control' disabled value='" . $row->naziv . "'></td>";
   echo "<td><input name='kolicina' type='text' class='form-control' disabled value='" . $row->kolicina . "'></td>";
   echo "<td><input name='napomena' class='form-control' onkeypress='getValue();' id=n$row->ID type='text' value='" . $row->napomena . "'></td>";

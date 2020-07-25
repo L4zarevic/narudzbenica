@@ -331,15 +331,21 @@ div.tabela8{
 
 
 
-.lijevaKolona{
+.leftColumnSpec{
 	float:left;
 	width:100%;
 	display:inline;
 }
-.desnaKolona{
-	float:right;
-	width:50%;
-	display:inline;
+
+#precnik1{
+	width:25%;
+	display:inline-block;
+	
+}
+
+#precnik2{
+	width:25%;
+	display:inline-block;
 }
 
 

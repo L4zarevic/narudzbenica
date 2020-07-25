@@ -40,7 +40,7 @@ while ($red = mysqli_fetch_object($rezultat)) {
 }
 
 
-$upit = "insert into narudzbenica (IDKorisnika,sifra,naziv,kolicina) values ('$idKorisnika','$sifra', '$naziv', '$kolicina')";
+$upit = "insert into narudzbenica (IDKorisnika,sifra,naziv,kolicina) values (Lager,$idKorisnika','$sifra', '$naziv', '$kolicina')";
 
 $rezultat = mysqli_query($conn, $upit);
 if (mysqli_error($conn)) {

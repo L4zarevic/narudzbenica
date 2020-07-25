@@ -161,621 +161,615 @@ $imeKorisnika = $ar[1];
           <h1 class="h3 mb-4 text-gray-800">Specijala</h1>
 
 
-          <div class='lijevaKolona'>
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect1">Od / Os / Ou</label>
-                <select title="Od - za desno oko, Os - za lijevo oko , Ou - ako je obostrano isto" class="form-control" id="select1">
-                  <option value="0"></option>
-                  <option value="1">Od</option>
-                  <option value="2">Os</option>
-                  <option value="3">Ou</option>
-                </select>
+          <div class='leftColumnSpec'>
+            <form method="POST" action="/dodajStavkuSpecijala-db.php">
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect1">Od / Os / Ou</label>
+                  <select name="od_os_ou" title="Od - za desno oko, Os - za lijevo oko , Ou - ako je obostrano isto" class="form-control" id="select1">
+                    <option></option>
+                    <option>Od</option>
+                    <option>Os</option>
+                    <option>Ou</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect1">Vrsta sočiva</label>
-                <select title="Unesite vrstu sočiva" class="form-control" id="select1">
-                  <option value="0"></option>
-                  <option value="1">Monofokal</option>
-                  <option value="2">Lentikular</option>
-                  <option value="3">Bifokal FT28</option>
-                  <option value="4">Bifokal CT28</option>
-                  <option value="5">Multifokal</option>
-                  <option value="6">Progresiv</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect1">Vrsta sočiva</label>
+                  <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select1">
+                    <option></option>
+                    <option>Monofokal</option>
+                    <option>Lentikular</option>
+                    <option>Bifokal FT28</option>
+                    <option>Bifokal CT28</option>
+                    <option>Multifokal</option>
+                    <option>Progresiv</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Dizajni kontaktnih sočiva</label>
-                <select title="Unesite vrstu dizajna" class="form-control" id="select2">
-                  <option value="0"></option>
-                  <option value="1">Sverik</option>
-                  <option value="2">Asverik</option>
-                  <option value="3">RX</option>
-                  <option value="4">Panorama</option>
-                  <option value="5">Anglera</option>
-                  <option value="6">Elegance</option>
-                  <option value="7">Matrix Mono</option>
-                  <option value="8">Matrix Sport</option>
-                  <option value="9">Pollux Pro</option>
-                  <option value="10">Polino</option>
-                  <option value="11">Inoffis</option>
-                  <option value="12">Invision Ultey</option>
-                  <option value="13">Invisio Raund</option>
-                  <option value="14">Harmony</option>
-                  <option value="15">Futura Pro</option>
-                  <option value="16">Infini Pro</option>
-                  <option value="17">Varia Pro</option>
-                  <option value="18">Custom Fit</option>
-                  <option value="19">Sequel DBS</option>
-                  <option value="20">Adapta DBS</option>
-                  <option value="21">Matrix Pro</option>
-                  <option value="22">Matrix Short</option>
-                  <option value="23">Dynamic</option>
-                  <option value="24">Active</option>
-                  <option value="25">Active Elegance</option>
-                  <option value="26">Operative</option>
-                  <option value="27">Light Form</option>
-                  <option value="28">Hexacorr</option>
-                  <option value="29">AOA H63</option>
-                  <option value="30">DACP/30</option>
-                  <option value="31">AOA Colors</option>
-                  <option value="32">AOA N@D</option>
-                  <option value="33">AOT3</option>
-                  <option value="34">F55A/6</option>
-                  <option value="35">XCT3</option>
-                  <option value="36">BFT3</option>
-                  <option value="37">SL59/6</option>
-                  <option value="38">OFW/4</option>
-                  <option value="39">PV2/3</option>
-                  <option value="40">SLT/6</option>
-                  <option value="41">PV2T/6</option>
-                  <option value="42">ST43/1</option>
-                  <option value="43">ST43/3</option>
-                  <option value="44">ST43/12</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Dizajni kontaktnih sočiva</label>
+                  <select name="dizajn" title="Unesite vrstu dizajna" class="form-control" id="select2">
+                    <option></option>
+                    <option>Sverik</option>
+                    <option>Asverik</option>
+                    <option>RX</option>
+                    <option>Panorama</option>
+                    <option>Anglera</option>
+                    <option>>Elegance</option>
+                    <option>Matrix Mono</option>
+                    <option>Matrix Sport</option>
+                    <option>Pollux Pro</option>
+                    <option>Polino</option>
+                    <option>Inoffis</option>
+                    <option>Invision Ultey</option>
+                    <option>Invisio Raund</option>
+                    <option>>Harmony</option>
+                    <option>Futura Pro</option>
+                    <option>Infini Pro</option>
+                    <option>Varia Pro</option>
+                    <option>Custom Fit</option>
+                    <option>Sequel DBS</option>
+                    <option>Adapta DBS</option>
+                    <option>Matrix Pro</option>
+                    <option>Matrix Short</option>
+                    <option>Dynamic</option>
+                    <option>Active</option>
+                    <option>Active Elegance</option>
+                    <option>Operative</option>
+                    <option>Light Form</option>
+                    <option>Hexacorr</option>
+                    <option>AOA H63</option>
+                    <option>DACP/30</option>
+                    <option>AOA Colors</option>
+                    <option>AOA N@D</option>
+                    <option>AOT3</option>
+                    <option>F55A/6</option>
+                    <option>XCT3</option>
+                    <option>BFT3</option>
+                    <option>SL59/6</option>
+                    <option>OFW/4</option>
+                    <option>PV2/3</option>
+                    <option>SLT/6</option>
+                    <option>PV2T/6</option>
+                    <option>ST43/1</option>
+                    <option>ST43/3</option>
+                    <option>ST43/12</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Visina ugradnje</label>
-                <select title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="1">13</option>
-                  <option value="2">14</option>
-                  <option value="0">15</option>
-                  <option value="0">16</option>
-                  <option value="0">17</option>
-                  <option value="0">18</option>
-                  <option value="0">19</option>
-                  <option value="0">20</option>
-                  <option value="0">21</option>
-                  <option value="0">22</option>
-                  <option value="0">23</option>
-                  <option value="0">24</option>
-                  <option value="0">25</option>
-                  <option value="0">26</option>
-                  <option value="0">27</option>
-                  <option value="0">28</option>
-                  <option value="0">29</option>
-                  <option value="0">30</option>
-                  <option value="0">31</option>
-                  <option value="0">32</option>
-                  <option value="0">33</option>
-                  <option value="0">34</option>
-                  <option value="0">35</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Visina ugradnje</label>
+                  <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                    <option>32</option>
+                    <option>33</option>
+                    <option>34</option>
+                    <option>35</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Index</label>
-                <select title="Unesite Index prelamanja" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">+1.50</option>
-                  <option value="0">+1.53</option>
-                  <option value="0">+1.56</option>
-                  <option value="0">+1.59</option>
-                  <option value="0">+1.60</option>
-                  <option value="0">+1.67</option>
-                  <option value="0">+1.70</option>
-                  <option value="0">+1.74</option>
-                  <option value="0">+1.80</option>
-                  <option value="0">+1.90</option>
-                </select>
-
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Index</label>
+                  <select name="index" title="Unesite Index prelamanja" class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>+1.50</option>
+                    <option>+1.53</option>
+                    <option>+1.56</option>
+                    <option>+1.59</option>
+                    <option>+1.60</option>
+                    <option>+1.67</option>
+                    <option>+1.70</option>
+                    <option>+1.74</option>
+                    <option>+1.80</option>
+                    <option>+1.90</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Materijal za recepturu</label>
-                <select title="Unesite vrstu materijala za recepturu" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">Mineral</option>
-                  <option value="0">Fotomineral</option>
-                  <option value="0">CR39</option>
-                  <option value="0">CR39 HMC</option>
-                  <option value="0">CRPHG HMC</option>
-                  <option value="0">Photohrom.MC</option>
-                  <option value="0">CR39UT</option>
-                  <option value="0">CR39BT</option>
-                  <option value="0">CR39NT</option>
-                  <option value="0">Transit.UT</option>
-                  <option value="0">RemUV420UT</option>
-                  <option value="0">Poly HMC</option>
-                  <option value="0">Solea</option>
-                  <option value="0">Solea UBS</option>
-                  <option value="0">Poly</option>
-                  <option value="0">Trivex</option>
-                  <option value="0">Tribrid</option>
-                  <option value="0">RemUVPhoto</option>
-                  <option value="0">Transitions</option>
-                  <option value="0">PolyTransitions</option>
-                  <option value="0">TrivexTransition</option>
-                  <option value="0">NuPolar</option>
-                  <option value="0">DrimeWear</option>
-                  <option value="0">Photomat.</option>
-                  <option value="0">Tran.Xtract</option>
-
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Materijal za recepturu</label>
+                  <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>Mineral</option>
+                    <option>Fotomineral</option>
+                    <option>CR39</option>
+                    <option>CR39 HMC</option>
+                    <option>CRPHG HMC</option>
+                    <option>Photohrom.MC</option>
+                    <option>CR39UT</option>
+                    <option>CR39BT</option>
+                    <option>CR39NT</option>
+                    <option>Transit.UT</option>
+                    <option>RemUV420UT</option>
+                    <option>Poly HMC</option>
+                    <option>Solea</option>
+                    <option>Solea UBS</option>
+                    <option>Poly</option>
+                    <option>Trivex</option>
+                    <option>Tribrid</option>
+                    <option>RemUVPhoto</option>
+                    <option>Transitions</option>
+                    <option>PolyTransitions</option>
+                    <option>TrivexTransition</option>
+                    <option>NuPolar</option>
+                    <option>DrimeWear</option>
+                    <option>Photomat.</option>
+                    <option>Tran.Xtract</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Boja</label>
-                <select title="Unesite boju u sljedećim slučajevima: -za fotostakla, -za bojena i gradual stakla  NAPOMENA: Nivo zatamnjenja unesite u polju 'NAPOMENA'" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">Gray</option>
-                  <option value="0">Brown</option>
-                  <option value="0">Green</option>
-                  <option value="0">Turquoise</option>
-                  <option value="0">Amethyst</option>
-                  <option value="0">TrueSapphire</option>
-                  <option value="0">PureHazel</option>
-                  <option value="0">Blue</option>
-                  <option value="0">Honey</option>
-                  <option value="0">GemstonGreen</option>
-                  <option value="0">BriliantBlue</option>
-                  <option value="0">SterlingGray</option>
-                  <option value="0">India</option>
-                  <option value="0">DarkHazel</option>
-                  <option value="0">Aquamarine</option>
-                  <option value="0">Emerald</option>
-                  <option value="0">Amazon</option>
-                  <option value="0">Jade</option>
-                  <option value="0">Topaz</option>
-                  <option value="0">Pacific</option>
-                  <option value="0">Platinum</option>
-                  <option value="0">Indigo</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Boja</label>
+                  <select name="boja" title="Unesite boju u sljedećim slučajevima: -za fotostakla, -za bojena i gradual stakla  NAPOMENA: Nivo zatamnjenja unesite u polju 'NAPOMENA'" class="form-control" id="exampleFormControlSelect1">
+                    <option value="0"></option>
+                    <option value="0">Gray</option>
+                    <option value="0">Brown</option>
+                    <option value="0">Green</option>
+                    <option value="0">Turquoise</option>
+                    <option value="0">Amethyst</option>
+                    <option value="0">TrueSapphire</option>
+                    <option value="0">PureHazel</option>
+                    <option value="0">Blue</option>
+                    <option value="0">Honey</option>
+                    <option value="0">GemstonGreen</option>
+                    <option value="0">BriliantBlue</option>
+                    <option value="0">SterlingGray</option>
+                    <option value="0">India</option>
+                    <option value="0">DarkHazel</option>
+                    <option value="0">Aquamarine</option>
+                    <option value="0">Emerald</option>
+                    <option value="0">Amazon</option>
+                    <option value="0">Jade</option>
+                    <option value="0">Topaz</option>
+                    <option value="0">Pacific</option>
+                    <option value="0">Platinum</option>
+                    <option value="0">Indigo</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Baza</label>
-                <input title="Unesite bazu sočiva" type="text" class="form-control" id="inputText">
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Baza</label>
+                  <input name="baza" title="Unesite bazu sočiva" type="text" class="form-control" id="inputText">
+                </div>
               </div>
-            </div>
 
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Prečnik mm</label>
-                <select title="Unesite prečnik" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">50</option>
-                  <option value="0">51</option>
-                  <option value="0">52</option>
-                  <option value="0">53</option>
-                  <option value="0">54</option>
-                  <option value="0">55</option>
-                  <option value="0">56</option>
-                  <option value="0">57</option>
-                  <option value="0">58</option>
-                  <option value="0">59</option>
-                  <option value="0">60</option>
-                  <option value="0">61</option>
-                  <option value="0">62</option>
-                  <option value="0">63</option>
-                  <option value="0">64</option>
-                  <option value="0">65</option>
-                  <option value="0">66</option>
-                  <option value="0">67</option>
-                  <option value="0">68</option>
-                  <option value="0">69</option>
-                  <option value="0">70</option>
-                  <option value="0">71</option>
-                  <option value="0">72</option>
-                  <option value="0">73</option>
-                  <option value="0">74</option>
-                  <option value="0">75</option>
-                </select>
-                <select title="Unesite prečnik" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">50</option>
-                  <option value="0">51</option>
-                  <option value="0">52</option>
-                  <option value="0">53</option>
-                  <option value="0">54</option>
-                  <option value="0">55</option>
-                  <option value="0">56</option>
-                  <option value="0">57</option>
-                  <option value="0">58</option>
-                  <option value="0">59</option>
-                  <option value="0">60</option>
-                  <option value="0">61</option>
-                  <option value="0">62</option>
-                  <option value="0">63</option>
-                  <option value="0">64</option>
-                  <option value="0">65</option>
-                  <option value="0">66</option>
-                  <option value="0">67</option>
-                  <option value="0">68</option>
-                  <option value="0">69</option>
-                  <option value="0">70</option>
-                  <option value="0">71</option>
-                  <option value="0">72</option>
-                  <option value="0">73</option>
-                  <option value="0">74</option>
-                  <option value="0">75</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Prečnik mm</label>
+                  <select name="precnik1" title="Unesite prečnik" class="form-control" id="precnik1">
+                    <option></option>
+                    <option>50</option>
+                    <option>51</option>
+                    <option>52</option>
+                    <option>53</option>
+                    <option>54</option>
+                    <option>55</option>
+                    <option>56</option>
+                    <option>57</option>
+                    <option>58</option>
+                    <option>59</option>
+                    <option>60</option>
+                    <option>61</option>
+                    <option>62</option>
+                    <option>63</option>
+                    <option>64</option>
+                    <option>65</option>
+                    <option>66</option>
+                    <option>67</option>
+                    <option>68</option>
+                    <option>69</option>
+                    <option>70</option>
+                    <option>71</option>
+                    <option>72</option>
+                    <option>73</option>
+                    <option>74</option>
+                    <option>75</option>
+                  </select>
+                  <select name="precnik2" title="Unesite prečnik" class="form-control" id="precnik2">
+                    <option></option>
+                    <option>50</option>
+                    <option>51</option>
+                    <option>52</option>
+                    <option>53</option>
+                    <option>54</option>
+                    <option>55</option>
+                    <option>56</option>
+                    <option>57</option>
+                    <option>58</option>
+                    <option>59</option>
+                    <option>60</option>
+                    <option>61</option>
+                    <option>62</option>
+                    <option>63</option>
+                    <option>64</option>
+                    <option>65</option>
+                    <option>66</option>
+                    <option>67</option>
+                    <option>68</option>
+                    <option>69</option>
+                    <option>70</option>
+                    <option>71</option>
+                    <option>72</option>
+                    <option>73</option>
+                    <option>74</option>
+                    <option>75</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">SPH</label>
-                <select title="Unesite Svernu dioptriju sa popisa" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">0.25</option>
-                  <option value="0">0.50</option>
-                  <option value="0">0.75</option>
-                  <option value="0">1.00</option>
-                  <option value="0">1.25</option>
-                  <option value="0">1.50</option>
-                  <option value="0">1.75</option>
-                  <option value="0">2.00</option>
-                  <option value="0">2.25</option>
-                  <option value="0">2.50</option>
-                  <option value="0">2.75</option>
-                  <option value="0">3.00</option>
-                  <option value="0">3.25</option>
-                  <option value="0">3.50</option>
-                  <option value="0">3.75</option>
-                  <option value="0">4.00</option>
-                  <option value="0">4.25</option>
-                  <option value="0">4.50</option>
-                  <option value="0">4.75</option>
-                  <option value="0">5.00</option>
-                  <option value="0">5.25</option>
-                  <option value="0">5.50</option>
-                  <option value="0">5.75</option>
-                  <option value="0">6.00</option>
-                  <option value="0">6.25</option>
-                  <option value="0">6.50</option>
-                  <option value="0">6.75</option>
-                  <option value="0">7.00</option>
-                  <option value="0">7.25</option>
-                  <option value="0">7.50</option>
-                  <option value="0">7.75</option>
-                  <option value="0">8.00</option>
-                  <option value="0">8.25</option>
-                  <option value="0">8.50</option>
-                  <option value="0">8.75</option>
-                  <option value="0">9.00</option>
-                  <option value="0">9.25</option>
-                  <option value="0">9.50</option>
-                  <option value="0">9.75</option>
-                  <option value="0">10.00</option>
-                  <option value="0">10.25</option>
-                  <option value="0">10.50</option>
-                  <option value="0">10.75</option>
-                  <option value="0">11.00</option>
-                  <option value="0">11.25</option>
-                  <option value="0">11.50</option>
-                  <option value="0">11.75</option>
-                  <option value="0">12.00</option>
-                  <option value="0">12.50</option>
-                  <option value="0">13.00</option>
-                  <option value="0">13.50</option>
-                  <option value="0">14.00</option>
-                  <option value="0">14.50</option>
-                  <option value="0">15.00</option>
-                  <option value="0">15.50</option>
-                  <option value="0">16.00</option>
-                  <option value="0">-0.25</option>
-                  <option value="0">-0.50</option>
-                  <option value="0">-0.75</option>
-                  <option value="0">-1.00</option>
-                  <option value="0">-1.25</option>
-                  <option value="0">-1.50</option>
-                  <option value="0">-1.75</option>
-                  <option value="0">-2.00</option>
-                  <option value="0">-2.25</option>
-                  <option value="0">-2.50</option>
-                  <option value="0">-2.75</option>
-                  <option value="0">-3.00</option>
-                  <option value="0">-3.25</option>
-                  <option value="0">-3.50</option>
-                  <option value="0">-3.75</option>
-                  <option value="0">-4.00</option>
-                  <option value="0">-4.25</option>
-                  <option value="0">-4.50</option>
-                  <option value="0">-4.75</option>
-                  <option value="0">-5.00</option>
-                  <option value="0">-5.25</option>
-                  <option value="0">-5.50</option>
-                  <option value="0">-5.75</option>
-                  <option value="0">-6.00</option>
-                  <option value="0">-6.25</option>
-                  <option value="0">-6.50</option>
-                  <option value="0">-6.75</option>
-                  <option value="0">-7.00</option>
-                  <option value="0">-7.25</option>
-                  <option value="0">-7.50</option>
-                  <option value="0">-7.75</option>
-                  <option value="0">-8.00</option>
-                  <option value="0">-8.25</option>
-                  <option value="0">-8.50</option>
-                  <option value="0">-8.75</option>
-                  <option value="0">-9.00</option>
-                  <option value="0">-9.25</option>
-                  <option value="0">-9.50</option>
-                  <option value="0">-9.75</option>
-                  <option value="0">-10.00</option>
-                  <option value="0">-10.25</option>
-                  <option value="0">-10.50</option>
-                  <option value="0">-10.75</option>
-                  <option value="0">-11.00</option>
-                  <option value="0">-11.25</option>
-                  <option value="0">-11.50</option>
-                  <option value="0">-11.75</option>
-                  <option value="0">-12.00</option>
-                  <option value="0">-12.25</option>
-                  <option value="0">-12.50</option>
-                  <option value="0">-12.75</option>
-                  <option value="0">-13.00</option>
-                  <option value="0">-13.25</option>
-                  <option value="0">-13.50</option>
-                  <option value="0">-13.75</option>
-                  <option value="0">-14.00</option>
-                  <option value="0">-14.25</option>
-                  <option value="0">-14.50</option>
-                  <option value="0">-14.75</option>
-                  <option value="0">-15.00</option>
-                  <option value="0">-15.25</option>
-                  <option value="0">-15.50</option>
-                  <option value="0">-15.75</option>
-                  <option value="0">-16.00</option>
-                  <option value="0">-16.25</option>
-                  <option value="0">-16.50</option>
-                  <option value="0">-16.75</option>
-                  <option value="0">-17.00</option>
-                  <option value="0">-17.25</option>
-                  <option value="0">-17.50</option>
-                  <option value="0">-17.75</option>
-                  <option value="0">-18.00</option>
-                  <option value="0">-18.50</option>
-                  <option value="0">-19.00</option>
-                  <option value="0">-19.50</option>
-                  <option value="0">-20.00</option>
-                  <option value="0">-20.50</option>
-                  <option value="0">-21.00</option>
-                  <option value="0">-21.50</option>
-                  <option value="0">-22.00</option>
-                  <option value="0">-23.00</option>
-                  <option value="0">-24.00</option>
-                  <option value="0">-25.00</option>
-                  <option value="0">-26.00</option>
-                  <option value="0">-27.00</option>
-                  <option value="0">-28.00</option>
-                  <option value="0">-29.00</option>
-                  <option value="0">-30.00</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">SPH</label>
+                  <select name="sph" title="Unesite Svernu dioptriju sa popisa" class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>0.25</option>
+                    <option>0.50</option>
+                    <option>0.75</option>
+                    <option>1.00</option>
+                    <option>1.25</option>
+                    <option>1.50</option>
+                    <option>1.75</option>
+                    <option>2.00</option>
+                    <option>2.25</option>
+                    <option>2.50</option>
+                    <option>2.75</option>
+                    <option>3.00</option>
+                    <option>3.25</option>
+                    <option>3.50</option>
+                    <option>3.75</option>
+                    <option>4.00</option>
+                    <option>4.25</option>
+                    <option>4.50</option>
+                    <option>4.75</option>
+                    <option>5.00</option>
+                    <option>5.25</option>
+                    <option>5.50</option>
+                    <option>5.75</option>
+                    <option>6.00</option>
+                    <option>6.25</option>
+                    <option>6.50</option>
+                    <option>6.75</option>
+                    <option>7.00</option>
+                    <option>7.25</option>
+                    <option>7.50</option>
+                    <option>7.75</option>
+                    <option>8.00</option>
+                    <option>8.25</option>
+                    <option>8.50</option>
+                    <option>8.75</option>
+                    <option>9.00</option>
+                    <option>9.25</option>
+                    <option>9.50</option>
+                    <option>9.75</option>
+                    <option>10.00</option>
+                    <option>10.25</option>
+                    <option>10.50</option>
+                    <option>10.75</option>
+                    <option>11.00</option>
+                    <option>11.25</option>
+                    <option>11.50</option>
+                    <option>11.75</option>
+                    <option>12.00</option>
+                    <option>12.50</option>
+                    <option>13.00</option>
+                    <option>13.50</option>
+                    <option>14.00</option>
+                    <option>14.50</option>
+                    <option>15.00</option>
+                    <option>15.50</option>
+                    <option>16.00</option>
+                    <option>-0.25</option>
+                    <option>-0.50</option>
+                    <option>-0.75</option>
+                    <option>-1.00</option>
+                    <option>-1.25</option>
+                    <option>-1.50</option>
+                    <option>-1.75</option>
+                    <option>-2.00</option>
+                    <option>-2.25</option>
+                    <option>-2.50</option>
+                    <option>-2.75</option>
+                    <option>-3.00</option>
+                    <option>-3.25</option>
+                    <option>-3.50</option>
+                    <option>-3.75</option>
+                    <option>-4.00</option>
+                    <option>-4.25</option>
+                    <option>-4.50</option>
+                    <option>-4.75</option>
+                    <option>-5.00</option>
+                    <option>-5.25</option>
+                    <option>-5.50</option>
+                    <option>-5.75</option>
+                    <option>-6.00</option>
+                    <option>-6.25</option>
+                    <option>-6.50</option>
+                    <option>-6.75</option>
+                    <option>-7.00</option>
+                    <option>-7.25</option>
+                    <option>-7.50</option>
+                    <option>-7.75</option>
+                    <option>-8.00</option>
+                    <option>-8.25</option>
+                    <option>-8.50</option>
+                    <option>-8.75</option>
+                    <option>-9.00</option>
+                    <option>-9.25</option>
+                    <option>-9.50</option>
+                    <option>-9.75</option>
+                    <option>-10.00</option>
+                    <option>-10.25</option>
+                    <option>-10.50</option>
+                    <option>-10.75</option>
+                    <option>-11.00</option>
+                    <option>-11.25</option>
+                    <option>-11.50</option>
+                    <option>-11.75</option>
+                    <option>-12.00</option>
+                    <option>-12.25</option>
+                    <option>-12.50</option>
+                    <option>-12.75</option>
+                    <option>-13.00</option>
+                    <option>-13.25</option>
+                    <option>-13.50</option>
+                    <option>-13.75</option>
+                    <option>-14.00</option>
+                    <option>-14.25</option>
+                    <option>-14.50</option>
+                    <option>-14.75</option>
+                    <option>-15.00</option>
+                    <option>-15.25</option>
+                    <option>-15.50</option>
+                    <option>-15.75</option>
+                    <option>-16.00</option>
+                    <option>-16.25</option>
+                    <option>-16.50</option>
+                    <option>-16.75</option>
+                    <option>-17.00</option>
+                    <option>-17.25</option>
+                    <option>-17.50</option>
+                    <option>-17.75</option>
+                    <option>-18.00</option>
+                    <option>-18.50</option>
+                    <option>-19.00</option>
+                    <option>-19.50</option>
+                    <option>-20.00</option>
+                    <option>-20.50</option>
+                    <option>-21.00</option>
+                    <option>-21.50</option>
+                    <option>-22.00</option>
+                    <option>-23.00</option>
+                    <option>-24.00</option>
+                    <option>-25.00</option>
+                    <option>-26.00</option>
+                    <option>-27.00</option>
+                    <option>-28.00</option>
+                    <option>-29.00</option>
+                    <option>-30.00</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">CYL</label>
-                <select title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">0.25</option>
-                  <option value="0">0.50</option>
-                  <option value="0">0.75</option>
-                  <option value="0">1.00</option>
-                  <option value="0">1.25</option>
-                  <option value="0">1.50</option>
-                  <option value="0">1.75</option>
-                  <option value="0">2.00</option>
-                  <option value="0">2.25</option>
-                  <option value="0">2.50</option>
-                  <option value="0">2.75</option>
-                  <option value="0">3.00</option>
-                  <option value="0">3.25</option>
-                  <option value="0">3.50</option>
-                  <option value="0">3.75</option>
-                  <option value="0">4.00</option>
-                  <option value="0">4.25</option>
-                  <option value="0">4.50</option>
-                  <option value="0">4.75</option>
-                  <option value="0">5.00</option>
-                  <option value="0">5.25</option>
-                  <option value="0">5.50</option>
-                  <option value="0">5.75</option>
-                  <option value="0">6.00</option>
-                  <option value="0">-0.25</option>
-                  <option value="0">-0.50</option>
-                  <option value="0">-0.75</option>
-                  <option value="0">-1.00</option>
-                  <option value="0">-1.25</option>
-                  <option value="0">-1.50</option>
-                  <option value="0">-1.75</option>
-                  <option value="0">-2.00</option>
-                  <option value="0">-2.25</option>
-                  <option value="0">-2.50</option>
-                  <option value="0">-2.75</option>
-                  <option value="0">-3.00</option>
-                  <option value="0">-3.25</option>
-                  <option value="0">-3.50</option>
-                  <option value="0">-3.75</option>
-                  <option value="0">-4.00</option>
-                  <option value="0">-4.25</option>
-                  <option value="0">-4.50</option>
-                  <option value="0">-4.75</option>
-                  <option value="0">-5.00</option>
-                  <option value="0">-5.25</option>
-                  <option value="0">-5.50</option>
-                  <option value="0">-5.75</option>
-                  <option value="0">-6.00</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">CYL</label>
+                  <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>0.25</option>
+                    <option>0.50</option>
+                    <option>0.75</option>
+                    <option>1.00</option>
+                    <option>1.25</option>
+                    <option>1.50</option>
+                    <option>1.75</option>
+                    <option>2.00</option>
+                    <option>2.25</option>
+                    <option>2.50</option>
+                    <option>2.75</option>
+                    <option>3.00</option>
+                    <option>3.25</option>
+                    <option>3.50</option>
+                    <option>3.75</option>
+                    <option>4.00</option>
+                    <option>4.25</option>
+                    <option>4.50</option>
+                    <option>4.75</option>
+                    <option>5.00</option>
+                    <option>5.25</option>
+                    <option>5.50</option>
+                    <option>5.75</option>
+                    <option>6.00</option>
+                    <option>-0.25</option>
+                    <option>-0.50</option>
+                    <option>-0.75</option>
+                    <option>-1.00</option>
+                    <option>-1.25</option>
+                    <option>-1.50</option>
+                    <option>-1.75</option>
+                    <option>-2.00</option>
+                    <option>-2.25</option>
+                    <option>-2.50</option>
+                    <option>-2.75</option>
+                    <option>-3.00</option>
+                    <option>-3.25</option>
+                    <option>-3.50</option>
+                    <option>-3.75</option>
+                    <option>-4.00</option>
+                    <option>-4.25</option>
+                    <option>-4.50</option>
+                    <option>-4.75</option>
+                    <option>-5.00</option>
+                    <option>-5.25</option>
+                    <option>-5.50</option>
+                    <option>-5.75</option>
+                    <option>-6.00</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Ax</label>
-                <input title="Unesite ugao cilindra" type="text" class="form-control" id="inputText">
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Ax</label>
+                  <input name="ugao" title="Unesite ugao cilindra" type="text" class="form-control" id="inputText">
+                </div>
               </div>
-            </div>
 
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Add / Dig.</label>
-                <select title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">+0.75</option>
-                  <option value="0">+1.00</option>
-                  <option value="0">+1.25</option>
-                  <option value="0">+1.50</option>
-                  <option value="0">+1.75</option>
-                  <option value="0">+2.00</option>
-                  <option value="0">+2.25</option>
-                  <option value="0">+2.50</option>
-                  <option value="0">+2.75</option>
-                  <option value="0">+3.00</option>
-                  <option value="0">+3.25</option>
-                  <option value="0">+3.50</option>
-                  <option value="0">+3.75</option>
-                  <option value="0">+4.00</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Add / Dig.</label>
+                  <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>+0.75</option>
+                    <option>+1.00</option>
+                    <option>+1.25</option>
+                    <option>+1.50</option>
+                    <option>+1.75</option>
+                    <option>+2.00</option>
+                    <option>+2.25</option>
+                    <option>+2.50</option>
+                    <option>+2.75</option>
+                    <option>+3.00</option>
+                    <option>+3.25</option>
+                    <option>+3.50</option>
+                    <option>+3.75</option>
+                    <option>+4.00</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Jedinica mjere</label>
-                <select title="Unesite jedinicu mjere" class="form-control" id="exampleFormControlSelect1">
-                  <option value="0">kom</option>
-                  <option value="0">kut</option>
-                  <option value="0">kut-2</option>
-                  <option value="0">kut-3</option>
-                  <option value="0">kut-4</option>
-                  <option value="0">kut-6</option>
-                  <option value="0">kut-30</option>
-                  <option value="0">paklo-10</option>
-                  <option value="0">paklo-100</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Jedinica mjere</label>
+                  <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="exampleFormControlSelect1">
+                    <option>kom</option>
+                    <option>kut</option>
+                    <option>kut-2</option>
+                    <option>kut-3</option>
+                    <option>kut-4</option>
+                    <option>kut-6</option>
+                    <option>kut-30</option>
+                    <option>paklo-10</option>
+                    <option>paklo-100</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Količina</label>
-                <input title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control" id="inputText">
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Količina</label>
+                  <input name="kolicina" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control" id="inputText">
+                </div>
               </div>
-            </div>
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Tretman1</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">HC</option>
-                  <option value="0">MultiPlus</option>
-                  <option value="0">UltraGlide</option>
-                  <option value="0">NanoGlide</option>
-                  <option value="0">PolarGlide</option>
-                  <option value="0">BlueGlide</option>
-                  <option value="0">PureGLide</option>
-                  <option value="0">UGBackside</option>
-                  <option value="0">Mirror/UltraBS</option>
-                  <option value="0">Bojenje</option>
-                  <option value="0">Boj.Vis.Index</option>
-                  <option value="0">Boj.Uzorka</option>
-                  <option value="0">Boj.Uzor.Vis.Ind</option>
-                  <option value="0">Gradient</option>
-                  <option value="0">Grad.Vis.Ind</option>
-                  <option value="0">UVProtektor</option>
-                  <option value="0">BlueBlocker</option>
-                  <option value="0">Prizme do 5D</option>
-                  <option value="0">Prizme 5-12D</option>
-                  <option value="0">Cylin. 6.25-12D</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Tretman1</label>
+                  <select name="tretman1" class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>HC</option>
+                    <option>MultiPlus</option>
+                    <option>UltraGlide</option>
+                    <option>NanoGlide</option>
+                    <option>PolarGlide</option>
+                    <option>BlueGlide</option>
+                    <option>PureGLide</option>
+                    <option>UGBackside</option>
+                    <option>Mirror/UltraBS</option>
+                    <option>Bojenje</option>
+                    <option>Boj.Vis.Index</option>
+                    <option>Boj.Uzorka</option>
+                    <option>Boj.Uzor.Vis.Ind</option>
+                    <option>Gradient</option>
+                    <option>Grad.Vis.Ind</option>
+                    <option>UVProtektor</option>
+                    <option>BlueBlocker</option>
+                    <option>Prizme do 5D</option>
+                    <option>Prizme 5-12D</option>
+                    <option>Cylin. 6.25-12D</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Tretman2</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="0"></option>
-                  <option value="0">HC</option>
-                  <option value="0">MultiPlus</option>
-                  <option value="0">UltraGlide</option>
-                  <option value="0">NanoGlide</option>
-                  <option value="0">PolarGlide</option>
-                  <option value="0">BlueGlide</option>
-                  <option value="0">PureGLide</option>
-                  <option value="0">UGBackside</option>
-                  <option value="0">Mirror/UltraBS</option>
-                  <option value="0">Bojenje</option>
-                  <option value="0">Boj.Vis.Index</option>
-                  <option value="0">Boj.Uzorka</option>
-                  <option value="0">Boj.Uzor.Vis.Ind</option>
-                  <option value="0">Gradient</option>
-                  <option value="0">Grad.Vis.Ind</option>
-                  <option value="0">UVProtektor</option>
-                  <option value="0">BlueBlocker</option>
-                  <option value="0">Prizme do 5D</option>
-                  <option value="0">Prizme 5-12D</option>
-                  <option value="0">Cylin. 6.25-12D</option>
-                </select>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Tretman2</label>
+                  <select name="tretman2" class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>HC</option>
+                    <option>MultiPlus</option>
+                    <option>UltraGlide</option>
+                    <option>NanoGlide</option>
+                    <option>PolarGlide</option>
+                    <option>BlueGlide</option>
+                    <option>PureGLide</option>
+                    <option>UGBackside</option>
+                    <option>Mirror/UltraBS</option>
+                    <option>Bojenje</option>
+                    <option>Boj.Vis.Index</option>
+                    <option>Boj.Uzorka</option>
+                    <option>Boj.Uzor.Vis.Ind</option>
+                    <option>Gradient</option>
+                    <option>Grad.Vis.Ind</option>
+                    <option>UVProtektor</option>
+                    <option>BlueBlocker</option>
+                    <option>Prizme do 5D</option>
+                    <option>Prizme 5-12D</option>
+                    <option>Cylin. 6.25-12D</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">PD</label>
-                <input type="text" title="Ovdje unesite vrijednost pupilarne distance!" class="form-control" id="inputText">
-              </div>
-            </div>
-
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Napomena</label>
-                <input type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Ime i prezime; Vrijeme isporuke itd." class="form-control" id="inputText">
-              </div>
-            </div>
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Napomena</label>
+                  <textarea class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Ime i prezime; Vrijeme isporuke itd." class="form-control" id="inputText" row="4"></textarea>
+                </div>
+                <button type='submit' id='dugmeNaruci' class='btn btn-success'>Sačuvaj stavku</button>
+            </form>
+          </div>
 
 
-            <!-- <div class='desnaKolona'>
+          <!-- <div class='desnaKolona'>
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect1">Tip sočiva</label>
@@ -955,24 +949,31 @@ $imeKorisnika = $ar[1];
         </div>
       </div> 
             <!-- /.container-fluid -->
-          </div>
+        </div>
+
+        <h1 id="naslovNarudzbenice">Narudžbenica</h1>
+        <hr>
+
+        <?php
+        include 'narudzbenicaSpecijala.php';
+        ?>
+      </div>
+    </div>
+
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright &copy; M-Optic 2020</span>
         </div>
       </div>
+    </footer>
+    <!-- End of Footer -->
 
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; M-Optic 2020</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Content Wrapper -->
 
   </div>
   <!-- End of Page Wrapper -->
