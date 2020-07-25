@@ -21,7 +21,6 @@ echo "<form id='mydata'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
 <thead>
     <tr>
-    <th class='tg-0lax'>Sifra</th>
     <th class='tg-0lax'>Naziv</th>
     <th id='poljeKolicine' class='tg-0lax'>Količina</th>
     <th class='tg-0lax'>Napomena</th>
@@ -31,20 +30,16 @@ echo "<form id='mydata'>
     <tbody>";
 
 while ($row = mysqli_fetch_object($result)) {
-
   echo "<tr>";
-  echo "<td><input name='sifra' type='text' class='form-control' disabled value='" . $row->sifra . "'></td>";
   echo "<td><input name='naziv' type='text' class='form-control' disabled value='" . $row->naziv . "'></td>";
-  echo "<td><input name='kolicina' type='text' class='form-control' disabled value=" . $row->kolicina . "></td>";
-  echo "<td><input name='napomena' type='text' class='form-control'></td>";
-  echo "<td><input name='napomena2' type='text' class='form-control'></td>";
+  echo "<td><input name='kolicina' type='text' class='form-control' disabled value='" . $row->kolicina . "'></td>";
+  echo "<td><input name='napomena' class='form-control' onkeypress='getValue();' id=n$row->ID type='text' value='" . $row->napomena . "'></td>";
   echo "<td><a class='stavkaNarudzbenice' href='deleteRow.php?stavka={$row->ID}'><i class='fas fa-trash'></i></td>";
   echo "</tr>";
 }
 echo "</tbody>";
 echo "</table>";
-echo  "<button type='button' id='dugmeNaruci' class='btn btn-success' onclick='showTableData()'>Naruči</button>";
+echo  "<button type='button' id='dugmeNaruci' class='btn btn-success'>Naruči</button>";
 echo "</form>";
 
 CloseCon($conn);
-?>

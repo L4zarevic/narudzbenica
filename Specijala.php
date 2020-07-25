@@ -191,7 +191,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Dizajni kontaktnih sočiva</label>
-                <select class="form-control" id="select2">
+                <select title="Unesite vrstu dizajna" class="form-control" id="select2">
                   <option value="0"></option>
                   <option value="1">Sverik</option>
                   <option value="2">Asverik</option>
@@ -244,7 +244,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Visina ugradnje</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="exampleFormControlSelect1">
                   <option value="0"></option>
                   <option value="1">13</option>
                   <option value="2">14</option>
@@ -276,7 +276,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Index</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Unesite Index prelamanja" class="form-control" id="exampleFormControlSelect1">
                   <option value="0"></option>
                   <option value="0">+1.50</option>
                   <option value="0">+1.53</option>
@@ -296,7 +296,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Materijal za recepturu</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Unesite vrstu materijala za recepturu" class="form-control" id="exampleFormControlSelect1">
                   <option value="0"></option>
                   <option value="0">Mineral</option>
                   <option value="0">Fotomineral</option>
@@ -332,7 +332,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Boja</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Unesite boju u sljedećim slučajevima: -za fotostakla, -za bojena i gradual stakla  NAPOMENA: Nivo zatamnjenja unesite u polju 'NAPOMENA'" class="form-control" id="exampleFormControlSelect1">
                   <option value="0"></option>
                   <option value="0">Gray</option>
                   <option value="0">Brown</option>
@@ -364,7 +364,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Baza</label>
-                <input type="text" class="form-control" id="inputText">
+                <input title="Unesite bazu sočiva" type="text" class="form-control" id="inputText">
               </div>
             </div>
 
@@ -372,7 +372,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Prečnik mm</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Unesite prečnik" class="form-control" id="exampleFormControlSelect1">
                   <option value="0"></option>
                   <option value="0">50</option>
                   <option value="0">51</option>
@@ -401,7 +401,7 @@ $imeKorisnika = $ar[1];
                   <option value="0">74</option>
                   <option value="0">75</option>
                 </select>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Unesite prečnik" class="form-control" id="exampleFormControlSelect1">
                   <option value="0"></option>
                   <option value="0">50</option>
                   <option value="0">51</option>
@@ -437,7 +437,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">SPH</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Unesite Svernu dioptriju sa popisa" class="form-control" id="exampleFormControlSelect1">
                   <option value="0"></option>
                   <option value="0">0.25</option>
                   <option value="0">0.50</option>
@@ -591,7 +591,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">CYL</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="exampleFormControlSelect1">
                   <option value="0"></option>
                   <option value="0">0.25</option>
                   <option value="0">0.50</option>
@@ -649,7 +649,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Ax</label>
-                <input type="text" class="form-control" id="inputText">
+                <input title="Unesite ugao cilindra" type="text" class="form-control" id="inputText">
               </div>
             </div>
 
@@ -657,7 +657,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Add / Dig.</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="exampleFormControlSelect1">
                   <option value="0"></option>
                   <option value="0">+0.75</option>
                   <option value="0">+1.00</option>
@@ -680,7 +680,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Jedinica mjere</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select title="Unesite jedinicu mjere" class="form-control" id="exampleFormControlSelect1">
                   <option value="0">kom</option>
                   <option value="0">kut</option>
                   <option value="0">kut-2</option>
@@ -698,7 +698,7 @@ $imeKorisnika = $ar[1];
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Količina</label>
-                <input type="text" class="form-control" id="inputText">
+                <input title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control" id="inputText">
               </div>
             </div>
 
@@ -757,6 +757,13 @@ $imeKorisnika = $ar[1];
                   <option value="0">Prizme 5-12D</option>
                   <option value="0">Cylin. 6.25-12D</option>
                 </select>
+              </div>
+            </div>
+
+            <div class="rowSpec">
+              <div class="form-group col-md-3">
+                <label for="exampleFormControlSelect2">PD</label>
+                <input type="text" title="Ovdje unesite vrijednost pupilarne distance!" class="form-control" id="inputText">
               </div>
             </div>
 

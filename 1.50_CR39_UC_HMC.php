@@ -3527,30 +3527,30 @@
              </table>
            </div>
 
-           <h1 id="naslovNarudzbenice">Narudžbenica</h2>
-             <hr>
-             <?php
-              include 'narudzbenica.php';
-              ?>
-
+           <h1 id="naslovNarudzbenice">Narudžbenica</h1>
+           <hr>
+           <?php
+            include 'narudzbenicaLager.php';
+            ?>
          </div>
-         <!-- /.container-fluid -->
-
        </div>
-       <!-- End of Main Content -->
-
-       <!-- Footer -->
-       <footer class="sticky-footer bg-white">
-         <div class="container my-auto">
-           <div class="copyright text-center my-auto">
-             <span>Copyright &copy; M-Optic 2020</span>
-           </div>
-         </div>
-       </footer>
-       <!-- End of Footer -->
+       <!-- /.container-fluid -->
 
      </div>
-     <!-- End of Content Wrapper -->
+     <!-- End of Main Content -->
+
+     <!-- Footer -->
+     <footer class="sticky-footer bg-white">
+       <div class="container my-auto">
+         <div class="copyright text-center my-auto">
+           <span>Copyright &copy; M-Optic 2020</span>
+         </div>
+       </div>
+     </footer>
+     <!-- End of Footer -->
+
+   </div>
+   <!-- End of Content Wrapper -->
 
    </div>
    <!-- End of Page Wrapper -->
@@ -3590,7 +3590,8 @@
    <script src="js/sb-admin-2.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   
+   <script src="js/myScript.js"></script>
+
    <script type="text/javascript">
      //Funckija koja uzima vrijednosti iz polja tabele narudzbenica
      function showTableData() {
