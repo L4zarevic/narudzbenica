@@ -17,7 +17,7 @@ $conn = OpenCon();
 
 $stavka = mysqli_real_escape_string($conn,$_REQUEST['stavka']);
 
-$upit = "DELETE FROM `narudzbenica` where ID='$stavka'";
+$upit = "DELETE FROM `narudzbenica` WHERE ID='$stavka'";
 $rezultat = mysqli_query($conn, $upit);
 
 if (!$rezultat)

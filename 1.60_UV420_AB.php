@@ -1,42 +1,9 @@
-<?php
-session_start();
-
-if (is_null($_SESSION['prijavljen'])) {
-  header('Location: ../narudzbenica/login.php');
-}
-
-
-include 'connection.php';
-
-$korisnik = $_SESSION['prijavljen'];
-$ar = explode("#", $korisnik, 2);
-$ar[1] = rtrim($ar[1], "#");
-$idKorisnika = $ar[0];
-$imeKorisnika = $ar[1];
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="robots" content="noindex">
-  <meta name="description" content="">
-  <meta name="author" content="M-Optic">
-
-  <title>M-Optic</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-</head>
+<?php
+include '../narudzbenica/modules/header.php';
+?>
 
 <body id="page-top">
 
@@ -1664,13 +1631,9 @@ $imeKorisnika = $ar[1];
     <!-- End of Main Content -->
 
     <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-      <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-          <span>Copyright &copy; M-Optic 2020</span>
-        </div>
-      </div>
-    </footer>
+    <?php
+    include '../narudzbenica/modules/footer.php';
+    ?>
     <!-- End of Footer -->
 
   </div>
@@ -1716,57 +1679,6 @@ $imeKorisnika = $ar[1];
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/myScript.js"></script>
   <script type="text/javascript">
-    //Funckija koja uzima vrijednosti iz polja tabele narudzbenica
-    function showTableData() {
-      var inputValue = "";
-      var table = document.getElementById('narudzbenica');
-      var rowCount = table.rows.length;
-      for (var r = 1, n = table.rows.length; r < n; r++) {
-        for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
-          inputValue = inputValue + " || " + table.rows[r].cells[c].firstChild.value;
-        }
-        inputValue = inputValue + "\n";
-      }
-      sendMail(inputValue);
-    }
-
-    //Funkcija koja salje podatke iz tabele na mejl veleprodaje
-    function sendMail(inputValue) {
-      $.ajax({
-        type: "POST",
-        url: "mail.php",
-        dataType: 'json',
-        data: ({
-          stavka: inputValue
-        }),
-        success: function() {
-          location.reload();
-        },
-        error: function() {
-          location.reload();
-        }
-      });
-    }
-
-    function deleteRow() {
-      var row = document.getElementByClass('stavkaNarudzbenice').value;
-
-      $.ajax({
-        type: "POST",
-        url: "deleteRow.php",
-        dataType: 'json',
-        data: ({
-          stavka: row
-        }),
-        success: function() {
-          location.reload();
-        },
-        error: function() {
-          location.reload();
-        }
-      });
-    }
-
     //Funkcija koja provjerava da li je pritisnut taster Enter nakon unosa vrijednosti kolicine za odredjeno polje
     //Nakon toga se vrsi provjera ID polja i unesene vrijednosti
     //Ako je su uneseni parametri odgovarajuci,podaci se prosljedjuju funkciji add
@@ -1788,7 +1700,7 @@ $imeKorisnika = $ar[1];
         function add(inputVal) {
           $.ajax({
             type: 'POST',
-            url: 'dodajStavku-db.php',
+            url: 'addRow.php',
             dataType: 'json',
             data: ({
               stavka: "9#" + inputVal

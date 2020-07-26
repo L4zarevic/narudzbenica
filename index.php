@@ -92,7 +92,7 @@ $imeKorisnika = $ar[1];
             <a class="collapse-item" href="1.60_UV420_AB.php">1.60 UV420 AB</a>
             <a class="collapse-item" href="1.67_HMC_UV420_AB.php">1.67 HMC/UV420 AB</a>
           </div>
-         
+
         </div>
         <a class="nav-link collapsed" href="specijala.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-glasses"></i>
@@ -165,93 +165,93 @@ $imeKorisnika = $ar[1];
             <h1 class="h3 mb-0 text-gray-800">Dobro došli</h1>
           </div>
 
+
+
           <!-- Content Row -->
           <div class="row">
 
-            <!-- Content Row -->
-            <div class="row">
-
-              <!-- Content Column -->
-              <div class="">
+            <!-- Content Column -->
+            <div class="">
 
               <h5>Uputstvo za narudžbenicu</h5>
-              <p>Da bi kreirali željenu narudženicu potrebno je:</p>
+              <p>Da bi kreirali željenu narudžbenicu potrebno je:</p>
               <p>U jezičku lijevo izabrati iz ponude Lagerska stakla ili Specijala</p>
-              <p>Kod "Lagerska stakla" dobićete padajuću listu sa indeksima i materijalima. Nakon čega je potrebno klikom izabrati željeni indeks.</p>
-              <p>Nakon izabranog indeksa, prikaće vam se grafikoni. Da bi definisali potrebnu količinu određene dioptrije, potrebno je u polje grafikona unijeti željenu količinu, nakon čega je potrebno pritisnuti ENTER na tastaturi radi potvrde.</p>
+              <p>Kod "Lagerska stakla" dobićete padajuću listu sa indexima i materijalima, nakon čega je potrebno klikom izabrati željeni index.</p>
+              <p>Da bi definisali potrebnu količinu određene dioptrije, potrebno je u polje grafikona unijeti željenu količinu, nakon čega je potrebno pritisnuti ENTER na tastaturi radi potvrde.</p>
               <p><strong>NAPOMENA: Stavke dodavati jednu po jednu</strong></p>
 
-              <p>Sve željene stavke koje potvrdite nakon unosa biće prikazane u tabeli NARUDŽBENICA koja se nalazi na dnu stranice.Ako nije vidjiva zbog velikog broja grafikona, potrebno je skrolovati na dno stranice.</p>
+              <p>Sve željene stavke koje potvrdite nakon unosa biće prikazane u tabeli NARUDŽBENICA koja se nalazi na dnu stranice.</p>
               <p>Unesene količine za stavke u tabeli NARUDŽBENICA nije moguće uređivati.</p>
-              <p>U slučaju pogrešnog unosa, stavku iz tabele je potrebno ukloniti klikom na ikonicu kantice u redu te stavke i nakon toga izvršiti ponovni unos iz grafikona.</p>
+              <p>U slučaju pogrešnog unosa, stavku iz tabele je potrebno ukloniti klikom na ikonicu kantice, a nakon toga izvršiti ponovni unos iz grafikona.</p>
               <p>Nakon što kreirate narudžbenicu, potrebno je kliknuti na dugme NARUČI, nakog čega će vaša narudžbenica biti poslata veleprodaji M-Optic</p>
-              <p>Za sve dodatne informacije možete nas kontaktirati na email: mopticvp@mojaoptika.com</p>
-              </div>
-
-              
-              <!-- /.container-fluid -->
-
-              
-
+              <p>Za sve dodatne informacije možete nas kontaktirati na email: <a href="mailto:mopticvp@mojaoptika.com">mopticvp@mojaoptika.com</a></p>
             </div>
-            <!-- End of Main Content -->
-          </div>
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-              <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                  <span>Copyright &copy; M-Optic 2020</span>
-                </div>
-              </div>
-            </footer>
-            <!-- End of Footer -->
+
+
+            <!-- /.container-fluid -->
+
+
 
           </div>
-          <!-- End of Content Wrapper -->
-
+          <!-- End of Main Content -->
         </div>
-        <!-- End of Page Wrapper -->
-
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-          <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-              <div class="modal-body">Izaberite "Odjava" da bi završili trenutnu sesiju.</div>
-              <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Prekini</button>
-                <a class="btn btn-primary" href="../narudzbenica/odjava.php">Odjava</a>
-              </div>
-            </div>
+      </div>
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; M-Optic 2020</span>
           </div>
         </div>
+      </footer>
+      <!-- End of Footer -->
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- End of Content Wrapper -->
 
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  </div>
+  <!-- End of Page Wrapper -->
 
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Izaberite "Odjava" da bi završili trenutnu sesiju.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Prekini</button>
+          <a class="btn btn-primary" href="../narudzbenica/odjava.php">Odjava</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 

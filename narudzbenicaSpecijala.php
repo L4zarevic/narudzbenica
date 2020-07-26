@@ -16,7 +16,7 @@ $IDKorisnika = $ar[0];
 $conn = OpenCon();
 $result = mysqli_query($conn, " select * from narudzbenica where IDKorisnika = $IDKorisnika ");
 
-echo "<form id='mydata'>
+echo "<form <form action='../narudzbenica/mail.php' id='mydata'>
 <div class='table-wrapper-scroll-y my-custom-scrollbar'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
 <thead>
@@ -67,7 +67,7 @@ while ($row = mysqli_fetch_object($result)) {
 }
 echo "</tbody>";
 echo "</table>";
-echo  "<button type='button' id='dugmeNaruci' class='btn btn-success'>Naruči</button>";
+echo  "<button type='submit' id='dugmeNaruci' class='btn btn-success'>Naruči</button>";
 echo "</form>";
 
 CloseCon($conn);

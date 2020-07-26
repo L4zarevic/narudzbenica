@@ -45,5 +45,5 @@ $rezultat = mysqli_query($conn, $upit);
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));
 }
-
+header('Location: ../narudzbenica/specijala.php');
 CloseCon($conn);
