@@ -162,7 +162,7 @@ $imeKorisnika = $ar[1];
 
 
           <div class='leftColumnSpec'>
-            <form method="POST" action="/dodajStavkuSpecijala-db.php">
+            <form method="POST" action="../narudzbenica/dodajStavkuSpecijala-db.php">
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect1">Od / Os / Ou</label>
@@ -762,7 +762,7 @@ $imeKorisnika = $ar[1];
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Napomena</label>
-                  <textarea class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Ime i prezime; Vrijeme isporuke itd." class="form-control" id="inputText" row="4"></textarea>
+                  <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Ime i prezime; Vrijeme isporuke itd." id="inputText" row="4"></textarea>
                 </div>
                 <button type='submit' id='dugmeNaruci' class='btn btn-success'>Sačuvaj stavku</button>
             </form>

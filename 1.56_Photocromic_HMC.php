@@ -858,10 +858,10 @@ $imeKorisnika = $ar[1];
         function add(inputVal) {
           $.ajax({
             type: 'POST',
-            url: 'dodajStavku-db4.php',
+            url: 'dodajStavku-db.php',
             dataType: 'json',
             data: ({
-              stavka: inputVal
+              stavka: "4#" + inputVal
             }),
             success: function() {
               location.reload();

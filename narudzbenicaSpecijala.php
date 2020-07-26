@@ -24,6 +24,7 @@ echo "<form id='mydata'>
     <th class='tg-0lax'>Lager-Specijala</th>
     <th class='tg-0lax'>Od/Os/Ou</th>
     <th class='tg-0lax'>Vrsta soč.</th>
+    <th class='tg-0lax'>Visina ugr.</th>
     <th class='tg-0lax'>Baza</th>
     <th class='tg-0lax'>Index</th>
     <th class='tg-0lax'>Vrsta materijala</th>
@@ -42,15 +43,28 @@ echo "<form id='mydata'>
     </thead>
     <tbody>";
 
-// while ($row = mysqli_fetch_object($result)) {
-//   echo "<tr>";
-//   echo "<td><input name='lag-spec' type='text' class='form-control' disabled value='" . $row->lag_spec . "'></td>";
-//   echo "<td><input name='naziv' type='text' class='form-control' disabled value='" . $row->naziv . "'></td>";
-//   echo "<td><input name='kolicina' type='text' class='form-control' disabled value='" . $row->kolicina . "'></td>";
-//   echo "<td><input name='napomena' class='form-control' onkeypress='getValue();' id=n$row->ID type='text' value='" . $row->napomena . "'></td>";
-//   echo "<td><a class='stavkaNarudzbenice' href='deleteRow.php?stavka={$row->ID}'><i class='fas fa-trash'></i></td>";
-//   echo "</tr>";
-// }
+while ($row = mysqli_fetch_object($result)) {
+  echo "<tr>";
+  echo "<td>$row->lag_spec</td>";
+  echo "<td>$row->od_os_ou</td>";
+  echo "<td>$row->vrsta_sociva</td>";
+  echo "<td>$row->visina</td>";
+  echo "<td>$row->baza</td>";
+  echo "<td>$row->indeks</td>";
+  echo "<td>$row->vrsta_materijala</td>";
+  echo "<td>$row->precnik</td>";
+  echo "<td>$row->sph</td>";
+  echo "<td>$row->cyl</td>";
+  echo "<td>$row->ugao</td>";
+  echo "<td>$row->adicija</td>";
+  echo "<td>$row->jm</td>";
+  echo "<td>$row->kolicina</td>";
+  echo "<td>$row->tretman1</td>";
+  echo "<td>$row->tretman2</td>";
+  echo "<td>$row->napomena</td>";
+  echo "<td><a class='stavkaNarudzbenice' href='deleteRow.php?stavka={$row->ID}'><i class='fas fa-trash'></i></td>";
+  echo "</tr>";
+}
 echo "</tbody>";
 echo "</table>";
 echo  "<button type='button' id='dugmeNaruci' class='btn btn-success'>Naruči</button>";

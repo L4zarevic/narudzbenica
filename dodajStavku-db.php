@@ -17,16 +17,60 @@ $idKorisnika = $ar[0];
 $imeKorisnika = $ar[1];
 
 
-$stavka = mysqli_real_escape_string($conn,$_REQUEST['stavka']);
+$stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
 
-$ar = explode("#", $stavka, 2);
+$ar = explode("#", $stavka, 3);
 $ar[1] = rtrim($ar[1], "#");
-$kolicina = $ar[0];
-$idPolja = $ar[1];
+$oznaka = $ar[0];
+$kolicina = $ar[1];
+$idPolja = $ar[2];
+
+switch ($oznaka) {
+
+	case 1:
+		$upit = "SELECT * FROM `1.50_cr39_uc_hmc` WHERE IDPolja='$idPolja'";
+		break;
+
+	case 2:
+		$upit = "SELECT * FROM `1.56_shmc_uv420_ab` WHERE IDPolja='$idPolja'";
+		break;
+
+	case 3:
+		$upit = "SELECT * FROM `1.60_transition_hmc` WHERE IDPolja='$idPolja'";
+		break;
+
+	case 4:
+		$upit = "SELECT * FROM `1.56_photocromic_hmc` WHERE IDPolja='$idPolja'";
+		break;
+
+	case 5:
+		$upit = "SELECT * FROM `1.59_polycarbonate_hmc` WHERE IDPolja='$idPolja'";
+		break;
+
+	case 6:
+		$upit = "SELECT * FROM `1.50_transition_hmc` WHERE IDPolja='$idPolja'";
+		break;
+
+	case 7:
+		$upit = "SELECT * FROM `1.53_trivex_hmc` WHERE IDPolja='$idPolja'";
+		break;
+
+	case 8:
+		$upit = "SELECT * FROM `1.60_hmc` WHERE IDPolja='$idPolja'";
+		break;
+
+	case 9:
+		$upit = "SELECT * FROM `1.60_uv420_ab` WHERE IDPolja='$idPolja'";
+		break;
+
+	case 10:
+		$upit = "SELECT * FROM `1.67_hmc_uv420_ab` WHERE IDPolja='$idPolja'";
+		break;
+}
 
 
 
-$upit = "SELECT * FROM `1.50_cr39_uc_hmc` where IDPolja='$idPolja'";
+
 $rezultat = mysqli_query($conn, $upit);
 
 if (!$rezultat)
@@ -36,11 +80,11 @@ if (!$rezultat)
 // Iz tabele korisnici podaci 
 while ($red = mysqli_fetch_object($rezultat)) {
 	$sifra = $red->sifra;
-	$naziv = $red->naziv;
+	$vrsta_materijala = $red->naziv;
 }
 
 
-$upit = "insert into narudzbenica (IDKorisnika,sifra,naziv,kolicina) values (Lager,$idKorisnika','$sifra', '$naziv', '$kolicina')";
+$upit = "insert into narudzbenica (IDKorisnika,lag_spec,vrsta_materijala,kolicina) values ('$idKorisnika','Lager', '$vrsta_materijala', '$kolicina')";
 
 $rezultat = mysqli_query($conn, $upit);
 if (mysqli_error($conn)) {

@@ -647,14 +647,6 @@ $imeKorisnika = $ar[1];
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/myScript.js"></script>
   <script type="text/javascript">
-    $(document).ready(function() {
-      $(document).on('click', '#narudzbenica tbody tr td', function() {
-        $(this).parents('tbody').find('td').not(this).removeClass('active');
-        alert($(this).find('strong').html());
-      });
-    });
-
-
     //Funckija koja uzima vrijednosti iz polja tabele narudzbenica
     function showTableData() {
       var inputValue = "";
@@ -727,10 +719,10 @@ $imeKorisnika = $ar[1];
         function add(inputVal) {
           $.ajax({
             type: 'POST',
-            url: 'dodajStavku-db7.php',
+            url: 'dodajStavku-db.php',
             dataType: 'json',
             data: ({
-              stavka: inputVal
+              stavka: "7#" + inputVal
             }),
             success: function() {
               location.reload();

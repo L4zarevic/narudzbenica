@@ -32,11 +32,11 @@ echo "<form id='mydata'>
 
 while ($row = mysqli_fetch_object($result)) {
   echo "<tr>";
-  echo "<td><input name='lag-spec' type='text' class='form-control' disabled value='" . $row->lag_spec . "'></td>";
-  echo "<td><input name='naziv' type='text' class='form-control' disabled value='" . $row->naziv . "'></td>";
-  echo "<td><input name='kolicina' type='text' class='form-control' disabled value='" . $row->kolicina . "'></td>";
+  echo "<td>$row->lag_spec</td>";
+  echo "<td>$row->vrsta_materijala</td>";
+  echo "<td>$row->kolicina</td>";
   echo "<td><input name='napomena' class='form-control' onkeypress='getValue();' id=n$row->ID type='text' value='" . $row->napomena . "'></td>";
-  echo "<td><a class='stavkaNarudzbenice' href='deleteRow.php?stavka={$row->ID}'><i class='fas fa-trash'></i></td>";
+  echo "<td><a class='stavkaNarudzbenice' href='deleteRow.php?stavka={$row->ID}'  onclick='return confirm('Da li ste sigurni da želite da uklonite stavku?')'><i class='fas fa-trash'></i></td>";
   echo "</tr>";
 }
 echo "</tbody>";

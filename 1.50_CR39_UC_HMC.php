@@ -3668,7 +3668,7 @@
              url: 'dodajStavku-db.php',
              dataType: 'json',
              data: ({
-               stavka: inputVal
+               stavka: "1#" + inputVal
              }),
              success: function() {
                location.reload();
