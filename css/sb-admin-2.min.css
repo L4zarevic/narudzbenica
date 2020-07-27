@@ -251,14 +251,13 @@ div.tabela8{
 /*Uredjivanje tabele naruzdbenice*/
 
 .narudzbenica-tabela{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+  
 	background:white;
 	text-align:center;
 	table-layout:auto;
 	width:100%;
 	resize: both;
+	
 	}
 	
 
@@ -337,13 +336,15 @@ div.tabela8{
 	display:inline;
 }
 
-#precnik1{
+
+
+#select6{
 	width:25%;
 	display:inline-block;
 	
 }
 
-#precnik2{
+#select7{
 	width:25%;
 	display:inline-block;
 }

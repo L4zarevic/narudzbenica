@@ -23,12 +23,12 @@ echo "<form <form action='../narudzbenica/mail.php' id='mydata'>
     <tr>
     <th class='tg-0lax'>Lager-Specijala</th>
     <th class='tg-0lax'>Od/Os/Ou</th>
-    <th class='tg-0lax'>Vrsta soč.</th>
-    <th class='tg-0lax'>Visina ugr.</th>
+    <th class='tg-0lax'>Vrsta sočiva</th>
+    <th class='tg-0lax'>Visina ugradnje</th>
     <th class='tg-0lax'>Baza</th>
     <th class='tg-0lax'>Index</th>
     <th class='tg-0lax'>Vrsta materijala</th>
-    <th class='tg-0lax'>Prečn.</th>
+    <th class='tg-0lax'>Prečnik</th>
     <th class='tg-0lax'>SPH</th>
     <th class='tg-0lax'>CYL</th>
     <th class='tg-0lax'>Ugao</th>
@@ -62,12 +62,12 @@ while ($row = mysqli_fetch_object($result)) {
   echo "<td>$row->tretman1</td>";
   echo "<td>$row->tretman2</td>";
   echo "<td>$row->napomena</td>";
-  echo "<td><a class='stavkaNarudzbenice' href='deleteRow.php?stavka={$row->ID}'><i class='fas fa-trash'></i></td>";
+  echo "<td><i onclick='deleteRow();' id='$row->ID'class='fas fa-trash'></i></td>";
   echo "</tr>";
 }
 echo "</tbody>";
 echo "</table>";
-echo  "<button type='submit' id='dugmeNaruci' class='btn btn-success'>Naruči</button>";
+echo  "<button type='submit' id='dugmeNaruci' class='btn btn-success'>Potvrdi narudžbu</button>";
 echo "</form>";
 
 CloseCon($conn);

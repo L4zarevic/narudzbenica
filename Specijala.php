@@ -129,12 +129,12 @@ include '../narudzbenica/modules/header.php';
 
 
           <div class='leftColumnSpec'>
-            <form method="POST" action="../narudzbenica/dodajStavkuSpecijala-db.php">
+            <form method="POST" action="../narudzbenica/dodajStavkuSpecijala-db.php" onsubmit="return checkForm()">
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect1">Od / Os / Ou</label>
                   <select name="od_os_ou" title="Od - za desno oko, Os - za lijevo oko , Ou - ako je obostrano isto" class="form-control" id="select1">
-                    <option></option>
+                    <option value="0"></option>
                     <option>Od</option>
                     <option>Os</option>
                     <option>Ou</option>
@@ -144,8 +144,8 @@ include '../narudzbenica/modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect1">Vrsta sočiva</label>
-                  <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select1">
-                    <option></option>
+                  <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2" required>
+                    <option value="0"></option>
                     <option>Monofokal</option>
                     <option>Lentikular</option>
                     <option>Bifokal FT28</option>
@@ -159,7 +159,7 @@ include '../narudzbenica/modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Visina ugradnje</label>
-                  <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="exampleFormControlSelect1">
+                  <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="select3">
                     <option></option>
                     <option>13</option>
                     <option>14</option>
@@ -190,9 +190,16 @@ include '../narudzbenica/modules/header.php';
 
               <div class="rowSpec">
                 <div class="form-group col-md-3">
+                  <label for="exampleFormControlSelect2">Baza</label>
+                  <input name="baza" title="Unesite bazu sočiva" type="text" class="form-control" id="inputText">
+                </div>
+              </div>
+
+              <div class="rowSpec">
+                <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Index</label>
-                  <select name="index" title="Unesite Index prelamanja" class="form-control" id="exampleFormControlSelect1">
-                    <option></option>
+                  <select name="index" title="Unesite Index prelamanja" class="form-control" id="select4">
+                    <option value="0"></option>
                     <option>+1.50</option>
                     <option>+1.53</option>
                     <option>+1.56</option>
@@ -210,8 +217,8 @@ include '../narudzbenica/modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Materijal za recepturu</label>
-                  <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="exampleFormControlSelect1">
-                    <option></option>
+                  <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select5">
+                    <option value="0"></option>
                     <option>Mineral</option>
                     <option>Fotomineral</option>
                     <option>CR39</option>
@@ -241,51 +248,10 @@ include '../narudzbenica/modules/header.php';
                 </div>
               </div>
 
-
-              <div class="rowSpec">
-                <div class="form-group col-md-3">
-                  <label for="exampleFormControlSelect2">Boja</label>
-                  <select name="boja" title="Unesite boju u sljedećim slučajevima: -za fotostakla, -za bojena i gradual stakla  NAPOMENA: Nivo zatamnjenja unesite u polju 'NAPOMENA'" class="form-control" id="exampleFormControlSelect1">
-                    <option value="0"></option>
-                    <option value="0">Gray</option>
-                    <option value="0">Brown</option>
-                    <option value="0">Green</option>
-                    <option value="0">Turquoise</option>
-                    <option value="0">Amethyst</option>
-                    <option value="0">TrueSapphire</option>
-                    <option value="0">PureHazel</option>
-                    <option value="0">Blue</option>
-                    <option value="0">Honey</option>
-                    <option value="0">GemstonGreen</option>
-                    <option value="0">BriliantBlue</option>
-                    <option value="0">SterlingGray</option>
-                    <option value="0">India</option>
-                    <option value="0">DarkHazel</option>
-                    <option value="0">Aquamarine</option>
-                    <option value="0">Emerald</option>
-                    <option value="0">Amazon</option>
-                    <option value="0">Jade</option>
-                    <option value="0">Topaz</option>
-                    <option value="0">Pacific</option>
-                    <option value="0">Platinum</option>
-                    <option value="0">Indigo</option>
-                  </select>
-                </div>
-              </div>
-
-
-              <div class="rowSpec">
-                <div class="form-group col-md-3">
-                  <label for="exampleFormControlSelect2">Baza</label>
-                  <input name="baza" title="Unesite bazu sočiva" type="text" class="form-control" id="inputText">
-                </div>
-              </div>
-
-
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Prečnik mm</label>
-                  <select name="precnik1" title="Unesite prečnik" class="form-control" id="precnik1">
+                  <select name="precnik1" title="Unesite prečnik" class="form-control" id="select6">
                     <option></option>
                     <option>50</option>
                     <option>51</option>
@@ -314,7 +280,7 @@ include '../narudzbenica/modules/header.php';
                     <option>74</option>
                     <option>75</option>
                   </select>
-                  <select name="precnik2" title="Unesite prečnik" class="form-control" id="precnik2">
+                  <select name="precnik2" title="Unesite prečnik" class="form-control" id="select7">
                     <option></option>
                     <option>50</option>
                     <option>51</option>
@@ -350,7 +316,7 @@ include '../narudzbenica/modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">SPH</label>
-                  <select name="sph" title="Unesite Svernu dioptriju sa popisa" class="form-control" id="exampleFormControlSelect1">
+                  <select name="sph" title="Unesite Svernu dioptriju sa popisa" class="form-control" id="select8">
                     <option></option>
                     <option>0.25</option>
                     <option>0.50</option>
@@ -504,7 +470,7 @@ include '../narudzbenica/modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">CYL</label>
-                  <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="exampleFormControlSelect1">
+                  <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="select9">
                     <option></option>
                     <option>0.25</option>
                     <option>0.50</option>
@@ -570,7 +536,7 @@ include '../narudzbenica/modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Add / Dig.</label>
-                  <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="exampleFormControlSelect1">
+                  <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select10">
                     <option></option>
                     <option>+0.75</option>
                     <option>+1.00</option>
@@ -593,7 +559,7 @@ include '../narudzbenica/modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Jedinica mjere</label>
-                  <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="exampleFormControlSelect1">
+                  <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select11">
                     <option>kom</option>
                     <option>kut</option>
                     <option>kut-2</option>
@@ -611,14 +577,14 @@ include '../narudzbenica/modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Količina</label>
-                  <input name="kolicina" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control" id="inputText">
+                  <input name="kolicina" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control" id="kolicina">
                 </div>
               </div>
 
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Tretman1</label>
-                  <select name="tretman1" class="form-control" id="exampleFormControlSelect1">
+                  <select name="tretman1" class="form-control" id="select12">
                     <option></option>
                     <option>HC</option>
                     <option>MultiPlus</option>
@@ -647,7 +613,7 @@ include '../narudzbenica/modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Tretman2</label>
-                  <select name="tretman2" class="form-control" id="exampleFormControlSelect1">
+                  <select name="tretman2" class="form-control" id="select13">
                     <option></option>
                     <option>HC</option>
                     <option>MultiPlus</option>
@@ -673,6 +639,8 @@ include '../narudzbenica/modules/header.php';
                 </div>
               </div>
 
+              
+
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Napomena</label>
@@ -681,6 +649,8 @@ include '../narudzbenica/modules/header.php';
                 <button type='submit' id='dugmeNaruci' class='btn btn-success'>Sačuvaj stavku</button>
             </form>
           </div>
+
+
 
           <!-- /.container-fluid -->
         </div>
@@ -743,8 +713,9 @@ include '../narudzbenica/modules/header.php';
   <script src="js/sb-admin-2.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/myScript.js"></script>
   <script type="text/javascript">
-
+    
   </script>
 
 

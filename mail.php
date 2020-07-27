@@ -14,12 +14,11 @@ $ar[1] = rtrim($ar[1], "#");
 $IDKorisnika = $ar[0];
 $imeKorisnika = $ar[1];
 
-//$stavka = $_REQUEST['stavka'];
+
 
 
 $result = mysqli_query($conn, " SELECT * FROM narudzbenica WHERE IDKorisnika = $IDKorisnika ");
 
-//var_dump($result);
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
 
@@ -104,34 +103,3 @@ if (mail($to, $title, $message, $header)) {
   echo "false";
 }
 
-
-
-// $to = "somebody@example.com";
-// $subject = "Narudžbenica";
-
-
-// $message = "
-// Narudžbenica od:' . $imeKorisnika . ' \n 
-// Šifra Naziv Količina TR TRB TRPB TR2 Napomena Napomena#2 \n
-// ---------------------------------------------------------
-// .$stavka";
-
-
-// $headers  = 'MIME-Version: 1.0' . "\r\n";
-// $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-// $headers = "From: webmaster@example.com" . "\r\n" .
-//   "CC: somebodyelse@example.com";
-
-
-// $result = mail($to, $subject, $message, $headers);
-// if ($result) {
-
-//   $upit = "DELETE FROM `narudzbenica` where IDKorisnika='$idKorisnika'";
-//   $rezultat = mysqli_query($conn, $upit);
-
-//   if (!$rezultat)
-//     die(mysqli_error($conn));
-// } else {
-//   echo "Error";
-// }

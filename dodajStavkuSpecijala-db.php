@@ -36,7 +36,14 @@ $tretman1 = mysqli_real_escape_string($conn, $_REQUEST['tretman1']);
 $tretman2 = mysqli_real_escape_string($conn, $_REQUEST['tretman2']);
 $napomena = mysqli_real_escape_string($conn, $_REQUEST['napomena']);
 
-$precnik=$precnik1."/".$precnik2;
+if ($precnik2 == "") {
+	$precnik = $precnik1;
+} else if ($precnik1 == "") {
+	$precnik = $precnik2;
+} else {
+	$precnik = $precnik1 . "/" . $precnik2;
+}
+
 
 
 $upit = "insert into narudzbenica (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,visina,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,napomena) values ('$idKorisnika','Specijala','$odOsOu', '$vrstaSociva','$visina','$baza','$indeks','$materijal','$precnik','$sph','$cyl','$ugao','$add','$jm','$kolicina','$tretman1','$tretman2','$napomena')";

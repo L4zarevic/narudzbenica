@@ -39,8 +39,8 @@ include '../narudzbenica/modules/header.php';
         Ponuda
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-glasses"></i>
           <span>Lagerska stakla</span>
@@ -60,6 +60,10 @@ include '../narudzbenica/modules/header.php';
             <a class="collapse-item" href="1.67_HMC_UV420_AB.php">1.67 HMC/UV420 AB</a>
           </div>
         </div>
+        <a class="nav-link collapsed" href="specijala.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-glasses"></i>
+          <span>Specijala</span>
+        </a>
       </li>
 
       <!-- Divider -->

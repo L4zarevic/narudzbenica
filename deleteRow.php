@@ -9,12 +9,6 @@ require_once 'connection.php';
 
 $conn = OpenCon();
 
-// $korisnik = $_SESSION['prijavljen'];
-// $ar = explode("#", $korisnik, 2);
-// $ar[1] = rtrim($ar[1], "#");
-// $idKorisnika = $ar[0];
-// $imeKorisnika = $ar[1];
-
 $stavka = mysqli_real_escape_string($conn,$_REQUEST['stavka']);
 
 $upit = "DELETE FROM `narudzbenica` WHERE ID='$stavka'";
