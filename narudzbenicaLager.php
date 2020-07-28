@@ -44,4 +44,14 @@ echo "</table>";
 echo  "<button type='submit' id='dugmeNaruci' onClick=\"javascript: return confirm('Želite da potvrdite narudžbu? ');\" class='btn btn-success'>Potvrdi narudžbu </button>";
 echo "</form>";
 
+if (isset($_REQUEST['msg'])) {
+  if ($_REQUEST['msg'] == '0') {
+    echo "<script src=\"js/alertify.min.js\"></script>";
+    echo "<script type=\"text/javascript\"> alertify.error('Greška prilikom slanja');</script>";
+  } else if ($_REQUEST['msg'] == '1') {
+    echo "<script src=\"js/alertify.min.js\"></script>";
+    echo "<script type=\"text/javascript\">alertify.success('Narudžbenica je poslata');</script>";
+  }
+}
+
 CloseCon($conn);

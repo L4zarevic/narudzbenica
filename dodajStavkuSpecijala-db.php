@@ -4,7 +4,6 @@ session_start();
 if (is_null($_SESSION['prijavljen'])) {
 	header('Location: ../narudzbenica/login.php');
 }
-//header("Content-Type: application/json", true);
 
 require_once 'connection.php';
 
@@ -43,7 +42,6 @@ if ($precnik2 == "") {
 } else {
 	$precnik = $precnik1 . "/" . $precnik2;
 }
-
 
 
 $upit = "insert into narudzbenica (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,visina,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,napomena) values ('$idKorisnika','Specijala','$odOsOu', '$vrstaSociva','$visina','$baza','$indeks','$materijal','$precnik','$sph','$cyl','$ugao','$add','$jm','$kolicina','$tretman1','$tretman2','$napomena')";

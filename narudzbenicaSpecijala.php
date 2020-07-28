@@ -16,7 +16,7 @@ $IDKorisnika = $ar[0];
 $conn = OpenCon();
 $result = mysqli_query($conn, " select * from narudzbenica where IDKorisnika = $IDKorisnika ");
 
-echo "<form <form action='../narudzbenica/mail.php' id='mydata'>
+echo "<form action='../narudzbenica/mail.php' id='mydata'>
 <div class='table-wrapper-scroll-y my-custom-scrollbar'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
 <thead>
@@ -67,11 +67,18 @@ while ($row = mysqli_fetch_object($result)) {
 }
 echo "</tbody>";
 echo "</table>";
-echo  "<button type='submit' id='dugmeNaruci' class='btn btn-success'>Potvrdi narudžbu</button>";
+echo  "<button type='submit' id='dugmeNaruci' onClick=\"javascript: return confirm('Želite da potvrdite narudžbu? ');\" class='btn btn-success'>Potvrdi narudžbu</button>";
 echo "</form>";
 
+
+if (isset($_REQUEST['msg'])) {
+  if ($_REQUEST['msg'] == '0') {
+    echo "<script src=\"js/alertify.min.js\"></script>";
+    echo "<script type=\"text/javascript\"> alertify.error('Greška prilikom slanja');</script>";
+  } else if ($_REQUEST['msg'] == '1') {
+    echo "<script src=\"js/alertify.min.js\"></script>";
+    echo "<script type=\"text/javascript\">alertify.success('Narudžbenica je poslata');</script>";
+  }
+}
+
 CloseCon($conn);
-
-
-
-?>
