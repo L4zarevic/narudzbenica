@@ -41,8 +41,10 @@ while ($row = mysqli_fetch_object($result)) {
 }
 echo "</tbody>";
 echo "</table>";
-echo  "<button type='submit' id='dugmeNaruci' onClick=\"javascript: return confirm('Želite da potvrdite narudžbu? ');\" class='btn btn-success'>Potvrdi narudžbu </button>";
+echo  "<button type='submit' id='dugmeNaruci' onClick='confirmOrder();' class='btn btn-success'>Potvrdi narudžbu</button>";
 echo "</form>";
+//echo " <p id='info'>U tabeli je moguće samo unijeti Napomenu.</br> Svaki unos potvrdite pritiskom ENTER na tastaturi.</br> Da bi izbrisali stavku kliknite na ikonicu kantice</p>";
+
 
 if (isset($_REQUEST['msg'])) {
   if ($_REQUEST['msg'] == '0') {

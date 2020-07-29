@@ -28,7 +28,7 @@ $napomena = $ar[1];
 $realID=substr($ID,1);
 
 
-$upit = "UPDATE narudzbenica SET napomena='$napomena' where ID='$realID'";
+$upit = "UPDATE narudzbenica SET napomena='$napomena' WHERE ID='$realID'";
 $rezultat = mysqli_query($conn, $upit);
 
 if (!$rezultat)

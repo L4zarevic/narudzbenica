@@ -127,8 +127,7 @@ include '../narudzbenica/modules/header.php';
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Specijala</h1>
 
-
-          <div class='leftColumnSpec'>
+          <div class='tabelaSpecijala1'>
             <form method="POST" action="../narudzbenica/dodajStavkuSpecijala-db.php" onsubmit="return checkForm()">
               <div class="rowSpec">
                 <div class="form-group col-md-3">
@@ -216,7 +215,7 @@ include '../narudzbenica/modules/header.php';
 
               <div class="rowSpec">
                 <div class="form-group col-md-3">
-                  <label for="exampleFormControlSelect2">Materijal za recepturu</label>
+                  <label for="exampleFormControlSelect2">Vrsta materijala</label>
                   <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select5">
                     <option value="0"></option>
                     <option>Mineral</option>
@@ -639,29 +638,61 @@ include '../narudzbenica/modules/header.php';
                 </div>
               </div>
 
-
-
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Napomena</label>
                   <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Ime i prezime; Vrijeme isporuke itd." id="inputText" row="4"></textarea>
                 </div>
-                <button type='submit' id='dugmeNaruci' class='btn btn-success'>Sačuvaj stavku</button>
+              </div>
+              <button type='submit' id='dugmeNaruci' class='btn btn-success'>Sačuvaj stavku</button>
             </form>
           </div>
+
+          <div class="tabelaSpecijala2">
+           <strong>NAPOMENA:</strong></br>
+           -Od(za desno oko)</br>
+           -Os(za lijevo oko)</br>
+           -Ou(obostrano)</br>
+           -SPH(sferna dioptrija)</br>
+           -CYL(cilindrična dioptrija)</br>
+           -Ax(ugao cilindra)</br>
+           -Add(adicija)</br>
+           </br>
+           Obavezna polja za Specijalu su:</br>
+           -Od/Os/Ou</br>
+           -Vrsta sočiva</br>
+           -Index</br>
+           -Vrsta materijala</br>
+           -Prečnik</br>
+           -Količina</br>
+           </br>
+
+           <b id="napomena">Unesenu stavku u tabeli Narudžbenica nije moguće uređivati.</b>
+
+
+
+
+          </div>
+
+
+
 
 
 
           <!-- /.container-fluid -->
         </div>
 
+
+      </div>
+      <div class="naslov">
         <h1 id="naslovNarudzbenice">Narudžbenica</h1>
         <hr>
+      
 
-        <?php
-        include 'narudzbenicaSpecijala.php';
-        ?>
-      </div>
+      <?php
+      include 'narudzbenicaSpecijala.php';
+      ?>
+    </div>
     </div>
 
     <!-- End of Main Content -->
@@ -671,8 +702,6 @@ include '../narudzbenica/modules/header.php';
     include '../narudzbenica/modules/footer.php';
     ?>
     <!-- End of Footer -->
-
-
 
 </body>
 

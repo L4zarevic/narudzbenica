@@ -15,9 +15,8 @@ $IDKorisnika = $ar[0];
 
 $conn = OpenCon();
 $result = mysqli_query($conn, " select * from narudzbenica where IDKorisnika = $IDKorisnika ");
-
 echo "<form action='../narudzbenica/mail.php' id='mydata'>
-<div class='table-wrapper-scroll-y my-custom-scrollbar'>
+<div class='table-wrapper-scroll-y'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
 <thead>
     <tr>
