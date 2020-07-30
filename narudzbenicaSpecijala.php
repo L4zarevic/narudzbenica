@@ -15,8 +15,7 @@ $IDKorisnika = $ar[0];
 
 $conn = OpenCon();
 $result = mysqli_query($conn, " select * from narudzbenica where IDKorisnika = $IDKorisnika ");
-echo "<form action='../narudzbenica/mail.php' id='mydata'>
-<div class='table-wrapper-scroll-y'>
+echo "<div class='table-wrapper-scroll-y'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
 <thead>
     <tr>
@@ -60,14 +59,16 @@ while ($row = mysqli_fetch_object($result)) {
   echo "<td>$row->kolicina</td>";
   echo "<td>$row->tretman1</td>";
   echo "<td>$row->tretman2</td>";
-  echo "<td>$row->napomena</td>";
+  echo "<td><input name='napomena' class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
   echo "<td><i onclick='deleteRow();' id='$row->ID'class='fas fa-trash'></i></td>";
   echo "</tr>";
 }
 echo "</tbody>";
 echo "</table>";
-echo  "<button type='submit' id='dugmeNaruci' onClick=\"javascript: return confirm('Želite da potvrdite narudžbu? ');\" class='btn btn-success'>Potvrdi narudžbu</button>";
-echo "</form>";
+echo  "<a  onClick=\"javascript: return confirm('Želite da potvrdite narudžbu? ');\" href='../narudzbenica/mail.php'><button type='button' id='dugmeNaruci'  class='btn btn-success'>Potvrdi narudžbu</button></a>";
+
+echo " <p id='info'>U tabeli je moguće unijeti samo Napomenu i da bi potvrditili unos pritisnite ENTER na tastaturi.</br> Da bi izbrisali stavku u tabeli kliknite na ikonicu kantice <i class='fas fa-trash'></i></p>";
+
 
 
 if (isset($_REQUEST['msg'])) {

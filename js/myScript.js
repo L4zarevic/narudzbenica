@@ -17,20 +17,17 @@
 
 //Metod za azuriranje reda u tabeli naruzbenice
  function getValue() {
-      var rowID;
-      var fieldValue;
-      var inputVal;
       if (event.keyCode == 13) {
-        rowID = event.srcElement.id;
-        fieldValue = document.getElementById(rowID).value;
-        inputVal = rowID + "#" + fieldValue;
+        var rowID = event.srcElement.id;
+        var fieldValue = document.getElementById(rowID).value;
+        var inputValue = rowID + "#" + fieldValue;
 		
         $.ajax({
           type: 'POST',
           url: 'updateRow.php',
           dataType: 'json',
           data: ({
-            stavka: inputVal
+            stavka: inputValue
           }),
           success: function() {
             location.reload();
@@ -41,6 +38,8 @@
         });
       }
     }
+	
+	
 
 //Metod za brisanje reda u tabeli narudzbenice
 function deleteRow() {

@@ -649,50 +649,38 @@ include '../narudzbenica/modules/header.php';
           </div>
 
           <div class="tabelaSpecijala2">
-           <strong>NAPOMENA:</strong></br>
-           -Od(za desno oko)</br>
-           -Os(za lijevo oko)</br>
-           -Ou(obostrano)</br>
-           -SPH(sferna dioptrija)</br>
-           -CYL(cilindrična dioptrija)</br>
-           -Ax(ugao cilindra)</br>
-           -Add(adicija)</br>
-           </br>
-           Obavezna polja za Specijalu su:</br>
-           -Od/Os/Ou</br>
-           -Vrsta sočiva</br>
-           -Index</br>
-           -Vrsta materijala</br>
-           -Prečnik</br>
-           -Količina</br>
-           </br>
-
-           <b id="napomena">Unesenu stavku u tabeli Narudžbenica nije moguće uređivati.</b>
-
-
-
+            <strong>NAPOMENA:</strong></br>
+            -Od(za desno oko)</br>
+            -Os(za lijevo oko)</br>
+            -Ou(obostrano)</br>
+            -SPH(sferna dioptrija)</br>
+            -CYL(cilindrična dioptrija)</br>
+            -Ax(ugao cilindra)</br>
+            -Add(adicija)</br>
+            </br>
+            Obavezna polja za Specijalu su:</br>
+            -Od/Os/Ou</br>
+            -Vrsta sočiva</br>
+            -Index</br>
+            -Vrsta materijala</br>
+            -Prečnik</br>
+            -Količina</br>
+            </br>
 
           </div>
 
-
-
-
-
-
           <!-- /.container-fluid -->
         </div>
-
 
       </div>
       <div class="naslov">
         <h1 id="naslovNarudzbenice">Narudžbenica</h1>
         <hr>
-      
 
-      <?php
-      include 'narudzbenicaSpecijala.php';
-      ?>
-    </div>
+        <?php
+        include 'narudzbenicaSpecijala.php';
+        ?>
+      </div>
     </div>
 
     <!-- End of Main Content -->

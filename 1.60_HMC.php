@@ -128,7 +128,7 @@ include '../narudzbenica/modules/header.php';
           <div class="tabela1">
             <h5 id>1.60 HMC 65mm</h5>
             <h6 id="cyl">+Cyl</h6>
-            <table class="table table-bordered table-condensed">
+            <table class="table table-bordered table-condensed9">
               <tbody>
                 <tr>
                   <td class="poljeTabele">Sph+</td>

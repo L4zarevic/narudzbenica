@@ -128,7 +128,7 @@ include '../narudzbenica/modules/header.php';
           <div class="tabela1">
             <h5 id>1.67 HMC 65mm</h5>
             <h6 id="cyl">+Cyl</h6>
-            <table class="table table-bordered table-condensed">
+            <table class="table table-bordered table-condensed10">
               <tbody>
                 <tr>
                   <td class="poljeTabele">Sph+</td>
@@ -1117,7 +1117,7 @@ include '../narudzbenica/modules/header.php';
           <div class="tabela3">
             <h5 id>1.67 UV420 AB 65mm</h5>
             <h6 id="cyl">+Cyl</h6>
-            <table class="table table-bordered table-condensed">
+            <table class="table table-bordered table-condensed10">
               <tbody>
                 <tr>
                   <td class="poljeTabele">Sph+</td>

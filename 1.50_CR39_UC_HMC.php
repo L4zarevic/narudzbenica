@@ -1,44 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <?php
 include '../narudzbenica/modules/header.php';
 ?>
-
 <body id="page-top">
-
   <!-- Page Wrapper -->
   <div id="wrapper">
-
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
-
         </div>
         <div class="sidebar-brand-text mx-3">M-Optic</div>
       </a>
-
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
-
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
         <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Početna</span></a>
       </li>
-
       <!-- Divider -->
       <hr class="sidebar-divider">
-
       <!-- Heading -->
       <div class="sidebar-heading">
         Ponuda
       </div>
-
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -65,44 +54,27 @@ include '../narudzbenica/modules/header.php';
           <span>Specijala</span>
         </a>
       </li>
-
       <!-- Divider -->
       <hr class="sidebar-divider">
-
-
-
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
-
     </ul>
     <!-- End of Sidebar -->
-
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-
       <!-- Main Content -->
       <div id="content">
-
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
-
-
-
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-
-
-
-
             <div class="topbar-divider d-none d-sm-block"></div>
-
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -117,24 +89,18 @@ include '../narudzbenica/modules/header.php';
                 </a>
               </div>
             </li>
-
           </ul>
-
         </nav>
         <!-- End of Topbar -->
-
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">1.50 CR39 UC/HMC</h1>
-
           <div class="tabela1">
             <h5 id>1.50 CR39 UC 55mm</h6>
               <h6 id="cyl">+Cyl</h6>
               <table class="table table-bordered table-condensed">
                 <tbody>
-
                   <tr>
                     <td class="poljeTabele">Sph+</td>
                     <td class="poljeTabele">0.00</td>
@@ -150,20 +116,17 @@ include '../narudzbenica/modules/header.php';
                   <tr>
                     <td class="poljeTabele">8.00</td>
                     <td class="poljeTabele"><input type="text" id="1" class="form-control" /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">7.75</td>
                     <td class="poljeTabele"><input type="text" id="2" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="3" class="form-control" /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">7.50</td>
                     <td class="poljeTabele"><input type="text" id="4" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="5" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="6" class="form-control" /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">7.25</td>
@@ -171,7 +134,6 @@ include '../narudzbenica/modules/header.php';
                     <td class="poljeTabele"><input type="text" id="8" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="9" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="10" class="form-control" /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">7.00</td>
@@ -180,7 +142,6 @@ include '../narudzbenica/modules/header.php';
                     <td class="poljeTabele"><input type="text" id="13" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="14" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="15" class="form-control" /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">6.75</td>
@@ -190,7 +151,6 @@ include '../narudzbenica/modules/header.php';
                     <td class="poljeTabele"><input type="text" id="19" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="20" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="21" class="form-control" /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">6.50</td>
@@ -201,7 +161,6 @@ include '../narudzbenica/modules/header.php';
                     <td class="poljeTabele"><input type="text" id="26" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="27" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="28" class="form-control" /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">6.25</td>
@@ -213,7 +172,6 @@ include '../narudzbenica/modules/header.php';
                     <td class="poljeTabele"><input type="text" id="34" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="35" class="form-control" /></td>
                     <td class="poljeTabele"><input type="text" id="36" class="form-control" /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">6.00</td>
@@ -422,7 +380,6 @@ include '../narudzbenica/modules/header.php';
                 </tbody>
               </table>
           </div>
-
           <div class="tabela2">
             <h5 id>1.50 CR39 HMC 55mm</h6>
               <h6 id="cyl">+Cyl</h6>
@@ -448,14 +405,12 @@ include '../narudzbenica/modules/header.php';
                     <td class="poljeTabele">7.75</td>
                     <td class='poljeTabele'><input type='text' id='191' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='192' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">7.50</td>
                     <td class='poljeTabele'><input type='text' id='193' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='194' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='195' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">7.25</td>
@@ -463,7 +418,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='197' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='198' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='199' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">7.00</td>
@@ -472,7 +426,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='202' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='203' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='204' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">6.75</td>
@@ -482,7 +435,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='208' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='209' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='210' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">6.50</td>
@@ -493,7 +445,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='215' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='216' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='217' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">6.25</td>
@@ -505,7 +456,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='223' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='224' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='225' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">6.00</td>
@@ -554,7 +504,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='259' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='260' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='261' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">5.00</td>
@@ -567,7 +516,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='268' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='269' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='270' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">4.75</td>
@@ -580,7 +528,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='277' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='278' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='279' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">4.50</td>
@@ -593,7 +540,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='286' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='287' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='288' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">4.25</td>
@@ -606,7 +552,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='295' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='296' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='297' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">4.00</td>
@@ -619,7 +564,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='304' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='305' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='306' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">3.75</td>
@@ -632,7 +576,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='313' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='314' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='315' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">3.50</td>
@@ -645,7 +588,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='322' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='323' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='324' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">3.25</td>
@@ -658,7 +600,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='331' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='332' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='333' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">3.00</td>
@@ -671,7 +612,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='340' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='341' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='342' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">2.75</td>
@@ -684,7 +624,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='349' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='350' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='351' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">2.50</td>
@@ -697,7 +636,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='358' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='359' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='360' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">2.25</td>
@@ -710,7 +648,6 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='367' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='368' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='369' class='form-control' /></td>
-
                   </tr>
                   <tr>
                     <td class="poljeTabele">2.00</td>
@@ -723,12 +660,10 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='376' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='377' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='378' class='form-control' /></td>
-
                   </tr>
                 </tbody>
               </table>
           </div>
-
           <!-- Tabela 3 -->
           <div class="tabela3">
             <h5 id>1.50 CR39 UC 60mm</h6>
@@ -1002,7 +937,6 @@ include '../narudzbenica/modules/header.php';
                 </tbody>
               </table>
           </div>
-
           <!-- Tabela 4 -->
           <div class="tabela4">
             <h5>1.50 CR39 HMC 60mm</h6>
@@ -1276,8 +1210,6 @@ include '../narudzbenica/modules/header.php';
                 </tbody>
               </table>
           </div>
-
-
           <!-- Tabela 5 -->
           <div class="tabela5">
             <h5>1.50 CR39 UC 65mm</h6>
@@ -2163,7 +2095,6 @@ include '../narudzbenica/modules/header.php';
                 </tbody>
               </table>
           </div>
-
           <!-- Tabela 6 -->
           <div class="tabela6">
             <h5>1.50 CR39 HMC 65mm</h6>
@@ -3049,7 +2980,6 @@ include '../narudzbenica/modules/header.php';
                 </tbody>
               </table>
           </div>
-
           <!-- Tabela 7 -->
           <div class="tabela7">
             <h5>1.50 CR39 UC 70mm</h5>
@@ -3271,7 +3201,6 @@ include '../narudzbenica/modules/header.php';
               </tbody>
             </table>
           </div>
-
           <!-- Tabela 8 -->
           <div class="tabela8">
             <h5>1.50 CR39 HMC 70mm</h5>
@@ -3493,7 +3422,6 @@ include '../narudzbenica/modules/header.php';
               </tbody>
             </table>
           </div>
-
           <h1 id="naslovNarudzbenice">Narudžbenica</h1>
           <hr>
           <?php
@@ -3502,38 +3430,16 @@ include '../narudzbenica/modules/header.php';
         </div>
       </div>
       <!-- /.container-fluid -->
-
     </div>
     <!-- End of Main Content -->
-
     <!-- Footer -->
     <?php
     include '../narudzbenica/modules/footer.php';
     ?>
     <!-- End of Footer -->
-
-
     <script type="text/javascript">
       //Funkcija za slanje podataka u tabelu naruzdbenica
-      function add(inputVal) {
-        $.ajax({
-          type: 'POST',
-          url: 'addRow.php',
-          dataType: 'json',
-          data: ({
-            stavka: "1#" + inputVal
-          }),
-          success: function() {
-            location.reload();
-          },
-          error: function() {
-            location.reload();
-          }
-        });
-      }
+     function add(a){$.ajax({type:"POST",url:"addRow.php",dataType:"json",data:{stavka:"1#"+a},success:function(){location.reload()},error:function(){location.reload()}})}
     </script>
-
-
 </body>
-
 </html>

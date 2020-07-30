@@ -3676,7 +3676,35 @@
         }
       }
     });
-
+	
+	
+	
+//Metod za azuriranje reda u tabeli naruzbenice
+ function getValue() {
+      var row;
+      var fieldValue;
+      var inputVal;
+      if (event.keyCode == 13) {
+        row = event.srcElement.id;
+        fieldValue = document.getElementById(rowID).value;
+        inputVal = rowID + "#" + fieldValue;
+		
+        $.ajax({
+          type: 'POST',
+          url: 'updateRow.php',
+          dataType: 'json',
+          data: ({
+            stavka: inputVal
+          }),
+          success: function() {
+            location.reload();
+          },
+          error: function() {
+            location.reload();
+          }
+        });
+      }
+    }
 	//Metod za brisanje reda u tabeli narudzbenice
 function deleteRow() {
       var rowID = event.srcElement.id;
