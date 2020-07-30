@@ -1,0 +1,50 @@
+[30-Jul-2020 20:55:11 Europe/Belgrade] PHP Notice:  Undefined index: prijavljen in /home/mojaopt/public_html/narudzbenica/modules/header.php on line 4
+[30-Jul-2020 20:55:11 Europe/Belgrade] PHP Notice:  Undefined index: prijavljen in /home/mojaopt/public_html/narudzbenica/modules/header.php on line 11
+[30-Jul-2020 20:55:11 Europe/Belgrade] PHP Notice:  Undefined offset: 1 in /home/mojaopt/public_html/narudzbenica/modules/header.php on line 13
+[30-Jul-2020 20:55:24 Europe/Belgrade] PHP Notice:  Undefined index: prijavljen in /home/mojaopt/public_html/narudzbenica/obrada.php on line 4
+[30-Jul-2020 20:55:24 Europe/Belgrade] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'mojaopt_moptic'@'localhost' to database 'mojaopt-narudzbenica' in /home/mojaopt/public_html/narudzbenica/connection.php on line 8
+[30-Jul-2020 20:55:24 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 17
+[30-Jul-2020 20:55:24 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 18
+[30-Jul-2020 20:55:24 Europe/Belgrade] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 23
+[30-Jul-2020 20:55:24 Europe/Belgrade] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 26
+[30-Jul-2020 20:55:33 Europe/Belgrade] PHP Notice:  Undefined index: prijavljen in /home/mojaopt/public_html/narudzbenica/obrada.php on line 4
+[30-Jul-2020 20:55:33 Europe/Belgrade] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'mojaopt_moptic'@'localhost' to database 'mojaopt-narudzbenica' in /home/mojaopt/public_html/narudzbenica/connection.php on line 8
+[30-Jul-2020 20:55:33 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 17
+[30-Jul-2020 20:55:33 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 18
+[30-Jul-2020 20:55:33 Europe/Belgrade] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 23
+[30-Jul-2020 20:55:33 Europe/Belgrade] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 26
+[30-Jul-2020 20:55:53 Europe/Belgrade] PHP Notice:  Undefined index: prijavljen in /home/mojaopt/public_html/narudzbenica/obrada.php on line 4
+[30-Jul-2020 20:55:53 Europe/Belgrade] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'mojaopt_moptic'@'localhost' to database 'mojaopt-narudzbenica' in /home/mojaopt/public_html/narudzbenica/connection.php on line 8
+[30-Jul-2020 20:55:53 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 17
+[30-Jul-2020 20:55:53 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 18
+[30-Jul-2020 20:55:53 Europe/Belgrade] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 23
+[30-Jul-2020 20:55:53 Europe/Belgrade] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 26
+[30-Jul-2020 20:58:23 Europe/Belgrade] PHP Notice:  Undefined index: prijavljen in /home/mojaopt/public_html/narudzbenica/obrada.php on line 4
+[30-Jul-2020 20:58:23 Europe/Belgrade] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'mojaopt_moptic'@'localhost' to database 'mojaopt-narudzbenica' in /home/mojaopt/public_html/narudzbenica/connection.php on line 8
+[30-Jul-2020 20:58:23 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 17
+[30-Jul-2020 20:58:23 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 18
+[30-Jul-2020 20:58:23 Europe/Belgrade] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 23
+[30-Jul-2020 20:58:23 Europe/Belgrade] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 26
+[30-Jul-2020 21:00:07 Europe/Belgrade] PHP Notice:  Undefined index: prijavljen in /home/mojaopt/public_html/narudzbenica/obrada.php on line 4
+[30-Jul-2020 21:00:07 Europe/Belgrade] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'mojaopt_moptic'@'localhost' to database 'mojaopt-narudzbenica' in /home/mojaopt/public_html/narudzbenica/connection.php on line 8
+[30-Jul-2020 21:00:07 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 17
+[30-Jul-2020 21:00:07 Europe/Belgrade] PHP Warning:  mysqli_real_escape_string(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 18
+[30-Jul-2020 21:00:07 Europe/Belgrade] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 23
+[30-Jul-2020 21:00:07 Europe/Belgrade] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/mojaopt/public_html/narudzbenica/obrada.php on line 26
+[30-Jul-2020 21:10:18 Europe/Belgrade] PHP Notice:  Undefined index: prijavljen in /home/mojaopt/public_html/narudzbenica/obrada.php on line 4
+[30-Jul-2020 21:11:20 Europe/Belgrade] PHP Notice:  Undefined variable: to in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 21:11:20 Europe/Belgrade] PHP Notice:  Undefined variable: title in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 21:11:20 Europe/Belgrade] PHP Notice:  Undefined variable: message in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 21:11:20 Europe/Belgrade] PHP Notice:  Undefined variable: header in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 21:11:20 Europe/Belgrade] PHP Warning:  mail(): headers parameter must be string or array in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 21:59:40 Europe/Belgrade] PHP Notice:  Undefined index: prijavljen in /home/mojaopt/public_html/narudzbenica/obrada.php on line 4
+[30-Jul-2020 22:15:30 Europe/Belgrade] PHP Notice:  Undefined variable: to in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 22:15:30 Europe/Belgrade] PHP Notice:  Undefined variable: title in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 22:15:30 Europe/Belgrade] PHP Notice:  Undefined variable: message in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 22:15:30 Europe/Belgrade] PHP Notice:  Undefined variable: header in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 22:15:30 Europe/Belgrade] PHP Warning:  mail(): headers parameter must be string or array in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 22:32:06 Europe/Belgrade] PHP Notice:  Undefined variable: to in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 22:32:06 Europe/Belgrade] PHP Notice:  Undefined variable: title in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 22:32:06 Europe/Belgrade] PHP Notice:  Undefined variable: message in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 22:32:06 Europe/Belgrade] PHP Notice:  Undefined variable: header in /home/mojaopt/public_html/narudzbenica/mail.php on line 91
+[30-Jul-2020 22:32:06 Europe/Belgrade] PHP Warning:  mail(): headers parameter must be string or array in /home/mojaopt/public_html/narudzbenica/mail.php on line 91

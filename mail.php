@@ -23,7 +23,7 @@ if (mysqli_num_rows($result) > 0) {
   // output data of each row
 
 
-  $header = "From: no-reply@test.com" . "\r\n";
+  $header = "From: no-reply@mojaoptika.com" . "\r\n";
   $to    = 'info@mojaoptika.com';
   $header .= "MIME-Version: 1.0\r\n";
   $header .= "Content-Type: text/html; charset=utf-8\r\n";
@@ -33,7 +33,7 @@ if (mysqli_num_rows($result) > 0) {
   $message .= '<br/>Narudžba od: ' . $imeKorisnika . '<br/>';
   $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . '<br/>';
   $message .= '<br/>';
-  $message .= '<table rules="all" style="border-color: #666;" cellpadding="2">';
+  $message .= '<table rules="all" style="border-color:#000;" cellpadding="2">';
   $message .= '<thead>';
   $message .= '<tr>';
   $message .= '<th>Lager-Specijala</th>';
