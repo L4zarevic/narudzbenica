@@ -98,7 +98,7 @@ if (mail($to, $title, $message, $header)) {
     die(mysqli_error($conn));
 
   CloseCon($conn);
-  header('Location: ' . $_SERVER['HTTP_REFERER'].'?msg=1');
+  header('Location: ../narudzbenica/thanks.php');
   die();
 } else {
   header('Location: ' . $_SERVER['HTTP_REFERER'].'?msg=0');
