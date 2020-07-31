@@ -1,7 +1,5 @@
 <?php
 
-// session_start();
-
 if (is_null($_SESSION['prijavljen'])) {
   header('Location: ../narudzbenica/login.php');
 }
@@ -60,7 +58,7 @@ while ($row = mysqli_fetch_object($result)) {
   echo "<td>$row->tretman1</td>";
   echo "<td>$row->tretman2</td>";
   echo "<td><input name='napomena' class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
-  echo "<td><i onclick='deleteRow();' id='$row->ID'class='fas fa-trash'></i></td>";
+  echo "<td><i onclick='deleteRow();' id='$row->ID' title='Ukloni stavku' class='fas fa-trash'></i></td>";
   echo "</tr>";
 }
 echo "</tbody>";
@@ -76,9 +74,11 @@ if (isset($_REQUEST['msg'])) {
   if ($_REQUEST['msg'] == '0') {
     echo "<script src=\"js/alertify.min.js\"></script>";
     echo "<script type=\"text/javascript\"> alertify.error('Greška prilikom slanja');</script>";
+    echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
   } else if ($_REQUEST['msg'] == '1') {
     echo "<script src=\"js/alertify.min.js\"></script>";
     echo "<script type=\"text/javascript\">alertify.success('Narudžbenica je poslata');</script>";
+    echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
   }
 }
 

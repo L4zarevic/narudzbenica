@@ -128,7 +128,7 @@ include '../narudzbenica/modules/header.php';
           <h1 class="h3 mb-4 text-gray-800">Specijala</h1>
 
           <div class='tabelaSpecijala1'>
-            <form method="POST" action="../narudzbenica/dodajStavkuSpecijala-db.php" onsubmit="return checkForm()">
+            <form method="POST" action="../narudzbenica/addRowSpecial.php" onsubmit="return checkForm()">
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect1">Od / Os / Ou</label>

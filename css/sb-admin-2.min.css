@@ -266,9 +266,11 @@ th#poljeKolicine.tg-0lax {
 }
 .fas {
     font-size: 17px;
+	
 }
 .fas:hover {
     color: red;
+	cursor:pointer;
 }
 .leftColumnSpec {
     float: left;
