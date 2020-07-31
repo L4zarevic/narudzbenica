@@ -279,6 +279,7 @@ include '../narudzbenica/modules/header.php';
                     <option>74</option>
                     <option>75</option>
                   </select>
+                  
                   <select name="precnik2" title="Unesite prečnik" class="form-control" id="select7">
                     <option></option>
                     <option>50</option>
