@@ -587,12 +587,11 @@ include '../narudzbenica/modules/header.php';
           },
           error: function() {
             location.reload();
+            window.location.href = "1.50_Transition_HMC.php?msg=2";
           }
         });
       }
     </script>
-
-
 </body>
 
 </html>

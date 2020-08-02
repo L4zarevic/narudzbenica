@@ -957,6 +957,7 @@ include '../narudzbenica/modules/header.php';
           },
           error: function() {
             location.reload();
+            window.location.href = "1.60_Transition_HMC.php?msg=2";
           }
         });
       }

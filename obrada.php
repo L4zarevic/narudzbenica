@@ -8,12 +8,6 @@ if (is_null($_SESSION['prijavljen'])) {
 include 'connection.php';
 $conn = OpenCon();
 
-
-// if (!$conn) {
-// 	header("Location:../narudzbenica/login.php?msg=2");
-// 	exit; 
-// }
-
 //normalizacija podataka
 $korisnickoIme = mysqli_real_escape_string($conn, $_POST['korisnickoIme']);
 $lozinka = mysqli_real_escape_string($conn, $_POST['lozinka']);

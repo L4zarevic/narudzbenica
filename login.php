@@ -11,7 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -32,16 +31,13 @@
 							if ($_REQUEST['msg'] == '1') {
 								echo "<script src=\"js/alertify.min.js\"></script>";
 								echo "<script type=\"text/javascript\">alertify.error('Neuspiješno logovanje');</script>";
-								echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
 							}
 							if ($_REQUEST['msg'] == '2') {
 								echo "<script src=\"js/alertify.min.js\"></script>";
 								echo "<script type=\"text/javascript\">alertify.alert('Prekid konekcije','Provjerite Vašu internet konekciju i pokušajte ponovo da se ulogujete na Vaš korisnički nalog. Ukoliko se problem ponavlja kontaktirajte nas na info@mojaoptika.com');</script>";
-								echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
 							}
 						}
-
-						//echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
+						echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
 						?>
 
 					</div>

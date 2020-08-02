@@ -586,6 +586,7 @@ include '../narudzbenica/modules/header.php';
           },
           error: function() {
             location.reload();
+            window.location.href = "1.53_Trivex_HMC.php?msg=2";
           }
         });
       }

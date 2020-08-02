@@ -1655,6 +1655,7 @@ include '../narudzbenica/modules/header.php';
           },
           error: function() {
             location.reload();
+            window.location.href = "1.60_UV420_AB.php?msg=2";
           }
         });
       }

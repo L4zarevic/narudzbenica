@@ -71,11 +71,11 @@ echo " <p id='info'>U tabeli je moguće unijeti samo Napomenu i da bi potvrditil
 
 
 if (isset($_REQUEST['msg'])) {
-  if ($_REQUEST['msg'] == '0') {
+  if ($_REQUEST['msg'] == '1') {
     echo "<script src=\"js/alertify.min.js\"></script>";
     echo "<script type=\"text/javascript\"> alertify.error('Greška prilikom slanja');</script>";
     echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
-  } else if ($_REQUEST['msg'] == '1') {
+  } else if ($_REQUEST['msg'] == '0') {
     echo "<script src=\"js/alertify.min.js\"></script>";
     echo "<script type=\"text/javascript\">alertify.success('Narudžbenica je poslata');</script>";
     echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";

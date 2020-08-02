@@ -83,11 +83,11 @@ while ($red = mysqli_fetch_object($rezultat)) {
 }
 
 
-$upit = "insert into narudzbenica (IDKorisnika,lag_spec,vrsta_materijala,kolicina) values ('$idKorisnika','Lager', '$vrsta_materijala', '$kolicina')";
+$upit = "INSERT INTO narudzbenica (IDKorisnika,lag_spec,vrsta_materijala,kolicina) VALUES ('$idKorisnika','Lager', '$vrsta_materijala', '$kolicina')";
 
 $rezultat = mysqli_query($conn, $upit);
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));
 }
-
+header('Location: ' . $_SERVER['HTTP_REFERER'].'?msg=2');
 CloseCon($conn);

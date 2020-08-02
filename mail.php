@@ -84,7 +84,7 @@ if (mysqli_num_rows($result) > 0) {
   $message .= '</table>';
   $message .= '</body></html>';
 } else {
-  header('Location: ' . $_SERVER['HTTP_REFERER'].'?msg=0');
+  header('Location: ' . $_SERVER['HTTP_REFERER'].'?msg=1');
   echo "0 results";
 }
 
@@ -101,7 +101,7 @@ if (mail($to, $title, $message, $header)) {
   header('Location: ../narudzbenica/thanks.php');
   die();
 } else {
-  header('Location: ' . $_SERVER['HTTP_REFERER'].'?msg=0');
+  header('Location: ' . $_SERVER['HTTP_REFERER'].'?msg=1');
   echo "false";
 }
 
