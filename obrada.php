@@ -9,9 +9,10 @@ include 'connection.php';
 $conn = OpenCon();
 
 
-if (!$conn) {
-	die('Greška pri povezivanju s bazom');
-}
+// if (!$conn) {
+// 	header("Location:../narudzbenica/login.php?msg=2");
+// 	exit; 
+// }
 
 //normalizacija podataka
 $korisnickoIme = mysqli_real_escape_string($conn, $_POST['korisnickoIme']);
@@ -37,24 +38,24 @@ while ($red = mysqli_fetch_object($rezultat)) {
 
 //provjere
 if (!$korisnickoIme && !$lozinka) {
-	$greska = 1;
+	$error = 1;
 } else if (!$korisnickoIme) {
-	$greska = 1;
+	$error = 1;
 } else if (!$lozinka) {
-	$greska = 1;
+	$error = 1;
 } else {
 	if (($korisnickoIme == $user) && ($hash_password == $pass)) {
-		$greska = 0;
+		$error = 0;
 	} else {
-		$greska = 1;
+		$error = 1;
 	}
 }
-if ($greska == 1) {
-	$greska = 'Neuspiješno logovanje';
-	header("Location:login.php?msg=$greska");
+if ($error == 1) {
+	//$error = 'Neuspiješno logovanje';
+	header("Location:login.php?msg=1");
 	exit;
 } else {
-	$_SESSION['prijavljen'] = $idKorisnika."#".$imeKorisnika;
+	$_SESSION['prijavljen'] = $idKorisnika . "#" . $imeKorisnika;
 
 	die(header('Location:../narudzbenica/index.php'));
 }

@@ -4,11 +4,10 @@ session_start();
 if (is_null($_SESSION['prijavljen'])) {
 	header('Location: ../narudzbenica/login.php');
 }
-header("Content-Type: application/json", true);
 
-require_once 'connection.php';
-
+include 'connection.php';
 $conn = OpenCon();
+
 
 $korisnik = $_SESSION['prijavljen'];
 $ar = explode("#", $korisnik, 2);
@@ -92,4 +91,3 @@ if (mysqli_error($conn)) {
 }
 
 CloseCon($conn);
-
