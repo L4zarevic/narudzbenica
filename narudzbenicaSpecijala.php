@@ -64,7 +64,9 @@ while ($row = mysqli_fetch_object($result)) {
 echo "</tbody>";
 echo "</table>";
 echo "</br>";
-echo  "<a  onClick=\"javascript: return confirm('Želite da potvrdite narudžbu? ');\" href='../narudzbenica/mail.php' class='btn btn-success'>Potvrdi narudžbu</a>";
+if (mysqli_num_rows($result) > 0) {
+  echo  "<a  onClick=\"javascript: return confirm('Želite da potvrdite narudžbu? ');\" href='../narudzbenica/mail.php' class='btn btn-success'>Potvrdi narudžbu</a>";
+}
 
 echo " <p id='info'>U tabeli je moguće unijeti samo Napomenu i da bi potvrditili unos pritisnite ENTER na tastaturi.</br> Da bi izbrisali stavku u tabeli kliknite na ikonicu kantice <i class='fas fa-trash'></i></p>";
 
