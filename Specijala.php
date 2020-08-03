@@ -199,16 +199,16 @@ include '../narudzbenica/modules/header.php';
                   <label for="exampleFormControlSelect2">Index</label>
                   <select name="index" title="Unesite Index prelamanja" class="form-control" id="select4">
                     <option value="0"></option>
-                    <option>+1.50</option>
-                    <option>+1.53</option>
-                    <option>+1.56</option>
-                    <option>+1.59</option>
-                    <option>+1.60</option>
-                    <option>+1.67</option>
-                    <option>+1.70</option>
-                    <option>+1.74</option>
-                    <option>+1.80</option>
-                    <option>+1.90</option>
+                    <option>1.50</option>
+                    <option>1.53</option>
+                    <option>1.56</option>
+                    <option>1.59</option>
+                    <option>1.60</option>
+                    <option>1.67</option>
+                    <option>1.70</option>
+                    <option>1.74</option>
+                    <option>1.80</option>
+                    <option>1.90</option>
                   </select>
                 </div>
               </div>
@@ -318,62 +318,62 @@ include '../narudzbenica/modules/header.php';
                   <label for="exampleFormControlSelect2">SPH</label>
                   <select name="sph" title="Unesite Svernu dioptriju sa popisa" class="form-control" id="select8">
                     <option></option>
-                    <option>0.25</option>
-                    <option>0.50</option>
-                    <option>0.75</option>
-                    <option>1.00</option>
-                    <option>1.25</option>
-                    <option>1.50</option>
-                    <option>1.75</option>
-                    <option>2.00</option>
-                    <option>2.25</option>
-                    <option>2.50</option>
-                    <option>2.75</option>
-                    <option>3.00</option>
-                    <option>3.25</option>
-                    <option>3.50</option>
-                    <option>3.75</option>
-                    <option>4.00</option>
-                    <option>4.25</option>
-                    <option>4.50</option>
-                    <option>4.75</option>
-                    <option>5.00</option>
-                    <option>5.25</option>
-                    <option>5.50</option>
-                    <option>5.75</option>
-                    <option>6.00</option>
-                    <option>6.25</option>
-                    <option>6.50</option>
-                    <option>6.75</option>
-                    <option>7.00</option>
-                    <option>7.25</option>
-                    <option>7.50</option>
-                    <option>7.75</option>
-                    <option>8.00</option>
-                    <option>8.25</option>
-                    <option>8.50</option>
-                    <option>8.75</option>
-                    <option>9.00</option>
-                    <option>9.25</option>
-                    <option>9.50</option>
-                    <option>9.75</option>
-                    <option>10.00</option>
-                    <option>10.25</option>
-                    <option>10.50</option>
-                    <option>10.75</option>
-                    <option>11.00</option>
-                    <option>11.25</option>
-                    <option>11.50</option>
-                    <option>11.75</option>
-                    <option>12.00</option>
-                    <option>12.50</option>
-                    <option>13.00</option>
-                    <option>13.50</option>
-                    <option>14.00</option>
-                    <option>14.50</option>
-                    <option>15.00</option>
-                    <option>15.50</option>
-                    <option>16.00</option>
+                    <option>+0.25</option>
+                    <option>+0.50</option>
+                    <option>+0.75</option>
+                    <option>+1.00</option>
+                    <option>+1.25</option>
+                    <option>+1.50</option>
+                    <option>+1.75</option>
+                    <option>+2.00</option>
+                    <option>+2.25</option>
+                    <option>+2.50</option>
+                    <option>+2.75</option>
+                    <option>+3.00</option>
+                    <option>+3.25</option>
+                    <option>+3.50</option>
+                    <option>+3.75</option>
+                    <option>+4.00</option>
+                    <option>+4.25</option>
+                    <option>+4.50</option>
+                    <option>+4.75</option>
+                    <option>+5.00</option>
+                    <option>+5.25</option>
+                    <option>+5.50</option>
+                    <option>+5.75</option>
+                    <option>+6.00</option>
+                    <option>+6.25</option>
+                    <option>+6.50</option>
+                    <option>+6.75</option>
+                    <option>+7.00</option>
+                    <option>+7.25</option>
+                    <option>+7.50</option>
+                    <option>+7.75</option>
+                    <option>+8.00</option>
+                    <option>+8.25</option>
+                    <option>+8.50</option>
+                    <option>+8.75</option>
+                    <option>+9.00</option>
+                    <option>+9.25</option>
+                    <option>+9.50</option>
+                    <option>+9.75</option>
+                    <option>+10.00</option>
+                    <option>+10.25</option>
+                    <option>+10.50</option>
+                    <option>+10.75</option>
+                    <option>+11.00</option>
+                    <option>+11.25</option>
+                    <option>+11.50</option>
+                    <option>+11.75</option>
+                    <option>+12.00</option>
+                    <option>+12.50</option>
+                    <option>+13.00</option>
+                    <option>+13.50</option>
+                    <option>+14.00</option>
+                    <option>+14.50</option>
+                    <option>+15.00</option>
+                    <option>+15.50</option>
+                    <option>+16.00</option>
                     <option>-0.25</option>
                     <option>-0.50</option>
                     <option>-0.75</option>
@@ -472,30 +472,30 @@ include '../narudzbenica/modules/header.php';
                   <label for="exampleFormControlSelect2">CYL</label>
                   <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="select9">
                     <option></option>
-                    <option>0.25</option>
-                    <option>0.50</option>
-                    <option>0.75</option>
-                    <option>1.00</option>
-                    <option>1.25</option>
-                    <option>1.50</option>
-                    <option>1.75</option>
-                    <option>2.00</option>
-                    <option>2.25</option>
-                    <option>2.50</option>
-                    <option>2.75</option>
-                    <option>3.00</option>
-                    <option>3.25</option>
-                    <option>3.50</option>
-                    <option>3.75</option>
-                    <option>4.00</option>
-                    <option>4.25</option>
-                    <option>4.50</option>
-                    <option>4.75</option>
-                    <option>5.00</option>
-                    <option>5.25</option>
-                    <option>5.50</option>
-                    <option>5.75</option>
-                    <option>6.00</option>
+                    <option>+0.25</option>
+                    <option>+0.50</option>
+                    <option>+0.75</option>
+                    <option>+1.00</option>
+                    <option>+1.25</option>
+                    <option>+1.50</option>
+                    <option>+1.75</option>
+                    <option>+2.00</option>
+                    <option>+2.25</option>
+                    <option>+2.50</option>
+                    <option>+2.75</option>
+                    <option>+3.00</option>
+                    <option>+3.25</option>
+                    <option>+3.50</option>
+                    <option>+3.75</option>
+                    <option>+4.00</option>
+                    <option>+4.25</option>
+                    <option>+4.50</option>
+                    <option>+4.75</option>
+                    <option>+5.00</option>
+                    <option>+5.25</option>
+                    <option>+5.50</option>
+                    <option>+5.75</option>
+                    <option>+6.00</option>
                     <option>-0.25</option>
                     <option>-0.50</option>
                     <option>-0.75</option>
@@ -538,20 +538,20 @@ include '../narudzbenica/modules/header.php';
                   <label for="exampleFormControlSelect2">Add / Dig.</label>
                   <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select10">
                     <option></option>
-                    <option>+0.75</option>
-                    <option>+1.00</option>
-                    <option>+1.25</option>
-                    <option>+1.50</option>
-                    <option>+1.75</option>
-                    <option>+2.00</option>
-                    <option>+2.25</option>
-                    <option>+2.50</option>
-                    <option>+2.75</option>
-                    <option>+3.00</option>
-                    <option>+3.25</option>
-                    <option>+3.50</option>
-                    <option>+3.75</option>
-                    <option>+4.00</option>
+                    <option>0.75</option>
+                    <option>1.00</option>
+                    <option>1.25</option>
+                    <option>1.50</option>
+                    <option>1.75</option>
+                    <option>2.00</option>
+                    <option>2.25</option>
+                    <option>2.50</option>
+                    <option>2.75</option>
+                    <option>3.00</option>
+                    <option>3.25</option>
+                    <option>3.50</option>
+                    <option>3.75</option>
+                    <option>4.00</option>
                   </select>
                 </div>
               </div>
