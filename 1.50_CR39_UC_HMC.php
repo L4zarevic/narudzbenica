@@ -41,7 +41,7 @@
                             <table class="table table-bordered table-condensed">
                                 <tbody>
                                     <tr>
-                                        <td class="poljeTabele">Sph+</td>
+                                        <td class="poljeTabele">Sph</td>
                                         <td class="poljeTabele">0.00</td>
                                         <td class="poljeTabele">0.25</td>
                                         <td class="poljeTabele">0.50</td>
@@ -316,8 +316,21 @@
                                         <td class="poljeTabele"><input type="text" id="188" class="form-control" /></td>
                                         <td class="poljeTabele"><input type="text" id="189" class="form-control" /></td>
                                     </tr>
+                                    <tr>
+                                        <td class="poljeTabele">Sph</td>
+                                        <td class="poljeTabele">0.00</td>
+                                        <td class="poljeTabele">0.25</td>
+                                        <td class="poljeTabele">0.50</td>
+                                        <td class="poljeTabele">0.75</td>
+                                        <td class="poljeTabele">1.00</td>
+                                        <td class="poljeTabele">1.25</td>
+                                        <td class="poljeTabele">1.50</td>
+                                        <td class="poljeTabele">1.75</td>
+                                        <td class="poljeTabele">2.00</td>
+                                    </tr>
                                 </tbody>
                             </table>
+                            <h6 id="cyl2">+Cyl</h6>
                     </div>
                     <div class="tabela2">
                         <h5 id>1.50 CR39 HMC 55mm</h6>
@@ -325,7 +338,7 @@
                             <table class="table table-bordered table-condensed">
                                 <tbody>
                                     <tr>
-                                        <td class="poljeTabele">Sph+</td>
+                                        <td class="poljeTabele">Sph</td>
                                         <td class="poljeTabele">0.00</td>
                                         <td class="poljeTabele">0.25</td>
                                         <td class="poljeTabele">0.50</td>
@@ -600,8 +613,21 @@
                                         <td class='poljeTabele'><input type='text' id='377' class='form-control' /></td>
                                         <td class='poljeTabele'><input type='text' id='378' class='form-control' /></td>
                                     </tr>
+                                    <tr>
+                                        <td class="poljeTabele">Sph</td>
+                                        <td class="poljeTabele">0.00</td>
+                                        <td class="poljeTabele">0.25</td>
+                                        <td class="poljeTabele">0.50</td>
+                                        <td class="poljeTabele">0.75</td>
+                                        <td class="poljeTabele">1.00</td>
+                                        <td class="poljeTabele">1.25</td>
+                                        <td class="poljeTabele">1.50</td>
+                                        <td class="poljeTabele">1.75</td>
+                                        <td class="poljeTabele">2.00</td>
+                                    </tr>
                                 </tbody>
                             </table>
+                            <h6 id="cyl2">+Cyl</h6>
                     </div>
                     <div class="tabela3">
                         <h5 id>1.50 CR39 UC 60mm</h6>
@@ -609,7 +635,7 @@
                             <table class="table table-bordered table-condensed3">
                                 <tbody>
                                     <tr>
-                                        <td class="poljeTabele">Sph+</td>
+                                        <td class="poljeTabele">Sph</td>
                                         <td class="poljeTabele">0.00</td>
                                         <td class="poljeTabele">0.25</td>
                                         <td class="poljeTabele">0.50</td>
@@ -860,8 +886,21 @@
                                         <td class='poljeTabele'><input type='text' id='548' class='form-control' /></td>
                                         <td class='poljeTabele'><input type='text' id='549' class='form-control' /></td>
                                     </tr>
+                                    <tr>
+                                        <td class="poljeTabele">Sph</td>
+                                        <td class="poljeTabele">0.00</td>
+                                        <td class="poljeTabele">0.25</td>
+                                        <td class="poljeTabele">0.50</td>
+                                        <td class="poljeTabele">0.75</td>
+                                        <td class="poljeTabele">1.00</td>
+                                        <td class="poljeTabele">1.25</td>
+                                        <td class="poljeTabele">1.50</td>
+                                        <td class="poljeTabele">1.75</td>
+                                        <td class="poljeTabele">2.00</td>
+                                    </tr>
                                 </tbody>
                             </table>
+                            <h6 id="cyl2">+Cyl</h6>
                     </div>
                     <div class="tabela4">
                         <h5>1.50 CR39 HMC 60mm</h6>
@@ -869,7 +908,7 @@
                             <table class="table table-bordered table-condensed4">
                                 <tbody>
                                     <tr>
-                                        <td class="poljeTabele">Sph+</td>
+                                        <td class="poljeTabele">Sph</td>
                                         <td class="poljeTabele">0.00</td>
                                         <td class="poljeTabele">0.25</td>
                                         <td class="poljeTabele">0.50</td>
@@ -1120,8 +1159,21 @@
                                         <td class='poljeTabele'><input type='text' id='719' class='form-control' /></td>
                                         <td class='poljeTabele'><input type='text' id='720' class='form-control' /></td>
                                     </tr>
+                                    <tr>
+                                        <td class="poljeTabele">Sph</td>
+                                        <td class="poljeTabele">0.00</td>
+                                        <td class="poljeTabele">0.25</td>
+                                        <td class="poljeTabele">0.50</td>
+                                        <td class="poljeTabele">0.75</td>
+                                        <td class="poljeTabele">1.00</td>
+                                        <td class="poljeTabele">1.25</td>
+                                        <td class="poljeTabele">1.50</td>
+                                        <td class="poljeTabele">1.75</td>
+                                        <td class="poljeTabele">2.00</td>
+                                    </tr>
                                 </tbody>
                             </table>
+                            <h6 id="cyl2">+Cyl</h6>
                     </div>
                     <div class="tabela5">
                         <h5>1.50 CR39 UC 65mm</h6>
@@ -1129,7 +1181,7 @@
                             <table class="table table-bordered table-condensed5">
                                 <tbody>
                                     <tr>
-                                        <td class="poljeTabele">Sph+</td>
+                                        <td class="poljeTabele">Sph</td>
                                         <td class="poljeTabele">0.00</td>
                                         <td class="poljeTabele">0.25</td>
                                         <td class="poljeTabele">0.50</td>
@@ -1992,8 +2044,29 @@
                                         <td class='poljeTabele'><input type='text' id='1416' class='form-control' /></td>
                                         <td class='poljeTabele'><input type='text' id='1417' class='form-control' /></td>
                                     </tr>
+                                    <tr>
+                                        <td class="poljeTabele">Sph</td>
+                                        <td class="poljeTabele">0.00</td>
+                                        <td class="poljeTabele">0.25</td>
+                                        <td class="poljeTabele">0.50</td>
+                                        <td class="poljeTabele">0.75</td>
+                                        <td class="poljeTabele">1.00</td>
+                                        <td class="poljeTabele">1.25</td>
+                                        <td class="poljeTabele">1.50</td>
+                                        <td class="poljeTabele">1.75</td>
+                                        <td class="poljeTabele">2.00</td>
+                                        <td class="poljeTabele">2.25</td>
+                                        <td class="poljeTabele">2.50</td>
+                                        <td class="poljeTabele">2.75</td>
+                                        <td class="poljeTabele">3.00</td>
+                                        <td class="poljeTabele">3.25</td>
+                                        <td class="poljeTabele">3.50</td>
+                                        <td class="poljeTabele">3.75</td>
+                                        <td class="poljeTabele">4.00</td>
+                                    </tr>
                                 </tbody>
                             </table>
+                            <h6 id="cyl2">+Cyl</h6>
                     </div>
                     <div class="tabela6">
                         <h5>1.50 CR39 HMC 65mm</h6>
@@ -2001,7 +2074,7 @@
                             <table class="table table-bordered table-condensed6">
                                 <tbody>
                                     <tr>
-                                        <td class="poljeTabele">Sph+</td>
+                                        <td class="poljeTabele">Sph</td>
                                         <td class="poljeTabele">0.00</td>
                                         <td class="poljeTabele">0.25</td>
                                         <td class="poljeTabele">0.50</td>
@@ -2864,8 +2937,29 @@
                                         <td class='poljeTabele'><input type='text' id='2113' class='form-control' /></td>
                                         <td class='poljeTabele'><input type='text' id='2114' class='form-control' /></td>
                                     </tr>
+                                    <tr>
+                                        <td class="poljeTabele">Sph</td>
+                                        <td class="poljeTabele">0.00</td>
+                                        <td class="poljeTabele">0.25</td>
+                                        <td class="poljeTabele">0.50</td>
+                                        <td class="poljeTabele">0.75</td>
+                                        <td class="poljeTabele">1.00</td>
+                                        <td class="poljeTabele">1.25</td>
+                                        <td class="poljeTabele">1.50</td>
+                                        <td class="poljeTabele">1.75</td>
+                                        <td class="poljeTabele">2.00</td>
+                                        <td class="poljeTabele">2.25</td>
+                                        <td class="poljeTabele">2.50</td>
+                                        <td class="poljeTabele">2.75</td>
+                                        <td class="poljeTabele">3.00</td>
+                                        <td class="poljeTabele">3.25</td>
+                                        <td class="poljeTabele">3.50</td>
+                                        <td class="poljeTabele">3.75</td>
+                                        <td class="poljeTabele">4.00</td>
+                                    </tr>
                                 </tbody>
                             </table>
+                            <h6 id="cyl2">+Cyl</h6>
                     </div>
                     <div class="tabela7">
                         <h5>1.50 CR39 UC 70mm</h5>
@@ -2873,7 +2967,7 @@
                         <table class="table table-bordered table-condensed7">
                             <tbody>
                                 <tr>
-                                    <td class="poljeTabele">Sph+</td>
+                                    <td class="poljeTabele">Sph</td>
                                     <td class="poljeTabele">0.00</td>
                                     <td class="poljeTabele">0.25</td>
                                     <td class="poljeTabele">0.50</td>
@@ -3074,7 +3168,7 @@
                                 </tr>
                                 <tr>
                                     <td class="poljeTabele">0.00</td>
-                                    <td class='poljeTabele'></td>
+                                    <td class='poljeTabele'><input disabled class='form-control' /></td>
                                     <td class='poljeTabele'><input type='text' id='2231' class='form-control' /></td>
                                     <td class='poljeTabele'><input type='text' id='2232' class='form-control' /></td>
                                     <td class='poljeTabele'><input type='text' id='2233' class='form-control' /></td>
@@ -3084,8 +3178,21 @@
                                     <td class='poljeTabele'><input type='text' id='2237' class='form-control' /></td>
                                     <td class='poljeTabele'><input type='text' id='2238' class='form-control' /></td>
                                 </tr>
+                                <tr>
+                                    <td class="poljeTabele">Sph</td>
+                                    <td class="poljeTabele">0.00</td>
+                                    <td class="poljeTabele">0.25</td>
+                                    <td class="poljeTabele">0.50</td>
+                                    <td class="poljeTabele">0.75</td>
+                                    <td class="poljeTabele">1.00</td>
+                                    <td class="poljeTabele">1.25</td>
+                                    <td class="poljeTabele">1.50</td>
+                                    <td class="poljeTabele">1.75</td>
+                                    <td class="poljeTabele">2.00</td>
+                                </tr>
                             </tbody>
                         </table>
+                        <h6 id="cyl2">+Cyl</h6>
                     </div>
                     <div class="tabela8">
                         <h5>1.50 CR39 HMC 70mm</h5>
@@ -3093,7 +3200,7 @@
                         <table class="table table-bordered table-condensed8">
                             <tbody>
                                 <tr>
-                                    <td class="poljeTabele">Sph+</td>
+                                    <td class="poljeTabele">Sph</td>
                                     <td class="poljeTabele">0.00</td>
                                     <td class="poljeTabele">0.25</td>
                                     <td class="poljeTabele">0.50</td>
@@ -3294,7 +3401,7 @@
                                 </tr>
                                 <tr>
                                     <td class="poljeTabele">0.00</td>
-                                    <td class='poljeTabele'></td>
+                                    <td class='poljeTabele'><input disabled class='form-control' /></td>
                                     <td class='poljeTabele'><input type='text' id='2355' class='form-control' /></td>
                                     <td class='poljeTabele'><input type='text' id='2356' class='form-control' /></td>
                                     <td class='poljeTabele'><input type='text' id='2357' class='form-control' /></td>
@@ -3304,8 +3411,21 @@
                                     <td class='poljeTabele'><input type='text' id='2361' class='form-control' /></td>
                                     <td class='poljeTabele'><input type='text' id='2362' class='form-control' /></td>
                                 </tr>
+                                <tr>
+                                    <td class="poljeTabele">Sph</td>
+                                    <td class="poljeTabele">0.00</td>
+                                    <td class="poljeTabele">0.25</td>
+                                    <td class="poljeTabele">0.50</td>
+                                    <td class="poljeTabele">0.75</td>
+                                    <td class="poljeTabele">1.00</td>
+                                    <td class="poljeTabele">1.25</td>
+                                    <td class="poljeTabele">1.50</td>
+                                    <td class="poljeTabele">1.75</td>
+                                    <td class="poljeTabele">2.00</td>
+                                </tr>
                             </tbody>
                         </table>
+                        <h6 id="cyl2">+Cyl</h6>
                     </div>
                     <h1 id="naslovNarudzbenice">Narudžbenica</h1>
                     <hr>
@@ -3316,6 +3436,20 @@
         <!-- Footer --> <?php include '../narudzbenica/modules/footer.php'; ?>
         <!-- End of Footer -->
         <script type="text/javascript">
+            var $currentTable;
+            $('td').on('click', function() {
+                if ($currentTable != null) {
+                    $currentTable.find('td').removeClass('selected');
+                }
+                $currentTable = $(this).closest('table');
+                var index = $(this).index();
+                $currentTable.find('td').removeClass('selected');
+                $currentTable.find('tr').each(function() {
+                    $(this).find('td').eq(index).addClass('selected');
+                });
+            });
+
+
             //Funkcija za slanje podataka u tabelu naruzdbenica
             function add(a) {
                 $.ajax({
