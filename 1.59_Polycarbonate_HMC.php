@@ -135,7 +135,7 @@ include '../narudzbenica/modules/header.php';
             <table class="table table-bordered table-condensed">
               <tbody>
                 <tr>
-                  <td class="poljeTabele">Sph+</td>
+                  <td class="poljeTabele">Sph</td>
                   <td class="poljeTabele">0.00</td>
                   <td class="poljeTabele">0.25</td>
                   <td class="poljeTabele">0.50</td>
@@ -366,6 +366,18 @@ include '../narudzbenica/modules/header.php';
                   <td class='poljeTabele'><input type='text' id='123' class='form-control' /></td>
                   <td class='poljeTabele'><input type='text' id='124' class='form-control' /></td>
                 </tr>
+                <tr>
+                  <td class="poljeTabele">Sph</td>
+                  <td class="poljeTabele">0.00</td>
+                  <td class="poljeTabele">0.25</td>
+                  <td class="poljeTabele">0.50</td>
+                  <td class="poljeTabele">0.75</td>
+                  <td class="poljeTabele">1.00</td>
+                  <td class="poljeTabele">1.25</td>
+                  <td class="poljeTabele">1.50</td>
+                  <td class="poljeTabele">1.75</td>
+                  <td class="poljeTabele">2.00</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -376,7 +388,7 @@ include '../narudzbenica/modules/header.php';
             <table class="table table-bordered table-condensed">
               <tbody>
                 <tr>
-                  <td class="poljeTabele">Sph+</td>
+                  <td class="poljeTabele">Sph</td>
                   <td class="poljeTabele">0.00</td>
                   <td class="poljeTabele">0.25</td>
                   <td class="poljeTabele">0.50</td>
@@ -687,6 +699,18 @@ include '../narudzbenica/modules/header.php';
                   <td class='poljeTabele'><input type='text' id='340' class='form-control' /></td>
                   <td class='poljeTabele'><input type='text' id='341' class='form-control' /></td>
                 </tr>
+                <tr>
+                  <td class="poljeTabele">Sph</td>
+                  <td class="poljeTabele">0.00</td>
+                  <td class="poljeTabele">0.25</td>
+                  <td class="poljeTabele">0.50</td>
+                  <td class="poljeTabele">0.75</td>
+                  <td class="poljeTabele">1.00</td>
+                  <td class="poljeTabele">1.25</td>
+                  <td class="poljeTabele">1.50</td>
+                  <td class="poljeTabele">1.75</td>
+                  <td class="poljeTabele">2.00</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -710,6 +734,18 @@ include '../narudzbenica/modules/header.php';
     <!-- End of Footer -->
 
     <script type="text/javascript">
+     var $currentTable;
+      $('td').on('click', function() {
+        if ($currentTable != null) {
+          $currentTable.find('td').removeClass('selected');
+        }
+        $currentTable = $(this).closest('table');
+        var index = $(this).index();
+        $currentTable.find('td').removeClass('selected');
+        $currentTable.find('tr').each(function() {
+          $(this).find('td').eq(index).addClass('selected');
+        });
+      });
       //Funkcija za slanje podataka u tabelu naruzdbenica
       function add(inputVal) {
         $.ajax({

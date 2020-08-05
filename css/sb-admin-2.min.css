@@ -197,23 +197,25 @@ input.form-control {
 input.form-control:focus {
     box-shadow: none;
     border: 1px solid red !important;
+	outline: none;
 }
 td {
     margin: 0 !important;
     padding: 0 !important;
     text-align: center;
+	height:100%;
 }
 td.poljeTabele {
     font-size: 9px;
 	font-weight:bold;
+	padding:0px; 
+    margin:0px;
+	border-width:100%;
 
 }
 th {
     font-size: 13px;
 	
-	position: sticky;
-    position: -webkit-sticky;
-    top: 200px;
 }
 #cyl {
 	font-size: 13px;
