@@ -380,6 +380,7 @@ include '../narudzbenica/modules/header.php';
                 </tr>
               </tbody>
             </table>
+            <h6 id="cyl2">+Cyl</h6>
           </div>
 
           <div class="tabela2">
@@ -713,6 +714,7 @@ include '../narudzbenica/modules/header.php';
                 </tr>
               </tbody>
             </table>
+            <h6 id="cyl2">+Cyl</h6>
           </div>
 
           <h1 id="naslovNarudzbenice">Narudžbenica</h1>
@@ -734,18 +736,6 @@ include '../narudzbenica/modules/header.php';
     <!-- End of Footer -->
 
     <script type="text/javascript">
-     var $currentTable;
-      $('td').on('click', function() {
-        if ($currentTable != null) {
-          $currentTable.find('td').removeClass('selected');
-        }
-        $currentTable = $(this).closest('table');
-        var index = $(this).index();
-        $currentTable.find('td').removeClass('selected');
-        $currentTable.find('tr').each(function() {
-          $(this).find('td').eq(index).addClass('selected');
-        });
-      });
       //Funkcija za slanje podataka u tabelu naruzdbenica
       function add(inputVal) {
         $.ajax({

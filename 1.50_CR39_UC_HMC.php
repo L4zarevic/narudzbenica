@@ -38,7 +38,7 @@
                     <div class="tabela1">
                         <h5 id>1.50 CR39 UC 55mm</h6>
                             <h6 id="cyl">+Cyl</h6>
-                            <table class="table table-bordered table-condensed">
+                            <table class="table table-bordered table-condensed" >
                                 <tbody>
                                     <tr>
                                         <td class="poljeTabele">Sph</td>
@@ -3197,7 +3197,7 @@
                     <div class="tabela8">
                         <h5>1.50 CR39 HMC 70mm</h5>
                         <h6 id="cyl">+Cyl</h6>
-                        <table class="table table-bordered table-condensed8">
+                        <table class="table table-bordered table-condensed8" onclick='selectColumnRow();'>
                             <tbody>
                                 <tr>
                                     <td class="poljeTabele">Sph</td>
@@ -3436,20 +3436,8 @@
         <!-- Footer --> <?php include '../narudzbenica/modules/footer.php'; ?>
         <!-- End of Footer -->
         <script type="text/javascript">
-            var $currentTable;
-            $('td').on('click', function() {
-                if ($currentTable != null) {
-                    $currentTable.find('td').removeClass('selected');
-                }
-                $currentTable = $(this).closest('table');
-                var index = $(this).index();
-                $currentTable.find('td').removeClass('selected');
-                $currentTable.find('tr').each(function() {
-                    $(this).find('td').eq(index).addClass('selected');
-                });
-            });
-
-
+        highlight();
+            
             //Funkcija za slanje podataka u tabelu naruzdbenica
             function add(a) {
                 $.ajax({

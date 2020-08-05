@@ -842,6 +842,7 @@ include '../narudzbenica/modules/header.php';
                   </tr>
                 </tbody>
               </table>
+              <h6 id="cyl2">+Cyl</h6>
           </div>
 
           <!-- Tabela 6 -->
@@ -1661,6 +1662,7 @@ include '../narudzbenica/modules/header.php';
                   </tr>
                 </tbody>
               </table>
+              <h6 id="cyl2">+Cyl</h6>
           </div>
 
           <h1 id="naslovNarudzbenice">Narudžbenica</h1>
@@ -1682,37 +1684,8 @@ include '../narudzbenica/modules/header.php';
     <!-- End of Footer -->
 
     <script type="text/javascript">
-      var $currentTable;
-      var $row;
-      $('td').on('click', function() {
-        if ($currentTable != null) {
-          $currentTable.find('td').removeClass('selected');
-          $row.removeClass('selected');
-        }
-        $currentTable = $(this).closest('table');
-        $row = $(this).closest('tr');
-        var index = $(this).index();
+      
 
-        //clean
-        $currentTable.find('td').removeClass('selected');
-
-
-        //select row if you want use js
-        $currentTable.find('tr').removeClass('selected');
-        $row.addClass('selected');
-        //$currentTable.find('tr').removeClass('selected');
-        //select column
-
-
-
-        //select column
-        $currentTable.find('tr:first-child').each(function() {
-          $(this).find('td').eq(index).addClass('selected');
-        });
-        $currentTable.find('tr:last-child').each(function() {
-          $(this).find('td').eq(index).addClass('selected');
-        });
-      });
       //Funkcija za slanje podataka u tabelu naruzdbenica
       function add(inputVal) {
         $.ajax({
