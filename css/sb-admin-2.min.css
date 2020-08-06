@@ -230,6 +230,19 @@ th {
 	margin-top:-3%;
 }
 
+#cyl3 {
+	font-size: 13px;
+    width: 50%;
+    margin: 0 auto;
+	margin-top:-50%;
+}
+#cyl4 {
+	font-size: 13px;
+    width: 50%;
+    margin: 0 auto;
+	margin-top:-70%;
+}
+
 .narudzbenica-tabela {
     background: #fff;
     text-align: center;
