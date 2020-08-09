@@ -345,14 +345,20 @@ img#checkMark {
 .thankYou h2{text-align:center}.thankYou h3{text-align:center} 
 	#homeButton{margin-left:40%;margin-right:40%;}
 	
-	#select6{
-		display:inline;
-		width:25%;
+	
+	#labelPrecnik{
+		display:block;
 	}
 	
-	#select7{
-		display:inline;
-		width:25%;
+	select#select7.form-control{
+		display:inline-block;
+		width:45% !important;
+		margin-right:5%;
+	}
+	
+	select#select8.form-control{
+		display:inline-block;
+		width:45% !important;
 	}
 	
 .selected{ background-color: red; color:white;}

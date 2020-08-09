@@ -20,6 +20,7 @@ echo "<div class='table-wrapper-scroll-y'>
     <th class='tg-0lax'>Lager-Specijala</th>
     <th class='tg-0lax'>Od/Os/Ou</th>
     <th class='tg-0lax'>Vrsta sočiva</th>
+    <th class='tg-0lax'>Dizajn</th>
     <th class='tg-0lax'>Visina ugradnje</th>
     <th class='tg-0lax'>Baza</th>
     <th class='tg-0lax'>Index</th>
@@ -44,6 +45,7 @@ while ($row = mysqli_fetch_object($result)) {
   echo "<td>$row->lag_spec</td>";
   echo "<td>$row->od_os_ou</td>";
   echo "<td>$row->vrsta_sociva</td>";
+  echo "<td>$row->dizajn</td>";
   echo "<td>$row->visina</td>";
   echo "<td>$row->baza</td>";
   echo "<td>$row->indeks</td>";
@@ -68,7 +70,7 @@ if (mysqli_num_rows($result) > 0) {
   echo  "<a  onClick=\"javascript: return confirm('Želite da potvrdite narudžbu? ');\" href='../narudzbenica/mail.php' class='btn btn-success'>Potvrdi narudžbu</a>";
 }
 
-echo " <p id='info'>U tabeli je moguće unijeti samo Napomenu i da bi potvrditili unos pritisnite ENTER na tastaturi.</br> Da bi izbrisali stavku u tabeli kliknite na ikonicu kantice <i class='fas fa-trash'></i></p>";
+echo " <p id='info'>U tabeli je moguće unijeti samo Napomenu i da bi potvrdili unos pritisnite ENTER na tastaturi.</br> Da bi izbrisali stavku u tabeli kliknite na ikonicu kantice <i class='fas fa-trash'></i></p>";
 
 
 

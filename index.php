@@ -143,15 +143,15 @@ include '../narudzbenica/modules/header.php';
               <h5>Uputstvo za narudžbenicu</h5>
               <p>Da bi kreirali željenu narudžbenicu potrebno je:</p>
               <p>U jezičku lijevo izabrati iz ponude Lagerska stakla ili Specijala</p>
-              <p>Kod "Lagerska stakla" dobićete padajuću listu sa indexima i materijalima, nakon čega je potrebno klikom izabrati željeni index.</p>
+              <p>Kod "Lagerska stakla" dobićete padajuću listu sa indexima i materijalima, nakon čega je potrebno izabrati željeni index.</p>
               <p>Da bi definisali potrebnu količinu određene dioptrije, potrebno je u polje grafikona unijeti željenu količinu, nakon čega je potrebno pritisnuti ENTER na tastaturi radi potvrde.</p>
               <p><strong>NAPOMENA: Stavke dodavati jednu po jednu</strong></p>
 
               <p>Sve željene stavke koje potvrdite nakon unosa biće prikazane u tabeli NARUDŽBENICA koja se nalazi na dnu stranice.</p>
-              <p>Unesene količine za stavke u tabeli NARUDŽBENICA nije moguće uređivati.</p>
+              <p><strong>Unesene količine za stavke u tabeli NARUDŽBENICA nije moguće uređivati.</strong></p>
               <p>U slučaju pogrešnog unosa, stavku iz tabele je potrebno ukloniti klikom na ikonicu kantice <i class='fas fa-trash'></i>, a nakon toga izvršiti ponovni unos iz grafikona.</p>
-              <p>Nakon što kreirate narudžbenicu, potrebno je kliknuti na dugme POTVRDI NARUDŽBU, nakog čega će vaša narudžbenica biti poslata veleprodaji M-Optic</p>
-              <p>Za sve dodatne informacije možete nas kontaktirati na email: <a href="mailto:info@mojaoptika.com">info@mojaoptika.com</a></p>
+              <p>Nakon što kreirate narudžbenicu, potrebno je kliknuti na dugme POTVRDI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji M-Optic</p>
+              <p>Za sve dodatne informacije u vezi aplikacije možete nas kontaktirati na email: <a href="mailto:info@mojaoptika.com">info@mojaoptika.com</a></p>
               </br>
             </div>
             <div class="companyInfo">
