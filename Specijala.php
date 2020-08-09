@@ -347,7 +347,7 @@ include '../narudzbenica/modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">SPH</label>
-                <select name="sph" title="Unesite Svernu dioptriju sa popisa" class="form-control" id="select9">
+                <select name="sph" title="Unesite Sfernu dioptriju sa popisa" class="form-control" id="select9">
                   <option></option>
                   <option>+0.25</option>
                   <option>+0.50</option>

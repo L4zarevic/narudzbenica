@@ -15,26 +15,6 @@ r <?php
 	$idKorisnika = $ar[0];
 	$imeKorisnika = $ar[1];
 
-
-	// $odOsOu = mysqli_real_escape_string($conn, $_REQUEST['od_os_ou']);
-	// $vrstaSociva = mysqli_real_escape_string($conn, $_REQUEST['vrsta_sociva']);
-	// $visina = mysqli_real_escape_string($conn, $_REQUEST['visina']);
-	// $indeks = mysqli_real_escape_string($conn, $_REQUEST['index']);
-	// $materijal = mysqli_real_escape_string($conn, $_REQUEST['materijal']);
-	// $boja = mysqli_real_escape_string($conn, $_REQUEST['boja']);
-	// $baza = mysqli_real_escape_string($conn, $_REQUEST['baza']);
-	// $precnik1 = mysqli_real_escape_string($conn, $_REQUEST['precnik1']);
-	// $precnik2 = mysqli_real_escape_string($conn, $_REQUEST['precnik2']);
-	// $sph = mysqli_real_escape_string($conn, $_REQUEST['sph']);
-	// $cyl = mysqli_real_escape_string($conn, $_REQUEST['cyl']);
-	// $ugao = mysqli_real_escape_string($conn, $_REQUEST['ugao']);
-	// $add = mysqli_real_escape_string($conn, $_REQUEST['add']);
-	// $jm = mysqli_real_escape_string($conn, $_REQUEST['jm']);
-	// $kolicina = mysqli_real_escape_string($conn, $_REQUEST['kolicina']);
-	// $tretman1 = mysqli_real_escape_string($conn, $_REQUEST['tretman1']);
-	// $tretman2 = mysqli_real_escape_string($conn, $_REQUEST['tretman2']);
-	// $napomena = mysqli_real_escape_string($conn, $_REQUEST['napomena']);
-
 	$stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
 	$arS = explode("###", $stavka, 18);
 	$arS[17] = rtrim($arS[17], "###");

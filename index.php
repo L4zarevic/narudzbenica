@@ -92,13 +92,8 @@ include '../narudzbenica/modules/header.php';
             <i class="fa fa-bars"></i>
           </button>
 
-
-
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-
-
-
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -132,8 +127,6 @@ include '../narudzbenica/modules/header.php';
             <h1 class="h3 mb-0 text-gray-800">Dobro došli</h1>
           </div>
 
-
-
           <!-- Content Row -->
           <div class="row">
 
@@ -164,10 +157,7 @@ include '../narudzbenica/modules/header.php';
                 <a href="https://mojaoptika.com">www.mojaoptika.com</a></p>
             </div>
 
-
             <!-- /.container-fluid -->
-
-
 
           </div>
           <!-- End of Main Content -->

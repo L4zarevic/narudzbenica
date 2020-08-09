@@ -1402,7 +1402,7 @@ include '../narudzbenica/modules/header.php';
                   </tr>
                   <tr>
                     <td class="poljeTabele">-8.25</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='834' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='835' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='836' class='form-control' /></td>
@@ -1422,8 +1422,8 @@ include '../narudzbenica/modules/header.php';
                   </tr>
                   <tr>
                     <td class="poljeTabele">-8.50</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='850' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='851' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='852' class='form-control' /></td>
@@ -1435,16 +1435,16 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='858' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='859' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='860' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='861' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='862' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='863' class='form-control' /></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-8.75</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='864' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='865' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='866' class='form-control' /></td>
@@ -1455,17 +1455,17 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='871' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='872' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='873' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='874' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='875' class='form-control' /></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-9.00</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='876' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='877' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='878' class='form-control' /></td>
@@ -1475,18 +1475,18 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='882' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='883' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='884' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='885' class='form-control' /></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-9.25</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='886' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='887' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='888' class='form-control' /></td>
@@ -1495,19 +1495,19 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='891' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='892' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='893' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-9.50</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='894' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='895' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='896' class='form-control' /></td>
@@ -1515,130 +1515,130 @@ include '../narudzbenica/modules/header.php';
                     <td class='poljeTabele'><input type='text' id='898' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='899' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='900' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-9.75</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='901' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='902' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='903' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='904' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='905' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='906' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-10.00</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='907' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='908' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='909' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='910' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='911' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-10.25</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='912' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='913' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='914' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='915' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-10.50</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='916' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='917' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='918' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-10.75</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='919' class='form-control' /></td>
                     <td class='poljeTabele'><input type='text' id='920' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">-11.00</td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                     <td class='poljeTabele'><input type='text' id='921' class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
-                    <td class='poljeTabele' style='border:none;'><input disabled class='form-control' /></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
+                    <td class='poljeTabele' style='border:none;'></td>
                   </tr>
                   <tr>
                     <td class="poljeTabele">Sph</td>
@@ -1684,8 +1684,6 @@ include '../narudzbenica/modules/header.php';
     <!-- End of Footer -->
 
     <script type="text/javascript">
-      
-
       //Funkcija za slanje podataka u tabelu naruzdbenica
       function add(inputVal) {
         $.ajax({

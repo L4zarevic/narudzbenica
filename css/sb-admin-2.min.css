@@ -218,29 +218,16 @@ th {
 	
 }
 #cyl {
-	font-size: 13px;
+	font-size: 10px;
     width: 50%;
     margin: 0 auto;
 	
 }
 #cyl2 {
-	font-size: 13px;
+	font-size: 10px;
     width: 50%;
     margin: 0 auto;
 	margin-top:-3%;
-}
-
-#cyl3 {
-	font-size: 13px;
-    width: 50%;
-    margin: 0 auto;
-	margin-top:-50%;
-}
-#cyl4 {
-	font-size: 13px;
-    width: 50%;
-    margin: 0 auto;
-	margin-top:-70%;
 }
 
 .narudzbenica-tabela {
@@ -324,9 +311,6 @@ div.naslov {
     padding-left: 2%;
     display: block;
     width: 98%;
-}
-#napomena {
-    color: red;
 }
 #info {
     margin-top: 1%;
