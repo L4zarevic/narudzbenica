@@ -34,7 +34,7 @@ while ($row = mysqli_fetch_object($result)) {
   echo "<td>$row->lag_spec</td>";
   echo "<td>$row->vrsta_materijala</td>";
   echo "<td>$row->kolicina</td>";
-  echo "<td><input name='napomena' class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
+  echo "<td><input name='napomena' title='Unesite napomenu' class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
   echo "<td><i onclick='deleteRow();' title='Ukloni stavku' id='$row->ID'class='fas fa-trash'></i></td>";
   echo "</tr>";
 }
