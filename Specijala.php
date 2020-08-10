@@ -157,8 +157,8 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">Vrsta materijala</label>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0"></option>
-                  <option value="1">Bijeli mineral</option>
-                  <option value="1">Bijeli mineral UV420</option>
+                  <option value="1">Bijeli materijal</option>
+                  <option value="1">Bijeli materijal UV420</option>
                   <option value="1">Photocromic gray</option>
                   <option value="1">Photocromic brown</option>
                   <option value="1">Transitions VII gray</option>
@@ -167,8 +167,8 @@ include '../narudzbenica/modules/header.php';
                   <option value="1"></option>
 
 
-                  <option value="2">Bijeli mineral</option>
-                  <option value="2">Bijeli mineral UV420</option>
+                  <option value="2">Bijeli materijal</option>
+                  <option value="2">Bijeli materijal UV420</option>
                   <option value="2">Photocromic gray</option>
                   <option value="2">Photocromic brown</option>
                   <option value="2">Transitions VII gray</option>
@@ -176,8 +176,8 @@ include '../narudzbenica/modules/header.php';
                   <option value="2">Nupolar</option>
                   <option value="2"></option>
 
-                  <option value="3">Bijeli mineral</option>
-                  <option value="3">Bijeli mineral UV420</option>
+                  <option value="3">Bijeli materijal</option>
+                  <option value="3">Bijeli materijal UV420</option>
                   <option value="3">Transitions VII gray</option>
                   <option value="3">Transitions VII brown</option>
                   <option value="3">Nupolar</option>
@@ -201,12 +201,12 @@ include '../narudzbenica/modules/header.php';
                   <option id="100" value="2">Bifocal FT28</option>
                   <option id="100" value="2">Bifocal CT28</option>
                   <option id="101" value="2">Bifo Invisio</option>
-                  <option id="100" value="2">Pollux</option>
-                  <option id="100" value="2">Polaris</option>
-                  <option id="101" value="2">Futura</option>
-                  <option id="101" value="2">Infini</option>
                   <option value="2"></option>
 
+                  <option id="100" value="3">Pollux</option>
+                  <option id="100" value="3">Polaris</option>
+                  <option id="101" value="3">Futura</option>
+                  <option id="101" value="3">Infini</option>
                   <option id="102" value="3">Matrix Pro</option>
                   <option id="102" value="3">Sequel DBS</option>
                   <option id="102" value="3">Adapta DBS</option>
