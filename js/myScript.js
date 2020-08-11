@@ -50,29 +50,33 @@ function checkForm() {
 
 var $odOsOu = $('#select1').find("option:selected").text();
 var $vrstaSociva = $('#select2').find("option:selected").text();
-var $visina = $('#select5').find("option:selected").text();
-var $indeks = $('#select6').find("option:selected").text();
 var $materijal = $('#select3').find("option:selected").text();
-var $dizajn = $('#select4').find("option:selected").text();
-var $baza = document.getElementById("bazaSociva").value;
-var $precnik1 = $('#select7').find("option:selected").text();
-var $precnik2 = $('#select8').find("option:selected").text();
+var $dizajn = $('#select4').find("option:selected").text(); 
+var $visina = $('#select5').find("option:selected").text();
+
+var $baza = $('#select7').find("option:selected").text();
+var $indeks = $('#select8').find("option:selected").text();
+
+
+
+var $precnik1 = $('#select9').find("option:selected").text();
+var $precnik2 = $('#select10').find("option:selected").text();
 var $kolicina = document.getElementById("kolicina").value;
-var $sph = $('#select9').find("option:selected").text();
-var $cyl = $('#select10').find("option:selected").text();
+var $sph = $('#select11').find("option:selected").text();
+var $cyl = $('#select12').find("option:selected").text();
 var $ugao = document.getElementById("ugaoCilindra").value;
-var $add = $('#select11').find("option:selected").text();
-var $jm = $('#select12').find("option:selected").text();
+var $add = $('#select13').find("option:selected").text();
+var $jm = $('#select14').find("option:selected").text();
 var $kolicina = document.getElementById("kolicina").value;
-var $tretman1 = $('#select13').find("option:selected").text();
-var $tretman2 = $('#select14').find("option:selected").text();
+var $tretman1 = $('#select15').find("option:selected").text();
+var $tretman2 = $('#select16').find("option:selected").text();
 var $napomena = document.getElementById("napomena").value;
 
 var precnik;
 if ($precnik1.selectedIndex == 0) {
-precnik = document.getElementById("select8").value;
+precnik = document.getElementById("select10").value;
 } else if ($precnik2.selectedIndex == 0) {
-precnik = document.getElementById("select7").value;
+precnik = document.getElementById("select9").value;
 }else{
 precnik = 1;
 }

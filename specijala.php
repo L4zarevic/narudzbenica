@@ -130,12 +130,11 @@ include '../narudzbenica/modules/header.php';
           <div class='tabelaSpecijala1'>
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect1">Od / Os / Ou</label>
-                <select name="od_os_ou" title="Od - za desno oko, Os - za lijevo oko , Ou - ako je obostrano isto" class="form-control" id="select1">
-                  <option value="0"></option>
-                  <option>Od</option>
-                  <option>Os</option>
-                  <option>Ou</option>
+                <label for="exampleFormControlSelect1">OD / OS / OU</label>
+                <select name="od_os_ou" title="OD - za desno oko, OS - za lijevo oko, OU - ako je obostrano isto" class="form-control" id="select1">
+                  <option>OD</option>
+                  <option>OS</option>
+                  <option>OU</option>
                 </select>
               </div>
             </div>
@@ -253,16 +252,23 @@ include '../narudzbenica/modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Baza</label>
-                <input name="baza" title="Unesite bazu sočiva" type="text" class="form-control" id="bazaSociva">
+                <select name="baza" title="Unesite bazu sočiva" class="form-control" id="select7">
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                </select>
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Index</label>
-                <select name="index" title="Unesite Index prelamanja" class="form-control" id="select6">
+                <select name="index" title="Unesite Index prelamanja" class="form-control" id="select8">
                   <option value="0"></option>
                   <option>1.50</option>
+                  <option>1.523</option>
                   <option>1.53</option>
                   <option>1.56</option>
                   <option>1.59</option>
@@ -281,7 +287,7 @@ include '../narudzbenica/modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label id="labelPrecnik" for="exampleFormControlSelect2">Prečnik mm</label>
-                <select name="precnik1" title="Unesite prečnik" class="form-control" id="select7">
+                <select name="precnik1" title="Unesite prečnik" class="form-control" id="select9">
                   <option></option>
                   <option>50</option>
                   <option>51</option>
@@ -311,7 +317,7 @@ include '../narudzbenica/modules/header.php';
                   <option>75</option>
                 </select>
 
-                <select name="precnik2" title="Unesite prečnik" class="form-control" id="select8">
+                <select name="precnik2" title="Unesite prečnik" class="form-control" id="select10">
                   <option></option>
                   <option>50</option>
                   <option>51</option>
@@ -347,7 +353,7 @@ include '../narudzbenica/modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">SPH</label>
-                <select name="sph" title="Unesite Sfernu dioptriju sa popisa" class="form-control" id="select9">
+                <select name="sph" title="Unesite Sfernu dioptriju sa popisa" class="form-control" id="select11">
                   <option></option>
                   <option>+0.25</option>
                   <option>+0.50</option>
@@ -501,7 +507,7 @@ include '../narudzbenica/modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">CYL</label>
-                <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="select10">
+                <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="select12">
                   <option></option>
                   <option>+0.25</option>
                   <option>+0.50</option>
@@ -567,7 +573,7 @@ include '../narudzbenica/modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Add / Dig.</label>
-                <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select11">
+                <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
                   <option></option>
                   <option>0.75</option>
                   <option>1.00</option>
@@ -590,7 +596,7 @@ include '../narudzbenica/modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Jedinica mjere</label>
-                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select12">
+                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
                   <option>kom</option>
                   <option>kut</option>
                   <option>kut-2</option>
@@ -614,8 +620,8 @@ include '../narudzbenica/modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Tretman1</label>
-                <select name="tretman1" class="form-control" id="select13">
+                <label for="exampleFormControlSelect2">Tretmani i bojenja #1</label>
+                <select name="tretman1" class="form-control" id="select15">
                   <option value="100">HC</option>
                   <option value="100">MultiPlus</option>
                   <option value="100">UltraGlide</option>
@@ -672,16 +678,16 @@ include '../narudzbenica/modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Tretman2</label>
-                <select name="tretman2" class="form-control" id="select14">
+                <label for="exampleFormControlSelect2">Tretmani i bojenja #2</label>
+                <select name="tretman2" class="form-control" id="select16">
                   <option value="100">HC</option>
                   <option value="100">MultiPlus</option>
                   <option value="100">UltraGlide</option>
                   <option value="100">NanoGlide</option>
                   <option value="100">PolarGlide</option>
                   <option value="100">BlueGlide</option>
-                  <option value="100">PureGLide</option>
-                  <option value="100">Ultra Glide BackSide</option>
+                  <option value="100">PureGlide</option>
+                  <option value="100">UltraGlide BackSide</option>
                   <option value="100">Mirror/UltraBS</option>
                   <option value="100" disabled>--- Bojenje ---</option>
                   <option value="100">Unicolor</option>
@@ -697,8 +703,8 @@ include '../narudzbenica/modules/header.php';
                   <option value="101">NanoGlide</option>
                   <option value="101">PolarGlide</option>
                   <option value="101">BlueGlide</option>
-                  <option value="101">PureGLide</option>
-                  <option value="101">Ultra Glide BackSide</option>
+                  <option value="101">PureGlide</option>
+                  <option value="101">UltraGlide BackSide</option>
                   <option value="101">Mirror/UltraBS</option>
                   <option value="101" disabled>--- Bojenje ---</option>
                   <option value="101">Unicolor</option>
@@ -713,8 +719,8 @@ include '../narudzbenica/modules/header.php';
                   <option value="102">NanoGlide</option>
                   <option value="102">PolarGlide</option>
                   <option value="102">BlueGlide</option>
-                  <option value="102">PureGLide</option>
-                  <option value="102">Ultra Glide BackSide</option>
+                  <option value="102">PureGlide</option>
+                  <option value="102">UltraGlide BackSide</option>
                   <option value="102">Mirror/UltraBS</option>
                   <option value="102" disabled>--- Bojenje ---</option>
                   <option value="102">Unicolor</option>
@@ -739,16 +745,16 @@ include '../narudzbenica/modules/header.php';
 
           <div class="tabelaSpecijala2">
             <strong>NAPOMENA:</strong></br>
-            -Od(za desno oko)</br>
-            -Os(za lijevo oko)</br>
-            -Ou(obostrano)</br>
+            -OD(za desno oko)</br>
+            -OS(za lijevo oko)</br>
+            -OU(obostrano)</br>
             -SPH(sferna dioptrija)</br>
             -CYL(cilindrična dioptrija)</br>
             -Ax(ugao cilindra)</br>
             -Add(adicija)</br>
             </br>
             Obavezna polja za Specijalu su:</br>
-            -Od/Os/Ou</br>
+            -OD/OS/OU</br>
             -Vrsta sočiva</br>
             -Dizajn</br>
             -Index</br>
@@ -785,12 +791,12 @@ include '../narudzbenica/modules/header.php';
       var $select2 = $('#select2'),
         $select3 = $('#select3'),
         $select4 = $('#select4'),
-        $select13 = $('#select13'),
-        $select14 = $('#select14  '),
+        $select15 = $('#select15'),
+        $select16 = $('#select16'),
         $options1 = $select3.find('option');
       $options2 = $select4.find('option');
-      $options3 = $select13.find('option');
-      $options4 = $select14.find('option');
+      $options3 = $select15.find('option');
+      $options4 = $select16.find('option');
 
 
       $select2.on('change', function() {
@@ -803,12 +809,12 @@ include '../narudzbenica/modules/header.php';
 
       $select4.on('change', function() {
         var id = $(this).children(":selected").attr("id");
-        $select13.html($options3.filter('[value="' + id + '"]'));
+        $select15.html($options3.filter('[value="' + id + '"]'));
       }).trigger('change');
 
       $select4.on('change', function() {
         var id1 = $(this).children(":selected").attr("id");
-        $select14.html($options4.filter('[value="' + id1 + '"]'));
+        $select16.html($options4.filter('[value="' + id1 + '"]'));
       }).trigger('change');
     </script>
 
