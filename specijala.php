@@ -163,6 +163,8 @@ include '../narudzbenica/modules/header.php';
                   <option value="1">Transitions VII gray</option>
                   <option value="1">Transitions VII brown</option>
                   <option value="1">Nupolar</option>
+                  <option value="1">Polycarbonate</option>
+                  <option value="1">Nupolar-Polycarbonate</option>
                   <option value="1"></option>
 
 
@@ -254,10 +256,15 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">Baza</label>
                 <select name="baza" title="Unesite bazu sočiva" class="form-control" id="select7">
                   <option>4</option>
+                  <option>4.5</option>
                   <option>5</option>
+                  <option>5.5</option>
                   <option>6</option>
+                  <option>6.5</option>
                   <option>7</option>
+                  <option>7.5</option>
                   <option>8</option>
+                  <option>8.5</option>
                 </select>
               </div>
             </div>
@@ -355,6 +362,7 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">SPH</label>
                 <select name="sph" title="Unesite Sfernu dioptriju sa popisa" class="form-control" id="select11">
                   <option></option>
+                  <option> 0.00</option>
                   <option>+0.25</option>
                   <option>+0.50</option>
                   <option>+0.75</option>
@@ -411,6 +419,7 @@ include '../narudzbenica/modules/header.php';
                   <option>+15.00</option>
                   <option>+15.50</option>
                   <option>+16.00</option>
+                  <option> 0.00</option>
                   <option>-0.25</option>
                   <option>-0.50</option>
                   <option>-0.75</option>
@@ -509,6 +518,7 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">CYL</label>
                 <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="select12">
                   <option></option>
+                  <option> 0.00</option>
                   <option>+0.25</option>
                   <option>+0.50</option>
                   <option>+0.75</option>
@@ -533,6 +543,7 @@ include '../narudzbenica/modules/header.php';
                   <option>+5.50</option>
                   <option>+5.75</option>
                   <option>+6.00</option>
+                  <option> 0.00</option> 
                   <option>-0.25</option>
                   <option>-0.50</option>
                   <option>-0.75</option>
