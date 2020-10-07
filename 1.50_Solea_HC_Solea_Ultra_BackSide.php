@@ -3,34 +3,7 @@
 
 <body id="page-top">
     <div id="wrapper">
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"> <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-                <div class="sidebar-brand-icon rotate-n-15"> </div>
-                <div class="sidebar-brand-text mx-3">M-Optic</div>
-            </a>
-            <hr class="sidebar-divider my-0">
-            <li class="nav-item"> <a class="nav-link" href="index.php"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>Početna</span></a> </li>
-            <hr class="sidebar-divider">
-            <div class="sidebar-heading"> Ponuda </div>
-            <li class="nav-item"> <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Lagerska stakla</span> </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="1.50_CR39_UC_HMC.php">1.50 CR39 UC/HMC</a>
-                        <a class="collapse-item" href="1.50_Transition_HMC.php">1.50 Transition HMC</a>
-                        <a class="collapse-item" href="1.53_Trivex_HMC.php">1.53 Trivex HMC</a>
-                        <a class="collapse-item" href="1.56_Photocromic_HMC.php">1.56 Photocromic HMC</a>
-                        <a class="collapse-item" href="1.56_SHMC_UV420_AB.php">1.56 SHMC/UV420 AB</a>
-                        <a class="collapse-item" href="1.59_Polycarbonate_HMC.php">1.59 Polycarbonate HMC</a>
-                        <a class="collapse-item" href="1.60_HMC.php">1.60 HMC</a>
-                        <a class="collapse-item" href="1.60_UV420_AB.php">1.60 UV420 AB</a>
-                        <a class="collapse-item" href="1.60_Transition_HMC.php">1.60 Transition HMC</a>
-                        <a class="collapse-item" href="1.67_HMC_UV420_AB.php">1.67 HMC/UV420 AB</a>
-                        <a class="collapse-item" href="1.74_AHMC.php">1.74 AHMC</a>
-                    </div>
-                </div><a class="nav-link collapsed" href="specijala.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Specijala</span> </a>
-            </li>
-            <hr class="sidebar-divider">
-            <div class="text-center d-none d-md-inline"> <button class="rounded-circle border-0" id="sidebarToggle"></button> </div>
-        </ul>
+    <?php include '../narudzbenica/modules/menu.php'; ?>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"> <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"> <i class="fa fa-bars"></i> </button>
@@ -248,7 +221,7 @@
                     </div>
 
                     <div class="tabela2">
-                        <h5 id>1.50 Solea Ulta BackSide 65mm</h5>
+                        <h5 id>1.50 Solea Ultra BackSide 65mm</h5>
                         <h6 id="cyl">+Cyl</h6>
                         <table class="table table-bordered table-condensed">
                             <tbody>
