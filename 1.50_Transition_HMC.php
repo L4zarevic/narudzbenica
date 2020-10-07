@@ -13,7 +13,19 @@
             <div class="sidebar-heading"> Ponuda </div>
             <li class="nav-item"> <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Lagerska stakla</span> </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded"> <a class="collapse-item" href="1.50_CR39_UC_HMC.php">1.50 CR39 UC/HMC</a> <a class="collapse-item" href="1.56_SHMC_UV420_AB.php">1.56 SHMC/UV420 AB</a> <a class="collapse-item" href="1.60_Transition_HMC.php">1.60 Transition HMC</a> <a class="collapse-item" href="1.56_Photocromic_HMC.php">1.56 Photocromic HMC</a> <a class="collapse-item" href="1.59_Polycarbonate_HMC.php">1.59 Polycarbonate HMC</a> <a class="collapse-item" href="1.50_Transition_HMC.php">1.50 Transition HMC</a> <a class="collapse-item" href="1.53_Trivex_HMC.php">1.53 Trivex HMC</a> <a class="collapse-item" href="1.60_HMC.php">1.60 HMC</a> <a class="collapse-item" href="1.60_UV420_AB.php">1.60 UV420 AB</a> <a class="collapse-item" href="1.67_HMC_UV420_AB.php">1.67 HMC/UV420 AB</a> </div>
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="1.50_CR39_UC_HMC.php">1.50 CR39 UC/HMC</a>
+                        <a class="collapse-item" href="1.50_Transition_HMC.php">1.50 Transition HMC</a>
+                        <a class="collapse-item" href="1.53_Trivex_HMC.php">1.53 Trivex HMC</a>
+                        <a class="collapse-item" href="1.56_Photocromic_HMC.php">1.56 Photocromic HMC</a>
+                        <a class="collapse-item" href="1.56_SHMC_UV420_AB.php">1.56 SHMC/UV420 AB</a>
+                        <a class="collapse-item" href="1.59_Polycarbonate_HMC.php">1.59 Polycarbonate HMC</a>
+                        <a class="collapse-item" href="1.60_HMC.php">1.60 HMC</a>
+                        <a class="collapse-item" href="1.60_UV420_AB.php">1.60 UV420 AB</a>
+                        <a class="collapse-item" href="1.60_Transition_HMC.php">1.60 Transition HMC</a>
+                        <a class="collapse-item" href="1.67_HMC_UV420_AB.php">1.67 HMC/UV420 AB</a>
+                        <a class="collapse-item" href="1.74_AHMC.php">1.74 AHMC</a>
+                    </div>
                 </div><a class="nav-link collapsed" href="specijala.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Specijala</span> </a>
             </li>
             <hr class="sidebar-divider">
