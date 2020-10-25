@@ -9,7 +9,7 @@ include '../narudzbenica/modules/header.php';
 
   <!-- Page Wrapper -->
   <div id="wrapper">
-  <?php include '../narudzbenica/modules/menu.php'; ?>
+    <?php include '../narudzbenica/modules/menu.php'; ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -34,7 +34,7 @@ include '../narudzbenica/modules/header.php';
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ulogovani ste kao <b><?php echo $imeKorisnika; ?></b>  <i class="fas fa-user"></i></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ulogovani ste kao <b><?php echo $imeKorisnika; ?></b> <i class="fas fa-user"></i></span>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -78,7 +78,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="1">Monofokal</option>
                   <option value="2">Bifokal</option>
                   <option value="3">Progresiv</option>
-                  <option>Lentikular</option>
+                  <option value="4">Lentikular</option>
                 </select>
               </div>
             </div>
@@ -88,7 +88,7 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">Vrsta materijala</label>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0"></option>
-                  <option value="1">Bijeli materijal</option>
+                  <option value="1">Bijeli materijal-UNC</option>
                   <option value="1">Bijeli materijal UV420</option>
                   <option value="1">Photocromic gray</option>
                   <option value="1">Photocromic brown</option>
@@ -97,23 +97,24 @@ include '../narudzbenica/modules/header.php';
                   <option value="1">Nupolar</option>
                   <option value="1">Polycarbonate</option>
                   <option value="1">Nupolar-Polycarbonate</option>
+                  <option value="1">Mineralni materijali</option>
+                  <option value="1">Photo gray mineralni materijali</option>
+                  <option value="1">Photo brown mineralni materijali</option>
                   <option value="1"></option>
 
 
                   <option value="2">Bijeli materijal</option>
-                  <option value="2">Bijeli materijal UV420</option>
-                  <option value="2">Photocromic gray</option>
-                  <option value="2">Photocromic brown</option>
                   <option value="2">Transitions VII gray</option>
                   <option value="2">Transitions VII brown</option>
-                  <option value="2">Nupolar</option>
+                  <option value="2">Polycarbonate</option>
+                  <option value="2">Polycarbonate Transitions</option>
                   <option value="2"></option>
 
                   <option value="3">Bijeli materijal</option>
-                  <option value="3">Bijeli materijal UV420</option>
                   <option value="3">Transitions VII gray</option>
                   <option value="3">Transitions VII brown</option>
-                  <option value="3">Nupolar</option>
+                  <option value="3">Polycarbonate</option>
+                  <option value="3">Polycarbonate Transitions</option>
                   <option value="3"></option>
                 </select>
               </div>
@@ -145,58 +146,9 @@ include '../narudzbenica/modules/header.php';
                   <option id="102" value="3">Adapta DBS</option>
                   <option id="102" value="3">Varia 3D</option>
                   <option id="102" value="3">Varia Pro</option>
+                  <option id="102" value="3">Mineralni progresiv</option>
                   <option value="3"></option>
 
-                </select>
-              </div>
-            </div>
-
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Visina ugradnje</label>
-                <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="select5">
-                  <option></option>
-                  <option>13</option>
-                  <option>14</option>
-                  <option>15</option>
-                  <option>16</option>
-                  <option>17</option>
-                  <option>18</option>
-                  <option>19</option>
-                  <option>20</option>
-                  <option>21</option>
-                  <option>22</option>
-                  <option>23</option>
-                  <option>24</option>
-                  <option>25</option>
-                  <option>26</option>
-                  <option>27</option>
-                  <option>28</option>
-                  <option>29</option>
-                  <option>30</option>
-                  <option>31</option>
-                  <option>32</option>
-                  <option>33</option>
-                  <option>34</option>
-                  <option>35</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Baza</label>
-                <select name="baza" title="Unesite bazu sočiva" class="form-control" id="select7">
-                  <option>4</option>
-                  <option>4.5</option>
-                  <option>5</option>
-                  <option>5.5</option>
-                  <option>6</option>
-                  <option>6.5</option>
-                  <option>7</option>
-                  <option>7.5</option>
-                  <option>8</option>
-                  <option>8.5</option>
                 </select>
               </div>
             </div>
@@ -222,6 +174,23 @@ include '../narudzbenica/modules/header.php';
             </div>
 
 
+            <div class="rowSpec">
+              <div class="form-group col-md-3">
+                <label for="exampleFormControlSelect2">Baza</label>
+                <select name="baza" title="Unesite bazu sočiva" class="form-control" id="select7">
+                  <option>4</option>
+                  <option>4.5</option>
+                  <option>5</option>
+                  <option>5.5</option>
+                  <option>6</option>
+                  <option>6.5</option>
+                  <option>7</option>
+                  <option>7.5</option>
+                  <option>8</option>
+                  <option>8.5</option>
+                </select>
+              </div>
+            </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
@@ -287,6 +256,45 @@ include '../narudzbenica/modules/header.php';
                 </select>
               </div>
             </div>
+
+
+            <div class="rowSpec">
+              <div class="form-group col-md-3">
+                <label for="exampleFormControlSelect2">Visina ugradnje</label>
+                <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="select5">
+                  <option></option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
+                  <option>22</option>
+                  <option>23</option>
+                  <option>24</option>
+                  <option>25</option>
+                  <option>26</option>
+                  <option>27</option>
+                  <option>28</option>
+                  <option>29</option>
+                  <option>30</option>
+                  <option>31</option>
+                  <option>32</option>
+                  <option>33</option>
+                  <option>34</option>
+                  <option>35</option>
+                </select>
+              </div>
+            </div>
+
+
+
+
+
+
 
 
             <div class="rowSpec">
@@ -475,7 +483,7 @@ include '../narudzbenica/modules/header.php';
                   <option>+5.50</option>
                   <option>+5.75</option>
                   <option>+6.00</option>
-                  <option> 0.00</option> 
+                  <option> 0.00</option>
                   <option>-0.25</option>
                   <option>-0.50</option>
                   <option>-0.75</option>
@@ -680,7 +688,7 @@ include '../narudzbenica/modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Napomena</label>
-                <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
+                <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
               </div>
             </div>
             <button type='button' onclick="return checkForm();" id='dugmeNaruci' class='btn btn-success'>Sačuvaj stavku</button>
