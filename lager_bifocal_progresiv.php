@@ -57,7 +57,7 @@ include '../narudzbenica/modules/header.php';
 
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Specijala</h1>
+          <h1 class="h3 mb-4 text-gray-800">Lagerska stakla bifocali i progresivi</h1>
 
           <div class='tabelaSpecijala1'>
             <div class="rowSpec">
@@ -75,10 +75,10 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect1">Vrsta sočiva</label>
                 <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2" required>
                   <option value="0"></option>
-                  <option value="1">Monofokal</option>
+                  <!--<option value="1">Monofokal</option>-->
                   <option value="2">Bifokal</option>
                   <option value="3">Progresiv</option>
-                  <option value="4">Lentikular</option>
+                  <!--<option value="4">Lentikular</option>-->
                 </select>
               </div>
             </div>
@@ -89,9 +89,9 @@ include '../narudzbenica/modules/header.php';
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0"></option>
                   <option value="1">Bijeli materijal-UNC</option>
-                  <option value="1">Bijeli materijal UV420</option>
+                  <!--<option value="1">Bijeli materijal UV420</option>-->
                   <option value="1">Photocromic gray</option>
-                  <option value="1">Photocromic brown</option>
+                 <!-- <option value="1">Photocromic brown</option>
                   <option value="1">Transitions VII gray</option>
                   <option value="1">Transitions VII brown</option>
                   <option value="1">Nupolar</option>
@@ -115,17 +115,12 @@ include '../narudzbenica/modules/header.php';
                   <option value="3">Transitions VII brown</option>
                   <option value="3">Polycarbonate</option>
                   <option value="3">Polycarbonate Transitions</option>
-                  <option value="3"></option>
-
-                  <option value="4">Ortas</option>
-                  <option value="4">Stand</option>
-                  <option value="4">Expert</option>
-                  <option value="4"></option>
+                  <option value="3"></option>-->
                 </select>
               </div>
             </div>
 
-            <div class="rowSpec">
+            <!-- <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Dizajn</label>
                 <select name="dizajn" title="Unesite vrstu dizajna" class="form-control" id="select4">
@@ -154,16 +149,11 @@ include '../narudzbenica/modules/header.php';
                   <option id="102" value="3">Mineralni progresiv</option>
                   <option value="3"></option>
 
-                  <option id="103" value="4">Tip A</option>
-                  <option id="103" value="4">Tip B</option>
-                  <option id="103" value="4">Tip C</option>
-                  <option value="4"></option>
-
                 </select>
               </div>
-            </div>
+            </div>-->
 
-            <div class="rowSpec">
+            <!-- <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Index</label>
                 <select name="index" title="Unesite Index prelamanja" class="form-control" id="select8">
@@ -298,7 +288,7 @@ include '../narudzbenica/modules/header.php';
                   <option>35</option>
                 </select>
               </div>
-            </div>
+            </div>-->
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
@@ -318,7 +308,7 @@ include '../narudzbenica/modules/header.php';
                   <option>+2.50</option>
                   <option>+2.75</option>
                   <option>+3.00</option>
-                  <option>+3.25</option>
+                  <!--<option>+3.25</option>
                   <option>+3.50</option>
                   <option>+3.75</option>
                   <option>+4.00</option>
@@ -450,13 +440,13 @@ include '../narudzbenica/modules/header.php';
                   <option>-27.00</option>
                   <option>-28.00</option>
                   <option>-29.00</option>
-                  <option>-30.00</option>
+                  <option>-30.00</option>-->
                 </select>
               </div>
             </div>
 
 
-            <div class="rowSpec">
+            <!--  <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">CYL</label>
                 <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="select12">
@@ -521,7 +511,7 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">Ax</label>
                 <input name="ugao" title="Unesite ugao cilindra" type="text" class="form-control" id="ugaoCilindra">
               </div>
-            </div>
+            </div>-->
 
 
             <div class="rowSpec">
@@ -529,7 +519,7 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">Add / Dig.</label>
                 <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
                   <option></option>
-                  <option>0.75</option>
+                  <!-- <option>0.75</option>-->
                   <option>1.00</option>
                   <option>1.25</option>
                   <option>1.50</option>
@@ -539,10 +529,10 @@ include '../narudzbenica/modules/header.php';
                   <option>2.50</option>
                   <option>2.75</option>
                   <option>3.00</option>
-                  <option>3.25</option>
+                  <!-- <option>3.25</option>
                   <option>3.50</option>
                   <option>3.75</option>
-                  <option>4.00</option>
+                  <option>4.00</option>-->
                 </select>
               </div>
             </div>
@@ -572,7 +562,7 @@ include '../narudzbenica/modules/header.php';
               </div>
             </div>
 
-            <div class="rowSpec">
+           <!-- <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Tretmani i bojenja #1</label>
                 <select name="tretman1" class="form-control" id="select15">
@@ -686,7 +676,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="102"></option>
                 </select>
               </div>
-            </div>
+            </div>-->
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
@@ -694,7 +684,7 @@ include '../narudzbenica/modules/header.php';
                 <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
               </div>
             </div>
-            <button type='button' onclick="return checkForm();" id='dugmeNaruci' class='btn btn-success'>Sačuvaj stavku</button>
+            <button type='button' onclick="return checkLagerBifoProgForm();" id='dugmeNaruci' class='btn btn-success'>Sačuvaj stavku</button>
           </div>
 
           <div class="tabelaSpecijala2">
@@ -703,17 +693,12 @@ include '../narudzbenica/modules/header.php';
             -OS(za lijevo oko)</br>
             -OU(obostrano)</br>
             -SPH(sferna dioptrija)</br>
-            -CYL(cilindrična dioptrija)</br>
-            -Ax(ugao cilindra)</br>
             -Add(adicija)</br>
             </br>
-            Obavezna polja za Specijalu su:</br>
+            Obavezna polja su:</br>
             -OD/OS/OU</br>
             -Vrsta sočiva</br>
-            -Dizajn</br>
-            -Index</br>
             -Vrsta materijala</br>
-            -Prečnik</br>
             -Količina</br>
             </br>
 
@@ -741,16 +726,16 @@ include '../narudzbenica/modules/header.php';
     ?>
     <!-- End of Footer -->
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
       var $select2 = $('#select2'),
         $select3 = $('#select3'),
         $select4 = $('#select4'),
         $select15 = $('#select15'),
         $select16 = $('#select16'),
         $options1 = $select3.find('option');
-        $options2 = $select4.find('option');
-        $options3 = $select15.find('option');
-        $options4 = $select16.find('option');
+      $options2 = $select4.find('option');
+      $options3 = $select15.find('option');
+      $options4 = $select16.find('option');
 
 
       $select2.on('change', function() {
@@ -770,7 +755,7 @@ include '../narudzbenica/modules/header.php';
         var id1 = $(this).children(":selected").attr("id");
         $select16.html($options4.filter('[value="' + id1 + '"]'));
       }).trigger('change');
-    </script>
+    </script>-->
 
 </body>
 

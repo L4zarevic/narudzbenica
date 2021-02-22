@@ -25,7 +25,7 @@
         </div>
 
 
-        <a class="nav-link collapsed" href="specijala.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Lagerska stakla bifocali i progresivi</span> </a>
+        <a class="nav-link collapsed" href="lager_bifocal_progresiv.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Lagerska stakla bifocali i progresivi</span> </a>
         <a class="nav-link collapsed" href="1.50_Solea_HC_Solea_Ultra_BackSide.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Lagerska stakla solea</span> </a>
 
         <a class="nav-link collapsed" href="specijala.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Specijala</span> </a>
