@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<html lang="en"><?php include '../narudzbenica/modules/header.php'; ?>
+<html lang="en">
+<?php
+include '../narudzbenica/modules/header.php';
+
+//Uklanjanje kolačića
+setcookie('cica_maca', '', time() - 3600);
+
+require_once 'connection.php';
+$korisnik = $_SESSION['prijavljen'];
+$ar = explode('#', $korisnik, 4);
+$ar[1] = rtrim($ar[1], '#');
+$idKorisnika = $ar[0];
+$dataBaseName = $ar[3];
+$conn = OpenStoreCon($dataBaseName);
+mysqli_set_charset($conn, 'utf8');
+
+//Metod za prikaz loga korisnika (optike)
+function logo($idKorisnika)
+{
+    $con = OpenCon();
+    $stmt = $con->prepare('SELECT logo FROM korisnici WHERE ID=?');
+    $stmt->bind_param('i', $idKorisnika);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    while ($row = $result->fetch_object()) {
+        $logo = '../naruzbenica/images/logo_optika/' . $row->logo;
+    }
+    echo $logo;
+    CloseCon($con);
+}
+
+?>
 
 <body id="page-top">
     <div id="wrapper">
-    <?php include '../narudzbenica/modules/menu.php'; ?>
+        <?php include '../narudzbenica/modules/menu.php'; ?>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"> <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"> <i class="fa fa-bars"></i> </button>
-                    <ul class="navbar-nav ml-auto">
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item dropdown no-arrow"> <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ulogovani ste kao <b><?php echo $imeKorisnika; ?></b> <i class="fas fa-user"></i></span> </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"> <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Odjava </a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+                <?php
+                include '../narudzbenica/modules/logout.php';
+                ?>
                 <div class="container-fluid">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">e-Narudžbenica</h1>
@@ -31,10 +55,10 @@
                             <p><strong>Unesene količine za stavke u tabeli NARUDŽBENICA nije moguće uređivati.</strong></p>
                             <p>U slučaju pogrešnog unosa, stavku iz tabele je potrebno ukloniti klikom na ikonicu kantice <i class='fas fa-trash'></i>, a nakon toga izvršiti ponovni unos iz grafikona.</p>
                             <p>Nakon što kreirate narudžbenicu, potrebno je kliknuti na dugme <i class='fas fa-paper-plane'></i> POŠALJI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji M-Optic</p>
-                            <p>Za sve dodatne informacije u vezi aplikacije, možete nas kontaktirati na email: <a href="mailto:nemanja.lazarevic@mojaoptika.com">nemanja.lazarevic@mojaoptika.com</a></p></br>
+                            <p>Za sve dodatne informacije u vezi aplikacije, pišite na email: <a href="mailto:nemanja.lazarevic@mojaoptika.com">nemanja.lazarevic@mojaoptika.com</a></p></br>
                         </div>
                         <div class="companyInfo"> <img id="logo" src="../narudzbenica/images/MO.png">
-                            <p>“M-Optic” d.o.o.</br> ul. Majevička br. 29, 76300 Bijeljina</br> <strong>Tel:</strong> +387 55 222 999, 222 990, 490 010</br> <strong>Fax:</strong> +387 55 222 998</br> <strong>Email:</strong> <a href="mailto:mopticvp@mojaoptika.com">mopticvp@mojaoptika.com</a></br> <a href="https://mojaoptika.com">www.mojaoptika.com</a></p>
+                            <p>“M-OPTIC” d.o.o.</br> ul. Majevička br. 29, 76300 Bijeljina</br> <strong>Tel:</strong> +387 55 222 999, 222 990, 490 010</br> <strong>Fax:</strong> +387 55 222 998</br> <strong>Email:</strong> <a href="mailto:mopticvp@mojaoptika.com">mopticvp@mojaoptika.com</a></br> <a href="https://mojaoptika.com">www.mojaoptika.com</a></p>
                         </div>
                     </div>
                 </div>

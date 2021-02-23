@@ -7,13 +7,13 @@ if (is_null($_SESSION['prijavljen'])) {
 
 require_once 'connection.php';
 
-$conn = OpenCon();
-
 $korisnik = $_SESSION['prijavljen'];
-$ar = explode("#", $korisnik, 2);
-$ar[1] = rtrim($ar[1], "#");
+$ar = explode('#', $korisnik, 4);
+$ar[1] = rtrim($ar[1], '#');
 $idKorisnika = $ar[0];
-$imeKorisnika = $ar[1];
+$dataBaseName = $ar[3];
+$conn = OpenStoreCon($dataBaseName);
+mysqli_set_charset($conn, 'utf8');
 
 $stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
 $arS = explode("###", $stavka, 7);
@@ -33,5 +33,5 @@ $rezultat = mysqli_query($conn, $upit);
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));
 }
-header('Location: ' . $_SERVER['HTTP_REFERER'] . '?msg=2');
+header('Location: ../narudzbenica/lager_bifocal_progresiv.php');
 CloseCon($conn);

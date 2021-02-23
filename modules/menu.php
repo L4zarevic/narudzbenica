@@ -1,9 +1,14 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"> <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15"> </div>
-        <div class="sidebar-brand-text mx-3">M-Optic</div>
+        <div class="sidebar-brand-text mx-3"><?php $korisnik = $_SESSION['prijavljen'];
+                                                $ar = explode('#', $korisnik, 4);
+                                                $ar[1] = rtrim($ar[1], '#');
+                                                echo $optika = $ar[1];
+                                                ?>
+        </div>
     </a>
     <hr class="sidebar-divider my-0">
-    <li class="nav-item active"> <a class="nav-link" href="index.php"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>Početna</span></a> </li>
+    <li class="nav-item active"> <a class="nav-link" href="index.php"> <i class="fas fa-home"></i> <span>Početna</span></a> </li>
     <hr class="sidebar-divider">
     <div class="sidebar-heading"> Ponuda </div>
     <li class="nav-item"> <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -23,13 +28,9 @@
                 <a class="collapse-item" href="1.74_AHMC.php">1.74 AHMC</a>
             </div>
         </div>
-
-
         <a class="nav-link collapsed" href="lager_bifocal_progresiv.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Lagerska stakla bifocali i progresivi</span> </a>
         <a class="nav-link collapsed" href="1.50_Solea_HC_Solea_Ultra_BackSide.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Lagerska stakla solea</span> </a>
-
         <a class="nav-link collapsed" href="specijala.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Specijala</span> </a>
-
     </li>
     <hr class="sidebar-divider">
     <div class="text-center d-none d-md-inline"> <button class="rounded-circle border-0" id="sidebarToggle"></button> </div>

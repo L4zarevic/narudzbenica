@@ -3,12 +3,14 @@ if (is_null($_SESSION['prijavljen'])) {
     header('Location: ../narudzbenica/login.php');
 }
 include 'connection.php';
-$conn = OpenCon();
 $korisnik = $_SESSION['prijavljen'];
-$ar = explode("#", $korisnik, 2);
-$ar[1] = rtrim($ar[1], "#");
+$ar = explode('#', $korisnik, 4);
+$ar[1] = rtrim($ar[1], '#');
 $idKorisnika = $ar[0];
-$imeKorisnika = $ar[1];
+$dataBaseName = $ar[3];
+$conn = OpenStoreCon($dataBaseName);
+mysqli_set_charset($conn, 'utf8');
+
 $stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
 $ar = explode("#", $stavka, 3);
 $ar[1] = rtrim($ar[1], "#");
