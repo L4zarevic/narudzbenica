@@ -17,9 +17,10 @@ $ar[1] = rtrim($ar[1], "#");
 $ID = $ar[0];
 $napomena = $ar[1];
 $realID = substr($ID, 1);
-$upit = "UPDATE narudzbenica SET napomena='$napomena' WHERE ID='$realID'";
-$rezultat = mysqli_query($conn, $upit);
-if (!$rezultat) {
+$stmt = $conn->prepare('UPDATE narudzbenica SET napomena =? WHERE ID =?');
+$stmt->bind_param('si', $napomena, $realID);
+$stmt->execute();
+if (mysqli_error($conn)) {
     die(mysqli_error($conn));
 }
 CloseCon($conn);

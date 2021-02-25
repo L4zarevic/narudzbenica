@@ -8,7 +8,10 @@ $idKorisnika = $ar[0];
 $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
-$result = mysqli_query($conn, "SELECT * FROM narudzbenica WHERE IDKorisnika = $idKorisnika ");
+$stmt = $conn->prepare('SELECT * FROM narudzbenica WHERE IDKorisnika =?');
+$stmt->bind_param('i', $idKorisnika);
+$stmt->execute();
+$result = $stmt->get_result();
 echo "<div class='table-wrapper-scroll-y my-custom-scrollbar'><table class='narudzbenica-tabela' id='narudzbenica'><tr><th class='tg-0lax'>Lager-Specijala</th><th class='tg-0lax'>Vrsta materijala</th><th id='poljeKolicine' class='tg-0lax'>Količina</th><th class='tg-0lax'>Napomena</th><th class='tg-0lax'></th></tr></thead><tbody>";
 while ($row = mysqli_fetch_object($result)) {
     echo "<tr>";

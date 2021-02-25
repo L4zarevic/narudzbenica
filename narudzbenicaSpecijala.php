@@ -9,7 +9,10 @@ $idKorisnika = $ar[0];
 $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
-$result = mysqli_query($conn, " select * from narudzbenica where IDKorisnika = $idKorisnika ");
+$stmt = $conn->prepare('SELECT * FROM narudzbenica WHERE IDKorisnika =?');
+$stmt->bind_param('i', $idKorisnika);
+$stmt->execute();
+$result = $stmt->get_result();
 echo "<div class='table-wrapper-scroll-y'><table class='narudzbenica-tabela' id='narudzbenica'><thead><tr><th class='tg-0lax'>Lag-Spec</th><th class='tg-0lax'>Od/Os/Ou</th><th class='tg-0lax'>Vrsta soč.</th><th class='tg-0lax'>Dizajn</th><th class='tg-0lax'>PRL/OCHT</th><th class='tg-0lax'>Segm.</th><th class='tg-0lax'>Baza</th><th class='tg-0lax'>Index</th><th class='tg-0lax'>Vrsta materijala</th><th class='tg-0lax'>Prečnik</th><th class='tg-0lax'>SPH</th><th class='tg-0lax'>CYL</th><th class='tg-0lax'>Ugao</th><th class='tg-0lax'>Add</th><th class='tg-0lax'>JM</th><th class='tg-0lax'>Kol.</th><th class='tg-0lax'>Tretman1</th><th class='tg-0lax'>Tretman2</th><th class='tg-0lax'>PD</th><th class='tg-0lax'>Napomena</th><th class='tg-0lax'></th></tr></thead><tbody>";
 while ($row = mysqli_fetch_object($result)) {
     echo "<tr>";

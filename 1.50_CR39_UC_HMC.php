@@ -4003,8 +4003,7 @@
         </div>
         <?php include '../narudzbenica/modules/footer.php'; ?>
         <script type="text/javascript">
-            highlight();
-
+           
             function add(a) {
                 $.ajax({
                     type: "POST",

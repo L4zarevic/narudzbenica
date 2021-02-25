@@ -665,7 +665,7 @@ include '../narudzbenica/modules/header.php';
             -SPH(sferna dioptrija)</br>
             -Add(adicija)</br>
             </br>
-            Obavezna polja su:</br>
+            <strong>Obavezna polja su:</strong></br>
             -OD/OS/OU</br>
             -Vrsta sočiva</br>
             -Vrsta materijala</br>
