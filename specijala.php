@@ -54,7 +54,7 @@ include '../narudzbenica/modules/header.php';
             </div>
 
             <div class="rowSpec">
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-4">
                 <label for="exampleFormControlSelect2">Vrsta materijala</label>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0"></option>
@@ -133,7 +133,7 @@ include '../narudzbenica/modules/header.php';
             </div>
 
             <div class="rowSpec">
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-2">
                 <label for="exampleFormControlSelect2">Index</label>
                 <select name="index" title="Unesite Index prelamanja" class="form-control" id="select8">
                   <option value="0"></option>
@@ -154,7 +154,7 @@ include '../narudzbenica/modules/header.php';
 
 
             <div class="rowSpec">
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-2">
                 <label for="exampleFormControlSelect2">Baza</label>
                 <select name="baza" title="Unesite bazu sočiva" class="form-control" id="select7">
                   <option>4</option>
@@ -288,7 +288,7 @@ include '../narudzbenica/modules/header.php';
           
 
           <div class="rowSpec">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-2">
               <label for="exampleFormControlSelect2">SPH</label>
               <select name="sph" title="Unesite Sfernu dioptriju sa popisa" class="form-control" id="select11">
                 <option></option>
@@ -444,7 +444,7 @@ include '../narudzbenica/modules/header.php';
 
 
           <div class="rowSpec">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-2">
               <label for="exampleFormControlSelect2">CYL</label>
               <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="select12">
                 <option></option>
@@ -512,7 +512,7 @@ include '../narudzbenica/modules/header.php';
 
 
           <div class="rowSpec">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-2">
               <label for="exampleFormControlSelect2">Add / Dig.</label>
               <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
                 <option></option>
@@ -535,7 +535,7 @@ include '../narudzbenica/modules/header.php';
           </div>
 
           <div class="rowSpec">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-2">
               <label for="exampleFormControlSelect2">Jedinica mjere</label>
               <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
                 <option>kom</option>
@@ -560,7 +560,7 @@ include '../narudzbenica/modules/header.php';
           </div>
 
           <div class="rowSpec">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-5">
               <label for="exampleFormControlSelect2">Tretmani i bojenja #1</label>
               <select name="tretman1" class="form-control" id="select15">
                 <option value="100">HC</option>
@@ -618,7 +618,7 @@ include '../narudzbenica/modules/header.php';
           </div>
 
           <div class="rowSpec">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-5">
               <label for="exampleFormControlSelect2">Tretmani i bojenja #2</label>
               <select name="tretman2" class="form-control" id="select16">
                 <option value="100">HC</option>
@@ -677,7 +677,7 @@ include '../narudzbenica/modules/header.php';
 
 
             <div class="rowSpec">
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-5">
                 <label for="exampleFormControlSelect2">Napomena</label>
                 <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
               </div>

@@ -25,10 +25,10 @@ mysqli_set_charset($conn, 'utf8');
 $result = mysqli_query($conn, " SELECT * FROM narudzbenica WHERE IDKorisnika = $idKorisnika ");
 
 
-$sep = "\t";
+//$sep = "\t";
 //$schema_insert = "Lag-Spec \t OD/OS/OU \t Vrsta soc. \t Dizajn \t PRL/OCHT \t Segm. \t Baza \t Index \t Vrsta materija \t SPH \t CYL \t Ugao \t Add \t JM \t Kol. \t Tretman1 \t Tretman2 \t PD \t Napomena \n";
 $schema_insert = '<html><body>';
-$schema_insert .= '<br/>Narudzba od: ' . "imeKorisnika" . '<br/>';
+$schema_insert .= '<br/>Narudzba od: ' . "$imeKorisnika" . '<br/>';
 $schema_insert .= 'Datum narudzbe: ' . date("d.m.Y") . ' u ' . date('H:i') . '<br/>';
 $schema_insert .= '<br/>';
 $schema_insert .= '<table rules="all" style="border-color:#000;" cellpadding="2">';
@@ -124,9 +124,21 @@ while ($row = mysqli_fetch_object($result)) {
 }
 file_put_contents('narudzbenica.xls', $schema_insert);
 
+
 $to = "info@mojaoptika.com";
-$from = "delta@mojaoptika.com";
-$subject = "eNarudzbenica - ".$imeKorisnika;
+
+$con = OpenCon();
+$stmt = $con->prepare('SELECT email FROM korisnici WHERE ID =?');
+$stmt->bind_param('i', $idKorisnika);
+$stmt->execute();
+$result = $stmt->get_result();
+$email = "";
+while ($row = mysqli_fetch_object($result)) {
+  $email = $row->email;
+}
+
+$from = $email;
+$subject = "eNarudzbenica - " . $imeKorisnika;
 $separator = md5(date('r', time()));
 // carriage return type (we use a PHP end of line constant)
 $eol = PHP_EOL;
@@ -147,7 +159,10 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 $body = "--" . $separator . $eol;
 $header .= "Content-Type: text/html; charset=utf-8" . $eol;
 $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
-$body .= "This is a MIME encoded message." . $eol;
+$body .= 'Narudzba od: ' . "$imeKorisnika" . $eol;
+$body .= 'Datum narudzbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
+$body .= "------------------------" . $eol;
+$body .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
 
 // message
 $body .= "--" . $separator . $eol;
