@@ -28,37 +28,37 @@ $result = mysqli_query($conn, " SELECT * FROM narudzbenica WHERE IDKorisnika = $
 $sep = "\t";
 //$schema_insert = "Lag-Spec \t OD/OS/OU \t Vrsta soc. \t Dizajn \t PRL/OCHT \t Segm. \t Baza \t Index \t Vrsta materija \t SPH \t CYL \t Ugao \t Add \t JM \t Kol. \t Tretman1 \t Tretman2 \t PD \t Napomena \n";
 $schema_insert = '<html><body>';
-  $schema_insert .= '<br/>Narudzba od: ' . "imeKorisnika" . '<br/>';
-  $schema_insert .= 'Datum narudzbe: ' . date("d.m.Y") . ' u ' . date('H:i') . '<br/>';
-  $schema_insert .= '<br/>';
-  $schema_insert .= '<table rules="all" style="border-color:#000;" cellpadding="2">';
-  $schema_insert .= '<thead>';
-  $schema_insert .= '<tr>';
-  $schema_insert .= '<th>Lag-Spec</th>';
-  $schema_insert .= '<th>Od/Os/Ou</th>';
-  $schema_insert .= '<th>Vrsta soc.</th>';
-  $schema_insert .= '<th>Dizajn</th>';
-  $schema_insert .= '<th>Visina ugr.</th>';
-  $schema_insert .= '<th>Segment</th>';
-  $schema_insert .= '<th>Baza</th>';
-  $schema_insert .= '<th>Index</th>';
-  $schema_insert .= '<th>Vrsta materijala</th>';
-  $schema_insert .= '<th>Precn.</th>';
-  $schema_insert .= '<th>SPH</th>';
-  $schema_insert .= '<th>CYL</th>';
-  $schema_insert .= '<th>Ugao</th>';
-  $schema_insert .= '<th>Add</th>';
-  $schema_insert .= '<th>JM</th>';
-  $schema_insert .= '<th>Kol.</th>';
-  $schema_insert .= '<th>Tretman1</th>';
-  $schema_insert .= '<th>Tretman2</th>';
-  $schema_insert .= '<th>PD</th>';
-  $schema_insert .= '<th>Napomena</th>';
-  $schema_insert .= '<th></th>';
-  $schema_insert .= '</tr>';
-  $schema_insert .= '</thead>';
-  $schema_insert .= '<tbody>';
-  $schema_insert .= '<tr>';
+$schema_insert .= '<br/>Narudzba od: ' . "imeKorisnika" . '<br/>';
+$schema_insert .= 'Datum narudzbe: ' . date("d.m.Y") . ' u ' . date('H:i') . '<br/>';
+$schema_insert .= '<br/>';
+$schema_insert .= '<table rules="all" style="border-color:#000;" cellpadding="2">';
+$schema_insert .= '<thead>';
+$schema_insert .= '<tr>';
+$schema_insert .= '<th>Lag-Spec</th>';
+$schema_insert .= '<th>Od/Os/Ou</th>';
+$schema_insert .= '<th>Vrsta soc.</th>';
+$schema_insert .= '<th>Dizajn</th>';
+$schema_insert .= '<th>Visina ugr.</th>';
+$schema_insert .= '<th>Segment</th>';
+$schema_insert .= '<th>Baza</th>';
+$schema_insert .= '<th>Index</th>';
+$schema_insert .= '<th>Vrsta materijala</th>';
+$schema_insert .= '<th>Precn.</th>';
+$schema_insert .= '<th>SPH</th>';
+$schema_insert .= '<th>CYL</th>';
+$schema_insert .= '<th>Ugao</th>';
+$schema_insert .= '<th>Add</th>';
+$schema_insert .= '<th>JM</th>';
+$schema_insert .= '<th>Kol.</th>';
+$schema_insert .= '<th>Tretman1</th>';
+$schema_insert .= '<th>Tretman2</th>';
+$schema_insert .= '<th>PD</th>';
+$schema_insert .= '<th>Napomena</th>';
+$schema_insert .= '<th></th>';
+$schema_insert .= '</tr>';
+$schema_insert .= '</thead>';
+$schema_insert .= '<tbody>';
+$schema_insert .= '<tr>';
 while ($row = mysqli_fetch_object($result)) {
 
   // $schema_insert .= $row->lag_spec . $sep;
@@ -81,32 +81,32 @@ while ($row = mysqli_fetch_object($result)) {
   // $schema_insert .= $row->pd . $sep;
   // $schema_insert .= $row->napomena . $sep;
 
-  
+
 
 
   //   while ($row = mysqli_fetch_object($result)) {
-    $schema_insert .= '<td>' . $row->lag_spec . '</td>';
-    $schema_insert .= '<td>' . $row->od_os_ou . '</td>';
-    $schema_insert .= '<td>' . $row->vrsta_sociva . '</td>';
-    $schema_insert .= '<td>' . $row->dizajn. '</td>';
-    $schema_insert .= '<td>' . $row->visina . '</td>';
-    $schema_insert .= '<td>' . $row->segment . '</td>';
-    $schema_insert .= '<td>' . $row->baza . '</td>';
-    $schema_insert .= '<td>' . $row->indeks . '</td>';
-    $schema_insert .= '<td>' . $row->vrsta_materijala . '</td>';
-    $schema_insert .= '<td>' . $row->precnik . '</td>';
-    $schema_insert .= '<td>' . $row->sph . '</td>';
-    $schema_insert .= '<td>' . $row->cyl . '</td>';
-    $schema_insert .= '<td>' . $row->ugao . '</td>';
-    $schema_insert .= '<td>' . $row->adicija . '</td>';
-    $schema_insert .= '<td>' . $row->jm . '</td>';
-    $schema_insert .= '<td>' . $row->kolicina . '</td>';
-    $schema_insert .= '<td>' . $row->tretman1 . '</td>';
-    $schema_insert .= '<td>' . $row->tretman2 . '</td>';
-    $schema_insert .= '<td>' . $row->pd . '</td>';
-    $schema_insert .= '<td>' . $row->napomena . '</td>';
-    $schema_insert .= '</tr>';
-    $schema_insert .= '</tbody>';
+  $schema_insert .= '<td>' . $row->lag_spec . '</td>';
+  $schema_insert .= '<td>' . $row->od_os_ou . '</td>';
+  $schema_insert .= '<td>' . $row->vrsta_sociva . '</td>';
+  $schema_insert .= '<td>' . $row->dizajn . '</td>';
+  $schema_insert .= '<td>' . $row->visina . '</td>';
+  $schema_insert .= '<td>' . $row->segment . '</td>';
+  $schema_insert .= '<td>' . $row->baza . '</td>';
+  $schema_insert .= '<td>' . $row->indeks . '</td>';
+  $schema_insert .= '<td>' . $row->vrsta_materijala . '</td>';
+  $schema_insert .= '<td>' . $row->precnik . '</td>';
+  $schema_insert .= '<td>' . $row->sph . '</td>';
+  $schema_insert .= '<td>' . $row->cyl . '</td>';
+  $schema_insert .= '<td>' . $row->ugao . '</td>';
+  $schema_insert .= '<td>' . $row->adicija . '</td>';
+  $schema_insert .= '<td>' . $row->jm . '</td>';
+  $schema_insert .= '<td>' . $row->kolicina . '</td>';
+  $schema_insert .= '<td>' . $row->tretman1 . '</td>';
+  $schema_insert .= '<td>' . $row->tretman2 . '</td>';
+  $schema_insert .= '<td>' . $row->pd . '</td>';
+  $schema_insert .= '<td>' . $row->napomena . '</td>';
+  $schema_insert .= '</tr>';
+  $schema_insert .= '</tbody>';
   //   }
 
 
@@ -118,24 +118,24 @@ while ($row = mysqli_fetch_object($result)) {
 
   // $schema_insert = str_replace($sep . "$", "", $schema_insert);
   // $schema_insert = preg_replace("/\r\n|\n\r|\n|\r/", " ", $schema_insert);
-  
+
   // print(trim(str_replace(',', " ", $schema_insert)));
   // print "\n";
 }
-file_put_contents('test.xls', $schema_insert);
+file_put_contents('narudzbenica.xls', $schema_insert);
 
-$to = "ex@example.com";
-$from = "ex@example.com";
-$subject = "test mail";
+$to = "info@mojaoptika.com";
+$from = "delta@mojaoptika.com";
+$subject = "eNarudzbenica - ".$imeKorisnika;
 $separator = md5(date('r', time()));
 // carriage return type (we use a PHP end of line constant)
 $eol = PHP_EOL;
 
 // attachment name
-$filename = "test.xls";
+$filename = "narudzbenica.xls";
 
 //$pdfdoc is PDF generated by FPDF
-$attachment = chunk_split(base64_encode(file_get_contents('test.xls')));
+$attachment = chunk_split(base64_encode(file_get_contents('narudzbenica.xls')));
 
 // main header
 $headers  = "From: " . $from . $eol;
@@ -165,8 +165,20 @@ $body .= "--" . $separator . "--";
 
 if (mail($to, $subject, $body, $headers)) {
   echo "mail send ... OK";
+
+  $upit = "DELETE FROM `narudzbenica` WHERE IDKorisnika = $idKorisnika";
+  $rezultat = mysqli_query($conn, $upit);
+
+  if (!$rezultat) {
+    die(mysqli_error($conn));
+  }
+
+  CloseCon($conn);
+  header('Location: ../narudzbenica/thanks.php');
+  die();
 } else {
   echo "mail send ... ERROR";
+  header('Location: ' . $_SERVER['HTTP_REFERER'] . '?msg=1');
 }
 // if (mysqli_num_rows($result) > 0) {
 //   // output data of each row
