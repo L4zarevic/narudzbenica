@@ -13,7 +13,7 @@ $stmt = $conn->prepare('SELECT * FROM narudzbenica WHERE IDKorisnika =?');
 $stmt->bind_param('i', $idKorisnika);
 $stmt->execute();
 $result = $stmt->get_result();
-echo "<div class='table-wrapper-scroll-y'><table class='narudzbenica-tabela' id='narudzbenica'><thead><tr><th class='tg-0lax'>Lag-Spec</th><th class='tg-0lax'>Od/Os/Ou</th><th class='tg-0lax'>Vrsta soč.</th><th class='tg-0lax'>Dizajn</th><th class='tg-0lax'>PRL/OCHT</th><th class='tg-0lax'>Segm.</th><th class='tg-0lax'>Baza</th><th class='tg-0lax'>Index</th><th class='tg-0lax'>Vrsta materijala</th><th class='tg-0lax'>Prečnik</th><th class='tg-0lax'>SPH</th><th class='tg-0lax'>CYL</th><th class='tg-0lax'>Ugao</th><th class='tg-0lax'>Add</th><th class='tg-0lax'>JM</th><th class='tg-0lax'>Kol.</th><th class='tg-0lax'>Tretman1</th><th class='tg-0lax'>Tretman2</th><th class='tg-0lax'>PD</th><th class='tg-0lax'>Napomena</th><th class='tg-0lax'></th></tr></thead><tbody>";
+echo "<div class='table-wrapper-scroll-y'><table class='narudzbenica-tabela' id='narudzbenica'><thead><tr><th class='tg-0lax'>Lag-Spec</th><th class='tg-0lax'>Od/Os/Ou</th><th class='tg-0lax'>Vrsta soč.</th><th class='tg-0lax'>Dizajn</th><th class='tg-0lax'>PRL/OCHT</th><th class='tg-0lax'>Segm.</th><th class='tg-0lax'>Baza</th><th class='tg-0lax'>Index</th><th class='tg-0lax'>Vrsta materijala</th><th class='tg-0lax'>Prečnik</th><th class='tg-0lax'>SPH</th><th class='tg-0lax'>CYL</th><th class='tg-0lax'>Ugao</th><th class='tg-0lax'>Add</th><th class='tg-0lax'>JM</th><th class='tg-0lax'>Kol.</th><th class='tg-0lax'>Tr.1</th><th class='tg-0lax'>Tr.2</th><th class='tg-0lax'>PD</th><th class='tg-0lax'>Napomena</th><th class='tg-0lax'></th></tr></thead><tbody>";
 while ($row = mysqli_fetch_object($result)) {
     echo "<tr>";
     echo "<td>$row->lag_spec</td>";
@@ -55,6 +55,11 @@ if (isset($_REQUEST['msg'])) {
         echo "<script src=\"js/alertify.min.js\"></script>";
         echo "<script type=\"text/javascript\">alertify.success('Narudžbenica je poslata');</script>";
         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
+    }
+    if ($_REQUEST['msg'] == '2') {
+        echo "<script src=\"js/alertify.min.js\"></script>";
+        echo "<script type=\"text/javascript\">alertify.success('Stavka je dodata');</script>";
+        echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })</script>";
     }
 }
 CloseCon($conn);

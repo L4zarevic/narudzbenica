@@ -83,7 +83,7 @@ while ($row = mysqli_fetch_object($result)) {
 }
 file_put_contents('orders/narudzbenica_' . $imeKorisnika . '_' . date("d.m.Y_H.i") . '.xls', $schema_insert);
 
-$to = "info@mojaoptika.com";
+$to = "narudzba@mojaoptika.com";
 
 $con = OpenCon();
 $stmt = $con->prepare('SELECT email FROM korisnici WHERE ID =?');

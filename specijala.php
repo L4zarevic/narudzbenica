@@ -44,7 +44,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect1">Vrsta sočiva</label>
                 <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2" required>
-                  <option value="0"></option>
+                  <option value="0" default></option>
                   <option value="1">Monofokal</option>
                   <option value="2">Bifokal</option>
                   <option value="3">Progresiv</option>
@@ -57,7 +57,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-4">
                 <label for="exampleFormControlSelect2">Vrsta materijala</label>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
-                  <option value="0"></option>
+                  <option value="0" default></option>
                   <option value="1">Bijeli materijal-UNC</option>
                   <option value="1">Bijeli materijal UV420</option>
                   <option value="1">Photocromic gray</option>
@@ -70,7 +70,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="1">Mineralni materijali</option>
                   <option value="1">Photo gray mineralni materijali</option>
                   <option value="1">Photo brown mineralni materijali</option>
-                  <option value="1"></option>
+                  <option value="1" default></option>
 
 
                   <option value="2">Bijeli materijal</option>
@@ -78,19 +78,19 @@ include '../narudzbenica/modules/header.php';
                   <option value="2">Transitions VII brown</option>
                   <option value="2">Polycarbonate</option>
                   <option value="2">Polycarbonate Transitions</option>
-                  <option value="2"></option>
+                  <option value="2" default></option>
 
                   <option value="3">Bijeli materijal</option>
                   <option value="3">Transitions VII gray</option>
                   <option value="3">Transitions VII brown</option>
                   <option value="3">Polycarbonate</option>
                   <option value="3">Polycarbonate Transitions</option>
-                  <option value="3"></option>
+                  <option value="3" default></option>
 
                   <option value="4">Ortas</option>
                   <option value="4">Stand</option>
                   <option value="4">Expert</option>
-                  <option value="4"></option>
+                  <option value="4" default></option>
                 </select>
               </div>
             </div>
@@ -105,12 +105,12 @@ include '../narudzbenica/modules/header.php';
                   <option id="101" value="1">Anglera</option>
                   <option id="102" value="1">Matrix Mono</option>
                   <option id="102" value="1">Elegance</option>
-                  <option value="1"></option>
+                  <option value="1" default></option>
 
                   <option id="100" value="2">Bifocal FT28</option>
                   <option id="100" value="2">Bifocal CT28</option>
                   <option id="101" value="2">Bifo Invisio</option>
-                  <option value="2"></option>
+                  <option value="2" default></option>
 
                   <option id="100" value="3">Pollux</option>
                   <option id="100" value="3">Polaris</option>
@@ -122,21 +122,21 @@ include '../narudzbenica/modules/header.php';
                   <option id="102" value="3">Varia 3D</option>
                   <option id="102" value="3">Varia Pro</option>
                   <option id="102" value="3">Mineralni progresiv</option>
-                  <option value="3"></option>
+                  <option value="3" default></option>
 
                   <option id="103" value="4">Tip A</option>
                   <option id="103" value="4">Tip B</option>
                   <option id="103" value="4">Tip C</option>
-                  <option value="4"></option>
+                  <option value="4" default></option>
                 </select>
               </div>
             </div>
 
             <div class="rowSpec">
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Index</label>
                 <select name="index" title="Unesite Index prelamanja" class="form-control" id="select8">
-                  <option value="0"></option>
+                  <option default></option>
                   <option>1.50</option>
                   <option>1.523</option>
                   <option>1.53</option>
@@ -154,7 +154,7 @@ include '../narudzbenica/modules/header.php';
 
 
             <div class="rowSpec">
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Baza</label>
                 <select name="baza" title="Unesite bazu sočiva" class="form-control" id="select7">
                   <option>4</option>
@@ -175,7 +175,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-3">
                 <label id="labelPrecnik" for="exampleFormControlSelect2">Prečnik mm</label>
                 <select name="precnik1" title="Unesite prečnik" class="form-control" id="select9">
-                  <option></option>
+                  <option default></option>
                   <option>50</option>
                   <option>51</option>
                   <option>52</option>
@@ -205,7 +205,7 @@ include '../narudzbenica/modules/header.php';
                 </select>
 
                 <select name="precnik2" title="Unesite prečnik" class="form-control" id="select10">
-                  <option></option>
+                  <option default></option>
                   <option>50</option>
                   <option>51</option>
                   <option>52</option>
@@ -241,7 +241,7 @@ include '../narudzbenica/modules/header.php';
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Visina ugradnje / Koridor</label>
                   <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="select5">
-                    <option></option>
+                    <option default></option>
                     <option>13</option>
                     <option>14</option>
                     <option>15</option>
@@ -288,10 +288,10 @@ include '../narudzbenica/modules/header.php';
 
 
             <div class="rowSpec">
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">SPH</label>
                 <select name="sph" title="Unesite Sfernu dioptriju sa popisa" class="form-control" id="select11">
-                  <option></option>
+                  <option default></option>
                   <option> 0.00</option>
                   <option>+0.25</option>
                   <option>+0.50</option>
@@ -444,10 +444,10 @@ include '../narudzbenica/modules/header.php';
 
 
             <div class="rowSpec">
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">CYL</label>
                 <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="select12">
-                  <option></option>
+                  <option default></option>
                   <option> 0.00</option>
                   <option>+0.25</option>
                   <option>+0.50</option>
@@ -512,10 +512,10 @@ include '../narudzbenica/modules/header.php';
 
 
             <div class="rowSpec">
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Add / Dig.</label>
                 <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
-                  <option></option>
+                  <option default></option>
                   <option>0.75</option>
                   <option>1.00</option>
                   <option>1.25</option>
@@ -535,7 +535,7 @@ include '../narudzbenica/modules/header.php';
             </div>
 
             <div class="rowSpec">
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Jedinica mjere</label>
                 <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
                   <option>kom</option>
@@ -569,7 +569,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="100">NanoGlide</option>
                   <option value="100">PolarGlide</option>
                   <option value="100">BlueGlide</option>
-                  <option value="100">PureGLide</option>
+                  <option value="100">PureGlide</option>
                   <option value="100">Ultra Glide BackSide</option>
                   <option value="100">Mirror/UltraBS</option>
                   <option value="100" disabled>--- Bojenje ---</option>
@@ -579,14 +579,14 @@ include '../narudzbenica/modules/header.php';
                   <option value="100">Color po uzorku Hi index</option>
                   <option value="100">Gradient</option>
                   <option value="100">Gradient Hi index</option>
-                  <option value="100"></option>
+                  <option value="100" default></option>
 
                   <option value="101">MultiPlus</option>
                   <option value="101">UltraGlide</option>
                   <option value="101">NanoGlide</option>
                   <option value="101">PolarGlide</option>
                   <option value="101">BlueGlide</option>
-                  <option value="101">PureGLide</option>
+                  <option value="101">PureGlide</option>
                   <option value="101">Ultra Glide BackSide</option>
                   <option value="101">Mirror/UltraBS</option>
                   <option value="101" disabled>--- Bojenje ---</option>
@@ -596,13 +596,13 @@ include '../narudzbenica/modules/header.php';
                   <option value="101">Color po uzorku Hi index</option>
                   <option value="101">Gradient</option>
                   <option value="101">Gradient Hi index</option>
-                  <option value="101"></option>
+                  <option value="101" default></option>
 
                   <option value="102">UltraGlide</option>
                   <option value="102">NanoGlide</option>
                   <option value="102">PolarGlide</option>
                   <option value="102">BlueGlide</option>
-                  <option value="102">PureGLide</option>
+                  <option value="102">PureGlide</option>
                   <option value="102">Ultra Glide BackSide</option>
                   <option value="102">Mirror/UltraBS</option>
                   <option value="102" disabled>--- Bojenje ---</option>
@@ -612,7 +612,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="102">Color po uzorku Hi index</option>
                   <option value="102">Gradient</option>
                   <option value="102">Gradient Hi index</option>
-                  <option value="102"></option>
+                  <option value="102" default></option>
                 </select>
               </div>
             </div>
@@ -637,7 +637,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="100">Color po uzorku Hi index</option>
                   <option value="100">Gradient</option>
                   <option value="100">Gradient Hi index</option>
-                  <option value="100"></option>
+                  <option value="100" default></option>
 
                   <option value="101">MultiPlus</option>
                   <option value="101">UltraGlide</option>
@@ -654,7 +654,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="101">Color po uzorku Hi index</option>
                   <option value="101">Gradient</option>
                   <option value="101">Gradient Hi index</option>
-                  <option value="101"></option>
+                  <option value="101" default></option>
 
                   <option value="102">UltraGlide</option>
                   <option value="102">NanoGlide</option>
@@ -670,7 +670,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="102">Color po uzorku Hi index</option>
                   <option value="102">Gradient</option>
                   <option value="102">Gradient Hi index</option>
-                  <option value="102"></option>
+                  <option value="102" default></option>
                 </select>
               </div>
 

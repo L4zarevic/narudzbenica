@@ -649,7 +649,7 @@ include '../narudzbenica/modules/header.php';
             </div>-->
 
             <div class="rowSpec">
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-5">
                 <label for="exampleFormControlSelect2">Napomena</label>
                 <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
               </div>

@@ -11,8 +11,8 @@
                 ?>
                 <div class="container-fluid">
                     <div class="thankYou">
-                        <h2 style="color:#0fad00">Hvala na narudžbi</h2> </br> <img id="checkMark" src="images/green-check-icon.png"> </br></br>
-                        <p style="font-size:20px;color:#5C5C5C;">Poštovani/a, Vaša narudžba je poslata veleprodaji M-Optic.</br> Za sve dodatne informacije možete nas kontaktirati putem email-a <a href="mailto:mopticvp@mojaoptika.com">mopticvp@mojaoptika.com</a></p><a id="homeButton" href="index.php" class="btn btn-success">Povratak na početnu</a> <br><br>
+                        <h2 style="color:#0fad00">Narudžbina uspješna</h2> </br> <img id="checkMark" src="images/green-check-icon.png"> </br></br>
+                        <p style="font-size:20px;color:#5C5C5C;">Narudžbina je poslata na email <a href="mailto:narudzbe@mojaoptika.com">narudzbe@mojaoptika.com</a></p>&nbsp;&nbsp;&nbsp;&nbsp;<a id="homeButton" href="index.php" class="btn btn-success"> Idi na početnu </a> <br><br>
                     </div>
                 </div>
             </div><?php include '../narudzbenica/modules/footer.php'; ?>
