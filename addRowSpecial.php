@@ -49,11 +49,12 @@ if ($precnik2 == "") {
 }
 
 
-$upit = "insert into narudzbenica (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,napomena) values ('$idKorisnika','Specijala','$odOsOu', '$vrstaSociva','$dizajn','$koridor_visina','$segment','$baza','$indeks','$materijal','$precnik','$sph','$cyl','$ugao','$add','$jm','$kolicina','$tretman1','$tretman2','$pd','$napomena')";
-
-$rezultat = mysqli_query($conn, $upit);
+$stmt = $conn->prepare('INSERT INTO narudzbenica (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,napomena) values (?,"Specijala",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+$stmt->bind_param('issssssssssssssissss', $idKorisnika, $odOsOu, $vrstaSociva, $dizajn, $koridor_visina, $segment, $baza, $indeks, $materijal, $precnik, $sph, $cyl, $ugao, $add, $jm, $kolicina, $tretman1, $tretman2, $pd, $napomena);
+$stmt->execute();
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));
 }
-header('Location: ../narudzbenica/specijala.php?msg=2');
+
+//header('Location: ../narudzbenica/specijala.php?msg=2');
 CloseCon($conn);

@@ -35,7 +35,7 @@ $schema_insert .= '<th>Lag-Spec</th>';
 $schema_insert .= '<th>Od/Os/Ou</th>';
 $schema_insert .= '<th>Vrsta soc.</th>';
 $schema_insert .= '<th>Dizajn</th>';
-$schema_insert .= '<th>Visina ugr.</th>';
+$schema_insert .= '<th>PRL/OCHT</th>';
 $schema_insert .= '<th>Segment</th>';
 $schema_insert .= '<th>Baza</th>';
 $schema_insert .= '<th>Index</th>';
@@ -137,8 +137,7 @@ $body .= $attachment . $eol;
 $body .= "--" . $separator . "--";
 
 if (mail($to, $subject, $body, $headers)) {
-  echo "mail send ... OK";
- 
+
   $stmt = $conn->prepare('DELETE FROM `narudzbenica` WHERE IDKorisnika =?');
   $stmt->bind_param('i', $idKorisnika);
   $stmt->execute();
@@ -150,6 +149,6 @@ if (mail($to, $subject, $body, $headers)) {
   header('Location: ../narudzbenica/thanks.php');
   die();
 } else {
-  echo "mail send ... ERROR";
+
   header('Location: ' . $_SERVER['HTTP_REFERER'] . '?msg=1');
 }
