@@ -54,7 +54,7 @@ mysqli_set_charset($conn, 'utf8');
                             <p>Sve željene stavke koje potvrdite nakon unosa biće prikazane u tabeli NARUDŽBENICA koja se nalazi na dnu stranice.</p>
                             <p><strong>Unesene količine za stavke u tabeli NARUDŽBENICA nije moguće uređivati.</strong></p>
                             <p>U slučaju pogrešnog unosa, stavku iz tabele je potrebno ukloniti klikom na ikonicu kantice <i class='fas fa-trash'></i>, a nakon toga izvršiti ponovni unos iz grafikona.</p>
-                            <p>Nakon što kreirate narudžbenicu, potrebno je kliknuti na dugme <i class='fas fa-paper-plane'></i> POŠALJI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji M-Optic</p>
+                            <p>Nakon što kreirate narudžbenicu, potrebno je kliknuti na dugme <i class='fas fa-paper-plane'></i> POŠALJI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji M-OPTIC</p>
                             <p>Za sve dodatne informacije u vezi aplikacije, pišite na email: <a href="mailto:nemanja.lazarevic@mojaoptika.com">nemanja.lazarevic@mojaoptika.com</a></p></br>
                         </div>
                         <div class="companyInfo"> <img id="logo" src="../narudzbenica/images/MO.png">
