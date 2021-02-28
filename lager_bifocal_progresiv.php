@@ -44,7 +44,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect1">Vrsta sočiva</label>
                 <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2" required>
-                  <option value="0"></option>
+                  <option value="0" default></option>
                   <!--<option value="1">Monofokal</option>-->
                   <option value="2">Bifokal</option>
                   <option value="3">Progresiv</option>
@@ -57,7 +57,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Vrsta materijala</label>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
-                  <option value="0"></option>
+                  <option value="0" default></option>
                   <option value="1">Bijeli materijal-UNC</option>
                   <!--<option value="1">Bijeli materijal UV420</option>-->
                   <option value="1">Photocromic gray</option>
@@ -264,7 +264,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">SPH</label>
                 <select name="sph" title="Unesite Sfernu dioptriju sa popisa" class="form-control" id="select11">
-                  <option></option>
+                  <option default></option>
                   <option> 0.00</option>
                   <option>+0.25</option>
                   <option>+0.50</option>
@@ -488,7 +488,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Add / Dig.</label>
                 <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
-                  <option></option>
+                  <option default></option>
                   <!-- <option>0.75</option>-->
                   <option>1.00</option>
                   <option>1.25</option>
@@ -511,7 +511,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Jedinica mjere</label>
                 <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
-                  <option>kom</option>
+                  <option default>kom</option>
                   <option>kut</option>
                   <option>kut-2</option>
                   <option>kut-3</option>

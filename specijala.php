@@ -58,6 +58,7 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">Vrsta materijala</label>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0" default></option>
+                  <option value="1" default></option>
                   <option value="1">Bijeli materijal-UNC</option>
                   <option value="1">Bijeli materijal UV420</option>
                   <option value="1">Photocromic gray</option>
@@ -70,27 +71,26 @@ include '../narudzbenica/modules/header.php';
                   <option value="1">Mineralni materijali</option>
                   <option value="1">Photo gray mineralni materijali</option>
                   <option value="1">Photo brown mineralni materijali</option>
-                  <option value="1" default></option>
 
-
+                  <option value="2" default></option>
                   <option value="2">Bijeli materijal</option>
                   <option value="2">Transitions VII gray</option>
                   <option value="2">Transitions VII brown</option>
                   <option value="2">Polycarbonate</option>
                   <option value="2">Polycarbonate Transitions</option>
-                  <option value="2" default></option>
 
+                  <option value="3" default></option>
                   <option value="3">Bijeli materijal</option>
                   <option value="3">Transitions VII gray</option>
                   <option value="3">Transitions VII brown</option>
                   <option value="3">Polycarbonate</option>
                   <option value="3">Polycarbonate Transitions</option>
-                  <option value="3" default></option>
 
+                  <option value="4" default></option>
                   <option value="4">Ortas</option>
                   <option value="4">Stand</option>
                   <option value="4">Expert</option>
-                  <option value="4" default></option>
+
                 </select>
               </div>
             </div>
@@ -100,18 +100,19 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">Dizajn</label>
                 <select name="dizajn" title="Unesite vrstu dizajna" class="form-control" id="select4">
                   <option value="0"></option>
+                  <option value="1" default></option>
                   <option id="100" value="1">Standard UNC</option>
                   <option id="101" value="1">Panorama</option>
                   <option id="101" value="1">Anglera</option>
                   <option id="102" value="1">Matrix Mono</option>
                   <option id="102" value="1">Elegance</option>
-                  <option value="1" default></option>
 
+                  <option value="2" default></option>
                   <option id="100" value="2">Bifocal FT28</option>
                   <option id="100" value="2">Bifocal CT28</option>
                   <option id="101" value="2">Bifo Invisio</option>
-                  <option value="2" default></option>
 
+                  <option value="3" default></option>
                   <option id="100" value="3">Pollux</option>
                   <option id="100" value="3">Polaris</option>
                   <option id="101" value="3">Futura</option>
@@ -122,12 +123,12 @@ include '../narudzbenica/modules/header.php';
                   <option id="102" value="3">Varia 3D</option>
                   <option id="102" value="3">Varia Pro</option>
                   <option id="102" value="3">Mineralni progresiv</option>
-                  <option value="3" default></option>
 
+                  <option value="4" default></option>
                   <option id="103" value="4">Tip A</option>
                   <option id="103" value="4">Tip B</option>
                   <option id="103" value="4">Tip C</option>
-                  <option value="4" default></option>
+
                 </select>
               </div>
             </div>
@@ -563,6 +564,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-5">
                 <label for="exampleFormControlSelect2">Tretmani i bojenja #1</label>
                 <select name="tretman1" class="form-control" id="select15">
+                  <option value="100" default></option>
                   <option value="100">HC</option>
                   <option value="100">MultiPlus</option>
                   <option value="100">UltraGlide</option>
@@ -579,8 +581,8 @@ include '../narudzbenica/modules/header.php';
                   <option value="100">Color po uzorku Hi index</option>
                   <option value="100">Gradient</option>
                   <option value="100">Gradient Hi index</option>
-                  <option value="100" default></option>
 
+                  <option value="101" default></option>
                   <option value="101">MultiPlus</option>
                   <option value="101">UltraGlide</option>
                   <option value="101">NanoGlide</option>
@@ -596,8 +598,8 @@ include '../narudzbenica/modules/header.php';
                   <option value="101">Color po uzorku Hi index</option>
                   <option value="101">Gradient</option>
                   <option value="101">Gradient Hi index</option>
-                  <option value="101" default></option>
 
+                  <option value="102" default></option>
                   <option value="102">UltraGlide</option>
                   <option value="102">NanoGlide</option>
                   <option value="102">PolarGlide</option>
@@ -612,7 +614,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="102">Color po uzorku Hi index</option>
                   <option value="102">Gradient</option>
                   <option value="102">Gradient Hi index</option>
-                  <option value="102" default></option>
+
                 </select>
               </div>
             </div>
@@ -621,6 +623,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-5">
                 <label for="exampleFormControlSelect2">Tretmani i bojenja #2</label>
                 <select name="tretman2" class="form-control" id="select16">
+                  <option value="100" default></option>
                   <option value="100">HC</option>
                   <option value="100">MultiPlus</option>
                   <option value="100">UltraGlide</option>
@@ -637,8 +640,8 @@ include '../narudzbenica/modules/header.php';
                   <option value="100">Color po uzorku Hi index</option>
                   <option value="100">Gradient</option>
                   <option value="100">Gradient Hi index</option>
-                  <option value="100" default></option>
 
+                  <option value="101" default></option>
                   <option value="101">MultiPlus</option>
                   <option value="101">UltraGlide</option>
                   <option value="101">NanoGlide</option>
@@ -654,8 +657,8 @@ include '../narudzbenica/modules/header.php';
                   <option value="101">Color po uzorku Hi index</option>
                   <option value="101">Gradient</option>
                   <option value="101">Gradient Hi index</option>
-                  <option value="101" default></option>
 
+                  <option value="102" default></option>
                   <option value="102">UltraGlide</option>
                   <option value="102">NanoGlide</option>
                   <option value="102">PolarGlide</option>
@@ -670,7 +673,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="102">Color po uzorku Hi index</option>
                   <option value="102">Gradient</option>
                   <option value="102">Gradient Hi index</option>
-                  <option value="102" default></option>
+
                 </select>
               </div>
 
