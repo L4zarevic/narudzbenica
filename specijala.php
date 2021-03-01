@@ -122,6 +122,7 @@ include '../narudzbenica/modules/header.php';
                   <option id="100" value="3">Polaris</option>
                   <option id="101" value="3">Futura</option>
                   <option id="101" value="3">Infini</option>
+                  <option id="102" value="3">Matrix Short</option>
                   <option id="102" value="3">Matrix Pro</option>
                   <option id="102" value="3">Sequel DBS</option>
                   <option id="102" value="3">Adapta DBS</option>
@@ -165,6 +166,7 @@ include '../narudzbenica/modules/header.php';
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Baza</label>
                 <select name="baza" title="Unesite bazu sočiva" class="form-control" id="select7">
+                  <option default></option>
                   <option>4</option>
                   <option>4.5</option>
                   <option>5</option>

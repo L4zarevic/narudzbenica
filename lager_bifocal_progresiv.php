@@ -58,9 +58,9 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">Vrsta materijala</label>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0" default></option>
-                  <option value="1">Bijeli materijal-UNC</option>
+                  <option value="1">1.50 Bijeli materijal HMC</option>
                   <!--<option value="1">Bijeli materijal UV420</option>-->
-                  <option value="1">Photocromic gray</option>
+                  <option value="1">1.56 Photocromic gray HMC</option>
                   <!-- <option value="1">Photocromic brown</option>
                   <option value="1">Transitions VII gray</option>
                   <option value="1">Transitions VII brown</option>
