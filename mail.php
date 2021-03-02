@@ -13,7 +13,7 @@ $korisnik = $_SESSION['prijavljen'];
 $ar = explode('#', $korisnik, 4);
 $ar[1] = rtrim($ar[1], '#');
 $idKorisnika = $ar[0];
-$imeKorisnika = $ar[1];
+$imeKorisnika = $ar[2];
 $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
