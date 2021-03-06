@@ -10,6 +10,8 @@ $idKorisnika = $ar[0];
 $optika = $ar[1];
 $imeKorisnika = $ar[2]; ?>
 
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
