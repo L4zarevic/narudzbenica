@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Moja Optika Stanković | e-Narudžbenica</title>
     <meta charset="UTF-8">
@@ -18,7 +19,7 @@
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
                 <form class="login100-form validate-form flex-sb flex-w" action="../narudzbenica/obrada.php" method="post"><img id="logo" src="../narudzbenica/images/MO.png"><span class="login100-form-title p-b-51">M-Optic</span>
-                    <div class="wrap-input100 validate-input m-b-16"><input class="input100" type="text" name="korisnicko_ime" placeholder="Korisničko ime"><span class="focus-input100"></span></div>
+                    <div class="wrap-input100 validate-input m-b-16"><input class="input100" type="text" id="korisnicko_ime" name="korisnicko_ime" placeholder="Korisničko ime"><span class="focus-input100"></span></div>
                     <div class="wrap-input100 validate-input m-b-16"><input class="input100" type="password" name="lozinka" placeholder="Lozinka"><span class="focus-input100"></span></div>
                     <div class="container-login100-form-btn m-t-17"><button class="login100-form-btn" type="submit">Prijava</button><br />
                         <?php
@@ -42,12 +43,11 @@
             </div>
         </div>
     </div>
-
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendor/bootstrap/js/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
-     <!-- „Ko traži, naći će. Ko kuca, otvoriće mu se.“ -->
+    <!-- „Ko traži, naći će. Ko kuca, otvoriće mu se.“ -->
 </body>
 
 </html>

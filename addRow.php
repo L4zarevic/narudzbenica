@@ -61,14 +61,35 @@ $stmt->bind_param('i', $idPolja);
 $stmt->execute();
 $result = $stmt->get_result();
 if (!$result) die(mysqli_error($conn));
+$vrsta_materijala = '';
 while ($row = mysqli_fetch_object($result)) {
     $sifra = $row->sifra;
     $vrsta_materijala = $row->naziv;
 }
 
-$stmt = $conn->prepare('INSERT INTO narudzbenica (IDKorisnika,lag_spec,vrsta_materijala,kolicina) VALUES (?, "Lager", ?, ?)');
-$stmt->bind_param('isi', $idKorisnika, $vrsta_materijala, $kolicina);
-$stmt->execute();
+$stmt1 = $conn->prepare('SELECT ID,kolicina FROM narudzbenica WHERE IDKorisnika =? AND lag_spec ="Lager" AND vrsta_materijala =?');
+$stmt1->bind_param('is', $idKorisnika, $vrsta_materijala);
+$stmt1->execute();
+$result = $stmt1->get_result();
+
+$count = 0;
+while ($row = mysqli_fetch_object($result)) {
+    $count = 1;
+    $ID = $row->ID;
+    $stara_kolicina = $row->kolicina;
+}
+
+if ($count == 1) {
+    $stmt2 = $conn->prepare('UPDATE narudzbenica SET kolicina =? WHERE ID =?');
+    $ukupna_kolicina = $stara_kolicina + $kolicina;
+    $stmt2->bind_param('ii', $ukupna_kolicina, $ID);
+    $stmt2->execute();
+} else {
+    $stmt = $conn->prepare('INSERT INTO narudzbenica (IDKorisnika,lag_spec,vrsta_materijala,kolicina) VALUES (?, "Lager", ?, ?)');
+    $stmt->bind_param('isi', $idKorisnika, $vrsta_materijala, $kolicina);
+    $stmt->execute();
+}
+
 if (mysqli_error($conn)) {
     die(mysqli_error($conn));
 }
