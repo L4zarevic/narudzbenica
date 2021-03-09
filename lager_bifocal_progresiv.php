@@ -654,7 +654,7 @@ include '../narudzbenica/modules/header.php';
                 <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
               </div>
             </div>
-            <button type='button' onclick="return checkLagerBifoProgForm();" id='dugmeNaruci' class='btn btn-success'><i class="fas fa-save"></i>&nbsp;Sačuvaj stavku</button>
+            <button type='button' onclick="return checkLagerBifoProgForm();" id='dugmeNaruci' class='btn btn-success'><i class="fa fa-save"></i>&nbsp;Sačuvaj stavku</button>
           </div>
 
           <div class="tabelaSpecijala2">
