@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_object($result)) {
     echo "<td>$row->tretman2</td>";
     echo "<td>$row->pd</td>";
     echo "<td><input name='napomena' title='Unesite napomenu' class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
-    echo "<td><i onclick='deleteRow();' id='$row->ID' title='Ukloni stavku' class='fas fa-trash'></i></td>";
+    echo "<td><i onclick='deleteRow();' id='$row->ID' title='Ukloni stavku' class='fas fa-trash fa-lg'></i></td>";
     echo "</tr>";
 }
 echo "</tbody>";
