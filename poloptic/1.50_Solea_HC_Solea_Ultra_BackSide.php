@@ -12,7 +12,7 @@
                         location.reload()
                     },
                     error: function() {
-                        location.reload(), window.location.href = "../poloptic/1.50_Solea_HC_Solea_Ultra_BackSide.php?msg=2"
+                        location.reload(), window.location.href = "1.50_Solea_HC_Solea_Ultra_BackSide.php?msg=2"
                     }
                 })
             }

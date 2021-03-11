@@ -32,17 +32,17 @@ if (mysqli_num_rows($result) > 0) {
 echo " <p id='info'>U tabeli je moguće unijeti samo Napomenu i da bi potvrdili unos pritisnite ENTER na tastaturi.</br> Da bi izbrisali stavku u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
 if (isset($_REQUEST['msg'])) {
     if ($_REQUEST['msg'] == '1') {
-        echo "<script src=\"js/alertify.min.js\"></script>";
+        echo "<script src=\"../js/alertify.min.js\"></script>";
         echo "<script type=\"text/javascript\">alertify.error('Greška prilikom slanja');</script>";
         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
     }
     if ($_REQUEST['msg'] == '0') {
-        echo "<script src=\"js/alertify.min.js\"></script>";
+        echo "<script src=\"../js/alertify.min.js\"></script>";
         echo "<script type=\"text/javascript\">alertify.success('Narudžbenica je poslata');</script>";
         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
     }
     if ($_REQUEST['msg'] == '2') {
-        echo "<script src=\"js/alertify.min.js\"></script>";
+        echo "<script src=\"../js/alertify.min.js\"></script>";
         echo "<script type=\"text/javascript\">alertify.success('Stavka je dodata');</script>";
         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })</script>";
     }
