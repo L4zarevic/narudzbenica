@@ -1,5 +1,5 @@
 <?php if (is_null($_SESSION['prijavljen'])) {
-    header('Location: ../narudzbenica/login.php');
+    header('Location: ../login.php');
 }
 $korisnik = $_SESSION['prijavljen'];
 $ar = explode('#', $korisnik, 4);

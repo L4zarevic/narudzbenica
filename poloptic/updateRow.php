@@ -1,6 +1,6 @@
 <?php session_start();
 if (is_null($_SESSION['prijavljen'])) {
-    header('Location: ../narudzbenica/login.php');
+    header('Location: ../login.php');
 }
 header("Content-Type: application/json", true);
 require_once '../connection.php';

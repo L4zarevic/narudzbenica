@@ -2,10 +2,10 @@
 
 session_start();
 if (is_null($_SESSION['prijavljen'])) {
-	header('Location: ../narudzbenica/login.php');
+	header('Location: ../login.php');
 }
 
-require_once 'connection.php';
+require_once '../connection.php';
 
 $korisnik = $_SESSION['prijavljen'];
 $ar = explode('#', $korisnik, 4);
@@ -49,7 +49,7 @@ if ($precnik2 == "") {
 }
 
 
-$stmt = $conn->prepare('INSERT INTO narudzbenica (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,napomena) values (?,"Specijala",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,napomena) values (?,"Specijala",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
 $stmt->bind_param('issssssssssssssissss', $idKorisnika, $odOsOu, $vrstaSociva, $dizajn, $koridor_visina, $segment, $baza, $indeks, $materijal, $precnik, $sph, $cyl, $ugao, $add, $jm, $kolicina, $tretman1, $tretman2, $pd, $napomena);
 $stmt->execute();
 if (mysqli_error($conn)) {

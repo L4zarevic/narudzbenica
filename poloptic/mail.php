@@ -2,13 +2,12 @@
 session_start();
 
 if (is_null($_SESSION['prijavljen'])) {
-  header('Location: ../narudzbenica/login.php');
+  header('Location: ../login.php');
 }
 require_once '../connection.php';
 
 $conn = OpenCon();
 
-$korisnik = $_SESSION['prijavljen'];
 $korisnik = $_SESSION['prijavljen'];
 $ar = explode('#', $korisnik, 4);
 $ar[1] = rtrim($ar[1], '#');
