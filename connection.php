@@ -26,7 +26,7 @@ function OpenStoreCon($dataBaseName)
     $db = $dataBaseName;
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
     if (!$conn) {
-        die(header("Location:../narudzbenica/login.php?msg=2"));
+        die(header("Location:./narudzbenica/login.php?msg=2"));
         exit;
     }
     return $conn;

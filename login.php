@@ -18,7 +18,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
-                <form class="login100-form validate-form flex-sb flex-w" action="../narudzbenica/obrada.php" method="post"><img id="logo" src="../narudzbenica/images/MO.png"><span class="login100-form-title p-b-51">M-Optic</span>
+                <form class="login100-form validate-form flex-sb flex-w" action="obrada.php" method="post"><img id="logo" src="images/MO.png"><span class="login100-form-title p-b-51">M-Optic</span>
                     <div class="wrap-input100 validate-input m-b-16"><input class="input100" type="text" id="korisnicko_ime" name="korisnicko_ime" placeholder="Korisničko ime"><span class="focus-input100"></span></div>
                     <div class="wrap-input100 validate-input m-b-16"><input class="input100" type="password" name="lozinka" placeholder="Lozinka"><span class="focus-input100"></span></div>
                     <div class="container-login100-form-btn m-t-17"><button class="login100-form-btn" type="submit">Prijava</button><br />
@@ -34,7 +34,7 @@
                             }
                             if ($_REQUEST['msg'] == '2') {
                                 echo "<script src=\"js/alertify.min.js\"></script>";
-                                echo "<script type=\"text/javascript\">alertify.alert('Prekid konekcije','Nije moguće ostvariti konekciju sa aplikacijom. Pokušajte ponovo da se ulogujete na Vaš korisnički nalog. Ukoliko se problem ponavlja kontaktirajte nas na info@mojaoptika.com');</script>";
+                                echo "<script type=\"text/javascript\">alertify.alert('Prekid konekcije','Nije moguće ostvariti konekciju sa aplikacijom. Pokušajte ponovo da se ulogujete na Vaš korisnički nalog. Ukoliko se problem ponavlja kontaktirajte nas na nemanja.lazarevic@mojaoptika.com');</script>";
                             }
                         }
                         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";

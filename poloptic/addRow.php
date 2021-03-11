@@ -2,7 +2,7 @@
 if (is_null($_SESSION['prijavljen'])) {
     header('Location: ../narudzbenica/login.php');
 }
-include 'connection.php';
+include '../connection.php';
 $korisnik = $_SESSION['prijavljen'];
 $ar = explode('#', $korisnik, 4);
 $ar[1] = rtrim($ar[1], '#');
@@ -67,7 +67,7 @@ while ($row = mysqli_fetch_object($result)) {
     $vrsta_materijala = $row->naziv;
 }
 
-$stmt1 = $conn->prepare('SELECT ID,kolicina FROM narudzbenica WHERE IDKorisnika =? AND lag_spec ="Lager" AND vrsta_materijala =?');
+$stmt1 = $conn->prepare('SELECT ID,kolicina FROM narudzbenica_pol WHERE IDKorisnika =? AND lag_spec ="Lager" AND vrsta_materijala =?');
 $stmt1->bind_param('is', $idKorisnika, $vrsta_materijala);
 $stmt1->execute();
 $result = $stmt1->get_result();
@@ -80,12 +80,12 @@ while ($row = mysqli_fetch_object($result)) {
 }
 
 if ($count == 1) {
-    $stmt2 = $conn->prepare('UPDATE narudzbenica SET kolicina =? WHERE ID =?');
+    $stmt2 = $conn->prepare('UPDATE narudzbenica_pol SET kolicina =? WHERE ID =?');
     $ukupna_kolicina = $stara_kolicina + $kolicina;
     $stmt2->bind_param('ii', $ukupna_kolicina, $ID);
     $stmt2->execute();
 } else {
-    $stmt = $conn->prepare('INSERT INTO narudzbenica (IDKorisnika,lag_spec,vrsta_materijala,kolicina) VALUES (?, "Lager", ?, ?)');
+    $stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,vrsta_materijala,kolicina) VALUES (?, "Lager", ?, ?)');
     $stmt->bind_param('isi', $idKorisnika, $vrsta_materijala, $kolicina);
     $stmt->execute();
 }

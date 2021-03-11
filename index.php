@@ -1,84 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<?php
-include '../narudzbenica/modules/header.php';
-
-//Uklanjanje kolačića
-setcookie('cica_maca', '', time() - 3600);
-
-require_once 'connection.php';
-$korisnik = $_SESSION['prijavljen'];
-$ar = explode('#', $korisnik, 4);
-$ar[1] = rtrim($ar[1], '#');
-$idKorisnika = $ar[0];
-$dataBaseName = $ar[3];
-$conn = OpenStoreCon($dataBaseName);
-mysqli_set_charset($conn, 'utf8');
-
-//Metod za prikaz loga korisnika (optike)
-// function logo($idKorisnika)
-// {
-//     $con = OpenCon();
-//     $stmt = $con->prepare('SELECT logo FROM korisnici WHERE ID=?');
-//     $stmt->bind_param('i', $idKorisnika);
-//     $stmt->execute();
-//     $result = $stmt->get_result();
-//     while ($row = $result->fetch_object()) {
-//         $logo = '../naruzbenica/images/logo_optika/' . $row->logo;
-//     }
-//     echo $logo;
-//     CloseCon($con);
-// }
-
+<?php session_start();
+if (is_null($_SESSION['prijavljen'])) {
+    header('Location:login.php');
+}
 ?>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="">
+    <meta name="author" content="Nemanja Lazarević">
+    <title>Moja Optika Stanković | e-Narudžbenica</title>
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
+</head>
+<style>
+    .text {
+        position: fixed;
+        top: 35%;
+        left: 41%;
+        width: 100%;
+    }
 
-<body id="page-top">
-    <div id="wrapper">
-        <?php include '../narudzbenica/modules/menu.php'; ?>
-        <div id="content-wrapper" class="d-flex flex-column">
-            <div id="content">
-                <?php
-                include '../narudzbenica/modules/logout.php';
-                ?>
-                <div class="container-fluid">
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">e-Narudžbenica &nbsp;<i class="fa fa-clipboard-list"></i></h1>
-                    </div>
-                    <div class="row">
-                        <div class="">
-                            <h5>Uputstvo za narudžbenicu</h5>
-                            <p>Da biste kreirali željenu narudžbenicu, potrebno je u meniju lijevo izabrati iz ponude Lagerska stakla ili Specijala</p>
-                            <p><strong> Lagerska stakla:</strong></p>
-                            <p>Iz padajuće liste izaberite željeni index. U polje grafikona unijeti željenu količinu dioptrije, nakon čega je potrebno pritisnuti ENTER na tastaturi radi potvrde.</p>
-                            <p><strong>NAPOMENA: Stavke dodavati jednu po jednu</strong></p>
-                            <p>Sve željene stavke koje potvrdite nakon unosa biće prikazane u tabeli NARUDŽBENICA koja se nalazi na dnu stranice.</p>
-                            <p><strong>Unesene količine za stavke u tabeli NARUDŽBENICA nije moguće uređivati.</strong></p>
-                            <p>U slučaju pogrešnog unosa, stavku iz tabele je potrebno ukloniti klikom na ikonicu kantice <i class='fa fa-trash'></i>, a nakon toga izvršiti ponovni unos iz grafikona.</p>
-                            <p>Nakon što kreirate narudžbenicu, potrebno je kliknuti na dugme <i class='fa fa-paper-plane'></i> POŠALJI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji "M-OPTIC"</p>
-                        </div>
-                        <div class="companyInfo"> <img id="logo" src="../narudzbenica/images/MO.png">
-                            <p>“M-OPTIC” d.o.o.</br> ul. Majevička br. 29, 76300 Bijeljina</br> <strong>Tel:</strong> +387 55 222 999, 222 990, 490 010</br> <strong>Fax:</strong> +387 55 222 998</br> <strong>Email:</strong> <a href="mailto:mopticvp@mojaoptika.com">mopticvp@mojaoptika.com</a></br> <a href="https://mojaoptika.com">www.mojaoptika.com</a></p>
-                        </div>
-                    </div>
+    .cards {
+        position: fixed;
+        top: 45%;
+        left: 8%;
+        width: 100%;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 20%;
+        display: inline-block;
+        padding: 2px 16px;
+        margin: 2px 5px;
+    }
+
+    .card img {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+</style>
+
+<body>
+
+    <div class="text">
+        <h1 class="h3 mb-0 text-gray-800">Izaberite proizvođača:</h1>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <img src="images/moptic.svg" alt="M-OPTIC" style="width:100%">
+            <div class="container">
+            </div>
+        </div>
+        <div class="card">
+            <a href="poloptic/index.php"><img src="images/poloptic.svg" alt="Pol Optic" style="width:100%">
+                <div class="container">
                 </div>
-            </div><?php include '../narudzbenica/modules/footer.php'; ?>
+            </a>
+        </div>
+        <div class="card">
+            <img src="images/essilor.svg" alt="Essilor" style="width:100%">
+            <div class="container">
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/hoya.svg" alt="Hoya" style="width:100%">
+            <div class="container">
+            </div>
+        </div>
+    </div>
+
 </body>
-
-<div class="pre-loader">
-  <div class="sk-fading-circle">
-    <div class="sk-circle1 sk-circle"></div>
-    <div class="sk-circle2 sk-circle"></div>
-    <div class="sk-circle3 sk-circle"></div>
-    <div class="sk-circle4 sk-circle"></div>
-    <div class="sk-circle5 sk-circle"></div>
-    <div class="sk-circle6 sk-circle"></div>
-    <div class="sk-circle7 sk-circle"></div>
-    <div class="sk-circle8 sk-circle"></div>
-    <div class="sk-circle9 sk-circle"></div>
-    <div class="sk-circle10 sk-circle"></div>
-    <div class="sk-circle11 sk-circle"></div>
-    <div class="sk-circle12 sk-circle"></div>
-  </div>
-</div>
-
 </html>

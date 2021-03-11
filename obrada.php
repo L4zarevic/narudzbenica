@@ -1,6 +1,6 @@
 <?php session_start();
 if (is_null($_SESSION['prijavljen'])) {
-    header('Location:../narudzbenica/login.php');
+    header('Location:../login.php');
 }
 include 'connection.php';
 $con = OpenCon();
@@ -13,7 +13,7 @@ $stmt->bind_param('ss', $korisnickoIme, $hash_password);
 $stmt->execute();
 $result = $stmt->get_result();
 if (!$stmt) {
-    header('Location:login.php?msg=2');
+    header('Location:../login.php?msg=2');
     die(mysqli_error($con));
     CloseCon($con);
 }
@@ -30,10 +30,8 @@ if (!$korisnickoIme && !$lozinka) {
     $error = 1;
 } else if (!$korisnickoIme) {
     $error = 1;
-    header('Location:login.php?msg=ovde sam');
 } else if (!$lozinka) {
     $error = 1;
-    header('Location:login.php?msg=ovde sam2');
 } else {
     if (($korisnickoIme == $user) && ($hash_password == $pass)) {
         if (isset($_POST['g-recaptcha-response'])) {
@@ -54,7 +52,7 @@ if (!$korisnickoIme && !$lozinka) {
 }
 if ($error == 1) {
     setcookie('cica_maca', 'mjauu', time() + 5 * 60);
-    header('Location:login.php?msg=1');
+    header('Location:../login.php?msg=1');
     exit;
 } else {
     $_SESSION['prijavljen'] = $idKorisnika . '#' . $optika . '#' . $imeKorisnika . '#' . $dataBaseName;

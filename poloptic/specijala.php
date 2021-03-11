@@ -2,14 +2,14 @@
 <html lang="en">
 
 <?php
-include '../narudzbenica/modules/header.php';
+include '../modules/header.php';
 ?>
 
 <body id="page-top">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
-    <?php include '../narudzbenica/modules/menu.php'; ?>
+    <?php include '../modules/menu.php'; ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -18,7 +18,7 @@ include '../narudzbenica/modules/header.php';
       <div id="content">
 
         <?php
-        include '../narudzbenica/modules/logout.php';
+        include '../modules/logout.php';
         ?>
         <!-- End of Topbar -->
 
@@ -59,8 +59,8 @@ include '../narudzbenica/modules/header.php';
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0" default></option>
                   <option value="1" default></option>
-                  <option value="1">Bijeli materijal-UNC</option>
-                  <option value="1">Bijeli materijal UV420</option>
+                  <option value="1">C39 UC</option>
+                  <option value="1">C39 UV420</option>
                   <option value="1">Photocromic gray</option>
                   <option value="1">Photocromic brown</option>
                   <option value="1">Transitions VII gray</option>
@@ -74,7 +74,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="1" default></option>
 
                   <option value="2" default></option>
-                  <option value="2">Bijeli materijal</option>
+                  <option value="2">C39</option>
                   <option value="2">Transitions VII gray</option>
                   <option value="2">Transitions VII brown</option>
                   <option value="2">Polycarbonate</option>
@@ -82,7 +82,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="2" default></option>
 
                   <option value="3" default></option>
-                  <option value="3">Bijeli materijal</option>
+                  <option value="3">C39</option>
                   <option value="3">Transitions VII gray</option>
                   <option value="3">Transitions VII brown</option>
                   <option value="3">Polycarbonate</option>
@@ -581,7 +581,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="100">PolarGlide</option>
                   <option value="100">BlueGlide</option>
                   <option value="100">PureGlide</option>
-                  <option value="100">Ultra Glide BackSide</option>
+                  <option value="100">UltraGlide BackSide</option>
                   <option value="100">Mirror/UltraBS</option>
                   <option value="100" disabled>--- Bojenje ---</option>
                   <option value="100">Unicolor</option>
@@ -593,13 +593,15 @@ include '../narudzbenica/modules/header.php';
                   <option value="100" default></option>
 
                   <option value="101" default></option>
-                  <option value="101">MultiPlus</option>
+                  <option value="101">HC</option>
+                  <option value="101">MC</option>
+                  <option value="101">MultiPlus HMC</option>
                   <option value="101">UltraGlide</option>
                   <option value="101">NanoGlide</option>
                   <option value="101">PolarGlide</option>
                   <option value="101">BlueGlide</option>
                   <option value="101">PureGlide</option>
-                  <option value="101">Ultra Glide BackSide</option>
+                  <option value="101">UltraGlide BackSide</option>
                   <option value="101">Mirror/UltraBS</option>
                   <option value="101" disabled>--- Bojenje ---</option>
                   <option value="101">Unicolor</option>
@@ -616,7 +618,7 @@ include '../narudzbenica/modules/header.php';
                   <option value="102">PolarGlide</option>
                   <option value="102">BlueGlide</option>
                   <option value="102">PureGlide</option>
-                  <option value="102">Ultra Glide BackSide</option>
+                  <option value="102">UltraGlide BackSide</option>
                   <option value="102">Mirror/UltraBS</option>
                   <option value="102" disabled>--- Bojenje ---</option>
                   <option value="102">Unicolor</option>
@@ -655,7 +657,9 @@ include '../narudzbenica/modules/header.php';
                   <option value="100" default></option>
 
                   <option value="101" default></option>
-                  <option value="101">MultiPlus</option>
+                  <option value="101">HC</option>
+                  <option value="101">MC</option>
+                  <option value="101">MultiPlus HMC</option>
                   <option value="101">UltraGlide</option>
                   <option value="101">NanoGlide</option>
                   <option value="101">PolarGlide</option>
@@ -733,11 +737,9 @@ include '../narudzbenica/modules/header.php';
 
       </div>
       <div class="naslov">
-        <h1 id="naslovNarudzbenice">Narudžbenica</h1>
-        <hr>
 
         <?php
-        include 'narudzbenicaSpecijala.php';
+        include '../poloptic/narudzbenicaSpecijala.php';
         ?>
       </div>
     </div>
@@ -746,7 +748,7 @@ include '../narudzbenica/modules/header.php';
 
     <!-- Footer -->
     <?php
-    include '../narudzbenica/modules/footer.php';
+    include '../modules/footer.php';
     ?>
     <!-- End of Footer -->
 

@@ -2,14 +2,14 @@
 <html lang="en">
 
 <?php
-include '../narudzbenica/modules/header.php';
+include '../modules/header.php';
 ?>
 
 <body id="page-top">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
-    <?php include '../narudzbenica/modules/menu.php'; ?>
+    <?php include '../modules/menu.php'; ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -17,7 +17,7 @@ include '../narudzbenica/modules/header.php';
       <!-- Main Content -->
       <div id="content">
         <?php
-        include '../narudzbenica/modules/logout.php';
+        include '../modules/logout.php';
         ?>
         <!-- End of Topbar -->
 
@@ -58,7 +58,7 @@ include '../narudzbenica/modules/header.php';
                 <label for="exampleFormControlSelect2">Vrsta materijala</label>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0" default></option>
-                  <option value="1">1.50 Bijeli materijal HMC</option>
+                  <option value="1">1.50 HMC</option>
                   <!--<option value="1">Bijeli materijal UV420</option>-->
                   <option value="1">1.56 Photocromic gray HMC</option>
                   <!-- <option value="1">Photocromic brown</option>
@@ -679,11 +679,8 @@ include '../narudzbenica/modules/header.php';
 
       </div>
       <div class="naslov">
-        <h1 id="naslovNarudzbenice">Narudžbenica</h1>
-        <hr>
-
         <?php
-        include 'narudzbenicaSpecijala.php';
+        include '../poloptic/narudzbenicaSpecijala.php';
         ?>
       </div>
     </div>
@@ -692,7 +689,7 @@ include '../narudzbenica/modules/header.php';
 
     <!-- Footer -->
     <?php
-    include '../narudzbenica/modules/footer.php';
+    include '../modules/footer.php';
     ?>
     <!-- End of Footer -->
 

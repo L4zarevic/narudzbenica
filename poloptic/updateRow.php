@@ -3,7 +3,7 @@ if (is_null($_SESSION['prijavljen'])) {
     header('Location: ../narudzbenica/login.php');
 }
 header("Content-Type: application/json", true);
-require_once 'connection.php';
+require_once '../connection.php';
 $korisnik = $_SESSION['prijavljen'];
 $ar = explode('#', $korisnik, 4);
 $ar[1] = rtrim($ar[1], '#');
@@ -17,7 +17,7 @@ $ar[1] = rtrim($ar[1], "#");
 $ID = $ar[0];
 $napomena = $ar[1];
 $realID = substr($ID, 1);
-$stmt = $conn->prepare('UPDATE narudzbenica SET napomena =? WHERE ID =?');
+$stmt = $conn->prepare('UPDATE narudzbenica_pol SET napomena =? WHERE ID =?');
 $stmt->bind_param('si', $napomena, $realID);
 $stmt->execute();
 if (mysqli_error($conn)) {
