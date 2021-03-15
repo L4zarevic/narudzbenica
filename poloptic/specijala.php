@@ -59,8 +59,8 @@ include '../modules/header.php';
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0" default></option>
                   <option value="1" default></option>
-                  <option value="1">C39 UC</option>
-                  <option value="1">C39 UV420</option>
+                  <option value="1">CR39 UC</option>
+                  <option value="1">CR39 UV420</option>
                   <option value="1">Photocromic gray</option>
                   <option value="1">Photocromic brown</option>
                   <option value="1">Transitions VII gray</option>
@@ -74,7 +74,7 @@ include '../modules/header.php';
                   <option value="1" default></option>
 
                   <option value="2" default></option>
-                  <option value="2">C39</option>
+                  <option value="2">CR39</option>
                   <option value="2">Transitions VII gray</option>
                   <option value="2">Transitions VII brown</option>
                   <option value="2">Polycarbonate</option>
@@ -82,7 +82,7 @@ include '../modules/header.php';
                   <option value="2" default></option>
 
                   <option value="3" default></option>
-                  <option value="3">C39</option>
+                  <option value="3">CR39</option>
                   <option value="3">Transitions VII gray</option>
                   <option value="3">Transitions VII brown</option>
                   <option value="3">Polycarbonate</option>
@@ -104,7 +104,7 @@ include '../modules/header.php';
                 <select name="dizajn" title="Unesite vrstu dizajna" class="form-control" id="select4">
                   <option value="0"></option>
                   <option value="1" default></option>
-                  <option id="100" value="1">Standard UNC</option>
+                  <option id="100" value="1">Standard UC</option>
                   <option id="101" value="1">Panorama</option>
                   <option id="101" value="1">Anglera</option>
                   <option id="102" value="1">Matrix Mono</option>
