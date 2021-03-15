@@ -44,7 +44,7 @@ if (isset($_REQUEST['msg'])) {
     if ($_REQUEST['msg'] == '2') {
         echo "<script src=\"../js/alertify.min.js\"></script>";
         echo "<script type=\"text/javascript\">alertify.success('Stavka je dodata');</script>";
-        echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })</script>";
+        echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight })</script>";
     }
 }
 CloseCon($conn);

@@ -13,6 +13,7 @@
                     },
                     error: function() {
                         location.reload(), window.location.href = "../poloptic/1.50_CR39_UC_HMC.php?msg=2"
+                        
                     }
                 })
             }
