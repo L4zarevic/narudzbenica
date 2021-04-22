@@ -50,6 +50,12 @@ if (!$korisnickoIme && !$lozinka) {
         $error = 1;
     }
 }
+
+if (empty($dataBaseName) && ($error == 0)) {
+    header('Location:login.php?msg=3');
+    exit;
+}
+
 if ($error == 1) {
     setcookie('cica_maca', 'mjauu', time() + 5 * 60);
     header('Location:login.php?msg=1');
