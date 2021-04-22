@@ -36,6 +36,10 @@
                                 echo "<script src=\"js/alertify.min.js\"></script>";
                                 echo "<script type=\"text/javascript\">alertify.alert('Prekid konekcije','Nije moguće ostvariti konekciju sa aplikacijom. Pokušajte ponovo da se ulogujete na Vaš korisnički nalog. Ukoliko se problem ponavlja kontaktirajte nas na nemanja.lazarevic@mojaoptika.com');</script>";
                             }
+                            if ($_REQUEST['msg'] == '3') {
+                                echo "<script src=\"js/alertify.min.js\"></script>";
+                                echo "<script type=\"text/javascript\">alertify.alert('Neuspiješno logovanje','Nemate ovlaštenje za pristup ovoj aplikaciji !');</script>";
+                            }
                         }
                         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname);</script>";
                         ?>

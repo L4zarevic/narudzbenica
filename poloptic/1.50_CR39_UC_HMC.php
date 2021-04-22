@@ -3,7 +3,7 @@
             function add(a) {
                 $.ajax({
                     type: "POST",
-                    url: "../poloptic/addRow.php",
+                    url: "addRow.php",
                     dataType: "json",
                     data: {
                         stavka: "1#" + a
@@ -12,7 +12,7 @@
                         location.reload()
                     },
                     error: function() {
-                        location.reload(), window.location.href = "../poloptic/1.50_CR39_UC_HMC.php?msg=2"
+                        location.reload(), window.location.href = "1.50_CR39_UC_HMC.php?msg=2"
                         
                     }
                 })
