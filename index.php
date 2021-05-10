@@ -60,9 +60,10 @@ if (is_null($_SESSION['prijavljen'])) {
     </div>
     <div class="cards">
         <div class="card">
-            <img src="images/moptic.svg" alt="M-OPTIC" style="width:100%">
-            <div class="container">
-            </div>
+            <a href="moptic/index.php"><img src="images/moptic.svg" alt="M-OPTIC" style="width:100%">
+                <div class="container">
+                </div>
+            </a>
         </div>
         <div class="card">
             <a href="poloptic/index.php"><img src="images/poloptic.svg" alt="Pol Optic" style="width:100%">
@@ -71,14 +72,16 @@ if (is_null($_SESSION['prijavljen'])) {
             </a>
         </div>
         <div class="card">
-            <img src="images/essilor.svg" alt="Essilor" style="width:100%">
-            <div class="container">
-            </div>
+            <a href="essilor/index.php"><img src="images/essilor.svg" alt="Essilor" style="width:100%">
+                <div class="container">
+                </div>
+            </a>
         </div>
         <div class="card">
-            <img src="images/hoya.svg" alt="Hoya" style="width:100%">
-            <div class="container">
-            </div>
+            <a href="hoya/index.php"> <img src="images/hoya.svg" alt="Hoya" style="width:100%">
+                <div class="container">
+                </div>
+            </a>
         </div>
     </div>
 

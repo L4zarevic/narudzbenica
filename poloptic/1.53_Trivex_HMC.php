@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"><?php include '../modules/header.php'; ?>
+<html lang="en">
+<?php include '../modules/header.php'; ?>
 
 <body id="page-top">
-    <div id="wrapper"><?php include '../modules/menu.php'; ?><div id="content-wrapper" class="d-flex flex-column">
-            <div id="content"> <?php include '../modules/logout.php'; ?><div class="container-fluid">
+    <div id="wrapper">
+        <?php include 'modules/menu.php'; ?>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <?php include '../modules/logout.php'; ?>
+                <div class="container-fluid">
                     <h1 class="h3 mb-4 text-gray-800">1.53 Trivex HMC</h1>
                     <div class="tabela1">
                         <h5 id>1.53 Trivex HMC 65mm</h5>
@@ -443,7 +448,7 @@
                         </table>
                         <h6 id="cyl2">+Cyl</h6>
                     </div>
-                   <?php include '../poloptic/narudzbenicaLager.php'; ?>
+                    <?php include '../poloptic/narudzbenicaLager.php'; ?>
                 </div>
             </div>
         </div><?php include '../modules/footer.php'; ?>

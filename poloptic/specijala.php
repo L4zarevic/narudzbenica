@@ -9,7 +9,7 @@ include '../modules/header.php';
 
   <!-- Page Wrapper -->
   <div id="wrapper">
-    <?php include '../modules/menu.php'; ?>
+    <?php include 'modules/menu.php'; ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">

@@ -56,7 +56,7 @@ mysqli_set_charset($conn, 'utf8');
                             <p>U slučaju pogrešnog unosa, stavku iz tabele je potrebno ukloniti klikom na ikonicu kantice <i class='fa fa-trash'></i>, a nakon toga izvršiti ponovni unos iz grafikona.</p>
                             <p>Nakon što kreirate narudžbenicu, potrebno je kliknuti na dugme <i class='fa fa-paper-plane'></i> POŠALJI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji "M-OPTIC"</p>
                         </div>
-                        <div class="companyInfo"> <img id="logo" src="../images/poloptic.png">
+                        <div class="companyInfo"> <img id="logo" src="../images/hoya.png">
                             <!-- <p>“M-OPTIC” d.o.o.</br> ul. Majevička br. 29, 76300 Bijeljina</br> <strong>Tel:</strong> +387 55 222 999, 222 990, 490 010</br> <strong>Fax:</strong> +387 55 222 998</br> <strong>Email:</strong> <a href="mailto:mopticvp@mojaoptika.com">mopticvp@mojaoptika.com</a></br> <a href="https://mojaoptika.com">www.mojaoptika.com</a></p>-->
                         </div>
                     </div>

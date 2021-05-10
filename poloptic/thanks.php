@@ -3,7 +3,7 @@
 
 <body id="page-top">
     <div id="wrapper">
-        <?php include '../modules/menu.php'; ?>
+        <?php include 'modules/menu.php'; ?>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <?php
