@@ -5,6 +5,7 @@ if (is_null($_SESSION['prijavljen'])) {
 }
 ?>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +23,7 @@ if (is_null($_SESSION['prijavljen'])) {
     .text {
         position: fixed;
         top: 35%;
-        left: 41%;
+        left: 36%;
         width: 100%;
     }
 
@@ -50,13 +51,12 @@ if (is_null($_SESSION['prijavljen'])) {
     .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     }
-
 </style>
 
 <body>
 
     <div class="text">
-        <h1 class="h3 mb-0 text-gray-800">Izaberite proizvođača:</h1>
+        <h1 class="h3 mb-0 text-gray-800">Izaberite proizvođača/dobavljača:</h1>
     </div>
     <div class="cards">
         <div class="card">
@@ -83,4 +83,5 @@ if (is_null($_SESSION['prijavljen'])) {
     </div>
 
 </body>
+
 </html>

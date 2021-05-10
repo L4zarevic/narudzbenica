@@ -4,7 +4,7 @@
  $(document).keypress(function(e) {
       if (e.which == 13) {
         var inputVal = 0;
-        for (var i = 1; i <= 2362; i++) {
+        for (var i = 1; i <= 2796; i++) {
           if (document.getElementById(i).value.length != 0) {
             if (document.getElementById(i).value > 0) {
               if (!isNaN(document.getElementById(i).value)) {
