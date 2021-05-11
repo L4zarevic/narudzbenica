@@ -7,7 +7,7 @@ include '../modules/header.php';
 setcookie('cica_maca', '', time() - 3600);
 
 require_once '../connection.php';
-$korisnik = $_SESSION['prijavljen'];
+$korisnik = $_SESSION['login'];
 $ar = explode('#', $korisnik, 4);
 $ar[1] = rtrim($ar[1], '#');
 $idKorisnika = $ar[0];

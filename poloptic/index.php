@@ -7,7 +7,7 @@ include '../modules/header.php';
 setcookie('cica_maca', '', time() - 3600);
 
 require_once '../connection.php';
-$korisnik = $_SESSION['prijavljen'];
+$korisnik = $_SESSION['login'];
 $ar = explode('#', $korisnik, 4);
 $ar[1] = rtrim($ar[1], '#');
 $idKorisnika = $ar[0];
@@ -15,20 +15,6 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
-//Metod za prikaz loga korisnika (optike)
-// function logo($idKorisnika)
-// {
-//     $con = OpenCon();
-//     $stmt = $con->prepare('SELECT logo FROM korisnici WHERE ID=?');
-//     $stmt->bind_param('i', $idKorisnika);
-//     $stmt->execute();
-//     $result = $stmt->get_result();
-//     while ($row = $result->fetch_object()) {
-//         $logo = '../naruzbenica/images/logo_optika/' . $row->logo;
-//     }
-//     echo $logo;
-//     CloseCon($con);
-// }
 
 ?>
 

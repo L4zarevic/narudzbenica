@@ -1,5 +1,5 @@
 <?php session_start();
-if (is_null($_SESSION['prijavljen'])) {
+if (is_null($_SESSION['login'])) {
     header('Location:../login.php');
 }
 include 'connection.php';
@@ -61,7 +61,7 @@ if ($error == 1) {
     header('Location:login.php?msg=1');
     exit;
 } else {
-    $_SESSION['prijavljen'] = $idKorisnika . '#' . $optika . '#' . $imeKorisnika . '#' . $dataBaseName;
+    $_SESSION['login'] = $idKorisnika . '#' . $optika . '#' . $imeKorisnika . '#' . $dataBaseName;
     die(header('Location:index.php'));
 }
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <?php session_start();
-if (is_null($_SESSION['prijavljen'])) {
+if (is_null($_SESSION['login'])) {
     header('Location:login.php');
 }
+
 ?>
-<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -54,7 +54,6 @@ if (is_null($_SESSION['prijavljen'])) {
 </style>
 
 <body>
-
     <div class="text">
         <h1 class="h3 mb-0 text-gray-800">Izaberite proizvođača/dobavljača:</h1>
     </div>

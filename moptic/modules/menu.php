@@ -1,6 +1,6 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"> <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15"> </div>
-        <div class="sidebar-brand-text mx-3"><?php $korisnik = $_SESSION['prijavljen'];
+        <div class="sidebar-brand-text mx-3"><?php $korisnik = $_SESSION['login'];
                                                 $ar = explode('#', $korisnik, 4);
                                                 $ar[1] = rtrim($ar[1], '#');
                                                 echo $optika = $ar[1];

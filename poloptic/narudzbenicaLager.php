@@ -1,7 +1,7 @@
-<?php if (is_null($_SESSION['prijavljen'])) {
+<?php if (is_null($_SESSION['login'])) {
     header('Location: ../login.php');
 }
-$korisnik = $_SESSION['prijavljen'];
+$korisnik = $_SESSION['login'];
 $ar = explode('#', $korisnik, 4);
 $ar[1] = rtrim($ar[1], '#');
 $idKorisnika = $ar[0];
