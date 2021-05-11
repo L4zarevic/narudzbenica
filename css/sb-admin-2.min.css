@@ -148,3 +148,21 @@
         opacity: 1;
     }
 }
+
+input.form-control2{
+	display: block !important;
+    width: 100% !important;
+    height: calc(1.5em + .75rem + 2px) !important;
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #6e707e !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    border: 1px solid #d1d3e2 !important;
+    border-radius: .35rem !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+	text-align:left !important;
+}
+input.form-control2:focus{color:#6e707e;background-color:#fff;border-color:#bac8f3;outline:0;box-shadow:0 0 0 .2rem rgba(78,115,223,.25)}

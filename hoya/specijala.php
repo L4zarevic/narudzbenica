@@ -27,7 +27,7 @@ include '../modules/header.php';
 
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Specijala</h1>
+          <h1 class="h3 mb-4 text-gray-800">Narudžba</h1>
 
           <div class='tabelaSpecijala1'>
             <div class="rowSpec">
@@ -56,88 +56,14 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-4">
                 <label for="exampleFormControlSelect2">Vrsta materijala</label>
-                <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
-                  <option value="0" default></option>
-                  <option value="1" default></option>
-                  <option value="1">CR39 UC</option>
-                  <option value="1">CR39 UV420</option>
-                  <option value="1">Photocromic gray</option>
-                  <option value="1">Photocromic brown</option>
-                  <option value="1">Transitions VII gray</option>
-                  <option value="1">Transitions VII brown</option>
-                  <option value="1">Nupolar</option>
-                  <option value="1">Polycarbonate</option>
-                  <option value="1">Nupolar-Polycarbonate</option>
-                  <option value="1">Mineralni materijali</option>
-                  <option value="1">Photo gray mineralni materijali</option>
-                  <option value="1">Photo brown mineralni materijali</option>
-                  <option value="1" default></option>
-
-                  <option value="2" default></option>
-                  <option value="2">CR39</option>
-                  <option value="2">Transitions VII gray</option>
-                  <option value="2">Transitions VII brown</option>
-                  <option value="2">Polycarbonate</option>
-                  <option value="2">Polycarbonate Transitions</option>
-                  <option value="2" default></option>
-
-                  <option value="3" default></option>
-                  <option value="3">CR39</option>
-                  <option value="3">Transitions VII gray</option>
-                  <option value="3">Transitions VII brown</option>
-                  <option value="3">Polycarbonate</option>
-                  <option value="3">Polycarbonate Transitions</option>
-                  <option value="3" default></option>
-
-                  <option value="4" default></option>
-                  <option value="4">Ortas</option>
-                  <option value="4">Stand</option>
-                  <option value="4">Expert</option>
-                  <option value="4" default></option>
-                </select>
+                <input name="materijal" title="Unesite vrstu materija" type="text" class="form-control2" id="materijal">
               </div>
             </div>
 
             <div class="rowSpec">
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-4">
                 <label for="exampleFormControlSelect2">Dizajn - Naziv proizvoda</label>
-                <select name="dizajn" title="Unesite vrstu dizajna" class="form-control" id="select4">
-                  <option value="0"></option>
-                  <option value="1" default></option>
-                  <option id="100" value="1">Standard UC</option>
-                  <option id="101" value="1">Panorama</option>
-                  <option id="101" value="1">Anglera</option>
-                  <option id="102" value="1">Matrix Mono</option>
-                  <option id="102" value="1">Elegance</option>
-                  <option value="1" default></option>
-
-                  <option value="2" default></option>
-                  <option id="100" value="2">Bifocal FT28</option>
-                  <option id="100" value="2">Bifocal CT28</option>
-                  <option id="101" value="2">Bifo Invisio</option>
-                  <option value="2" default></option>
-
-                  <option value="3" default></option>
-                  <option id="100" value="3">Pollux</option>
-                  <option id="100" value="3">Polaris</option>
-                  <option id="101" value="3">Futura</option>
-                  <option id="101" value="3">Infini</option>
-                  <option id="102" value="3">Matrix Short</option>
-                  <option id="102" value="3">Matrix Pro</option>
-                  <option id="102" value="3">Sequel DBS</option>
-                  <option id="102" value="3">Adapta DBS</option>
-                  <option id="102" value="3">Varia 3D</option>
-                  <option id="102" value="3">Varia Pro</option>
-                  <option id="102" value="3">Mineralni progresiv</option>
-                  <option value="3" default></option>
-
-                  <option value="4" default></option>
-                  <option id="103" value="4">Tip A</option>
-                  <option id="103" value="4">Tip B</option>
-                  <option id="103" value="4">Tip C</option>
-                  <option value="4" default></option>
-
-                </select>
+                <input name="dizajn" title="Unesite dizajn" type="text" class="form-control2" id="dizajn">
               </div>
             </div>
 
@@ -282,7 +208,7 @@ include '../modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">PD:</label>
-                  <input name="pd" title="Unesite PD" type="text" class="form-control" id="pd">
+                  <input name="pd" title="Unesite PD" type="text" class="form-control2" id="pd">
                 </div>
               </div>
             </div>
@@ -291,7 +217,7 @@ include '../modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect2">Segment:</label>
-                  <input name="segment" title="Unesite segment" type="text" class="form-control" id="segment">
+                  <input name="segment" title="Unesite segment" type="text" class="form-control2" id="segment">
                 </div>
               </div>
             </div>
@@ -516,7 +442,7 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Ax</label>
-                <input name="ugao" title="Unesite ugao cilindra" type="text" class="form-control" id="ugaoCilindra">
+                <input name="ugao" title="Unesite ugao cilindra" type="text" class="form-control2" id="ugaoCilindra">
               </div>
             </div>
 
@@ -565,184 +491,94 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">Količina</label>
-                <input name="kolicina" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control" id="kolicina">
+                <input name="kolicina" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control2" id="kolicina">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
                 <label for="exampleFormControlSelect2">Tretmani i bojenja #1</label>
-                <select name="tretman1" class="form-control" id="select15">
-                  <option value="100" default></option>
-                  <option value="100">HC</option>
-                  <option value="100">MultiPlus</option>
-                  <option value="100">UltraGlide</option>
-                  <option value="100">NanoGlide</option>
-                  <option value="100">PolarGlide</option>
-                  <option value="100">BlueGlide</option>
-                  <option value="100">PureGlide</option>
-                  <option value="100">UltraGlide BackSide</option>
-                  <option value="100">Mirror/UltraBS</option>
-                  <option value="100" disabled>--- Bojenje ---</option>
-                  <option value="100">Unicolor</option>
-                  <option value="100">Unicolor Hi index</option>
-                  <option value="100">Color po uzorku</option>
-                  <option value="100">Color po uzorku Hi index</option>
-                  <option value="100">Gradient</option>
-                  <option value="100">Gradient Hi index</option>
-                  <option value="100" default></option>
-
-                  <option value="101" default></option>
-                  <option value="101">HC</option>
-                  <option value="101">MC</option>
-                  <option value="101">MultiPlus HMC</option>
-                  <option value="101">UltraGlide</option>
-                  <option value="101">NanoGlide</option>
-                  <option value="101">PolarGlide</option>
-                  <option value="101">BlueGlide</option>
-                  <option value="101">PureGlide</option>
-                  <option value="101">UltraGlide BackSide</option>
-                  <option value="101">Mirror/UltraBS</option>
-                  <option value="101" disabled>--- Bojenje ---</option>
-                  <option value="101">Unicolor</option>
-                  <option value="101">Unicolor Hi index</option>
-                  <option value="101">Color po uzorku</option>
-                  <option value="101">Color po uzorku Hi index</option>
-                  <option value="101">Gradient</option>
-                  <option value="101">Gradient Hi index</option>
-                  <option value="101" default></option>
-
-                  <option value="102" default></option>
-                  <option value="102">UltraGlide</option>
-                  <option value="102">NanoGlide</option>
-                  <option value="102">PolarGlide</option>
-                  <option value="102">BlueGlide</option>
-                  <option value="102">PureGlide</option>
-                  <option value="102">UltraGlide BackSide</option>
-                  <option value="102">Mirror/UltraBS</option>
-                  <option value="102" disabled>--- Bojenje ---</option>
-                  <option value="102">Unicolor</option>
-                  <option value="102">Unicolor Hi index</option>
-                  <option value="102">Color po uzorku</option>
-                  <option value="102">Color po uzorku Hi index</option>
-                  <option value="102">Gradient</option>
-                  <option value="102">Gradient Hi index</option>
-                  <option value="102" default></option>
-
-                </select>
+                <input name="tretman1" title="Unesite tretman ili bojenja" type="text" class="form-control2" id="tretman1">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
                 <label for="exampleFormControlSelect2">Tretmani i bojenja #2</label>
-                <select name="tretman2" class="form-control" id="select16">
-                  <option value="100" default></option>
-                  <option value="100">HC</option>
-                  <option value="100">MultiPlus</option>
-                  <option value="100">UltraGlide</option>
-                  <option value="100">NanoGlide</option>
-                  <option value="100">PolarGlide</option>
-                  <option value="100">BlueGlide</option>
-                  <option value="100">PureGlide</option>
-                  <option value="100">UltraGlide BackSide</option>
-                  <option value="100">Mirror/UltraBS</option>
-                  <option value="100" disabled>--- Bojenje ---</option>
-                  <option value="100">Unicolor</option>
-                  <option value="100">Unicolor Hi index</option>
-                  <option value="100">Color po uzorku</option>
-                  <option value="100">Color po uzorku Hi index</option>
-                  <option value="100">Gradient</option>
-                  <option value="100">Gradient Hi index</option>
-                  <option value="100" default></option>
+                <input name="tretman2" title="Unesite tretman ili bojenja" type="text" class="form-control2" id="tretman2">
+              </div>
+            </div>
 
-                  <option value="101" default></option>
-                  <option value="101">HC</option>
-                  <option value="101">MC</option>
-                  <option value="101">MultiPlus HMC</option>
-                  <option value="101">UltraGlide</option>
-                  <option value="101">NanoGlide</option>
-                  <option value="101">PolarGlide</option>
-                  <option value="101">BlueGlide</option>
-                  <option value="101">PureGlide</option>
-                  <option value="101">UltraGlide BackSide</option>
-                  <option value="101">Mirror/UltraBS</option>
-                  <option value="101" disabled>--- Bojenje ---</option>
-                  <option value="101">Unicolor</option>
-                  <option value="101">Unicolor Hi index</option>
-                  <option value="101">Color po uzorku</option>
-                  <option value="101">Color po uzorku Hi index</option>
-                  <option value="101">Gradient</option>
-                  <option value="101">Gradient Hi index</option>
-                  <option value="101" default></option>
-
-                  <option value="102" default></option>
-                  <option value="102">UltraGlide</option>
-                  <option value="102">NanoGlide</option>
-                  <option value="102">PolarGlide</option>
-                  <option value="102">BlueGlide</option>
-                  <option value="102">PureGlide</option>
-                  <option value="102">UltraGlide BackSide</option>
-                  <option value="102">Mirror/UltraBS</option>
-                  <option value="102" disabled>--- Bojenje ---</option>
-                  <option value="102">Unicolor</option>
-                  <option value="102">Unicolor Hi index</option>
-                  <option value="102">Color po uzorku</option>
-                  <option value="102">Color po uzorku Hi index</option>
-                  <option value="102">Gradient</option>
-                  <option value="102">Gradient Hi index</option>
-                  <option value="102" default></option>
-
+            <div class="rowSpec">
+              <div class="form-group col-md-3">
+                <label for="exampleFormControlSelect2">Mjesto isporuke</label>
+                <select name="isporuka" title="Unesite mjesto isporuke" class="form-control" id="isporuka">
+                  <option default></option>
+                  <option>Delta - Banja Luka</option>
+                  <option>Boska - Banja Luka</option>
+                  <option>Emporium - Banja Luka</option>
+                  <option>Mercator - Banja Luka</option>
+                  <option>Bijeljina</option>
+                  <option>Brčko</option>
+                  <option>Galerija - Beograd</option>
+                  <option>Big - Novi Sad</option>
+                  <option>Plaza - Kragujevac</option>
                 </select>
               </div>
-
-
-
-              <div class="rowSpec">
-                <div class="form-group col-md-5">
-                  <label for="exampleFormControlSelect2">Napomena</label>
-                  <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
-                </div>
-              </div>
-              <button type='button' onclick="return checkForm();" id='dugmeNaruci' class='btn btn-success'><i class="fa fa-save"></i>&nbsp;Sačuvaj stavku</button>
             </div>
+
+            <div class="rowSpec">
+              <div class="form-group col-md-3">
+                <label for="exampleFormControlSelect2">MPC po komadu</label>
+                <input name="mpc" title="Unesite MPC" type="text" class="form-control2" id="mpc">
+              </div>
+            </div>
+
+
+
+            <div class="rowSpec">
+              <div class="form-group col-md-5">
+                <label for="exampleFormControlSelect2">Napomena</label>
+                <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
+              </div>
+            </div>
+            <button type='button' onclick="return checkForm2();" id='dugmeNaruci' class='btn btn-success'><i class="fa fa-save"></i>&nbsp;Sačuvaj stavku</button>
           </div>
-
-
-
-          <div class="tabelaSpecijala2">
-            <strong>NAPOMENA:</strong></br>
-            -OD(za desno oko)</br>
-            -OS(za lijevo oko)</br>
-            -OU(obostrano)</br>
-            -SPH(sferna dioptrija)</br>
-            -CYL(cilindrična dioptrija)</br>
-            -Ax(ugao cilindra)</br>
-            -Add(adicija)</br>
-            </br>
-            <strong>Obavezna polja za Specijalu su:</strong></br>
-            -OD/OS/OU</br>
-            -Vrsta sočiva</br>
-            -Dizajn</br>
-            -Index</br>
-            -Vrsta materijala</br>
-            -Prečnik</br>
-            -Količina</br>
-            </br>
-
-          </div>
-
-          <!-- /.container-fluid -->
         </div>
 
+        <div class="tabelaSpecijala2">
+          <strong>NAPOMENA:</strong></br>
+          -OD(za desno oko)</br>
+          -OS(za lijevo oko)</br>
+          -OU(obostrano)</br>
+          -SPH(sferna dioptrija)</br>
+          -CYL(cilindrična dioptrija)</br>
+          -Ax(ugao cilindra)</br>
+          -Add(adicija)</br>
+          </br>
+          <strong>Obavezna polja su:</strong></br>
+          -OD/OS/OU</br>
+          -Vrsta sočiva</br>
+          -Dizajn</br>
+          -Index</br>
+          -Vrsta materijala</br>
+          -Prečnik</br>
+          -Količina</br>
+          </br>
+
+        </div>
+
+        <!-- /.container-fluid -->
       </div>
+
       <div class="naslov">
 
         <?php
-        include '../poloptic/narudzbenicaSpecijala.php';
+        include 'narudzbenicaSpecijala.php';
         ?>
       </div>
     </div>
+
 
     <!-- End of Main Content -->
 
@@ -752,47 +588,7 @@ include '../modules/header.php';
     ?>
     <!-- End of Footer -->
 
-    <script type="text/javascript">
-      var $select2 = $('#select2'),
-        $select3 = $('#select3'),
-        $select4 = $('#select4'),
-        $select15 = $('#select15'),
-        $select16 = $('#select16'),
-        $options1 = $select3.find('option');
-      $options2 = $select4.find('option');
-      $options3 = $select15.find('option');
-      $options4 = $select16.find('option');
 
-
-      $select2.on('change', function() {
-        $select3.html($options1.filter('[value="' + this.value + '"]'));
-        if (this.value == '3') {
-          $('#ifYes').show();
-        } else {
-          $('#ifYes').hide();
-        }
-
-        if (this.value == '2') {
-          $('#showSegment').show();
-        } else {
-          $('#showSegment').hide();
-        }
-      }).trigger('change');
-
-      $select2.on('change', function() {
-        $select4.html($options2.filter('[value="' + this.value + '"]'));
-      }).trigger('change');
-
-      $select4.on('change', function() {
-        var id = $(this).children(":selected").attr("id");
-        $select15.html($options3.filter('[value="' + id + '"]'));
-      }).trigger('change');
-
-      $select4.on('change', function() {
-        var id1 = $(this).children(":selected").attr("id");
-        $select16.html($options4.filter('[value="' + id1 + '"]'));
-      }).trigger('change');
-    </script>
 
 </body>
 

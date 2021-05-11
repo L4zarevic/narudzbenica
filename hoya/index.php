@@ -15,21 +15,6 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
-//Metod za prikaz loga korisnika (optike)
-// function logo($idKorisnika)
-// {
-//     $con = OpenCon();
-//     $stmt = $con->prepare('SELECT logo FROM korisnici WHERE ID=?');
-//     $stmt->bind_param('i', $idKorisnika);
-//     $stmt->execute();
-//     $result = $stmt->get_result();
-//     while ($row = $result->fetch_object()) {
-//         $logo = '../naruzbenica/images/logo_optika/' . $row->logo;
-//     }
-//     echo $logo;
-//     CloseCon($con);
-// }
-
 ?>
 
 <body id="page-top">
@@ -47,12 +32,8 @@ mysqli_set_charset($conn, 'utf8');
                     <div class="row">
                         <div class="">
                             <h5>Uputstvo za narudžbenicu</h5>
-                            <p>Da biste kreirali željenu narudžbenicu, potrebno je u meniju lijevo izabrati iz ponude Lagerska stakla ili Specijala</p>
-                            <p><strong> Lagerska stakla:</strong></p>
-                            <p>Iz padajuće liste izaberite željeni index. U polje grafikona unijeti željenu količinu dioptrije, nakon čega je potrebno pritisnuti ENTER na tastaturi radi potvrde.</p>
-                            <p><strong>NAPOMENA: Stavke dodavati jednu po jednu</strong></p>
+                            <p>Da biste kreirali željenu narudžbenicu, potrebno je u meniju lijevo izabrati Narudžba</p>
                             <p>Sve željene stavke koje potvrdite nakon unosa biće prikazane u tabeli NARUDŽBENICA koja se nalazi na dnu stranice.</p>
-                            <p><strong>Unesene količine za stavke u tabeli NARUDŽBENICA nije moguće uređivati.</strong></p>
                             <p>U slučaju pogrešnog unosa, stavku iz tabele je potrebno ukloniti klikom na ikonicu kantice <i class='fa fa-trash'></i>, a nakon toga izvršiti ponovni unos iz grafikona.</p>
                             <p>Nakon što kreirate narudžbenicu, potrebno je kliknuti na dugme <i class='fa fa-paper-plane'></i> POŠALJI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji "M-OPTIC"</p>
                         </div>
