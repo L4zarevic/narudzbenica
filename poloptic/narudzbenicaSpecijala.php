@@ -14,7 +14,7 @@ $stmt->bind_param('i', $idKorisnika);
 $stmt->execute();
 $result = $stmt->get_result();
 echo "<div class='naslov'><h1 id='naslovNarudzbenice'>Narudžbenica - Pol Optic</h1><hr></div>";
-echo "<div class='table-wrapper-scroll-y'><table class='narudzbenica-tabela' id='narudzbenica'><thead><tr><th class='tg-0lax'>Lag-Spec</th><th class='tg-0lax'>Od/Os/Ou</th><th class='tg-0lax'>Vrsta soč.</th><th class='tg-0lax'>Dizajn</th><th class='tg-0lax'>PRL/OCHT</th><th class='tg-0lax'>Segm.</th><th class='tg-0lax'>Baza</th><th class='tg-0lax'>Index</th><th class='tg-0lax'>Vrsta materijala</th><th class='tg-0lax'>Prečnik</th><th class='tg-0lax'>SPH</th><th class='tg-0lax'>CYL</th><th class='tg-0lax'>Ugao</th><th class='tg-0lax'>Add</th><th class='tg-0lax'>JM</th><th class='tg-0lax'>Kol.</th><th class='tg-0lax'>Tr.1</th><th class='tg-0lax'>Tr.2</th><th class='tg-0lax'>PD</th><th class='tg-0lax'>Napomena</th><th class='tg-0lax'></th></tr></thead><tbody>";
+echo "<div class='table-wrapper-scroll-y'><table class='narudzbenica-tabela' id='narudzbenica'><thead><tr><th class='tg-0lax'>Lag-Spec</th><th class='tg-0lax'>Od/Os/Ou</th><th class='tg-0lax'>Vrsta soč.</th><th class='tg-0lax'>Dizajn</th><th class='tg-0lax'>PRL/OCHT</th><th class='tg-0lax'>Segm.</th><th class='tg-0lax'>Baza</th><th class='tg-0lax'>Index</th><th class='tg-0lax'>Vrsta materijala</th><th class='tg-0lax'>Prečnik</th><th class='tg-0lax'>SPH</th><th class='tg-0lax'>CYL</th><th class='tg-0lax'>Ugao</th><th class='tg-0lax'>Add</th><th class='tg-0lax'>JM</th><th class='tg-0lax'>Kol.</th><th class='tg-0lax'>Tr.1</th><th class='tg-0lax'>Tr.2</th><th class='tg-0lax'>PD</th><th class='tg-0lax'>Mjesto isp.</th><th class='tg-0lax'>Napomena</th><th class='tg-0lax'></th></tr></thead><tbody>";
 while ($row = mysqli_fetch_object($result)) {
     echo "<tr>";
     echo "<td>$row->lag_spec</td>";
@@ -36,6 +36,7 @@ while ($row = mysqli_fetch_object($result)) {
     echo "<td>$row->tretman1</td>";
     echo "<td>$row->tretman2</td>";
     echo "<td>$row->pd</td>";
+    echo "<td>$row->mjesto_isporuke</td>";
     echo "<td><input name='napomena' title='Unesite napomenu' class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
     echo "<td><i onclick='deleteRow();' id='$row->ID' title='Ukloni stavku' class='fas fa-trash fa-lg'></i></td>";
     echo "</tr>";

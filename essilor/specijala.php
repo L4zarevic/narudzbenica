@@ -55,13 +55,6 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-4">
-                <label for="exampleFormControlSelect2">Vrsta materijala</label>
-                <input name="materijal" title="Unesite vrstu materija" type="text" class="form-control2" id="materijal">
-              </div>
-            </div>
-
-            <div class="rowSpec">
-              <div class="form-group col-md-4">
                 <label for="exampleFormControlSelect2">Dizajn - Naziv proizvoda</label>
                 <input name="dizajn" title="Unesite dizajn" type="text" class="form-control2" id="dizajn">
               </div>
@@ -511,30 +504,10 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Mjesto isporuke</label>
-                <select name="isporuka" title="Unesite mjesto isporuke" class="form-control" id="isporuka">
-                  <option default></option>
-                  <option>Delta - Banja Luka</option>
-                  <option>Boska - Banja Luka</option>
-                  <option>Emporium - Banja Luka</option>
-                  <option>Mercator - Banja Luka</option>
-                  <option>Bijeljina</option>
-                  <option>Brčko</option>
-                  <option>Galerija - Beograd</option>
-                  <option>Big - Novi Sad</option>
-                  <option>Plaza - Kragujevac</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="rowSpec">
-              <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect2">MPC po komadu</label>
                 <input name="mpc" title="Unesite MPC" type="text" class="form-control2" id="mpc">
               </div>
             </div>
-
-
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
@@ -588,8 +561,27 @@ include '../modules/header.php';
     ?>
     <!-- End of Footer -->
 
-
-
 </body>
+<script type="text/javascript">
+  var $select2 = $('#select2'),
+    $select3 = $('#select3'),
+    $select4 = $('#select4'),
+    $options1 = $select3.find('option');
+
+  $select2.on('change', function() {
+    $select3.html($options1.filter('[value="' + this.value + '"]'));
+    if (this.value == '3') {
+      $('#ifYes').show();
+    } else {
+      $('#ifYes').hide();
+    }
+
+    if (this.value == '2') {
+      $('#showSegment').show();
+    } else {
+      $('#showSegment').hide();
+    }
+  }).trigger('change');
+</script>
 
 </html>

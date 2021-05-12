@@ -48,13 +48,22 @@ if ($precnik2 == "") {
 	$precnik = $precnik1 . "/" . $precnik2;
 }
 
+$con = OpenCon();
+mysqli_set_charset($con, 'utf8');
+$stmt3 = $con->prepare('SELECT alias FROM korisnici WHERE ID=?');
+$stmt3->bind_param('i', $idKorisnika);
+$stmt3->execute();
+$result3 = $stmt3->get_result();
+$mjesto_isporuke = "";
+while ($row3 = mysqli_fetch_object($result3)) {
+	$mjesto_isporuke = $row3->alias;
+}
 
-$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,napomena) values (?,"Specijala",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-$stmt->bind_param('issssssssssssssissss', $idKorisnika, $odOsOu, $vrstaSociva, $dizajn, $koridor_visina, $segment, $baza, $indeks, $materijal, $precnik, $sph, $cyl, $ugao, $add, $jm, $kolicina, $tretman1, $tretman2, $pd, $napomena);
+$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,napomena) values (?,"Specijala",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+$stmt->bind_param('issssssssssssssisssss', $idKorisnika, $odOsOu, $vrstaSociva, $dizajn, $koridor_visina, $segment, $baza, $indeks, $materijal, $precnik, $sph, $cyl, $ugao, $add, $jm, $kolicina, $tretman1, $tretman2, $pd, $mjesto_isporuke, $napomena);
 $stmt->execute();
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));
 }
 
-//header('Location: ../narudzbenica/specijala.php?msg=2');
 CloseCon($conn);

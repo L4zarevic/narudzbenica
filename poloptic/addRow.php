@@ -85,13 +85,25 @@ if ($count == 1) {
     $stmt2->bind_param('ii', $ukupna_kolicina, $ID);
     $stmt2->execute();
 } else {
-    $stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,vrsta_materijala,kolicina) VALUES (?, "Lager", ?, ?)');
-    $stmt->bind_param('isi', $idKorisnika, $vrsta_materijala, $kolicina);
+
+    $con = OpenCon();
+    mysqli_set_charset($con, 'utf8');
+    $stmt3 = $con->prepare('SELECT alias FROM korisnici WHERE ID=?');
+    $stmt3->bind_param('i', $idKorisnika);
+    $stmt3->execute();
+    $result3 = $stmt3->get_result();
+    $mjesto_isporuke = "";
+    while ($row3 = mysqli_fetch_object($result3)) {
+        $mjesto_isporuke = $row3->alias;
+    }
+
+    $stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,vrsta_materijala,kolicina,mjesto_isporuke) VALUES (?, "Lager", ?, ?, ?)');
+    $stmt->bind_param('isis', $idKorisnika, $vrsta_materijala, $kolicina, $mjesto_isporuke);
     $stmt->execute();
 }
 
 if (mysqli_error($conn)) {
     die(mysqli_error($conn));
 }
-//header('Location: ' . $_SERVER['HTTP_REFERER'] . '?msg=2');
+
 CloseCon($conn);

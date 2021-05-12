@@ -28,8 +28,19 @@ $jm = $arS[5];
 $kolicina = $arS[6];
 $napomena = $arS[7];
 
-$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,vrsta_materijala,sph,adicija,jm,kolicina,napomena) values (?,"Lager",?,?,?,?,?,?,?,?)');
-$stmt->bind_param('issssssis', $idKorisnika, $odOsOu, $vrstaSociva, $materijal, $sph, $add, $jm, $kolicina, $napomena);
+$con = OpenCon();
+mysqli_set_charset($con, 'utf8');
+$stmt3 = $con->prepare('SELECT alias FROM korisnici WHERE ID=?');
+$stmt3->bind_param('i', $idKorisnika);
+$stmt3->execute();
+$result3 = $stmt3->get_result();
+$mjesto_isporuke = "";
+while ($row3 = mysqli_fetch_object($result3)) {
+	$mjesto_isporuke = $row3->alias;
+}
+
+$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,vrsta_materijala,sph,adicija,jm,kolicina,mjesto_isporuke,napomena) values (?,"Lager",?,?,?,?,?,?,?,?,?)');
+$stmt->bind_param('issssssiss', $idKorisnika, $odOsOu, $vrstaSociva, $materijal, $sph, $add, $jm, $kolicina, $mjesto_isporuke, $napomena);
 $stmt->execute();
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));
