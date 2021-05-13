@@ -44,8 +44,11 @@ $schema_insert .= '<th>Ugao</th>';
 $schema_insert .= '<th>Add</th>';
 $schema_insert .= '<th>JM</th>';
 $schema_insert .= '<th>Kol.</th>';
-$schema_insert .= '<th>Tretman1</th>';
-$schema_insert .= '<th>Tretman2</th>';
+$schema_insert .= '<th>Tr.1</th>';
+$schema_insert .= '<th>Tr.
+
+
+2</th>';
 $schema_insert .= '<th>PD</th>';
 $schema_insert .= '<th>Mjesto ispor.</th>';
 $schema_insert .= '<th>MPC po kom.</th>';

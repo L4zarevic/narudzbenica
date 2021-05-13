@@ -32,7 +32,7 @@ include '../modules/header.php';
           <div class='tabelaSpecijala1'>
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect1">OD / OS / OU</label>
+                <strong><label>OD / OS / OU</label></strong>
                 <select name="od_os_ou" title="OD - za desno oko, OS - za lijevo oko, OU - ako je obostrano isto" class="form-control" id="select1">
                   <option>OD</option>
                   <option>OS</option>
@@ -42,7 +42,7 @@ include '../modules/header.php';
             </div>
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect1">Vrsta sočiva</label>
+              <strong><label>Vrsta sočiva</label></strong>
                 <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2" required>
                   <option value="0" default></option>
                   <option value="1">Monofokal</option>
@@ -55,7 +55,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-4">
-                <label for="exampleFormControlSelect2">Vrsta materijala</label>
+              <strong><label>Vrsta materijala</label></strong>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0" default></option>
                   <option value="1" default></option>
@@ -100,7 +100,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Dizajn - Naziv proizvoda</label>
+              <strong><label>Dizajn - Naziv proizvoda</label></strong>
                 <select name="dizajn" title="Unesite vrstu dizajna" class="form-control" id="select4">
                   <option value="0"></option>
                   <option value="1" default></option>
@@ -143,7 +143,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Index</label>
+              <strong><label>Index</label></strong>
                 <select name="index" title="Unesite Index prelamanja" class="form-control" id="select8">
                   <option default></option>
                   <option>1.50</option>
@@ -164,7 +164,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Baza</label>
+              <strong><label>Baza</label></strong>
                 <select name="baza" title="Unesite bazu sočiva" class="form-control" id="select7">
                   <option default></option>
                   <option>4</option>
@@ -183,7 +183,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label id="labelPrecnik" for="exampleFormControlSelect2">Prečnik mm</label>
+              <strong><label id="labelPrecnik">Prečnik mm</label></strong>
                 <select name="precnik1" title="Unesite prečnik" class="form-control" id="select9">
                   <option default></option>
                   <option>50</option>
@@ -249,7 +249,7 @@ include '../modules/header.php';
             <div id="ifYes" style="display: none;">
               <div class="rowSpec">
                 <div class="form-group col-md-3">
-                  <label for="exampleFormControlSelect2">Visina ugradnje / Koridor</label>
+                <strong><label>Visina ugradnje / Koridor</label></strong>
                   <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="select5">
                     <option default></option>
                     <option>13</option>
@@ -281,7 +281,7 @@ include '../modules/header.php';
 
               <div class="rowSpec">
                 <div class="form-group col-md-3">
-                  <label for="exampleFormControlSelect2">PD:</label>
+                <strong><label>PD:</label></strong>
                   <input name="pd" title="Unesite PD" type="text" class="form-control2" id="pd">
                 </div>
               </div>
@@ -290,7 +290,7 @@ include '../modules/header.php';
             <div id="showSegment">
               <div class="rowSpec">
                 <div class="form-group col-md-3">
-                  <label for="exampleFormControlSelect2">Segment:</label>
+                <strong><label>Segment:</label></strong>
                   <input name="segment" title="Unesite segment" type="text" class="form-control2" id="segment">
                 </div>
               </div>
@@ -299,7 +299,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">SPH</label>
+              <strong><label>SPH</label></strong>
                 <select name="sph" title="Unesite Sfernu dioptriju sa popisa" class="form-control" id="select11">
                   <option default></option>
                   <option> 0.00</option>
@@ -455,7 +455,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">CYL</label>
+              <strong><label>CYL</label></strong>
                 <select name="cyl" title="Unesite Cilindričnu dioptriju sa popisa" class="form-control" id="select12">
                   <option default></option>
                   <option> 0.00</option>
@@ -515,7 +515,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Ax</label>
+              <strong><label>Ax</label></strong>
                 <input name="ugao" title="Unesite ugao cilindra" type="text" class="form-control2" id="ugaoCilindra">
               </div>
             </div>
@@ -523,7 +523,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Add / Dig.</label>
+              <strong><label>Add / Dig.</label></strong>
                 <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
                   <option default></option>
                   <option>0.75</option>
@@ -546,7 +546,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Jedinica mjere</label>
+              <strong><label>Jedinica mjere</label></strong>
                 <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
                   <option>kom</option>
                   <option>kut</option>
@@ -564,14 +564,14 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <label for="exampleFormControlSelect2">Količina</label>
+              <strong><label>Količina</label></strong>
                 <input name="kolicina" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control2" id="kolicina">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
-                <label for="exampleFormControlSelect2">Tretmani i bojenja #1</label>
+              <strong><label>Tretmani i bojenja #1</label></strong>
                 <select name="tretman1" class="form-control" id="select15">
                   <option value="100" default></option>
                   <option value="100">HC</option>
@@ -635,7 +635,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
-                <label for="exampleFormControlSelect2">Tretmani i bojenja #2</label>
+              <strong><label>Tretmani i bojenja #2</label></strong>
                 <select name="tretman2" class="form-control" id="select16">
                   <option value="100" default></option>
                   <option value="100">HC</option>
@@ -692,23 +692,18 @@ include '../modules/header.php';
                   <option value="102">Gradient</option>
                   <option value="102">Gradient Hi index</option>
                   <option value="102" default></option>
-
                 </select>
               </div>
 
-
-
               <div class="rowSpec">
                 <div class="form-group col-md-5">
-                  <label for="exampleFormControlSelect2">Napomena</label>
+                <strong><label>Napomena</label></strong>
                   <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
                 </div>
               </div>
               <button type='button' onclick="return checkForm();" id='dugmeNaruci' class='btn btn-success'><i class="fa fa-save"></i>&nbsp;Sačuvaj stavku</button>
             </div>
           </div>
-
-
 
           <div class="tabelaSpecijala2">
             <strong>NAPOMENA:</strong></br>
