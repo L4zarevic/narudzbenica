@@ -38,7 +38,9 @@ $tretman1 = $arS[15];
 $tretman2 = $arS[16];
 $pd = $arS[17];
 $mpc = $arS[18];
-$napomena = $arS[19];
+$napomena1 = $arS[19];
+
+$napomena = str_replace('\n', " ", $napomena1);
 
 if ($precnik2 == "") {
 	$precnik = $precnik1;
