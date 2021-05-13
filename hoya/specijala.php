@@ -536,7 +536,6 @@ include '../modules/header.php';
           -Vrsta sočiva</br>
           -Dizajn</br>
           -Index</br>
-          -Vrsta materijala</br>
           -Prečnik</br>
           -Količina</br>
           </br>
