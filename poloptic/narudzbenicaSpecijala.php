@@ -14,10 +14,36 @@ $stmt->bind_param('i', $idKorisnika);
 $stmt->execute();
 $result = $stmt->get_result();
 echo "<div class='naslov'><h1 id='naslovNarudzbenice'>Narudžbenica - Pol Optic</h1><hr></div>";
-echo "<div class='table-wrapper-scroll-y'><table class='narudzbenica-tabela' id='narudzbenica'><thead><tr><th class='tg-0lax'>Lag-\nSpec</th><th class='tg-0lax'>Od/Os/Ou</th><th class='tg-0lax'>Vrsta \nsoč.</th><th class='tg-0lax'>Dizajn</th><th class='tg-0lax'>PRL \nOCHT</th><th class='tg-0lax'>Segm.</th><th class='tg-0lax'>Baza</th><th class='tg-0lax'>Index</th><th class='tg-0lax'>Vrsta materijala</th><th class='tg-0lax'>&Oslash;</th><th class='tg-0lax'>SPH</th><th class='tg-0lax'>CYL</th><th class='tg-0lax'>Ugao</th><th class='tg-0lax'>Add</th><th class='tg-0lax'>JM</th><th class='tg-0lax'>Kol.</th><th class='tg-0lax'>Tr.1</th><th class='tg-0lax'>Tr.2</th><th class='tg-0lax'>PD</th><th class='tg-0lax'>Mjesto isp.</th><th class='tg-0lax'>Napomena</th><th class='tg-0lax'></th></tr></thead><tbody>";
+echo "<div class='table-wrapper-scroll-y'>
+<table class='narudzbenica-tabela' id='narudzbenica'>
+<thead><tr><th class='tg-0lax'>Lag-Spec</th>
+<th class='tg-0lax'>Od/Os/Ou</th>
+<th class='tg-0lax'>Vrsta \nsoč.</th>
+<th class='tg-0lax'>Dizajn</th>
+<th class='tg-0lax'>PRL \nOCHT</th>
+<th class='tg-0lax'>Segm.</th>
+<th class='tg-0lax'>Baza</th>
+<th class='tg-0lax'>Index</th>
+<th class='tg-0lax'>Vrsta materijala</th>
+<th class='tg-0lax'>&Oslash;</th>
+<th class='tg-0lax'>SPH</th>
+<th class='tg-0lax'>CYL</th>
+<th class='tg-0lax'>Ugao</th>
+<th class='tg-0lax'>Add</th>
+<th class='tg-0lax'>JM</th>
+<th class='tg-0lax'>Kol.</th>
+<th class='tg-0lax'>Tr.1</th>
+<th class='tg-0lax'>Tr.2</th>
+<th class='tg-0lax'>PD</th>
+<th class='tg-0lax'>Mjesto isp.</th>
+<th class='tg-0lax'>Napomena</th>
+<th class='tg-0lax'></th>
+</tr>
+</thead>
+<tbody>";
 while ($row = mysqli_fetch_object($result)) {
     echo "<tr>";
-    echo "<td>$row->lag_spec</td>";
+    echo "<td class='od_os_ou'>$row->lag_spec</td>";
     echo "<td>$row->od_os_ou</td>";
     echo "<td>$row->vrsta_sociva</td>";
     echo "<td>$row->dizajn</td>";
@@ -37,8 +63,8 @@ while ($row = mysqli_fetch_object($result)) {
     echo "<td>$row->tretman2</td>";
     echo "<td>$row->pd</td>";
     echo "<td>$row->mjesto_isporuke</td>";
-    echo "<td><input name='napomena' title='Unesite napomenu' class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
-    echo "<td><i onclick='deleteRow();' id='$row->ID' title='Ukloni stavku' class='fas fa-trash fa-lg'></i></td>";
+    echo "<td>$row->napomena</td>";
+    echo "<td class='tg-options'><i onclick='deleteRow();' id='$row->ID' title='Ukloni stavku' class='fas fa-trash fa-lg'></i></td>";
     echo "</tr>";
 }
 echo "</tbody>";
@@ -47,7 +73,7 @@ echo "</br>";
 if (mysqli_num_rows($result) > 0) {
     echo "<a  onClick=\"javascript: return confirm('Želite da pošaljete narudžbu? ');\" href='../poloptic/mail.php' class='btn btn-success'><i class='fa fa-paper-plane'></i> Pošalji narudžbu</a>";
 }
-echo " <p id='info'>U tabeli je moguće unijeti samo Napomenu i da bi potvrdili unos pritisnite ENTER na tastaturi.</br> Da bi izbrisali stavku u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
+echo " <p id='info'>Da bi izbrisali stavku u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
 if (isset($_REQUEST['msg'])) {
     if ($_REQUEST['msg'] == '1') {
         echo "<script src=\"../js/alertify.min.js\"></script>";
