@@ -42,7 +42,7 @@ echo "<div class='table-wrapper-scroll-y'>
 </thead>
 <tbody>";
 while ($row = mysqli_fetch_object($result)) {
-    echo "<tr>";
+    echo "<tr id='$row->ID' onclick='updateEntireRow()'>";
     echo "<td class='od_os_ou'>$row->lag_spec</td>";
     echo "<td>$row->od_os_ou</td>";
     echo "<td>$row->vrsta_sociva</td>";
