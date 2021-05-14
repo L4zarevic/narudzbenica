@@ -43,7 +43,7 @@ echo "<div class='table-wrapper-scroll-y'>
 </thead>
 <tbody>";
 while ($row = mysqli_fetch_object($result)) {
-    echo "<tr>";
+    echo "<tr id='$row->ID' onclick='updateEntireRow();'>";
     echo "<td class='od_os_ou'>$row->od_os_ou</td>";
     echo "<td>$row->vrsta_sociva</td>";
     echo "<td>$row->dizajn</td>";
@@ -87,6 +87,11 @@ if (isset($_REQUEST['msg'])) {
     if ($_REQUEST['msg'] == '2') {
         echo "<script src=\"../js/alertify.min.js\"></script>";
         echo "<script type=\"text/javascript\">alertify.success('Stavka je dodata');</script>";
+        echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })</script>";
+    }
+    if ($_REQUEST['msg'] == '3') {
+        echo "<script src=\"../js/alertify.min.js\"></script>";
+        echo "<script type=\"text/javascript\">alertify.success('Stavka je ažurirana','custom',2);</script>";
         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })</script>";
     }
 }

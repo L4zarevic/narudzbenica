@@ -6,16 +6,6 @@ include '../modules/header.php';
 ?>
 
 <body id="page-top">
-  <style>
-    table tr {
-      cursor: pointer;
-      transition: all .25s ease-in-out;
-    }
-
-    table tr:hover {
-      background-color: #ddd;
-    }
-  </style>
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -575,13 +565,11 @@ include '../modules/header.php';
 
 </body>
 <script type="text/javascript">
-  var $select2 = $('#select2'),
-    $select3 = $('#select3'),
-    $select4 = $('#select4'),
-    $options1 = $select3.find('option');
+  var $select2 = $('#select2');
+  $('#showSegment').hide();
 
   $select2.on('change', function() {
-    $select3.html($options1.filter('[value="' + this.value + '"]'));
+ 
     if (this.value == '3') {
       $('#ifYes').show();
     } else {
@@ -593,7 +581,7 @@ include '../modules/header.php';
     } else {
       $('#showSegment').hide();
     }
-  }).trigger('change');
+  });
 </script>
 
 </html>

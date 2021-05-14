@@ -39,6 +39,9 @@ include '../modules/header.php';
                   <option>OU</option>
                 </select>
               </div>
+              <div class="form-group col-md-2">
+                <input name="id_stavke" type="hidden" class="form-control" id="id_stavke" value="">
+              </div>
             </div>
             <div class="rowSpec">
               <div class="form-group col-md-3">
@@ -63,20 +66,20 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Index</label></strong>
-                    <select name="index" title="Unesite Index prelamanja" class="form-control" id="select8">
-                      <option default></option>
-                      <option>1.50</option>
-                      <option>1.523</option>
-                      <option>1.53</option>
-                      <option>1.56</option>
-                      <option>1.59</option>
-                      <option>1.60</option>
-                      <option>1.67</option>
-                      <option>1.70</option>
-                      <option>1.74</option>
-                      <option>1.80</option>
-                      <option>1.90</option>
-                    </select>
+                <select name="index" title="Unesite Index prelamanja" class="form-control" id="select8">
+                  <option default></option>
+                  <option>1.50</option>
+                  <option>1.523</option>
+                  <option>1.53</option>
+                  <option>1.56</option>
+                  <option>1.59</option>
+                  <option>1.60</option>
+                  <option>1.67</option>
+                  <option>1.70</option>
+                  <option>1.74</option>
+                  <option>1.80</option>
+                  <option>1.90</option>
+                </select>
               </div>
             </div>
 
@@ -169,32 +172,32 @@ include '../modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <strong><label>Visina ugradnje / Koridor</label></strong>
-                      <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="select5">
-                        <option default></option>
-                        <option>13</option>
-                        <option>14</option>
-                        <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                        <option>20</option>
-                        <option>21</option>
-                        <option>22</option>
-                        <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                        <option>31</option>
-                        <option>32</option>
-                        <option>33</option>
-                        <option>34</option>
-                        <option>35</option>
-                      </select>
+                  <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="select5">
+                    <option default></option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                    <option>32</option>
+                    <option>33</option>
+                    <option>34</option>
+                    <option>35</option>
+                  </select>
                 </div>
               </div>
 
@@ -434,7 +437,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-              <strong><label>Ax</label></strong>
+                <strong><label>Ax</label></strong>
                 <input name="ugao" title="Unesite ugao cilindra" type="text" class="form-control2" id="ugaoCilindra">
               </div>
             </div>
@@ -442,7 +445,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-              <strong><label>Add / Dig.</label></strong>
+                <strong><label>Add / Dig.</label></strong>
                 <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
                   <option default></option>
                   <option>0.75</option>
@@ -465,7 +468,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-              <strong><label>Jedinica mjere</label></strong>
+                <strong><label>Jedinica mjere</label></strong>
                 <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
                   <option>kom</option>
                   <option>kut</option>
@@ -483,35 +486,35 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-              <strong><label>Količina</label></strong>
+                <strong><label>Količina</label></strong>
                 <input name="kolicina" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control2" id="kolicina">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
-              <strong><label>Tretmani i bojenja #1</label></strong>
+                <strong><label>Tretmani i bojenja #1</label></strong>
                 <input name="tretman1" title="Unesite tretman ili bojenja" type="text" class="form-control2" id="tretman1">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
-              <strong><label>Tretmani i bojenja #2</label></strong>
+                <strong><label>Tretmani i bojenja #2</label></strong>
                 <input name="tretman2" title="Unesite tretman ili bojenja" type="text" class="form-control2" id="tretman2">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-              <strong><label>MPC po komadu</label></strong>
+                <strong><label>MPC po komadu</label></strong>
                 <input name="mpc" title="Unesite MPC" type="text" class="form-control2" id="mpc">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
-              <strong><label>Napomena</label></strong>
+                <strong><label>Napomena</label></strong>
                 <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
               </div>
             </div>

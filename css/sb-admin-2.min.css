@@ -252,6 +252,14 @@ th {
     word-break: normal;
     width: 10% !important;
 }
+
+.narudzbenica-tabela tr:hover {
+      background-color: #ddd;
+    }
+.narudzbenica-tabela tr {
+	cursor: pointer;
+    transition: all .25s ease-in-out;
+}
 .narudzbenica-tabela .narudzbenica-tabela-0lax {
     text-align: left;
     vertical-align: top;
