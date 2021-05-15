@@ -39,14 +39,17 @@ include '../modules/header.php';
                   <option>OU</option>
                 </select>
               </div>
+              <div class="form-group col-md-2">
+                <input name="id_stavke" type="hidden" class="form-control" id="id_stavke" value="">
+              </div>
             </div>
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Vrsta sočiva</label></strong>
-                <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2" required>
-                  <option value="0" default></option>
-                  <option value="2">Bifokal</option>
-                  <option value="3">Progresiv</option>
+                <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2">
+                  <option default></option>
+                  <option>Bifokal</option>
+                  <option>Progresiv</option>
                 </select>
               </div>
             </div>
@@ -55,9 +58,9 @@ include '../modules/header.php';
               <div class="form-group col-md-3">
                 <strong><label>Vrsta materijala</label></strong>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
-                  <option value="0" default></option>
-                  <option value="1">1.50 HMC</option>
-                  <option value="1">1.56 Photocromic gray HMC</option>
+                  <option default></option>
+                  <option>1.50 HMC</option>
+                  <option>1.56 Photocromic gray HMC</option>
                 </select>
               </div>
             </div>
@@ -150,7 +153,6 @@ include '../modules/header.php';
             -Vrsta materijala</br>
             -Količina</br>
             </br>
-
           </div>
 
           <!-- /.container-fluid -->
@@ -171,37 +173,6 @@ include '../modules/header.php';
     include '../modules/footer.php';
     ?>
     <!-- End of Footer -->
-
-    <!--<script type="text/javascript">
-      var $select2 = $('#select2'),
-        $select3 = $('#select3'),
-        $select4 = $('#select4'),
-        $select15 = $('#select15'),
-        $select16 = $('#select16'),
-        $options1 = $select3.find('option');
-      $options2 = $select4.find('option');
-      $options3 = $select15.find('option');
-      $options4 = $select16.find('option');
-
-
-      $select2.on('change', function() {
-        $select3.html($options1.filter('[value="' + this.value + '"]'));
-      }).trigger('change');
-
-      $select2.on('change', function() {
-        $select4.html($options2.filter('[value="' + this.value + '"]'));
-      }).trigger('change');
-
-      $select4.on('change', function() {
-        var id = $(this).children(":selected").attr("id");
-        $select15.html($options3.filter('[value="' + id + '"]'));
-      }).trigger('change');
-
-      $select4.on('change', function() {
-        var id1 = $(this).children(":selected").attr("id");
-        $select16.html($options4.filter('[value="' + id1 + '"]'));
-      }).trigger('change');
-    </script>-->
 
 </body>
 
