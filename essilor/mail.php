@@ -30,6 +30,7 @@ $schema_insert .= '<br/>';
 $schema_insert .= '<table rules="all" style="border-color:#000;" cellpadding="2">';
 $schema_insert .= '<thead>';
 $schema_insert .= '<tr>';
+$schema_insert .= '<th>R.br.</th>';
 $schema_insert .= '<th>Od/Os/Ou</th>';
 $schema_insert .= '<th>Vrsta soc.</th>';
 $schema_insert .= '<th>Dizajn</th>';
@@ -45,10 +46,7 @@ $schema_insert .= '<th>Add</th>';
 $schema_insert .= '<th>JM</th>';
 $schema_insert .= '<th>Kol.</th>';
 $schema_insert .= '<th>Tr.1</th>';
-$schema_insert .= '<th>Tr.
-
-
-2</th>';
+$schema_insert .= '<th>Tr.2</th>';
 $schema_insert .= '<th>PD</th>';
 $schema_insert .= '<th>Mjesto ispor.</th>';
 $schema_insert .= '<th>MPC po kom.</th>';
@@ -58,8 +56,10 @@ $schema_insert .= '</tr>';
 $schema_insert .= '</thead>';
 $schema_insert .= '<tbody>';
 $schema_insert .= '<tr>';
-while ($row = mysqli_fetch_object($result)) {
 
+$rb=0;
+while ($row = mysqli_fetch_object($result)) {
+  $schema_insert .= '<td>' . ($rb = $rb + 1) . '</td>';
   $schema_insert .= '<td>' . $row->od_os_ou . '</td>';
   $schema_insert .= '<td>' . $row->vrsta_sociva . '</td>';
   $schema_insert .= '<td>' . $row->dizajn . '</td>';

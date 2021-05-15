@@ -30,6 +30,7 @@ $schema_insert .= '<br/>';
 $schema_insert .= '<table rules="all" style="border-color:#000;" cellpadding="2">';
 $schema_insert .= '<thead>';
 $schema_insert .= '<tr>';
+$schema_insert .= '<th>R.br.</th>';
 $schema_insert .= '<th>Lag-Spec</th>';
 $schema_insert .= '<th>Od/Os/Ou</th>';
 $schema_insert .= '<th>Vrsta soc.</th>';
@@ -56,8 +57,10 @@ $schema_insert .= '</tr>';
 $schema_insert .= '</thead>';
 $schema_insert .= '<tbody>';
 $schema_insert .= '<tr>';
-while ($row = mysqli_fetch_object($result)) {
 
+$rb=0;
+while ($row = mysqli_fetch_object($result)) {
+  $schema_insert .= '<td>' . ($rb = $rb + 1) . '</td>';
   $schema_insert .= '<td>' . $row->lag_spec . '</td>';
   $schema_insert .= '<td>' . $row->od_os_ou . '</td>';
   $schema_insert .= '<td>' . $row->vrsta_sociva . '</td>';
