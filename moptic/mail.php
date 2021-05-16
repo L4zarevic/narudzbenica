@@ -24,6 +24,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 $schema_insert = '<html><head><meta charset="utf-8"></head><body>';
+$schema_insert .= '<h2>Narudžbenica - M-Optic</h2>';
 $schema_insert .= '<br/>Narudžba od: ' . "$imeKorisnika" . '<br/>';
 $schema_insert .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . '<br/>';
 $schema_insert .= '<br/>';
@@ -119,6 +120,7 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 $body = "--" . $separator . $eol;
 $header .= "Content-Type: text/html; charset=utf-8" . $eol;
 $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+$body .= "Narudžbenica - M-Optic" . $eol;
 $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
 $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
 $body .= "------------------------" . $eol;
