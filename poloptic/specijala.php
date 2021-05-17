@@ -62,8 +62,8 @@ include '../modules/header.php';
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option value="0" default></option>
                   <option value="1" default></option>
-                  <option value="1">CR39 UC</option>
-                  <option value="1">CR39 UV420</option>
+                  <option value="1">CR-39 UC</option>
+                  <option value="1">CR-39 UV420</option>
                   <option value="1">Photocromic gray</option>
                   <option value="1">Photocromic brown</option>
                   <option value="1">Transitions VII gray</option>

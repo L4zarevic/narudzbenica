@@ -564,8 +564,6 @@ include '../modules/header.php';
     ?>
     <!-- End of Footer -->
 
-
-
 </body>
 
 <script type="text/javascript">
