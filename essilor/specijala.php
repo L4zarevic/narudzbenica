@@ -204,7 +204,7 @@ include '../modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <strong><label>PD:</label></strong>
-                  <input name="pd" title="Unesite PD" type="text" class="form-control2" id="pd">
+                  <input name="pd" title="Unesite PD" type="text" maxlength="14" class="form-control2" id="pd">
                 </div>
               </div>
             </div>
@@ -213,7 +213,7 @@ include '../modules/header.php';
               <div class="rowSpec">
                 <div class="form-group col-md-3">
                   <strong><label>Segment:</label></strong>
-                  <input name="segment" title="Unesite segment" type="text" class="form-control2" id="segment">
+                  <input name="segment" title="Unesite segment" type="text" maxlength="10" class="form-control2" id="segment">
                 </div>
               </div>
             </div>
@@ -438,7 +438,7 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Ax</label></strong>
-                <input name="ugao" title="Unesite ugao cilindra" type="text" class="form-control2" id="ugaoCilindra">
+                <input name="ugao" title="Unesite ugao cilindra" maxlength="3" type="text" class="form-control2" id="ugaoCilindra">
               </div>
             </div>
 
@@ -487,7 +487,7 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Količina</label></strong>
-                <input name="kolicina" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control2" id="kolicina">
+                <input name="kolicina" maxlength="2" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control2" id="kolicina">
               </div>
             </div>
 
