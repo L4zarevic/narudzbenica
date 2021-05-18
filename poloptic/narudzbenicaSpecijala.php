@@ -71,7 +71,7 @@ echo "</tbody>";
 echo "</table>";
 echo "</br>";
 if (mysqli_num_rows($result) > 0) {
-    echo "<a  onClick=\"javascript: return confirm('Želite da pošaljete narudžbu? ');\" href='../poloptic/mail.php' class='btn btn-success'><i class='fa fa-paper-plane'></i> Pošalji narudžbu</a>";
+    echo "<a  onClick=\"javascript: return confirm('Želite da pošaljete narudžbu? ');\" href='../poloptic/mail.php' class='btn btn-primary send'><i class='fa fa-paper-plane'></i> Pošalji narudžbu</a>";
 }
 echo " <p id='info'>Da bi izbrisali stavku u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
 if (isset($_REQUEST['msg'])) {
