@@ -115,8 +115,8 @@ include '../modules/header.php';
                   <option value="1" default></option>
 
                   <option value="2" default></option>
-                  <option id="100" value="2">Bifocal FT28</option>
-                  <option id="100" value="2">Bifocal CT28</option>
+                  <option id="100" value="2">FT28</option>
+                  <option id="100" value="2">CT28</option>
                   <option id="101" value="2">Bifo Invisio</option>
                   <option value="2" default></option>
 

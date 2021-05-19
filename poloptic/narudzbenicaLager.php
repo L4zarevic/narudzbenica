@@ -13,13 +13,26 @@ $stmt->bind_param('i', $idKorisnika);
 $stmt->execute();
 $result = $stmt->get_result();
 echo "<div class='naslov'><h1 id='naslovNarudzbenice'>Narudžbenica - Pol Optic</h1><hr></div>";
-echo "<div class='table-wrapper-scroll-y my-custom-scrollbar'><table class='narudzbenica-tabela' id='narudzbenica'><tr><th class='tg-0lax'>Lager-Specijala</th><th class='tg-0lax'>Vrsta materijala</th><th id='poljeKolicine' class='tg-0lax'>Količina</th><th class='tg-0lax'>Mjesto isporuke</th><th class='tg-0lax'>Napomena</th><th class='tg-0lax'></th></tr></thead><tbody>";
+echo "<div class='table-wrapper-scroll-y my-custom-scrollbar'>
+<table class='narudzbenica-tabela' id='narudzbenica'>
+<tr>
+<th class='tg-0lax'>Lager-Specijala</th>
+<th class='tg-0lax'>Vrsta materijala</th>
+<th id='poljeKolicine' class='tg-0lax'>Količina</th>
+<th class='tg-0lax'>Mjesto isporuke</th>
+<th class='tg-0lax'>MPC po kom.</th>
+<th class='tg-0lax'>Napomena</th>
+<th class='tg-0lax'></th>
+</tr>
+</thead>
+<tbody>";
 while ($row = mysqli_fetch_object($result)) {
     echo "<tr>";
     echo "<td>$row->lag_spec</td>";
     echo "<td>$row->vrsta_materijala</td>";
     echo "<td>$row->kolicina</td>";
     echo "<td>$row->mjesto_isporuke</td>";
+    echo "<td><input name='mpc' title='Unesite MPC' style='font-size: 12px;'class='form-control' onkeypress='getValue();' id='m$row->ID' type='text' value='" . $row->mpc . "'></td>";
     echo "<td><input name='napomena' title='Unesite napomenu' style='font-size: 12px;'class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
     echo "<td><i onclick='deleteRow();' title='Ukloni stavku' id='$row->ID'class='fas fa-trash fa-lg'></i></td>";
     echo "</tr>";
@@ -30,7 +43,7 @@ echo "</br>";
 if (mysqli_num_rows($result) > 0) {
     echo "<a  onClick=\"javascript: return confirm('Želite da pošaljete narudžbu? ');\" href='../poloptic/mail.php' class='btn btn-primary send'><i class='fa fa-paper-plane'></i> Pošalji narudžbu</a>";
 }
-echo " <p id='info'>U tabeli je moguće unijeti samo Napomenu i da bi potvrdili unos pritisnite ENTER na tastaturi.</br> Da bi izbrisali stavku u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
+echo " <p id='info'>U tabeli je moguće izmijeniti samo <strong>MPC po komadu</strong> i <strong>Napomenu</strong>. </br> Da bi potvrdili unos pritisnite ENTER na tastaturi.</br> Za brisanje stavke u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
 if (isset($_REQUEST['msg'])) {
     if ($_REQUEST['msg'] == '1') {
         echo "<script src=\"../js/alertify.min.js\"></script>";

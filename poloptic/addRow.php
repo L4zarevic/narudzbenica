@@ -97,7 +97,7 @@ if ($count == 1) {
         $mjesto_isporuke = $row3->alias;
     }
 
-    $stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,vrsta_materijala,kolicina,mjesto_isporuke) VALUES (?, "Lager", ?, ?, ?)');
+    $stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,vrsta_materijala,jm,kolicina,mjesto_isporuke) VALUES (?, "Lager", ?, "kom", ?, ?)');
     $stmt->bind_param('isis', $idKorisnika, $vrsta_materijala, $kolicina, $mjesto_isporuke);
     $stmt->execute();
 }

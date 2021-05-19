@@ -15,10 +15,18 @@ $stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
 $ar = explode("#", $stavka, 2);
 $ar[1] = rtrim($ar[1], "#");
 $ID = $ar[0];
-$napomena = $ar[1];
+$vrijednost = $ar[1];
 $realID = substr($ID, 1);
-$stmt = $conn->prepare('UPDATE narudzbenica_pol SET napomena =? WHERE ID =?');
-$stmt->bind_param('si', $napomena, $realID);
+
+if((substr($ID,0,1))=='m'){
+    $stmt = $conn->prepare('UPDATE narudzbenica_pol SET mpc =? WHERE ID =?');
+}
+
+if((substr($ID,0,1))=='n'){
+    $stmt = $conn->prepare('UPDATE narudzbenica_pol SET napomena =? WHERE ID =?');
+}
+
+$stmt->bind_param('si', $vrijednost, $realID);
 $stmt->execute();
 if (mysqli_error($conn)) {
     die(mysqli_error($conn));
