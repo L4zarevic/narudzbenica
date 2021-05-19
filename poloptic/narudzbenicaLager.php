@@ -20,7 +20,7 @@ echo "<div class='table-wrapper-scroll-y my-custom-scrollbar'>
 <th class='tg-0lax'>Vrsta materijala</th>
 <th id='poljeKolicine' class='tg-0lax'>Količina</th>
 <th class='tg-0lax'>Mjesto isporuke</th>
-<th class='tg-0lax'>MPC po kom.</th>
+<th class='tg-0lax'>MPC</th>
 <th class='tg-0lax'>Napomena</th>
 <th class='tg-0lax'></th>
 </tr>
@@ -41,7 +41,7 @@ echo "</tbody>";
 echo "</table>";
 echo "</br>";
 if (mysqli_num_rows($result) > 0) {
-    echo "<a  onClick=\"javascript: return confirm('Želite da pošaljete narudžbu? ');\" href='../poloptic/mail.php' class='btn btn-primary send'><i class='fa fa-paper-plane'></i> Pošalji narudžbu</a>";
+    echo "<button type='button' onclick='checkEmptyTable()' class='btn btn-primary send'><i class='fa fa-paper-plane'></i> Pošalji narudžbenicu</button>";
 }
 echo " <p id='info'>U tabeli je moguće izmijeniti samo <strong>MPC po komadu</strong> i <strong>Napomenu</strong>. </br> Da bi potvrdili unos pritisnite ENTER na tastaturi.</br> Za brisanje stavke u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
 if (isset($_REQUEST['msg'])) {

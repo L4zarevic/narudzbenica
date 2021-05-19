@@ -36,6 +36,7 @@ echo "<div class='table-wrapper-scroll-y'>
 <th class='tg-0lax'>Tr.2</th>
 <th class='tg-0lax'>PD</th>
 <th class='tg-0lax'>Mjesto isp.</th>
+<th class='tg-0lax'>MPC</th>
 <th class='tg-0lax'>Napomena</th>
 <th class='tg-0lax'></th>
 </tr>
@@ -63,6 +64,7 @@ while ($row = mysqli_fetch_object($result)) {
     echo "<td>$row->tretman2</td>";
     echo "<td>$row->pd</td>";
     echo "<td>$row->mjesto_isporuke</td>";
+    echo "<td>$row->mpc</td>";
     echo "<td>$row->napomena</td>";
     echo "<td class='tg-options'><i onclick='deleteRow();' id='$row->ID' title='Ukloni stavku' class='fas fa-trash fa-lg'></i></td>";
     echo "</tr>";
@@ -71,7 +73,7 @@ echo "</tbody>";
 echo "</table>";
 echo "</br>";
 if (mysqli_num_rows($result) > 0) {
-    echo "<a  onClick=\"javascript: return confirm('Želite da pošaljete narudžbu? ');\" href='../poloptic/mail.php' class='btn btn-primary send'><i class='fa fa-paper-plane'></i> Pošalji narudžbu</a>";
+    echo "<button type='button' onclick='checkSpecialTable()' class='btn btn-primary send'><i class='fa fa-paper-plane'></i> Pošalji narudžbenicu</button>";
 }
 echo " <p id='info'>Da bi izbrisali stavku u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
 if (isset($_REQUEST['msg'])) {
