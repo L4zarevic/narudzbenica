@@ -32,8 +32,8 @@ while ($row = mysqli_fetch_object($result)) {
     echo "<td>$row->vrsta_materijala</td>";
     echo "<td>$row->kolicina</td>";
     echo "<td>$row->mjesto_isporuke</td>";
-    echo "<td><input name='mpc' title='Unesite MPC' style='font-size: 12px;'class='form-control' onkeypress='getValue();' id='m$row->ID' type='text' value='" . $row->mpc . "'></td>";
-    echo "<td><input name='napomena' title='Unesite napomenu' style='font-size: 12px;'class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
+    echo "<td><input name='mpc' maxlength='25' title='Unesite MPC' style='font-size: 12px;'class='form-control' onkeypress='getValue();' id='m$row->ID' type='text' value='" . $row->mpc . "'></td>";
+    echo "<td><input name='napomena' maxlength='250' title='Unesite napomenu' style='font-size: 12px;'class='form-control' onkeypress='getValue();' id='n$row->ID' type='text' value='" . $row->napomena . "'></td>";
     echo "<td><i onclick='deleteRow();' title='Ukloni stavku' id='$row->ID'class='fas fa-trash fa-lg'></i></td>";
     echo "</tr>";
 }
