@@ -513,6 +513,13 @@ include '../modules/header.php';
             </div>
 
             <div class="rowSpec">
+                <div class="form-group col-md-5">
+                  <label>Broj radnog naloga <strong>(№) </strong></label>
+                  <input name="broj_radnog_naloga" maxlength='30' class="form-control2" type="text" title="Unesite broj radnog naloga" id="broj_radnog_naloga" placeholder="" />
+                </div>
+              </div>
+
+            <div class="rowSpec">
               <div class="form-group col-md-5">
                 <strong><label>Napomena</label></strong>
                 <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>

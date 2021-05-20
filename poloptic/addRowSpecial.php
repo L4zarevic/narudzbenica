@@ -16,7 +16,7 @@ $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
 $stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
-$arS = explode("###", $stavka, 20);
+$arS = explode("###", $stavka, 22);
 $arS[1] = rtrim($arS[1], "###");
 
 $odOsOu = $arS[0];
@@ -38,7 +38,9 @@ $kolicina = $arS[15];
 $tretman1 = $arS[16];
 $tretman2 = $arS[17];
 $pd = $arS[18];
-$napomena1 = $arS[19];
+$mpc = $arS[19];
+$broj_naloga = $arS[20];
+$napomena1 = $arS[21];
 
 $napomena = str_replace('\n', " ", $napomena1);
 
@@ -61,8 +63,8 @@ while ($row3 = mysqli_fetch_object($result3)) {
 	$mjesto_isporuke = $row3->alias;
 }
 
-$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,napomena) values (?,"Spec",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-$stmt->bind_param('issssssssssssssisssss', $idKorisnika, $odOsOu, $vrstaSociva, $dizajn, $koridor_visina, $segment, $baza, $indeks, $materijal, $precnik, $sph, $cyl, $ugao, $add, $jm, $kolicina, $tretman1, $tretman2, $pd, $mjesto_isporuke, $napomena);
+$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena) values (?,"Spec",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+$stmt->bind_param('issssssssssssssisssssss', $idKorisnika, $odOsOu, $vrstaSociva, $dizajn, $koridor_visina, $segment, $baza, $indeks, $materijal, $precnik, $sph, $cyl, $ugao, $add, $jm, $kolicina, $tretman1, $tretman2, $pd, $mjesto_isporuke, $mpc, $broj_naloga, $napomena);
 $stmt->execute();
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));

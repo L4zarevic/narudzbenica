@@ -50,7 +50,8 @@ $schema_insert .= '<th>Tr.1</th>';
 $schema_insert .= '<th>Tr.2</th>';
 $schema_insert .= '<th>PD</th>';
 $schema_insert .= '<th>Mjesto ispor.</th>';
-$schema_insert .= '<th>MPC po kom.</th>';
+$schema_insert .= '<th>MPC</th>';
+$schema_insert .= '<th>Br.radnog naloga</th>';
 $schema_insert .= '<th>Napomena</th>';
 $schema_insert .= '<th></th>';
 $schema_insert .= '</tr>';
@@ -58,7 +59,7 @@ $schema_insert .= '</thead>';
 $schema_insert .= '<tbody>';
 $schema_insert .= '<tr>';
 
-$rb=0;
+$rb = 0;
 while ($row = mysqli_fetch_object($result)) {
   $schema_insert .= '<td>' . ($rb = $rb + 1) . '</td>';
   $schema_insert .= '<td>' . $row->od_os_ou . '</td>';
@@ -80,6 +81,7 @@ while ($row = mysqli_fetch_object($result)) {
   $schema_insert .= '<td>' . $row->pd . '</td>';
   $schema_insert .= '<td>' . $row->mjesto_isporuke . '</td>';
   $schema_insert .= '<td>' . $row->mpc . '</td>';
+  $schema_insert .= '<td>' . $row->broj_naloga . '</td>';
   $schema_insert .= '<td>' . $row->napomena . '</td>';
   $schema_insert .= '</tr>';
   $schema_insert .= '</tbody>';

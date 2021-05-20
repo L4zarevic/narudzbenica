@@ -539,3 +539,9 @@ input.form-control2{
 }
 input.form-control2:focus{color:#6e707e;background-color:#fff;border-color:#bac8f3;outline:0;box-shadow:0 0 0 .2rem rgba(78,115,223,.25)}
 
+.obavezna_polja{
+	font-size:11pt;
+	color:#ff0000;
+	margin-left:1%;
+	font-weight:700;
+}
