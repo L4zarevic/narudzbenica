@@ -148,8 +148,7 @@ $body .= "--" . $separator . "--";
 
 if (mail($to, $subject, $body, $headers)) {
 
-  $subject = "eNarudzbenica - Uspješna narudžbina";
-  $tо = $email;
+  $title = "eNarudzbenica - Uspješna narudžbina";
   // main header
   $headers  = "From: no-reply@mojaoptika.com" . $eol;
   $headers .= "MIME-Version: 1.0" . $eol;
@@ -181,7 +180,7 @@ if (mail($to, $subject, $body, $headers)) {
   $body .= "Content-Disposition: attachment;  filename=\"" . $filename . "\"" . $eol . $eol;
   $body .= $attachment . $eol;
   $body .= "--" . $separator . "--";
-  mail($to, $subject, $body, $headers);
+  mail($email, $title, $body, $headers);
 
 
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
