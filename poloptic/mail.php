@@ -153,12 +153,11 @@ if (mail($to, $subject, $body, $headers)) {
   $name = basename($file);
 
   $header = "From: no-reply@mojaoptika.com" . "\r\n";;
-  $header .= "Reply-To: " . $email . "\r\n";
   $header .= "MIME-Version: 1.0\r\n";
   $header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
 
   $nmessage .= "Narudžbenica - Poloptic";
-  $nmessage.= 'Narudžba od: ' . "$imeKorisnika";
+  $nmessage .= 'Narudžba od: ' . "$imeKorisnika";
   $nmessage .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i');
   $nmessage .= "------------------------" . $eol;
   $nmessage .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica";
@@ -172,10 +171,10 @@ if (mail($to, $subject, $body, $headers)) {
   $nmessage .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"\r\n";
   $nmessage .= "Content-Transfer-Encoding: base64\r\n";
   $nmessage .= "Content-Disposition: attachment; filename=\"" . $filename . "\"\r\n\r\n";
-  $nmessage .= $content . "\r\n\r\n";
+  $nmessage .= $attachment . "\r\n\r\n";
   $nmessage .= "--" . $uid . "--";
 
-  mail($to, $subject, $nmessage, $header); 
+  mail($email, $subject, $nmessage, $header);
 
 
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
