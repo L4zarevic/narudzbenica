@@ -146,44 +146,43 @@ $body .= "Content-Disposition: attachment;  filename=\"" . $filename . "\"" . $e
 $body .= $attachment . $eol;
 $body .= "--" . $separator . "--";
 
-
 if (mail($to, $subject, $body, $headers)) {
 
-  $to = $from;
-  $headers  = "From:no-reply@mojaoptika.com"  . $eol;
+  $subject = "eNarudzbenica - Uspješna narudžbina";
+  $tо = $email;
+  // main header
+  $headers  = "From: no-reply@mojaoptika.com" . $eol;
   $headers .= "MIME-Version: 1.0" . $eol;
   $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
-  $title = "eNarudzbenica - Uspiješna narudžbina";
 
   // no more headers after this, we start the body! //
 
   $body = "--" . $separator . $eol;
   $header .= "Content-Type: text/html; charset=utf-8" . $eol;
-  $message .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
-  $message .= "Zahvaljujemo se na vašoj narudžbini!" . $eol;
-  $message .= " " . $eol;
-  $message .= "Narudžbenica - Poloptic" . $eol;
-  $message .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
-  $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
-  $message .= "----- Informacije o narudžbi u prilogu email-a -----" . $eol;
-  $message .= " " . $eol;
-  $message .= "---------------------------------------------" . $eol;
-  $message .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
+  $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+  $body .= "Zahvaljujemo se na vašoj narudžbini!" . $eol;
+  $body .= "Narudžbenica - Poloptic" . $eol;
+  $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
+  $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
+  $body .= "---- Informacije o narudžbini se nalaze u prilogu email-a ----" . $eol;
+  $body .= "--------------------------------------------------------------" . $eol;
+  $body .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
 
   // message
-  $message .= "--" . $separator . $eol;
-  $message .= "Content-Type: text/html; charset=\"utf-8\"" . $eol;
-  $message .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+  $body .= "--" . $separator . $eol;
+  $body .= "Content-Type: text/html; charset=\"utf-8\"" . $eol;
+  $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+  //$body .= $message . $eol;
 
   // attachment
-  $message .= "--" . $separator . $eol;
-  $message .= "Content-Type: application/octet-stream; charset=utf-8;   name=\"" . $filename . "\"" . $eol;
-  $message .= "Content-Transfer-Encoding: base64" . $eol;
-  $message .= "Content-Disposition: attachment;  filename=\"" . $filename . "\"" . $eol . $eol;
-  $message .= $attachment . $eol;
-  $message .= "--" . $separator . "--";
+  $body .= "--" . $separator . $eol;
+  $body .= "Content-Type: application/octet-stream; charset=utf-8;   name=\"" . $filename . "\"" . $eol;
+  $body .= "Content-Transfer-Encoding: base64" . $eol;
+  $body .= "Content-Disposition: attachment;  filename=\"" . $filename . "\"" . $eol . $eol;
+  $body .= $attachment . $eol;
+  $body .= "--" . $separator . "--";
+  mail($to, $subject, $body, $headers);
 
-  mail($to, $title, $message, $headers);
 
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
   $stmt->bind_param('i', $idKorisnika);
