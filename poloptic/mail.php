@@ -180,6 +180,7 @@ if (mail($to, $subject, $body, $headers)) {
   $body .= "Content-Disposition: attachment;  filename=\"" . $filename . "\"" . $eol . $eol;
   $body .= $attachment . $eol;
   $body .= "--" . $separator . "--";
+  $email = "lazarevic.nemanja96@gmail.com";
   mail($email, $title, $body, $headers);
 
 
