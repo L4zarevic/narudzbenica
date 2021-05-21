@@ -16,7 +16,7 @@ $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
 $stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
-$arS = explode("###", $stavka, 8);
+$arS = explode("###", $stavka, 10);
 $arS[1] = rtrim($arS[1], "###");
 
 $odOsOu = $arS[0];
@@ -26,7 +26,9 @@ $sph = $arS[3];
 $add = $arS[4];
 $jm = $arS[5];
 $kolicina = $arS[6];
-$napomena = $arS[7];
+$mpc = $arS[7];
+$broj_naloga = $arS[8];
+$napomena = $arS[9];
 
 $con = OpenCon();
 mysqli_set_charset($con, 'utf8');
@@ -39,12 +41,11 @@ while ($row3 = mysqli_fetch_object($result3)) {
 	$mjesto_isporuke = $row3->alias;
 }
 
-$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,vrsta_materijala,sph,adicija,jm,kolicina,mjesto_isporuke,napomena) values (?,"Lager",?,?,?,?,?,?,?,?,?)');
-$stmt->bind_param('issssssiss', $idKorisnika, $odOsOu, $vrstaSociva, $materijal, $sph, $add, $jm, $kolicina, $mjesto_isporuke, $napomena);
+$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,vrsta_materijala,sph,adicija,jm,kolicina,mjesto_isporuke,mpc,broj_naloga,napomena) VALUES (?,"Lager",?,?,?,?,?,?,?,?,?,?,?)');
+$stmt->bind_param('issssssissss', $idKorisnika, $odOsOu, $vrstaSociva, $materijal, $sph, $add, $jm, $kolicina, $mjesto_isporuke, $mpc, $broj_naloga, $napomena);
 $stmt->execute();
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));
 }
 
-header('Location: ../poloptic/lager_bifocal_progresiv.php');
 CloseCon($conn);

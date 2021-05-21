@@ -144,6 +144,42 @@ $body .= "--" . $separator . "--";
 
 if (mail($to, $subject, $body, $headers)) {
 
+  $to = $from;
+  $headers  = "From: no-reply@mojaoptika.com"  . $eol;
+  $headers .= "MIME-Version: 1.0" . $eol;
+  $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
+  $subject = "eNarudzbenica - Uspiješna narudžbina";
+
+  // no more headers after this, we start the body! //
+
+  $body = "--" . $separator . $eol;
+  $header .= "Content-Type: text/html; charset=utf-8" . $eol;
+  $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+  $body .= "Zahvaljujemo se na vašoj narudžbini!" . $eol;
+  $body .= " " . $eol;
+  $body .= "Narudžbenica - Hoya" . $eol;
+  $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
+  $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
+  $body .= "----- Informacije o narudžbi u prilogu email-a -----" . $eol;
+  $body .= " " . $eol;
+  $body .= "---------------------------------------------" . $eol;
+  $body .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
+
+  // message
+  $body .= "--" . $separator . $eol;
+  $body .= "Content-Type: text/html; charset=\"utf-8\"" . $eol;
+  $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+
+  // attachment
+  $body .= "--" . $separator . $eol;
+  $body .= "Content-Type: application/octet-stream; charset=utf-8;   name=\"" . $filename . "\"" . $eol;
+  $body .= "Content-Transfer-Encoding: base64" . $eol;
+  $body .= "Content-Disposition: attachment;  filename=\"" . $filename . "\"" . $eol . $eol;
+  $body .= $attachment . $eol;
+  $body .= "--" . $separator . "--";
+
+  mail($to, $subject, $body, $headers);
+
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_hoya` WHERE IDKorisnika =?');
   $stmt->bind_param('i', $idKorisnika);
   $stmt->execute();

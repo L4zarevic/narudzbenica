@@ -717,20 +717,11 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Jedinica mjere</label></strong>
-                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
-                  <option>kom</option>
-                  <option>kut</option>
-                  <option>kut-2</option>
-                  <option>kut-3</option>
-                  <option>kut-4</option>
-                  <option>kut-6</option>
-                  <option>kut-30</option>
-                  <option>paklo-10</option>
-                  <option>paklo-100</option>
+                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14" disabled>
+                  <option default>kom</option>
                 </select>
               </div>
             </div>
-
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
@@ -743,7 +734,7 @@ include '../modules/header.php';
               <div class="form-group col-md-5">
                 <strong><label>Tretmani i bojenja #1</label></strong>
                 <select name="tretman1" class="form-control" id="select15">
-                <option value="100" default></option>
+                  <option value="100" default></option>
                   <option value="100">HC</option>
                   <option value="100">MultiPlus</option>
                   <option value="100">NanoGlide</option>
@@ -910,7 +901,7 @@ include '../modules/header.php';
               <div class="form-group col-md-5">
                 <strong><label>Tretmani i bojenja #2</label></strong>
                 <select name="tretman2" class="form-control" id="select16">
-    
+
                   <option value="100" default></option>
                   <option value="100">HC</option>
                   <option value="100">MultiPlus</option>

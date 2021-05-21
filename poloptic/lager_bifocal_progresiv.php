@@ -32,7 +32,7 @@ include '../modules/header.php';
           <div class='tabelaSpecijala1'>
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>OD / OS / OU</label></strong>
+                <strong><label>OD / OS / OU</label></strong><label class="obavezna_polja">*</label>
                 <select name="od_os_ou" title="OD - za desno oko, OS - za lijevo oko, OU - ako je obostrano isto" class="form-control" id="select1">
                   <option>OD</option>
                   <option>OS</option>
@@ -45,7 +45,7 @@ include '../modules/header.php';
             </div>
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Vrsta sočiva</label></strong>
+                <strong><label>Vrsta sočiva</label></strong><label class="obavezna_polja">*</label>
                 <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2">
                   <option default></option>
                   <option>Bifokal</option>
@@ -56,7 +56,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Vrsta materijala</label></strong>
+                <strong><label>Vrsta materijala</label></strong><label class="obavezna_polja">*</label>
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option default></option>
                   <option>1.50 HMC</option>
@@ -109,30 +109,36 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Jedinica mjere</label></strong>
-                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
+                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14" disabled>
                   <option default>kom</option>
-                  <option>kut</option>
-                  <option>kut-2</option>
-                  <option>kut-3</option>
-                  <option>kut-4</option>
-                  <option>kut-6</option>
-                  <option>kut-30</option>
-                  <option>paklo-10</option>
-                  <option>paklo-100</option>
                 </select>
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Količina</label></strong>
+                <strong><label>Količina</label></strong><label class="obavezna_polja">*</label>
                 <input name="kolicina" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control2" id="kolicina">
               </div>
             </div>
 
             <div class="rowSpec">
+              <div class="form-group col-md-3">
+                <strong><label>MPC po komadu</label></strong><label class="obavezna_polja">*</label>
+                <input name="mpc" title="Unesite MPC" type="text" class="form-control2" id="mpc">
+              </div>
+            </div>
+
+            <div class="rowSpec">
               <div class="form-group col-md-5">
-                <label>Napomena</label>
+                <strong><label>Broj radnog naloga (№) </strong></label><label class="obavezna_polja">*</label>
+                <input name="broj_radnog_naloga" maxlength='30' class="form-control2" type="text" title="Unesite broj radnog naloga" id="broj_radnog_naloga" placeholder="" />
+              </div>
+            </div>
+
+            <div class="rowSpec">
+              <div class="form-group col-md-5">
+                <strong><label>Napomena</label></strong>
                 <textarea name="napomena" class="form-control" type="text" title="NAPOMENA: Ovdje unosite: Stepen zatamnjenja; Decentracija; Ime i prezime; Vrijeme isporuke itd." id="napomena" row="4"></textarea>
               </div>
             </div>
@@ -147,7 +153,7 @@ include '../modules/header.php';
             -SPH(sferna dioptrija)</br>
             -Add(adicija)</br>
             </br>
-            <strong>Obavezna polja su:</strong></br>
+            <label class="obavezna_polja">* Obavezna polja su:</label></br>
             -OD/OS/OU</br>
             -Vrsta sočiva</br>
             -Vrsta materijala</br>

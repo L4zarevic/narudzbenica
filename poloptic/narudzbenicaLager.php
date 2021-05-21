@@ -45,7 +45,7 @@ echo "</br>";
 if (mysqli_num_rows($result) > 0) {
     echo "<button type='button' onclick='checkEmptyTable()' class='btn btn-primary send'><i class='fa fa-paper-plane'></i> Pošalji narudžbenicu</button>";
 }
-echo " <p id='info'>U tabeli je moguće izmijeniti samo <strong>MPC po komadu</strong> i <strong>Napomenu</strong>. </br> Da bi potvrdili unos pritisnite ENTER na tastaturi.</br> Za brisanje stavke u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
+echo " <p id='info'>U tabeli je moguće unijeti / izmijeniti samo <strong>MPC po komadu</strong> i <strong>Napomenu</strong>. </br> Da bi potvrdili unos pritisnite ENTER na tastaturi.</br> Za brisanje stavke u tabeli, kliknite na ikonicu kantice <i class='fa fa-trash'></i></p>";
 if (isset($_REQUEST['msg'])) {
     if ($_REQUEST['msg'] == '1') {
         echo "<script src=\"../js/alertify.min.js\"></script>";
