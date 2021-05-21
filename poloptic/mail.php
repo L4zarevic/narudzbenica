@@ -148,11 +148,12 @@ $body .= "--" . $separator . "--";
 
 if (mail($to, $subject, $body, $headers)) {
 
-  $title = "eNarudzbenica - Uspješna narudžbina";
+  
   // main header
   $headers  = "From: no-reply@mojaoptika.com" . $eol;
   $headers .= "MIME-Version: 1.0" . $eol;
   $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
+  $title = "eNarudzbenica - Uspješna narudžbina";
 
   // no more headers after this, we start the body! //
 
@@ -160,6 +161,7 @@ if (mail($to, $subject, $body, $headers)) {
   $header .= "Content-Type: text/html; charset=utf-8" . $eol;
   $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
   $body .= "Zahvaljujemo se na vašoj narudžbini!" . $eol;
+  $body .= "" . $eol;
   $body .= "Narudžbenica - Poloptic" . $eol;
   $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
   $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
@@ -180,7 +182,6 @@ if (mail($to, $subject, $body, $headers)) {
   $body .= "Content-Disposition: attachment;  filename=\"" . $filename . "\"" . $eol . $eol;
   $body .= $attachment . $eol;
   $body .= "--" . $separator . "--";
-  $email = "nemanja.lazarevic@mojaoptika.com";
   mail($email, $title, $body, $headers);
 
 
@@ -192,7 +193,7 @@ if (mail($to, $subject, $body, $headers)) {
   }
 
   CloseCon($conn);
-  header('Location: ../poloptic/thanks.php');
+  header('Location: thanks.php');
   die();
 } else {
 
