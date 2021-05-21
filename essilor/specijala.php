@@ -32,7 +32,7 @@ include '../modules/header.php';
           <div class='tabelaSpecijala1'>
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong> <label>OD / OS / OU</label></strong>
+                <strong> <label>OD / OS / OU</label></strong><label class="obavezna_polja">*</label>
                 <select name="od_os_ou" title="OD - za desno oko, OS - za lijevo oko, OU - ako je obostrano isto" class="form-control" id="select1">
                   <option>OD</option>
                   <option>OS</option>
@@ -44,7 +44,7 @@ include '../modules/header.php';
               </div>
             </div>
             <div class="rowSpec">
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-3"><label class="obavezna_polja">*</label>
                 <strong><label>Vrsta sočiva</label></strong>
                 <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2">
                   <option value="0" default></option>
@@ -58,14 +58,14 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-4">
-                <strong><label>Dizajn - Naziv proizvoda</label></strong>
+                <strong><label>Dizajn - Naziv proizvoda</label></strong><label class="obavezna_polja">*</label>
                 <input name="dizajn" title="Unesite dizajn" type="text" class="form-control2" id="dizajn">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Index</label></strong>
+                <strong><label>Index</label></strong><label class="obavezna_polja">*</label>
                 <select name="index" title="Unesite Index prelamanja" class="form-control" id="select8">
                   <option default></option>
                   <option>1.50</option>
@@ -82,7 +82,6 @@ include '../modules/header.php';
                 </select>
               </div>
             </div>
-
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
@@ -105,7 +104,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label id="labelPrecnik">Prečnik mm</label></strong>
+                <strong><label id="labelPrecnik">Prečnik mm <label class="obavezna_polja">*</label></label></strong>
                 <select name="precnik1" title="Unesite prečnik" class="form-control" id="select9">
                   <option default></option>
                   <option>50</option>
@@ -171,7 +170,7 @@ include '../modules/header.php';
             <div id="ifYes" style="display: none;">
               <div class="rowSpec">
                 <div class="form-group col-md-3">
-                  <strong><label>Visina ugradnje / Koridor</label></strong>
+                  <strong><label>Visina ugradnje / Koridor</label></strong><label class="obavezna_polja">*</label>
                   <select name="visina" title="Visina ugradnje (ili koridor) Unesite Visinu ugradnje za progresive: 'Infini i sve progresive iz Orange Linea' ili koridor za klasične progresive (Futura,Pollux i Polaris)" class="form-control" id="select5">
                     <option default></option>
                     <option>13</option>
@@ -203,7 +202,7 @@ include '../modules/header.php';
 
               <div class="rowSpec">
                 <div class="form-group col-md-3">
-                  <strong><label>PD:</label></strong>
+                  <strong><label>PD:</label></strong><label class="obavezna_polja">*</label>
                   <input name="pd" title="Unesite PD" type="text" maxlength="14" class="form-control2" id="pd">
                 </div>
               </div>
@@ -217,7 +216,6 @@ include '../modules/header.php';
                 </div>
               </div>
             </div>
-
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
@@ -374,7 +372,6 @@ include '../modules/header.php';
               </div>
             </div>
 
-
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong> <label>CYL</label></strong>
@@ -434,14 +431,12 @@ include '../modules/header.php';
               </div>
             </div>
 
-
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Ax</label></strong>
                 <input name="ugao" title="Unesite ugao cilindra" maxlength="3" type="text" class="form-control2" id="ugaoCilindra">
               </div>
             </div>
-
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
@@ -469,16 +464,8 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Jedinica mjere</label></strong>
-                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
+                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14" disabled>
                   <option>kom</option>
-                  <option>kut</option>
-                  <option>kut-2</option>
-                  <option>kut-3</option>
-                  <option>kut-4</option>
-                  <option>kut-6</option>
-                  <option>kut-30</option>
-                  <option>paklo-10</option>
-                  <option>paklo-100</option>
                 </select>
               </div>
             </div>
@@ -486,7 +473,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Količina</label></strong>
+                <strong><label>Količina</label></strong><label class="obavezna_polja">*</label>
                 <input name="kolicina" maxlength="2" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control2" id="kolicina">
               </div>
             </div>
@@ -507,14 +494,14 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>MPC po komadu</label></strong>
+                <strong><label>MPC po komadu</label></strong><label class="obavezna_polja">*</label>
                 <input name="mpc" title="Unesite MPC" type="text" class="form-control2" id="mpc">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
-                <label>Broj radnog naloga <strong>(№) </strong></label>
+                <strong><label>Broj radnog naloga (№) </strong></label><label class="obavezna_polja">*</label>
                 <input name="broj_radnog_naloga" maxlength='30' class="form-control2" type="text" title="Unesite broj radnog naloga" id="broj_radnog_naloga" placeholder="" />
               </div>
             </div>
@@ -540,15 +527,20 @@ include '../modules/header.php';
           -Ax(ugao cilindra)</br>
           -Add(adicija)</br>
           </br>
-          <strong>Obavezna polja su:</strong></br>
+          <label class="obavezna_polja">* Obavezna polja su:</label></br>
           -OD/OS/OU</br>
           -Vrsta sočiva</br>
           -Dizajn</br>
           -Index</br>
           -Prečnik</br>
           -Količina</br>
+          -MPC po komadu</br>
+          -Broj radnog naloga</br>
           </br>
-
+          Kod Progresiva</br>
+          - Visina ugradnje</br>
+          - PD</br>
+          </br>
         </div>
 
         <!-- /.container-fluid -->
