@@ -148,7 +148,39 @@ $body .= "--" . $separator . "--";
 
 if (mail($to, $subject, $body, $headers)) {
 
-  
+
+  $uid = md5(uniqid(time()));
+  $name = basename($file);
+
+  $header = "From: no-reply@mojaoptika.com" . "\r\n";;
+  $header .= "Reply-To: " . $email . "\r\n";
+  $header .= "MIME-Version: 1.0\r\n";
+  $header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
+
+  $nmessage .= "Narudžbenica - Poloptic";
+  $nmessage .= 'Narudžba od: ' . "$imeKorisnika";
+  $nmessage .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i');
+  $nmessage .= "------------------------" . $eol;
+  $nmessage .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica";
+
+  // message & attachment
+  $nmessage = "--" . $uid . "\r\n";
+  $nmessage .= "Content-type:text/plain; charset=iso-8859-1\r\n";
+  $nmessage .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+  $nmessage .= $message . "\r\n\r\n";
+  $nmessage .= "--" . $uid . "\r\n";
+  $nmessage .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"\r\n";
+  $nmessage .= "Content-Transfer-Encoding: base64\r\n";
+  $nmessage .= "Content-Disposition: attachment; filename=\"" . $filename . "\"\r\n\r\n";
+  $nmessage .= $content . "\r\n\r\n";
+  $nmessage .= "--" . $uid . "--";
+
+  if (mail($email, $subject, $nmessage, $header)) {
+    return true; // Or do something here
+  } else {
+    return false;
+  }
+
   // main header
   $headers  = "From: no-reply@mojaoptika.com" . $eol;
   $headers .= "MIME-Version: 1.0" . $eol;
@@ -165,7 +197,8 @@ if (mail($to, $subject, $body, $headers)) {
   $body .= "Narudžbenica - Poloptic" . $eol;
   $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
   $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
-  $body .= "---- Informacije o narudžbini se nalaze u prilogu email-a ----" . $eol;
+  $body .= "" . $eol;
+  $body .= "Informacije o narudžbini se nalaze u fajlu " . $filename . $eol;
   $body .= "--------------------------------------------------------------" . $eol;
   $body .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
 
