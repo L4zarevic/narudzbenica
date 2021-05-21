@@ -22,6 +22,10 @@ if((substr($ID,0,1))=='m'){
     $stmt = $conn->prepare('UPDATE narudzbenica_pol SET mpc =? WHERE ID =?');
 }
 
+if((substr($ID,0,1))=='r'){
+    $stmt = $conn->prepare('UPDATE narudzbenica_pol SET broj_naloga =? WHERE ID =?');
+}
+
 if((substr($ID,0,1))=='n'){
     $stmt = $conn->prepare('UPDATE narudzbenica_pol SET napomena =? WHERE ID =?');
 }
