@@ -156,17 +156,15 @@ if (mail($to, $subject, $body, $headers)) {
   $header .= "MIME-Version: 1.0\r\n";
   $header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
 
+  // message & attachment
+  $nmessage = "--" . $uid . "\r\n";
+  $nmessage .= "Content-type:text/plain; charset=iso-8859-1\r\n";
+  $nmessage .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
   $nmessage .= "Narudžbenica - Poloptic";
   $nmessage .= 'Narudžba od: ' . "$imeKorisnika";
   $nmessage .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i');
   $nmessage .= "------------------------" . $eol;
   $nmessage .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica";
-
-  // message & attachment
-  $nmessage = "--" . $uid . "\r\n";
-  $nmessage .= "Content-type:text/plain; charset=iso-8859-1\r\n";
-  $nmessage .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-  $nmessage .= $message . "\r\n\r\n";
   $nmessage .= "--" . $uid . "\r\n";
   $nmessage .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"\r\n";
   $nmessage .= "Content-Transfer-Encoding: base64\r\n";
