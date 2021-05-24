@@ -101,7 +101,7 @@ while ($row = mysqli_fetch_object($result)) {
 }
 
 $from = $email;
-$subject = "eNarudžbenica - Nova narudžba ( " . $imeKorisnika . ")";
+$subject = "eNarudzbenica - Nova narudzba (" . $imeKorisnika . ")";
 $separator = md5(date('r', time()));
 // carriage return type (we use a PHP end of line constant)
 $eol = PHP_EOL;

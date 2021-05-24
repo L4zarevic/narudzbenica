@@ -25,7 +25,7 @@ $result = $stmt->get_result();
 
 $schema_insert = '<html><head><meta charset="utf-8"></head><body>';
 $schema_insert .= '<h2>Narudžbenica - Poloptic</h2>';
-$schema_insert .= '<br/>Narudžba od: ' . "$imeKorisnika" . '<br/>';
+$schema_insert .= '<br/>Narudžba od: ' . $imeKorisnika . '<br/>';
 $schema_insert .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . '<br/>';
 $schema_insert .= '<br/>';
 $schema_insert .= '<table rules="all" style="border-color:#000;" cellpadding="2">';
@@ -90,6 +90,7 @@ while ($row = mysqli_fetch_object($result)) {
   $schema_insert .= '</tr>';
   $schema_insert .= '</tbody>';
 }
+
 file_put_contents('../orders/poloptic/narudzbenica_Pol_' . $imeKorisnika . '_' . date("d.m.Y_H.i") . '.html', $schema_insert);
 
 $to = "narudzba@mojaoptika.com";
@@ -105,7 +106,7 @@ while ($row = mysqli_fetch_object($result)) {
 }
 
 $from = $email;
-$subject = "eNarudzbenica - " . $imeKorisnika;
+$subject = "eNarudzbenica - Nova narudzba (" . $imeKorisnika . ")";
 $separator = md5(date('r', time()));
 // carriage return type (we use a PHP end of line constant)
 $eol = PHP_EOL;
@@ -124,8 +125,6 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 // no more headers after this, we start the body! //
 
 $body = "--" . $separator . $eol;
-$header .= "Content-Type: text/html; charset=utf-8" . $eol;
-$body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
 $body .= "Narudžbenica - Poloptic" . $eol;
 $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
 $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
@@ -156,10 +155,10 @@ if (mail($to, $subject, $body, $headers)) {
   $header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
   $title = "eNarudzbenica - Uspjesna narudzbina";
 
-  $message = "Zahvaljujemo se na vašoj narudžbini".$eol;
-  $message = "Narudžbenica - Poloptic". $eol;
-  $message .= 'Narudžba od: ' . $imeKorisnika. $eol;;
-  $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i'). $eol;;
+  $message = "Zahvaljujemo se na vašoj narudžbini" . $eol;
+  $message = "Narudžbenica - Poloptic" . $eol;
+  $message .= 'Narudžba od: ' . $imeKorisnika . $eol;;
+  $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . $eol;;
   $message .= "------------------------" . $eol;
   $message .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica";
 
