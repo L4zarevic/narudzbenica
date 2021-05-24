@@ -125,11 +125,12 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 // no more headers after this, we start the body! //
 
 $body = "--" . $separator . $eol;
-$body .= "Narudžbenica - Poloptic" . $eol;
+$body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+$body .= "Narudžbenica -Poloptic" . $eol;
 $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
 $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
 $body .= "------------------------" . $eol;
-$body .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
+$body .= "Email je poslat putem aplikacije eNarudžbenica. https://mojaoptika.com/narudzbenica" . $eol;
 
 // message
 $body .= "--" . $separator . $eol;
@@ -176,20 +177,12 @@ if (mail($to, $subject, $body, $headers)) {
 
   mail($email, $title, $nmessage, $header);
 
-  $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol SELECT * FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
-  $stmt3->bind_param('i', $idKorisnika);
-  $stmt3->execute();
-  if (mysqli_error($conn)) {
-    die(mysqli_error($conn));
-  }
-
-  $stmt1 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol SELECT * FROM narudzbenica_pol WHERE IDKorisnika =?');
-  $stmt1->bind_param('i', $idKorisnika);
-  $stmt1->execute();
-  if (mysqli_error($conn)) {
-    die(mysqli_error($conn));
-  }
-
+  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (IDOptike,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena) SELECT IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
+  // $stmt3->bind_param('i', $idKorisnika);
+  // $stmt3->execute();
+  // if (mysqli_error($conn)) {
+  //   die(mysqli_error($conn));
+  // }
 
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
   $stmt->bind_param('i', $idKorisnika);
