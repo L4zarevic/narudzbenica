@@ -177,15 +177,12 @@ if (mail($to, $subject, $body, $headers)) {
 
   mail($email, $title, $nmessage, $header);
 
-  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol SELECT * FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
-  // $stmt3->bind_param('i', $idKorisnika);
-  // $stmt3->execute();
-  // if (mysqli_error($conn)) {
-  //   die(mysqli_error($conn));
-  // }
-
-
-
+  $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol SELECT * FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
+  $stmt3->bind_param('i', $idKorisnika);
+  $stmt3->execute();
+  if (mysqli_error($conn)) {
+    die(mysqli_error($conn));
+  }
 
   $stmt1 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol SELECT * FROM narudzbenica_pol WHERE IDKorisnika =?');
   $stmt1->bind_param('i', $idKorisnika);

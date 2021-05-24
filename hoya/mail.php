@@ -101,7 +101,7 @@ while ($row = mysqli_fetch_object($result)) {
 }
 
 $from = $email;
-$subject = "eNarudžbenica - Nova narudžba ( " . $imeKorisnika . ")";
+$subject = "eNarudzbenica - Nova narudzba (" . $imeKorisnika . ")";
 $separator = md5(date('r', time()));
 // carriage return type (we use a PHP end of line constant)
 $eol = PHP_EOL;
@@ -121,7 +121,7 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 $body = "--" . $separator . $eol;
 $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
 $body .= "Narudžbenica - Hoya" . $eol;
-$body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
+$body .= 'Narudžba od: ' . $imeKorisnika . $eol;
 $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
 $body .= "------------------------" . $eol;
 $body .= "Email je poslat putem aplikacije eNarudžbenica. https://mojaoptika.com/narudzbenica" . $eol;
