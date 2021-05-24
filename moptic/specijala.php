@@ -499,14 +499,14 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>MPC po komadu</label></strong>
+                <strong><label>MPC po komadu</label></strong><label class="obavezna_polja">*</label>
                 <input name="mpc" title="Unesite MPC" type="text" class="form-control2" id="mpc">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
-                <strong><label>Broj radnog naloga (№) </strong></label>
+                <strong><label>Broj radnog naloga (№) </strong></label><label class="obavezna_polja">*</label>
                 <input name="broj_radnog_naloga" maxlength='30' class="form-control2" type="text" title="Unesite broj radnog naloga" id="broj_radnog_naloga" placeholder="" />
               </div>
             </div>

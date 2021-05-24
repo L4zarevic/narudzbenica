@@ -101,7 +101,7 @@ while ($row = mysqli_fetch_object($result)) {
 }
 
 $from = $email;
-$subject = "eNarudzbenica - " . $imeKorisnika;
+$subject = "eNarudžbenica - Nova narudžba ( " . $imeKorisnika . ")";
 $separator = md5(date('r', time()));
 // carriage return type (we use a PHP end of line constant)
 $eol = PHP_EOL;
@@ -118,7 +118,6 @@ $headers .= "MIME-Version: 1.0" . $eol;
 $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 
 // no more headers after this, we start the body! //
-
 $body = "--" . $separator . $eol;
 $header .= "Content-Type: text/html; charset=utf-8" . $eol;
 $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
@@ -126,7 +125,7 @@ $body .= "Narudžbenica - Hoya" . $eol;
 $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
 $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
 $body .= "------------------------" . $eol;
-$body .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
+$body .= "Email je poslat putem aplikacije eNarudžbenica. https://mojaoptika.com/narudzbenica" . $eol;
 
 // message
 $body .= "--" . $separator . $eol;
@@ -144,41 +143,34 @@ $body .= "--" . $separator . "--";
 
 if (mail($to, $subject, $body, $headers)) {
 
-  $to = $from;
-  $headers  = "From: no-reply@mojaoptika.com"  . $eol;
-  $headers .= "MIME-Version: 1.0" . $eol;
-  $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
-  $subject = "eNarudzbenica - Uspiješna narudžbina";
+  $uid = md5(uniqid(time()));
+  $name = basename($file);
 
-  // no more headers after this, we start the body! //
+  $header = "From: no-reply@mojaoptika.com" . "\r\n";;
+  $header .= "MIME-Version: 1.0\r\n";
+  $header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
+  $title = "eNarudžbenica - Uspiješna narudžba";
 
-  $body = "--" . $separator . $eol;
-  $header .= "Content-Type: text/html; charset=utf-8" . $eol;
-  $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
-  $body .= "Zahvaljujemo se na vašoj narudžbini!" . $eol;
-  $body .= " " . $eol;
-  $body .= "Narudžbenica - Hoya" . $eol;
-  $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
-  $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
-  $body .= "----- Informacije o narudžbi u prilogu email-a -----" . $eol;
-  $body .= " " . $eol;
-  $body .= "---------------------------------------------" . $eol;
-  $body .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
+  $message = "Zahvaljujemo se na vašoj narudžbini! \n";
+  $message .= "Narudžbenica - Hoya \n";
+  $message .= 'Narudžba od: ' . $imeKorisnika . "\n";
+  $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . "\n";
+  $message .= "------------------------ \n";
+  $message .= "Email je poslat putem aplikacije eNarudžbenica. https://mojaoptika.com/narudzbenica \n";
 
-  // message
-  $body .= "--" . $separator . $eol;
-  $body .= "Content-Type: text/html; charset=\"utf-8\"" . $eol;
-  $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+  // message & attachment
+  $nmessage = "--" . $uid . "\r\n";
+  $nmessage .= "Content-type:text/plain; charset=utf-8\r\n";
+  $nmessage .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
+  $nmessage .= $message . "\r\n\r\n";
+  $nmessage .= "--" . $uid . "\r\n";
+  $nmessage .= "Content-Type: application/octet-stream; charset=utf-8; name=\"" . $filename . "\"\r\n";
+  $nmessage .= "Content-Transfer-Encoding: base64\r\n";
+  $nmessage .= "Content-Disposition: attachment; filename=\"" . $filename . "\"\r\n\r\n";
+  $nmessage .= $attachment . "\r\n\r\n";
+  $nmessage .= "--" . $uid . "--";
 
-  // attachment
-  $body .= "--" . $separator . $eol;
-  $body .= "Content-Type: application/octet-stream; charset=utf-8;   name=\"" . $filename . "\"" . $eol;
-  $body .= "Content-Transfer-Encoding: base64" . $eol;
-  $body .= "Content-Disposition: attachment;  filename=\"" . $filename . "\"" . $eol . $eol;
-  $body .= $attachment . $eol;
-  $body .= "--" . $separator . "--";
-
-  mail($to, $subject, $body, $headers);
+  mail($email, $title, $nmessage, $header);
 
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_hoya` WHERE IDKorisnika =?');
   $stmt->bind_param('i', $idKorisnika);
