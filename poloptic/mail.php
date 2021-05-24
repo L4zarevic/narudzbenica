@@ -6,6 +6,8 @@ if (is_null($_SESSION['login'])) {
 }
 require_once '../connection.php';
 
+$conn = OpenCon();
+
 $korisnik = $_SESSION['login'];
 $ar = explode('#', $korisnik, 4);
 $ar[1] = rtrim($ar[1], '#');
@@ -15,14 +17,15 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
-$stmt1 = $conn->prepare('SELECT * FROM narudzbenica_pol WHERE IDKorisnika =? ORDER BY lag_spec ASC');
-$stmt1->bind_param('i', $idKorisnika);
-$stmt1->execute();
-$result = $stmt1->get_result();
+
+$stmt = $conn->prepare('SELECT * FROM narudzbenica_pol WHERE IDKorisnika =? ORDER BY lag_spec ASC');
+$stmt->bind_param('i', $idKorisnika);
+$stmt->execute();
+$result = $stmt->get_result();
 
 $schema_insert = '<html><head><meta charset="utf-8"></head><body>';
 $schema_insert .= '<h2>Narudžbenica - Poloptic</h2>';
-$schema_insert .= '<br/>Narudžba od: ' . $imeKorisnika . '<br/>';
+$schema_insert .= '<br/>Narudžba od: ' . "$imeKorisnika" . '<br/>';
 $schema_insert .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . '<br/>';
 $schema_insert .= '<br/>';
 $schema_insert .= '<table rules="all" style="border-color:#000;" cellpadding="2">';
@@ -81,8 +84,8 @@ while ($row = mysqli_fetch_object($result)) {
   $schema_insert .= '<td>' . $row->tretman2 . '</td>';
   $schema_insert .= '<td>' . $row->pd . '</td>';
   $schema_insert .= '<td>' . $row->mjesto_isporuke . '</td>';
-  $schema_insert .= '<td>' . $row->mpc . '</td>';
   $schema_insert .= '<td>' . $row->broj_naloga . '</td>';
+  $schema_insert .= '<td>' . $row->mpc . '</td>';
   $schema_insert .= '<td>' . $row->napomena . '</td>';
   $schema_insert .= '</tr>';
   $schema_insert .= '</tbody>';
@@ -92,17 +95,17 @@ file_put_contents('../orders/poloptic/narudzbenica_Pol_' . $imeKorisnika . '_' .
 $to = "narudzba@mojaoptika.com";
 
 $con = OpenCon();
-$stmt2 = $con->prepare('SELECT email FROM korisnici WHERE ID =?');
-$stmt2->bind_param('i', $idKorisnika);
-$stmt2->execute();
-$result2 = $stmt2->get_result();
+$stmt = $con->prepare('SELECT email FROM korisnici WHERE ID =?');
+$stmt->bind_param('i', $idKorisnika);
+$stmt->execute();
+$result = $stmt->get_result();
 $email = "";
-while ($row2 = mysqli_fetch_object($result2)) {
-  $email = $row2->email;
+while ($row = mysqli_fetch_object($result)) {
+  $email = $row->email;
 }
 
 $from = $email;
-$subject = "eNarudžbenica - Nova narudžba ( " . $imeKorisnika . ")";
+$subject = "eNarudzbenica - " . $imeKorisnika;
 $separator = md5(date('r', time()));
 // carriage return type (we use a PHP end of line constant)
 $eol = PHP_EOL;
@@ -121,12 +124,13 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 // no more headers after this, we start the body! //
 
 $body = "--" . $separator . $eol;
+$header .= "Content-Type: text/html; charset=utf-8" . $eol;
 $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
 $body .= "Narudžbenica - Poloptic" . $eol;
-$body .= 'Narudžba od: ' . $imeKorisnika . $eol;
+$body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
 $body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
 $body .= "------------------------" . $eol;
-$body .= "Email je poslat putem aplikacije eNarudžbenica. https://mojaoptika.com/narudzbenica" . $eol;
+$body .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
 
 // message
 $body .= "--" . $separator . $eol;
@@ -150,22 +154,22 @@ if (mail($to, $subject, $body, $headers)) {
   $header = "From: no-reply@mojaoptika.com" . "\r\n";;
   $header .= "MIME-Version: 1.0\r\n";
   $header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
-  $title = "eNarudžbenica - Uspiješna narudžba";
+  $title = "eNarudzbenica - Uspjesna narudzbina";
 
-  $message = "Zahvaljujemo se na vašoj narudžbini! \n";
-  $message .= "Narudžbenica - Poloptic \n";
-  $message .= 'Narudžba od: ' . $imeKorisnika . "\n";
-  $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . "\n";
-  $message .= "------------------------ \n";
-  $message .= "Email je poslat putem aplikacije eNarudžbenica. https://mojaoptika.com/narudzbenica \n";
+  $message = "Zahvaljujemo se na vašoj narudžbini".$eol;
+  $message = "Narudžbenica - Poloptic". $eol;
+  $message .= 'Narudžba od: ' . $imeKorisnika. $eol;;
+  $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i'). $eol;;
+  $message .= "------------------------" . $eol;
+  $message .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica";
 
   // message & attachment
   $nmessage = "--" . $uid . "\r\n";
-  $nmessage .= "Content-type:text/plain; charset=utf-8\r\n";
-  $nmessage .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
+  $nmessage .= "Content-type:text/plain; charset=iso-8859-1\r\n";
+  $nmessage .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
   $nmessage .= $message . "\r\n\r\n";
   $nmessage .= "--" . $uid . "\r\n";
-  $nmessage .= "Content-Type: application/octet-stream; charset=utf-8; name=\"" . $filename . "\"\r\n";
+  $nmessage .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"\r\n";
   $nmessage .= "Content-Transfer-Encoding: base64\r\n";
   $nmessage .= "Content-Disposition: attachment; filename=\"" . $filename . "\"\r\n\r\n";
   $nmessage .= $attachment . "\r\n\r\n";
@@ -180,16 +184,28 @@ if (mail($to, $subject, $body, $headers)) {
   //   die(mysqli_error($conn));
   // }
 
-  $stmt4 = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
-  $stmt4->bind_param('i', $idKorisnika);
-  $stmt4->execute();
+
+
+
+  $stmt1 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol SELECT * FROM narudzbenica_pol WHERE IDKorisnika =?');
+  $stmt1->bind_param('i', $idKorisnika);
+  $stmt1->execute();
+  if (mysqli_error($conn)) {
+    die(mysqli_error($conn));
+  }
+
+
+  $stmt = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
+  $stmt->bind_param('i', $idKorisnika);
+  $stmt->execute();
   if (mysqli_error($conn)) {
     die(mysqli_error($conn));
   }
 
   CloseCon($conn);
-  header('Location:thanks.php');
+  header('Location: thanks.php');
   die();
 } else {
+
   header('Location: ' . $_SERVER['HTTP_REFERER'] . '?msg=1');
 }

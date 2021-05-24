@@ -147,22 +147,22 @@ if (mail($to, $subject, $body, $headers)) {
   $header = "From: no-reply@mojaoptika.com" . "\r\n";;
   $header .= "MIME-Version: 1.0\r\n";
   $header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
-  $title = "eNarudžbenica - Uspiješna narudžba";
+  $title = "eNarudzbenica - Uspjesna narudzbina";
 
-  $message = "Zahvaljujemo se na vašoj narudžbini! \n";
-  $message .= "Narudžbenica - Hoya \n";
-  $message .= 'Narudžba od: ' . $imeKorisnika . "\n";
-  $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . "\n";
-  $message .= "------------------------ \n";
-  $message .= "Email je poslat putem aplikacije eNarudžbenica. https://mojaoptika.com/narudzbenica \n";
+  $message = "Zahvaljujemo se na vašoj narudžbini" . $eol;
+  $message = "Narudžbenica - Hoya" . $eol;
+  $message .= 'Narudžba od: ' . $imeKorisnika . $eol;;
+  $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . $eol;;
+  $message .= "------------------------" . $eol;
+  $message .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica";
 
   // message & attachment
   $nmessage = "--" . $uid . "\r\n";
-  $nmessage .= "Content-type:text/plain; charset=utf-8\r\n";
-  $nmessage .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
+  $nmessage .= "Content-type:text/plain; charset=iso-8859-1\r\n";
+  $nmessage .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
   $nmessage .= $message . "\r\n\r\n";
   $nmessage .= "--" . $uid . "\r\n";
-  $nmessage .= "Content-Type: application/octet-stream; charset=utf-8; name=\"" . $filename . "\"\r\n";
+  $nmessage .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"\r\n";
   $nmessage .= "Content-Transfer-Encoding: base64\r\n";
   $nmessage .= "Content-Disposition: attachment; filename=\"" . $filename . "\"\r\n\r\n";
   $nmessage .= $attachment . "\r\n\r\n";
