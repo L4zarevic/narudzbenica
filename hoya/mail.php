@@ -119,7 +119,6 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 
 // no more headers after this, we start the body! //
 $body = "--" . $separator . $eol;
-$header .= "Content-Type: text/html; charset=utf-8" . $eol;
 $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
 $body .= "Narudžbenica - Hoya" . $eol;
 $body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
@@ -144,7 +143,6 @@ $body .= "--" . $separator . "--";
 if (mail($to, $subject, $body, $headers)) {
 
   $uid = md5(uniqid(time()));
-  $name = basename($file);
 
   $header = "From: no-reply@mojaoptika.com" . "\r\n";;
   $header .= "MIME-Version: 1.0\r\n";

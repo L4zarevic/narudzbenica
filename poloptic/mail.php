@@ -6,8 +6,6 @@ if (is_null($_SESSION['login'])) {
 }
 require_once '../connection.php';
 
-$conn = OpenCon();
-
 $korisnik = $_SESSION['login'];
 $ar = explode('#', $korisnik, 4);
 $ar[1] = rtrim($ar[1], '#');
@@ -17,14 +15,14 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
-$stmt = $conn->prepare('SELECT lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena FROM narudzbenica_pol WHERE IDKorisnika =? ORDER BY lag_spec ASC');
-$stmt->bind_param('i', $idKorisnika);
-$stmt->execute();
-$result = $stmt->get_result();
+$stmt1 = $conn->prepare('SELECT * FROM narudzbenica_pol WHERE IDKorisnika =? ORDER BY lag_spec ASC');
+$stmt1->bind_param('i', $idKorisnika);
+$stmt1->execute();
+$result = $stmt1->get_result();
 
 $schema_insert = '<html><head><meta charset="utf-8"></head><body>';
 $schema_insert .= '<h2>Narudžbenica - Poloptic</h2>';
-$schema_insert .= '<br/>Narudžba od: ' . "$imeKorisnika" . '<br/>';
+$schema_insert .= '<br/>Narudžba od: ' . $imeKorisnika . '<br/>';
 $schema_insert .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . '<br/>';
 $schema_insert .= '<br/>';
 $schema_insert .= '<table rules="all" style="border-color:#000;" cellpadding="2">';
@@ -94,13 +92,13 @@ file_put_contents('../orders/poloptic/narudzbenica_Pol_' . $imeKorisnika . '_' .
 $to = "narudzba@mojaoptika.com";
 
 $con = OpenCon();
-$stmt = $con->prepare('SELECT email FROM korisnici WHERE ID =?');
-$stmt->bind_param('i', $idKorisnika);
-$stmt->execute();
-$result = $stmt->get_result();
+$stmt2 = $con->prepare('SELECT email FROM korisnici WHERE ID =?');
+$stmt2->bind_param('i', $idKorisnika);
+$stmt2->execute();
+$result2 = $stmt2->get_result();
 $email = "";
-while ($row = mysqli_fetch_object($result)) {
-  $email = $row->email;
+while ($row2 = mysqli_fetch_object($result2)) {
+  $email = $row2->email;
 }
 
 $from = $email;
@@ -123,7 +121,6 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 // no more headers after this, we start the body! //
 
 $body = "--" . $separator . $eol;
-$header .= "Content-Type: text/html; charset=utf-8" . $eol;
 $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
 $body .= "Narudžbenica - Poloptic" . $eol;
 $body .= 'Narudžba od: ' . $imeKorisnika . $eol;
@@ -149,7 +146,6 @@ if (mail($to, $subject, $body, $headers)) {
 
 
   $uid = md5(uniqid(time()));
-  $name = basename($file);
 
   $header = "From: no-reply@mojaoptika.com" . "\r\n";;
   $header .= "MIME-Version: 1.0\r\n";
@@ -177,25 +173,23 @@ if (mail($to, $subject, $body, $headers)) {
 
   mail($email, $title, $nmessage, $header);
 
-  //$stmt1 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol SELECT * FROM narudzbenica_pol WHERE IDKorisnika =?');
-  //$stmt1->bind_param('i', $idKorisnika);
-  //$stmt1->execute();
-  //if (mysqli_error($conn)) {
-  //die(mysqli_error($conn));
-  //}
+  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol SELECT * FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
+  // $stmt3->bind_param('i', $idKorisnika);
+  // $stmt3->execute();
+  // if (mysqli_error($conn)) {
+  //   die(mysqli_error($conn));
+  // }
 
-
-  $stmt = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
-  $stmt->bind_param('i', $idKorisnika);
-  $stmt->execute();
+  $stmt4 = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
+  $stmt4->bind_param('i', $idKorisnika);
+  $stmt4->execute();
   if (mysqli_error($conn)) {
     die(mysqli_error($conn));
   }
 
   CloseCon($conn);
-  header('Location: thanks.php');
+  header('Location:thanks.php');
   die();
 } else {
-
   header('Location: ' . $_SERVER['HTTP_REFERER'] . '?msg=1');
 }
