@@ -28,7 +28,9 @@ $jm = $arS[5];
 $kolicina = $arS[6];
 $mpc = $arS[7];
 $broj_naloga = $arS[8];
-$napomena = $arS[9];
+$napomena1 = $arS[9];
+
+$napomena = str_replace('\n', " ", $napomena1);
 
 $con = OpenCon();
 mysqli_set_charset($con, 'utf8');
