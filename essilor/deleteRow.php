@@ -11,9 +11,12 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
-$stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
-$upit = "DELETE FROM `narudzbenica_essilor` WHERE ID='$stavka'";
-$rezultat = mysqli_query($conn, $upit);
-if (!$rezultat) die(mysqli_error($conn));
+$id_stavke = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
+$stmt = $conn->prepare('DELETE FROM `narudzbenica_essilor` WHERE ID=?');
+$stmt->bind_param('i',$id_stavke);
+$stmt->execute();
+if (mysqli_error($conn)) {
+	die(mysqli_error($conn));
+}
 CloseCon($conn);
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+
