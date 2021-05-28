@@ -44,8 +44,8 @@ include '../modules/header.php';
               </div>
             </div>
             <div class="rowSpec">
-              <div class="form-group col-md-3"><label class="obavezna_polja">*</label>
-                <strong><label>Vrsta sočiva</label></strong>
+              <div class="form-group col-md-3">
+                <strong><label>Vrsta sočiva</label></strong><label class="obavezna_polja">*</label>
                 <select name="vrsta_sociva" title="Unesite vrstu sočiva" class="form-control" id="select2">
                   <option value="0" default></option>
                   <option value="1">Monofokal</option>
