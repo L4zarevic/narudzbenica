@@ -62,5 +62,10 @@ if (isset($_REQUEST['msg'])) {
         echo "<script type=\"text/javascript\">alertify.success('Stavka je dodata');</script>";
         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight })</script>";
     }
+    if ($_REQUEST['msg'] == '3') {
+        echo "<script src=\"../js/alertify.min.js\"></script>";
+        echo "<script type=\"text/javascript\">alertify.warning('Stavka je ažurirana');</script>";
+        echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight })</script>";
+    }
 }
 CloseCon($conn);

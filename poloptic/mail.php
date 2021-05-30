@@ -84,8 +84,8 @@ while ($row = mysqli_fetch_object($result)) {
   $schema_insert .= '<td>' . $row->tretman2 . '</td>';
   $schema_insert .= '<td>' . $row->pd . '</td>';
   $schema_insert .= '<td>' . $row->mjesto_isporuke . '</td>';
-  $schema_insert .= '<td>' . $row->broj_naloga . '</td>';
   $schema_insert .= '<td>' . $row->mpc . '</td>';
+  $schema_insert .= '<td>' . $row->broj_naloga . '</td>';
   $schema_insert .= '<td>' . $row->napomena . '</td>';
   $schema_insert .= '</tr>';
   $schema_insert .= '</tbody>';
@@ -177,12 +177,12 @@ if (mail($to, $subject, $body, $headers)) {
 
   mail($email, $title, $nmessage, $header);
 
-  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (IDOptike,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena) SELECT IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
-  // $stmt3->bind_param('i', $idKorisnika);
-  // $stmt3->execute();
-  // if (mysqli_error($conn)) {
-  //   die(mysqli_error($conn));
-  // }
+  $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (IDOptike,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena) SELECT IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
+  $stmt3->bind_param('i', $idKorisnika);
+  $stmt3->execute();
+  if (mysqli_error($conn)) {
+    die(mysqli_error($conn));
+  }
 
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
   $stmt->bind_param('i', $idKorisnika);
