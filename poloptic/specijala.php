@@ -694,7 +694,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Add / Dig.</label></strong>
+                <strong><label>Add / Dig.</label></strong><label id="label_zvjezdica" class="obavezna_polja">*</label>
                 <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
                   <option default></option>
                   <option>0.75</option>
@@ -1138,9 +1138,12 @@ include '../modules/header.php';
     <!-- End of Footer -->
 
     <script type="text/javascript">
+      $('#label_zvjezdica').hide();
+
       var $select2 = $('#select2'),
         $select3 = $('#select3'),
         $select4 = $('#select4'),
+        $select12 = $('#select12'),
         $select15 = $('#select15'),
         $select16 = $('#select16'),
         $options1 = $select3.find('option');
@@ -1150,7 +1153,6 @@ include '../modules/header.php';
 
 
       $select2.on('change', function() {
-        //$select3.html($options1.filter('[value="' + this.value + '"]'));
         if (this.value == '3') {
           $('#ifYes').show();
         } else {
@@ -1181,6 +1183,14 @@ include '../modules/header.php';
       $select4.on('change', function() {
         var id1 = $(this).children(":selected").attr("id");
         $select16.html($options4.filter('[value="' + id1 + '"]'));
+      }).trigger('change');
+
+      $select12.on('change', function() {
+        if ((($('#select2').find("option:selected").text() == "Bifokal") || ($('#select2').find("option:selected").text() == "Progresiv")) && ($('#select12').find("option:selected").text().length != 0)) {
+          $('#label_zvjezdica').show();
+        } else if ((($('#select2').find("option:selected").text() == "Bifokal") || ($('#select2').find("option:selected").text() == "Progresiv")) && ($('#select12').find("option:selected").text().length == 0)) {
+          $('#label_zvjezdica').hide();
+        }
       }).trigger('change');
     </script>
 
