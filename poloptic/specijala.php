@@ -73,7 +73,8 @@ include '../modules/header.php';
                   <option value="2" default></option>
                   <option id="103" value="2">FT28</option>
                   <option id="103" value="2">CT28</option>
-                  <option id="104" value="2">Bifo Invisio</option>
+                  <option id="104" value="2">Bifo Invisio Ulteh</option>
+                  <option id="104" value="2">Bifo Invisio Round</option>
                   <option value="2" default></option>
 
                   <option value="3" default></option>
@@ -198,7 +199,7 @@ include '../modules/header.php';
                   <option value="103">Photo brown mineralni materijali</option>
                   <option value="103" default></option>
 
-                  <!-- Bifo invision-->
+                  <!-- Bifo invision Ulteh, Round-->
                   <option value="104" default></option>
                   <option value="104">CR-39</option>
                   <option value="104">CR-39 UV420</option>
