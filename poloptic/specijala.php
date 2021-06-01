@@ -1110,9 +1110,12 @@ include '../modules/header.php';
             -MPC po komadu</br>
             -Broj radnog naloga</br>
             </br>
-            Kod Progresiva</br>
+            Kod Progresiva:</br>
             - Visina ugradnje</br>
             - PD</br>
+            </br>
+            Kod Bifokala ili Progresiva, ako je unesen Cyl:</br>
+            -Add/Dig</br>
             </br>
 
           </div>
