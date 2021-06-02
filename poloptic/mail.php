@@ -126,11 +126,11 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
 
 $body = "--" . $separator . $eol;
 $body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
-$body .= "Narudžbenica -Poloptic" . $eol;
-$body .= 'Narudžba od: ' . "$imeKorisnika" . $eol;
-$body .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
+$body .= "Narudzbenica - Poloptic" . $eol;
+$body .= 'Narudzba od: ' . "$imeKorisnika" . $eol;
+$body .= 'Datum narudzbe: ' . date("d.m.Y") . ' u ' . date('H:i')  . $eol;
 $body .= "------------------------" . $eol;
-$body .= "Email je poslat putem aplikacije eNarudžbenica. https://mojaoptika.com/narudzbenica" . $eol;
+$body .= "Email je poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica" . $eol;
 
 // message
 $body .= "--" . $separator . $eol;
@@ -156,10 +156,10 @@ if (mail($to, $subject, $body, $headers)) {
   $header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
   $title = "eNarudzbenica - Uspjesna narudzbina";
 
-  $message = "Zahvaljujemo se na vašoj narudžbini" . $eol;
-  $message = "Narudžbenica - Poloptic" . $eol;
-  $message .= 'Narudžba od: ' . $imeKorisnika . $eol;;
-  $message .= 'Datum narudžbe: ' . date("d.m.Y") . ' u ' . date('H:i') . $eol;;
+  $message = "Zahvaljujemo se na vasoj narudzbini" . $eol;
+  $message = "Narudzbenica - Poloptic" . $eol;
+  $message .= 'Narudzba od: ' . $imeKorisnika . $eol;;
+  $message .= 'Datum narudzbe: ' . date("d.m.Y") . ' u ' . date('H:i') . $eol;;
   $message .= "------------------------" . $eol;
   $message .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica";
 
