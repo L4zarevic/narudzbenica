@@ -14,7 +14,7 @@ $stmt->bind_param('i', $idKorisnika);
 $stmt->execute();
 $result = $stmt->get_result();
 echo "<div class='naslov'><h1 id='naslovNarudzbenice'>Narudžbenica - Hoya</h1><hr></div>";
-echo "<div class='table-wrapper-scroll-y'>
+echo "<div class='table-wrapper-scroll-y table-hover'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
 <thead>
 <tr>
