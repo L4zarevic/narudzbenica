@@ -18,6 +18,9 @@ $oznaka = $ar[0];
 $kolicina = $ar[1];
 $idPolja = $ar[2];
 
+//Ovu skriptu koriste sve stranice koje sadrže grafikone
+//Vrijednosti koje se prosleđuju ovoj skripti su ID stranice, ID polja i količina
+//Na osnovu ID stranice se izvršava jedan od upita
 $stmt = "";
 switch ($oznaka) {
     case 1:
@@ -57,6 +60,8 @@ switch ($oznaka) {
         $stmt = $conn->prepare('SELECT * FROM `1.50_solea_hc_solea_ultra_backside` WHERE IDPolja =?');
         break;
 }
+
+//ID polja u grafikonu koji se proslijedi, se provjera u tabeli i na osnovu toga dobijamo naziv tj izabranu dioptriju
 $stmt->bind_param('i', $idPolja);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -67,6 +72,8 @@ while ($row = mysqli_fetch_object($result)) {
     $vrsta_materijala = $row->naziv;
 }
 
+//Ukoliko se nekoliko puta unese ista dioptrija, ne kreira se novi zapis već se postojećem ažurira količina
+//Prvo se provjerava da li već postoji zapis u tabeli koji ima istu "vrstu materijala"
 $stmt1 = $conn->prepare('SELECT ID,kolicina FROM narudzbenica_pol WHERE IDKorisnika =? AND lag_spec ="Lager" AND vrsta_materijala =?');
 $stmt1->bind_param('is', $idKorisnika, $vrsta_materijala);
 $stmt1->execute();
@@ -79,6 +86,7 @@ while ($row = mysqli_fetch_object($result)) {
     $stara_kolicina = $row->kolicina;
 }
 
+//Ažuriranje količine (sabiranje stare i nove unesene količine)
 if ($count == 1) {
     $stmt2 = $conn->prepare('UPDATE narudzbenica_pol SET kolicina =? WHERE ID =?');
     $ukupna_kolicina = $stara_kolicina + $kolicina;
@@ -86,6 +94,7 @@ if ($count == 1) {
     $stmt2->execute();
 } else {
 
+    //Za svaki red u tabeli se automatski popunjava i mjesto isporuke koje je već predifinisano za korisnika koji je ulogovan.
     $con = OpenCon();
     mysqli_set_charset($con, 'utf8');
     $stmt3 = $con->prepare('SELECT alias FROM korisnici WHERE ID=?');
@@ -97,6 +106,7 @@ if ($count == 1) {
         $mjesto_isporuke = $row3->alias;
     }
 
+    //Dodavanje zapisa u tabelu
     $stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,vrsta_materijala,jm,kolicina,mjesto_isporuke) VALUES (?, "Lager", ?, "kom", ?, ?)');
     $stmt->bind_param('isis', $idKorisnika, $vrsta_materijala, $kolicina, $mjesto_isporuke);
     $stmt->execute();

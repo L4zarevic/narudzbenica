@@ -42,8 +42,10 @@ $mpc = $arS[19];
 $broj_naloga = $arS[20];
 $napomena1 = $arS[21];
 
+//Formatiranje zapisa napomene gdje se novi redovi (\n) zamijenjuju razmakom
 $napomena = str_replace('\n', " ", $napomena1);
 
+//Ako su unesena oba prečnika onda se zapisi spajaju u jedan string sa separator /
 if ($precnik2 == "") {
 	$precnik = $precnik1;
 } else if ($precnik1 == "") {
@@ -52,6 +54,7 @@ if ($precnik2 == "") {
 	$precnik = $precnik1 . "/" . $precnik2;
 }
 
+//Za svaki red u tabeli se automatski popunjava i mjesto isporuke koje je već predifinisano za korisnika koji je ulogovan.
 $con = OpenCon();
 mysqli_set_charset($con, 'utf8');
 $stmt3 = $con->prepare('SELECT alias FROM korisnici WHERE ID=?');
@@ -63,6 +66,7 @@ while ($row3 = mysqli_fetch_object($result3)) {
 	$mjesto_isporuke = $row3->alias;
 }
 
+//Dodavanje zapisa u tabelu
 $stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena) values (?,"Spec",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
 $stmt->bind_param('issssssssssssssisssssss', $idKorisnika, $odOsOu, $vrstaSociva, $dizajn, $koridor_visina, $segment, $baza, $indeks, $materijal, $precnik, $sph, $cyl, $ugao, $add, $jm, $kolicina, $tretman1, $tretman2, $pd, $mjesto_isporuke, $mpc, $broj_naloga, $napomena);
 $stmt->execute();

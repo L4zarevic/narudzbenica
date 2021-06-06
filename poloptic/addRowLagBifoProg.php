@@ -1,4 +1,5 @@
 <?php
+//Dodavanje zapisa lager bifokal i progresiv u tabelu
 
 session_start();
 if (is_null($_SESSION['login'])) {
@@ -32,6 +33,7 @@ $napomena1 = $arS[9];
 
 $napomena = str_replace('\n', " ", $napomena1);
 
+//Za svaki red u tabeli se automatski popunjava i mjesto isporuke koje je već predifinisano za korisnika koji je ulogovan.
 $con = OpenCon();
 mysqli_set_charset($con, 'utf8');
 $stmt3 = $con->prepare('SELECT alias FROM korisnici WHERE ID=?');
@@ -43,6 +45,7 @@ while ($row3 = mysqli_fetch_object($result3)) {
 	$mjesto_isporuke = $row3->alias;
 }
 
+//Dodavanje zapisa u tabelu
 $stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,vrsta_materijala,sph,adicija,jm,kolicina,mjesto_isporuke,mpc,broj_naloga,napomena) VALUES (?,"Lager",?,?,?,?,?,?,?,?,?,?,?)');
 $stmt->bind_param('issssssissss', $idKorisnika, $odOsOu, $vrstaSociva, $materijal, $sph, $add, $jm, $kolicina, $mjesto_isporuke, $mpc, $broj_naloga, $napomena);
 $stmt->execute();

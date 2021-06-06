@@ -11,6 +11,7 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
+//Brisanje izabranog reda iz tabele na osnovu dobijenog ID-a reda
 $id_stavke = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
 $stmt = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE ID=?');
 $stmt->bind_param('i',$id_stavke);

@@ -17,12 +17,13 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
-
+//Selektovanje svih stavki iz tabele narudzbenica_pol za korisnika koji je ulogovavan. Zapisi se sortiraju da se prvo prikažu lager pa specijale
 $stmt = $conn->prepare('SELECT * FROM narudzbenica_pol WHERE IDKorisnika =? ORDER BY lag_spec ASC');
 $stmt->bind_param('i', $idKorisnika);
 $stmt->execute();
 $result = $stmt->get_result();
 
+//Kreiramo promjenljivu koja sadrži tabelu koja sadrži selektovane redove na osnu upita
 $schema_insert = '<html><head><meta charset="utf-8"></head><body>';
 $schema_insert .= '<h2>Narudžbenica - Poloptic</h2>';
 $schema_insert .= '<br/>Narudžba od: ' . $imeKorisnika . '<br/>';
@@ -91,8 +92,11 @@ while ($row = mysqli_fetch_object($result)) {
   $schema_insert .= '</tbody>';
 }
 
+//Kreiramo html fajl koji sadrži vrijednosti promjenljive $schema_insert
 file_put_contents('../orders/poloptic/narudzbenica_Pol_' . $imeKorisnika . '_' . date("d.m.Y_H.i") . '.html', $schema_insert);
 
+
+//Slanje mejla sa tabelom narudžbe
 $to = "narudzba@mojaoptika.com";
 
 $con = OpenCon();
@@ -148,7 +152,7 @@ $body .= "--" . $separator . "--";
 
 if (mail($to, $subject, $body, $headers)) {
 
-
+  //Slanje notifikacionog mejla korisniku koji je izvšio narudžbu
   $uid = md5(uniqid(time()));
 
   $header = "From: no-reply@mojaoptika.com" . "\r\n";;
@@ -177,13 +181,16 @@ if (mail($to, $subject, $body, $headers)) {
 
   mail($email, $title, $nmessage, $header);
 
+  //Kopiranje poslatih stavku u novu tabelu koju koristi aplikacija VP e-Narudžbenica
   $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (IDOptike,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena) SELECT IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
   $stmt3->bind_param('i', $idKorisnika);
   $stmt3->execute();
   if (mysqli_error($conn)) {
     die(mysqli_error($conn));
   }
+  ////////////////////////////////////////////////////////////////////////////////////
 
+  //Nakon uspiješne narudžbe, sve stavke za tog korisnika se brišu
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_pol` WHERE IDKorisnika =?');
   $stmt->bind_param('i', $idKorisnika);
   $stmt->execute();
@@ -192,6 +199,8 @@ if (mail($to, $subject, $body, $headers)) {
   }
 
   CloseCon($conn);
+
+  //Redirekcija na stranicu uspiješna narudžba
   header('Location: thanks.php');
   die();
 } else {
