@@ -53,14 +53,18 @@ if ($allowed_access == "false") {
                             <p><strong>NAPOMENA: Stavke dodavati jednu po jednu</strong></p>
                             <p>Sve željene stavke koje potvrdite nakon unosa biće prikazane u tabeli NARUDŽBENICA koja se nalazi na dnu stranice.</p>
                             <p><strong>Unesene količine za stavke u tabeli NARUDŽBENICA nije moguće uređivati.</strong></p>
-                            <p>U slučaju pogrešnog unosa, stavku iz tabele možete ukloniti klikom na ikonicu kantice <i class='fa fa-trash'></i>, a nakon toga izvršiti ponovni unos iz grafikona.</p>
+                            <p><strong>Obavezno je unositi MPC/kom i Broj radnog naloga za svaku red u narudžbenici. </strong>Unositi stavku po stavku i nakon svakog unosa pritisnuti ENTER na tastaturi radi potvrde.</p>
+                            <p>U slučaju pogrešnog unosa dioptrije, stavku iz tabele možete ukloniti klikom na ikonicu kantice <i class='fa fa-trash'></i>, a nakon toga izvršiti ponovni unos iz grafikona.</p>
                             <p>Kada kreirate narudžbenicu, potrebno je kliknuti na dugme <i class='fa fa-paper-plane'></i> POŠALJI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji "M-OPTIC"-a</p>
                         </div>
                         </br>
                         <div class="companyInfo"> <img id="logo" src="../images/poloptic.png">
                             <!-- <p>“M-OPTIC” d.o.o.</br> ul. Majevička br. 29, 76300 Bijeljina</br> <strong>Tel:</strong> +387 55 222 999, 222 990, 490 010</br> <strong>Fax:</strong> +387 55 222 998</br> <strong>Email:</strong> <a href="mailto:mopticvp@mojaoptika.com">mopticvp@mojaoptika.com</a></br> <a href="https://mojaoptika.com">www.mojaoptika.com</a></p>-->
                         </div>
+
                     </div>
+                    </br>
+                    </br>
                 </div>
             </div><?php include '../modules/footer.php'; ?>
 </body>

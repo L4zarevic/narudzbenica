@@ -182,12 +182,12 @@ if (mail($to, $subject, $body, $headers)) {
   mail($email, $title, $nmessage, $header);
 
   //Kopiranje poslatih stavku u novu tabelu koju koristi aplikacija VP e-Narudžbenica
-  $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (IDOptike,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena) SELECT IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
-  $stmt3->bind_param('i', $idKorisnika);
-  $stmt3->execute();
-  if (mysqli_error($conn)) {
-    die(mysqli_error($conn));
-  }
+  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (IDOptike,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena) SELECT IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
+  // $stmt3->bind_param('i', $idKorisnika);
+  // $stmt3->execute();
+  // if (mysqli_error($conn)) {
+  //   die(mysqli_error($conn));
+  // }
   ////////////////////////////////////////////////////////////////////////////////////
 
   //Nakon uspiješne narudžbe, sve stavke za tog korisnika se brišu
