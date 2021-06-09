@@ -15,6 +15,20 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
+$con = OpenCon();
+$stmt = $con->prepare('SELECT poloptic_access FROM korisnici WHERE ID =?');
+$stmt->bind_param('i', $idKorisnika);
+$stmt->execute();
+$result = $stmt->get_result();
+$allowed_access = "false";
+while ($row = mysqli_fetch_object($result)) {
+    $allowed_access = $row->poloptic_access;
+}
+
+if ($allowed_access == "false") {
+    header('Location: ../index.php');
+}
+
 
 ?>
 

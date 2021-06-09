@@ -15,6 +15,21 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
+$con = OpenCon();
+$stmt = $con->prepare('SELECT essilor_access FROM korisnici WHERE ID =?');
+$stmt->bind_param('i', $idKorisnika);
+$stmt->execute();
+$result = $stmt->get_result();
+$allowed_access = "false";
+while ($row = mysqli_fetch_object($result)) {
+    $allowed_access = $row->essilor_access;
+}
+
+if ($allowed_access == "false") {
+    header('Location: ../index.php');
+}
+
+
 ?>
 
 <body id="page-top">

@@ -4,6 +4,90 @@ if (is_null($_SESSION['login'])) {
     header('Location:login.php');
 }
 
+require_once 'connection.php';
+$conn = OpenCon();
+
+$korisnik = $_SESSION['login'];
+$ar = explode('#', $korisnik, 4);
+$ar[1] = rtrim($ar[1], '#');
+$idKorisnika = $ar[0];
+$con = OpenCon();
+mysqli_set_charset($conn, 'utf8');
+
+function moptic_access($con, $idKorisnika)
+{
+    $stmt = $con->prepare('SELECT moptic_access FROM korisnici WHERE ID =?');
+    $stmt->bind_param('i', $idKorisnika);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $allowed_access = "false";
+    while ($row = mysqli_fetch_object($result)) {
+        $allowed_access = $row->moptic_access;
+    }
+
+    if ($allowed_access == "true") {
+        echo '<a href="moptic/index.php"><img src="images/moptic.svg" alt="M-OPTIC" style="width:100%"><div class="container"></div></a>';
+    } else {
+        echo '<img src="images/moptic_disabled.png" alt="M-OPTIC" style="width:100%">';
+    }
+}
+
+function poloptic_access($con, $idKorisnika)
+{
+    $stmt = $con->prepare('SELECT poloptic_access FROM korisnici WHERE ID =?');
+    $stmt->bind_param('i', $idKorisnika);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $allowed_access = "false";
+    while ($row = mysqli_fetch_object($result)) {
+        $allowed_access = $row->poloptic_access;
+    }
+
+    if ($allowed_access == "true") {
+        echo '<a href="poloptic/index.php"><img src="images/poloptic.svg" alt="Poloptic" style="width:100%"><div class="container"></div></a>';
+    } else {
+        echo '<img src="images/poloptic_disabled.png" alt="Poloptic" style="width:100%">';
+    }
+}
+
+
+function essilor_access($con, $idKorisnika)
+{
+    $stmt = $con->prepare('SELECT essilor_access FROM korisnici WHERE ID =?');
+    $stmt->bind_param('i', $idKorisnika);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $allowed_access = "false";
+    while ($row = mysqli_fetch_object($result)) {
+        $allowed_access = $row->essilor_access;
+    }
+
+    if ($allowed_access == "true") {
+        echo '<a href="essilor/index.php"><img src="images/essilor.svg" alt="Essilor" style="width:100%"><div class="container"></div></a>';
+    } else {
+        echo '<img src="images/essilor_disabled.png" alt="Essilor" style="width:100%">';
+    }
+}
+
+function hoya_access($con, $idKorisnika)
+{
+    $stmt = $con->prepare('SELECT hoya_access FROM korisnici WHERE ID =?');
+    $stmt->bind_param('i', $idKorisnika);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $allowed_access = "false";
+    while ($row = mysqli_fetch_object($result)) {
+        $allowed_access = $row->hoya_access;
+    }
+
+    if ($allowed_access == "true") {
+        echo '<a href="hoya/index.php"><img src="images/hoya.svg" alt="Hoya" style="width:100%"><div class="container"></div></a>';
+    } else {
+        echo '<img src="images/hoya_disabled.png" alt="Hoya" style="width:100%">';
+    }
+}
+
+
 ?>
 
 <head>
@@ -59,28 +143,16 @@ if (is_null($_SESSION['login'])) {
     </div>
     <div class="cards">
         <div class="card">
-            <a href="moptic/index.php"><img src="images/moptic.svg" alt="M-OPTIC" style="width:100%">
-                <div class="container">
-                </div>
-            </a>
+            <?php echo moptic_access($con, $idKorisnika); ?>
         </div>
         <div class="card">
-            <a href="poloptic/index.php"><img src="images/poloptic.svg" alt="Pol Optic" style="width:100%">
-                <div class="container">
-                </div>
-            </a>
+            <?php echo poloptic_access($con, $idKorisnika); ?>
         </div>
         <div class="card">
-            <a href="essilor/index.php"><img src="images/essilor.svg" alt="Essilor" style="width:100%">
-                <div class="container">
-                </div>
-            </a>
+            <?php echo essilor_access($con, $idKorisnika); ?>
         </div>
         <div class="card">
-            <a href="hoya/index.php"> <img src="images/hoya.svg" alt="Hoya" style="width:100%">
-                <div class="container">
-                </div>
-            </a>
+            <?php echo hoya_access($con, $idKorisnika); ?>
         </div>
     </div>
 
