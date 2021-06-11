@@ -109,7 +109,7 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Jedinica mjere</label></strong>
-                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14" disabled>
+                <select name="jm" title="Unesite jedinicu mjere" class="form-control" id="select14">
                   <option default>kom</option>
                 </select>
               </div>

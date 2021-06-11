@@ -181,8 +181,12 @@ if (mail($to, $subject, $body, $headers)) {
 
   mail($email, $title, $nmessage, $header);
 
-  //Kopiranje poslatih stavku u novu tabelu koju koristi aplikacija VP e-Narudžbenica
-  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (IDOptike,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena) SELECT IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena FROM mojaopt_narudzbenica.narudzbenica_pol WHERE IDKorisnika =?');
+  // Kopiranje poslatih stavku u novu tabelu koju koristi aplikacija VP e-Narudžbenica
+  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena,dobavljac) 
+  // SELECT lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena,mojaopt_optike.korisnici.poloptic FROM mojaopt_narudzbenica.narudzbenica_pol 
+  // JOIN mojaopt_optike.korisnici 
+  // ON narudzbenica_pol.IDKorisnika = mojaopt_optike.korisnici.ID 
+  // WHERE IDKorisnika =?');
   // $stmt3->bind_param('i', $idKorisnika);
   // $stmt3->execute();
   // if (mysqli_error($conn)) {
