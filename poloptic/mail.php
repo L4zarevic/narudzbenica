@@ -139,7 +139,7 @@ $body .= "Email je poslat putem aplikacije eNarudzbenica. https://mojaoptika.com
 // message
 $body .= "--" . $separator . $eol;
 $body .= "Content-Type: text/html; charset=\"utf-8\"" . $eol;
-$body .= "Content-Transfer-Encoding: 8bit" . $eol . $eol;
+$body .= "Content-Transfer-Encoding: 7bit" . $eol . $eol;
 //$body .= $message . $eol;
 
 // attachment
@@ -153,11 +153,9 @@ $body .= "--" . $separator . "--";
 if (mail($to, $subject, $body, $headers)) {
 
   //Slanje notifikacionog mejla korisniku koji je izvšio narudžbu
-  $uid = md5(uniqid(time()));
-
-  $header = "From: no-reply@mojaoptika.com" . "\r\n";;
-  $header .= "MIME-Version: 1.0\r\n";
-  $header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
+  $header = "From: no-reply@mojaoptika.com" . $eol;
+  $header .= "MIME-Version: 1.0" . $eol;
+  $header .= "Content-Type: multipart/mixed; charset=utf-8; boundary=\"" . $separator . "\"";
   $title = "eNarudzbenica - Uspjesna narudzbina";
 
   $message = "Zahvaljujemo se na vasoj narudzbini" . $eol;
@@ -168,16 +166,16 @@ if (mail($to, $subject, $body, $headers)) {
   $message .= "Email poslat putem aplikacije eNarudzbenica. https://mojaoptika.com/narudzbenica";
 
   // message & attachment
-  $nmessage = "--" . $uid . "\r\n";
-  $nmessage .= "Content-type:text/plain; charset=iso-8859-1\r\n";
-  $nmessage .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-  $nmessage .= $message . "\r\n\r\n";
-  $nmessage .= "--" . $uid . "\r\n";
-  $nmessage .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"\r\n";
-  $nmessage .= "Content-Transfer-Encoding: base64\r\n";
-  $nmessage .= "Content-Disposition: attachment; filename=\"" . $filename . "\"\r\n\r\n";
-  $nmessage .= $attachment . "\r\n\r\n";
-  $nmessage .= "--" . $uid . "--";
+  $nmessage = "--" . $separator . $eol;
+  $nmessage .= "Content-type:text/plain; charset=utf-8;" . $eol;
+  $nmessage .= "Content-Transfer-Encoding: 7bit" . $eol . $eol;
+  $nmessage .= $message . $eol;
+  $nmessage .= "--" . $separator . $eol;
+  $nmessage .= "Content-Type: application/octet-stream; charset=utf-8; name=\"" . $filename . "\"" . $eol;
+  $nmessage .= "Content-Transfer-Encoding: base64" . $eol;
+  $nmessage .= "Content-Disposition: attachment;  filename=\"" . $filename . "\"" . $eol . $eol;
+  $nmessage .= $attachment . $eol;
+  $nmessage .= "--" . $separator . "--";
 
   mail($email, $title, $nmessage, $header);
 
