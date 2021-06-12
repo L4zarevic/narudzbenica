@@ -17,6 +17,17 @@ $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
+//Provjera da li su unijeti MPC/kom i Broj radnog naloga za sve stavke narudžbenice
+$stmt1 =  $conn->prepare('SELECT * FROM narudzbenica_pol WHERE ((mpc IS NULL OR mpc ="") OR (broj_naloga IS NULL OR broj_naloga ="")) AND IDKorisnika =?');
+$stmt1->bind_param('i', $idKorisnika);
+$stmt1->execute();
+$result1 = $stmt1->get_result();
+if (mysqli_num_rows($result1) > 0) {
+  CloseCon($conn);
+  header('Location: ' . $_SERVER['HTTP_REFERER'] . '?msg=4');
+  die();
+}
+
 //Selektovanje svih stavki iz tabele narudzbenica_pol za korisnika koji je ulogovavan. Zapisi se sortiraju da se prvo prikažu lager pa specijale
 $stmt = $conn->prepare('SELECT * FROM narudzbenica_pol WHERE IDKorisnika =? ORDER BY lag_spec ASC');
 $stmt->bind_param('i', $idKorisnika);

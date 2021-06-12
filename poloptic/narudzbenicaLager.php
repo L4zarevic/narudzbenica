@@ -67,5 +67,14 @@ if (isset($_REQUEST['msg'])) {
         echo "<script type=\"text/javascript\">alertify.warning('Stavka je ažurirana');</script>";
         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight })</script>";
     }
+    if ($_REQUEST['msg'] == '4') {
+        echo "<script src=\"../js/alertify.min.js\"></script>";
+        echo "<script type=\"text/javascript\">alertify.error('Odbijen zahtjev');alertify.alert('Informacija', '<strong> MPC/kom </strong> i <strong>Broj radnog naloga </strong> je obavezno popuniti za sve stavke narudžbenice!');</script>";
+        echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight })</script>";
+    }
+
+
+
+    
 }
 CloseCon($conn);

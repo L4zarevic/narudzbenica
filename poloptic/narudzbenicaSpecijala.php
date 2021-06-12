@@ -98,5 +98,10 @@ if (isset($_REQUEST['msg'])) {
         echo "<script type=\"text/javascript\">alertify.success('Stavka je ažurirana','custom',2);</script>";
         echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })</script>";
     }
+    if ($_REQUEST['msg'] == '4') {
+        echo "<script src=\"../js/alertify.min.js\"></script>";
+        echo "<script type=\"text/javascript\">alertify.alert('Informacija', '<strong> MPC/kom </strong> i <strong>Broj radnog naloga </strong> je obavezno popuniti za sve stavke narudžbenice!');</script>";
+        echo "<script type=\"text/javascript\">window.history.replaceState(null, null, window.location.pathname); window.scrollTo({ top: document.body.scrollHeight })</script>";
+    }
 }
 CloseCon($conn);
