@@ -115,7 +115,7 @@ include '../modules/header.php';
                   <!-- Standard UC / Pollux / Polaris-->
                   <option value="100" default></option>
                   <option value="100">CR-39</option>
-                  <option value="100">CR-39 UV420</option>
+                  <option value="100">CR-39 UV420 Remove</option>
                   <option value="100">CR-39 UV420 Photo gray</option>
                   <option value="100">CR-39 UV420 Photo brown</option>
                   <option value="100">Transitions VII gray</option>
@@ -141,7 +141,7 @@ include '../modules/header.php';
                   <!-- Panorama / Anglera -->
                   <option value="101" default></option>
                   <option value="101">CR-39</option>
-                  <option value="101">CR-39 UV420</option>
+                  <option value="101">CR-39 UV420 Remove</option>
                   <option value="101">CR-39 UV420 Photo gray</option>
                   <option value="101">CR-39 UV420 Photo brown</option>
                   <option value="101">Transitions VII gray</option>
@@ -164,7 +164,7 @@ include '../modules/header.php';
                   <!-- Matrix Mono / Elegance / Matrix Sport -->
                   <option value="102" default></option>
                   <option value="102">CR-39</option>
-                  <option value="102">CR-39 UV420</option>
+                  <option value="102">CR-39 UV420 Remove</option>
                   <option value="102">CR-39 UV420 Photo gray</option>
                   <option value="102">CR-39 UV420 Photo brown</option>
                   <option value="102">Transitions VII gray</option>
@@ -202,7 +202,7 @@ include '../modules/header.php';
                   <!-- Bifo invision Ulteh, Round-->
                   <option value="104" default></option>
                   <option value="104">CR-39</option>
-                  <option value="104">CR-39 UV420</option>
+                  <option value="104">CR-39 UV420 Remove</option>
                   <option value="104">CR-39 UV420 Photo gray</option>
                   <option value="104">CR-39 UV420 Photo brown</option>
                   <option value="104">Transitions VII gray</option>
@@ -225,7 +225,7 @@ include '../modules/header.php';
                   <!-- Futura / Infini -->
                   <option value="105" default></option>
                   <option value="105">CR-39</option>
-                  <option value="105">CR-39 UV420</option>
+                  <option value="105">CR-39 UV420 Remove</option>
                   <option value="105">CR-39 UV420 Photo gray</option>
                   <option value="105">CR-39 UV420 Photo brown</option>
                   <option value="105">Transitions VII gray</option>
@@ -248,7 +248,7 @@ include '../modules/header.php';
                   <!-- Inoffis -->
                   <option value="106" default></option>
                   <option value="106">CR-39</option>
-                  <option value="106">CR-39 UV420</option>
+                  <option value="106">CR-39 UV420 Remove</option>
                   <option value="106">CR-39 UV420 Photo gray</option>
                   <option value="106">CR-39 UV420 Photo brown</option>
                   <option value="106">Transitions VII gray</option>
@@ -265,7 +265,7 @@ include '../modules/header.php';
                   <!-- Matrix Short / Matrix Pro / Lightform / Operative -->
                   <option value="107" default></option>
                   <option value="107">CR-39</option>
-                  <option value="107">CR-39 UV420</option>
+                  <option value="107">CR-39 UV420 Remove</option>
                   <option value="107">CR-39 UV420 Photo gray</option>
                   <option value="107">CR-39 UV420 Photo brown</option>
                   <option value="107">Transitions VII gray</option>
