@@ -694,7 +694,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Add / Dig.</label></strong><label id="label_zvjezdica" class="obavezna_polja">*</label>
+                <strong><label>Add / Dig.</label></strong><label id="label_zvjezdica1" class="obavezna_polja">*</label>
                 <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
                   <option default></option>
                   <option>0.75</option>
@@ -733,7 +733,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
-                <strong><label>Tretmani i bojenja #1</label></strong>
+                <strong><label>Tretmani i bojenja #1</label></strong><label id="label_zvjezdica2" class="obavezna_polja">*</label>
                 <select name="tretman1" class="form-control" id="select15">
                   <option value="100" default></option>
                   <option value="100">HC</option>
@@ -1107,6 +1107,7 @@ include '../modules/header.php';
             -Vrsta materijala</br>
             -Prečnik</br>
             -Količina</br>
+            -Tretman (osim kod Standard UC dizajna)</br>
             -MPC po komadu</br>
             -Broj radnog naloga</br>
             </br>
@@ -1141,7 +1142,8 @@ include '../modules/header.php';
     <!-- End of Footer -->
 
     <script type="text/javascript">
-      $('#label_zvjezdica').hide();
+      $('#label_zvjezdica1').hide();
+      $('#label_zvjezdica2').hide();
 
       var $select2 = $('#select2'),
         $select3 = $('#select3'),
@@ -1188,11 +1190,20 @@ include '../modules/header.php';
         $select16.html($options4.filter('[value="' + id1 + '"]'));
       }).trigger('change');
 
+      $select4.on('change', function() {
+        $('#label_zvjezdica2').hide();
+        if ($('#select4').find("option:selected").text() == "Standard UC") {
+          $('#label_zvjezdica2').hide();
+        } else {
+          $('#label_zvjezdica2').show();
+        }
+      }).trigger('change');
+
       $select12.on('change', function() {
         if ((($('#select2').find("option:selected").text() == "Bifokal") || ($('#select2').find("option:selected").text() == "Progresiv")) && ($('#select12').find("option:selected").text().length != 0)) {
-          $('#label_zvjezdica').show();
+          $('#label_zvjezdica1').show();
         } else if ((($('#select2').find("option:selected").text() == "Bifokal") || ($('#select2').find("option:selected").text() == "Progresiv")) && ($('#select12').find("option:selected").text().length == 0)) {
-          $('#label_zvjezdica').hide();
+          $('#label_zvjezdica1').hide();
         }
       }).trigger('change');
     </script>
