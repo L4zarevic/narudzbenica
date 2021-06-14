@@ -59,6 +59,9 @@ switch ($oznaka) {
     case 12:
         $stmt = $conn->prepare('SELECT * FROM `1.50_solea_hc_solea_ultra_backside` WHERE IDPolja =?');
         break;
+    case 13:
+        $stmt = $conn->prepare('SELECT * FROM `1.50_bluetech` WHERE IDPolja =?');
+        break;
 }
 
 //ID polja u grafikonu koji se proslijedi, se provjera u tabeli i na osnovu toga dobijamo naziv tj izabranu dioptriju

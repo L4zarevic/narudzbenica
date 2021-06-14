@@ -1115,7 +1115,7 @@ include '../modules/header.php';
             - Visina ugradnje</br>
             - PD</br>
             </br>
-            Kod Bifokala ili Progresiva, ako je unesen Cyl:</br>
+            Ako je unesen Cyl:</br>
             -Add/Dig</br>
             </br>
 
@@ -1191,7 +1191,6 @@ include '../modules/header.php';
       }).trigger('change');
 
       $select4.on('change', function() {
-        $('#label_zvjezdica2').hide();
         if ($('#select4').find("option:selected").text() == "Standard UC") {
           $('#label_zvjezdica2').hide();
         } else {
@@ -1200,9 +1199,9 @@ include '../modules/header.php';
       }).trigger('change');
 
       $select12.on('change', function() {
-        if ((($('#select2').find("option:selected").text() == "Bifokal") || ($('#select2').find("option:selected").text() == "Progresiv")) && ($('#select12').find("option:selected").text().length != 0)) {
+        if ($('#select12').find("option:selected").text().length != 0) {
           $('#label_zvjezdica1').show();
-        } else if ((($('#select2').find("option:selected").text() == "Bifokal") || ($('#select2').find("option:selected").text() == "Progresiv")) && ($('#select12').find("option:selected").text().length == 0)) {
+        } else {
           $('#label_zvjezdica1').hide();
         }
       }).trigger('change');

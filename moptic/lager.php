@@ -27,7 +27,7 @@ include '../modules/header.php';
 
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Narudžba</h1>
+          <h1 class="h3 mb-4 text-gray-800">Lager</h1>
 
           <div class='tabelaSpecijala1'>
             <div class="rowSpec">
@@ -40,7 +40,7 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Vrsta materijala</label></strong><label class="obavezna_polja">*</label>
-                <select name="materijal" title="Unesite vrstu materijala" class="form-control" id="vrsta_materijala">
+                <select name="vrsta_materijala" title="Unesite vrstu dizajna" class="form-control" id="vrsta_materijala">
                   <option default></option>
                   <option>1.50 CR-39 UC</option>
                   <option>1.50 HMC</option>
@@ -318,9 +318,7 @@ include '../modules/header.php';
           -CYL(cilindrična dioptrija)</br>
           </br>
           <label class="obavezna_polja">* Obavezna polja su:</label></br>
-          -Dizajn</br>
-          -Index</br>
-          -Prečnik</br>
+          -Vrsta materijala</br>
           -Količina</br>
           -MPC po komadu</br>
           -Broj radnog naloga</br>
@@ -335,7 +333,7 @@ include '../modules/header.php';
       <div class="naslov">
 
         <?php
-        include 'narudzbenicaSpecijala.php';
+        include 'narudzbenica_lager.php';
         ?>
       </div>
     </div>
@@ -350,25 +348,5 @@ include '../modules/header.php';
     <!-- End of Footer -->
 
 </body>
-
-<script type="text/javascript">
-  var $select2 = $('#select2');
-  $('#showSegment').hide();
-
-  $select2.on('change', function() {
-
-    if (this.value == '3') {
-      $('#ifYes').show();
-    } else {
-      $('#ifYes').hide();
-    }
-
-    if (this.value == '2') {
-      $('#showSegment').show();
-    } else {
-      $('#showSegment').hide();
-    }
-  });
-</script>
 
 </html>

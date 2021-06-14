@@ -158,6 +158,8 @@ include '../modules/header.php';
             -Vrsta sočiva</br>
             -Vrsta materijala</br>
             -Količina</br>
+            -MPC po komadu</br>
+            -Broj radnog naloga</br>
             </br>
           </div>
 
@@ -167,7 +169,7 @@ include '../modules/header.php';
       </div>
       <div class="naslov">
         <?php
-        include '../poloptic/narudzbenicaSpecijala.php';
+        include 'narudzbenica_lag_bifo_prog.php';
         ?>
       </div>
     </div>

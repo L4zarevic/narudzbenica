@@ -46,7 +46,7 @@ if ($allowed_access == "false") {
                     <div class="row">
                         <div class="form-group col-md-12">
                             <h5>Uputstvo za narudžbenicu</h5>
-                            <p>Da biste kreirali željenu narudžbenicu, potrebno je u meniju lijevo izabrati Narudžba</p>
+                            <p>Da biste kreirali željenu narudžbenicu, potrebno je iz ponude lijevo izabrati Lager ili Lager stakla bifocali i progresivi</p>
                             <p>Sve željene stavke koje potvrdite nakon unosa biće prikazane u tabeli NARUDŽBENICA koja se nalazi na dnu stranice.</p>
                             <p>U slučaju pogrešnog unosa, stavku iz tabele je moguće ukloniti klikom na ikonicu kantice <i class='fa fa-trash'></i>.</p>
                             <p>Kada kreirate narudžbenicu, potrebno je kliknuti na dugme <i class='fa fa-paper-plane'></i> POŠALJI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji "M-OPTIC"-a</p>

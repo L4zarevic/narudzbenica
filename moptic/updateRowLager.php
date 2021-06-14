@@ -1,5 +1,4 @@
 <?php
-//Dodavanje zapisa lager bifokal i progresiv u tabelu
 
 session_start();
 if (is_null($_SESSION['login'])) {
@@ -17,23 +16,21 @@ $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
 $stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
-$arS = explode("###", $stavka, 10);
+$arS = explode("###", $stavka, 9);
 $arS[1] = rtrim($arS[1], "###");
 
-$odOsOu = $arS[0];
-$vrstaSociva = $arS[1];
-$materijal = $arS[2];
-$sph = $arS[3];
-$add = $arS[4];
-$jm = $arS[5];
-$kolicina = $arS[6];
-$mpc = $arS[7];
-$broj_naloga = $arS[8];
-$napomena1 = $arS[9];
+$dizajn = $arS[0];
+$sph = $arS[1];
+$cyl = $arS[2];
+$jm = $arS[3];
+$kolicina = $arS[4];
+$mpc = $arS[5];
+$broj_naloga = $arS[6];
+$napomena1 = $arS[7];
+$id_stavke = $arS[8];
 
 $napomena = str_replace('\n', " ", $napomena1);
 
-//Za svaki red u tabeli se automatski popunjava i mjesto isporuke koje je već predifinisano za korisnika koji je ulogovan.
 $con = OpenCon();
 mysqli_set_charset($con, 'utf8');
 $stmt3 = $con->prepare('SELECT alias FROM korisnici WHERE ID=?');
@@ -45,12 +42,10 @@ while ($row3 = mysqli_fetch_object($result3)) {
 	$mjesto_isporuke = $row3->alias;
 }
 
-//Dodavanje zapisa u tabelu
-$stmt = $conn->prepare('INSERT INTO narudzbenica_pol (IDKorisnika,lag_spec,od_os_ou,vrsta_sociva,vrsta_materijala,sph,adicija,jm,kolicina,mjesto_isporuke,mpc,broj_naloga,napomena) VALUES (?,"Lager",?,?,?,?,?,?,?,?,?,?,?)');
-$stmt->bind_param('issssssissss', $idKorisnika, $odOsOu, $vrstaSociva, $materijal, $sph, $add, $jm, $kolicina, $mjesto_isporuke, $mpc, $broj_naloga, $napomena);
+$stmt = $conn->prepare('UPDATE narudzbenica_moptic SET IDKorisnika=?,dizajn=?,sph=?,cyl=?,jm=?,kolicina=?,mjesto_isporuke=?,mpc=?,broj_naloga=?,napomena=? WHERE ID=?');
+$stmt->bind_param('isssssssssi', $idKorisnika, $dizajn, $sph, $cyl, $jm, $kolicina, $mjesto_isporuke, $mpc, $broj_naloga, $napomena, $id_stavke);
 $stmt->execute();
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));
 }
-
 CloseCon($conn);
