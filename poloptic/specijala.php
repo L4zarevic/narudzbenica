@@ -1199,10 +1199,17 @@ include '../modules/header.php';
 
       $select12.on('change', function() {
         if ($('#select12').find("option:selected").text().length != 0) {
-          $('#label_zvjezdica1,#label_zvjezdica3').show();
+          $('#label_zvjezdica1').show();
         } else {
-          $('#label_zvjezdica1,#label_zvjezdica3').hide();
+          $('#label_zvjezdica1').hide();
         }
+
+        if ((($('#select2').find("option:selected").text() == "Bifokal") || ($('#select2').find("option:selected").text() == "Progresiv")) && ($('#select12').find("option:selected").text().length != 0)) {
+          $('#label_zvjezdica3').show();
+        } else if ((($('#select2').find("option:selected").text() == "Bifokal") || ($('#select2').find("option:selected").text() == "Progresiv")) && ($('#select12').find("option:selected").text().length == 0)) {
+          $('#label_zvjezdica3').hide();
+        }
+
       }).trigger('change');
     </script>
 
