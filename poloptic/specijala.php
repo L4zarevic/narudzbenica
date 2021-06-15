@@ -686,7 +686,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Ax</label></strong>
+                <strong><label>Ax</label></strong><label id="label_zvjezdica3" class="obavezna_polja">*</label>
                 <input name="ugao" title="Unesite ugao cilindra" type="text" maxlength="3" class="form-control2" id="ugaoCilindra">
               </div>
             </div>
@@ -1142,8 +1142,7 @@ include '../modules/header.php';
     <!-- End of Footer -->
 
     <script type="text/javascript">
-      $('#label_zvjezdica1').hide();
-      $('#label_zvjezdica2').hide();
+      $('#label_zvjezdica1,#label_zvjezdica2,#label_zvjezdica3').hide();
 
       var $select2 = $('#select2'),
         $select3 = $('#select3'),
@@ -1200,9 +1199,9 @@ include '../modules/header.php';
 
       $select12.on('change', function() {
         if ($('#select12').find("option:selected").text().length != 0) {
-          $('#label_zvjezdica1').show();
+          $('#label_zvjezdica1,#label_zvjezdica3').show();
         } else {
-          $('#label_zvjezdica1').hide();
+          $('#label_zvjezdica1,#label_zvjezdica3').hide();
         }
       }).trigger('change');
     </script>
