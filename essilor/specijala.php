@@ -433,14 +433,14 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Ax</label></strong>
+                <strong><label>Ax</label></strong><label id="label_zvjezdica1" class="obavezna_polja">*</label>
                 <input name="ugao" title="Unesite ugao cilindra" maxlength="3" type="text" class="form-control2" id="ugaoCilindra">
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
-                <strong><label>Add / Dig.</label></strong>
+                <strong><label>Add / Dig.</label></strong><label id="label_zvjezdica2" class="obavezna_polja">*</label>
                 <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
                   <option default></option>
                   <option>0.75</option>
@@ -565,7 +565,9 @@ include '../modules/header.php';
 
 </body>
 <script type="text/javascript">
-  var $select2 = $('#select2');
+  $('#label_zvjezdica1,#label_zvjezdica2').hide();
+  var $select2 = $('#select2'),
+    $select12 = $('#select12');
   $('#showSegment').hide();
 
   $select2.on('change', function() {
@@ -582,6 +584,14 @@ include '../modules/header.php';
       $('#showSegment').hide();
     }
   });
+
+  $select12.on('change', function() {
+    if ($('#select12').find("option:selected").text().length != 0) {
+      $('#label_zvjezdica1,#label_zvjezdica2').show();
+    } else {
+      $('#label_zvjezdica1,#label_zvjezdica2').hide();
+    }
+  }).trigger('change');
 </script>
 
 </html>
