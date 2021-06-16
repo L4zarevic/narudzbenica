@@ -57,10 +57,13 @@ switch ($oznaka) {
         $stmt = $conn->prepare('SELECT * FROM `1.74_ahmc` WHERE IDPolja =?');
         break;
     case 12:
-        $stmt = $conn->prepare('SELECT * FROM `1.50_solea_hc_solea_ultra_backside` WHERE IDPolja =?');
+        $stmt = $conn->prepare('SELECT * FROM `1.50_solea_hc_solea_ultra_backside_brown` WHERE IDPolja =?');
         break;
     case 13:
         $stmt = $conn->prepare('SELECT * FROM `1.50_bluetech` WHERE IDPolja =?');
+        break;
+    case 14:
+        $stmt = $conn->prepare('SELECT * FROM `1.50_solea_hc_solea_ultra_backside_gray` WHERE IDPolja =?');
         break;
 }
 

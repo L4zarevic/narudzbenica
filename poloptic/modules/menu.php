@@ -29,7 +29,16 @@
                 <a class="collapse-item" href="../poloptic/1.74_AHMC.php">1.74 AHMC</a>
             </div>
         </div>
-        <a class="nav-link collapsed" href="../poloptic/1.50_Solea_HC_Solea_Ultra_BackSide.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Lagerska stakla solea</span> </a>
+
+    <li class="nav-item"> <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+            <i class="fas fa-glasses"></i> <span>Lagerska stakla solea</span> </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="../poloptic/1.50_Solea_HC_Solea_Ultra_BackSide_Brown.php">Brown</a>
+                <a class="collapse-item" href="../poloptic/1.50_Solea_HC_Solea_Ultra_BackSide_Gray.php">Gray</a>
+
+            </div>
+        </div>
         <a class="nav-link collapsed" href="../poloptic/specijala.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Specijala</span> </a>
     </li>
     <hr class="sidebar-divider">
