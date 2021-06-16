@@ -33,16 +33,16 @@ $schema_insert .= '<thead>';
 $schema_insert .= '<tr>';
 $schema_insert .= '<th>R.br.</th>';
 $schema_insert .= '<th>OD/OS/OU</th>';
-$schema_insert .= '<th>Vrsta sočiva</th>';
-$schema_insert .= '<th>Vrsta materijala</th>';
+$schema_insert .= "<th>Vrsta \nsočiva</th>";
+$schema_insert .= "<th>Vrsta \nmaterijala</th>";
 $schema_insert .= '<th>SPH</th>';
 $schema_insert .= '<th>CYL</th>';
-$schema_insert .= '<th>Add/Dig</th>';
+$schema_insert .= "<th>Add \nDig</th>";
 $schema_insert .= '<th>JM</th>';
 $schema_insert .= '<th>Kol.</th>';
-$schema_insert .= '<th>Mjesto ispor.</th>';
-$schema_insert .= '<th>MPC/kom</th>';
-$schema_insert .= '<th>Br. radnog naloga</th>';
+$schema_insert .= "<th>Mjesto \nispor.</th>";
+$schema_insert .= "<th>MPC\n(kom)</th>";
+$schema_insert .= "<th>Br.\nradnog \nnaloga</th>";
 $schema_insert .= '<th>Napomena</th>';
 $schema_insert .= '<th></th>';
 $schema_insert .= '</tr>';
@@ -128,7 +128,7 @@ if (mail($to, $subject, $body, $headers)) {
   //Slanje notifikacionog mejla korisniku koji je izvšio narudžbu
   $header = "From: no-reply@mojaoptika.com" . $eol;
   $header .= "MIME-Version: 1.0" . $eol;
-  $header .= "Content-Type: multipart/mixed; charset=utf-8; boundary=\"" . $separator . "\"";
+  $header .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
   $title = "eNarudzbenica - Uspjesna narudzbina";
 
   $message = "Zahvaljujemo se na vasoj narudzbini" . $eol;

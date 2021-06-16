@@ -44,28 +44,28 @@ $schema_insert .= '<table rules="all" style="border-color:#000;" cellpadding="2"
 $schema_insert .= '<thead>';
 $schema_insert .= '<tr>';
 $schema_insert .= '<th>R.br.</th>';
-$schema_insert .= '<th>Lag-Spec</th>';
-$schema_insert .= '<th>Od/Os/Ou</th>';
-$schema_insert .= '<th>Vrsta soč.</th>';
+$schema_insert .= "<th>Lag\nSpec</th>";
+$schema_insert .= "<th>OD\nOS\nOU</th>";
+$schema_insert .= "<th>Vrsta\nsoč.</th>";
 $schema_insert .= '<th>Dizajn</th>';
-$schema_insert .= '<th>PRL/OCHT</th>';
+$schema_insert .= "<th>PRL\nOCHT</th>";
 $schema_insert .= '<th>Segm.</th>';
 $schema_insert .= '<th>Baza</th>';
 $schema_insert .= '<th>Index</th>';
-$schema_insert .= '<th>Vrsta materijala</th>';
+$schema_insert .= "<th>Vrsta \nmaterijala</th>";
 $schema_insert .= '<th>Prečn.</th>';
 $schema_insert .= '<th>SPH</th>';
 $schema_insert .= '<th>CYL</th>';
 $schema_insert .= '<th>Ugao</th>';
-$schema_insert .= '<th>Add/Dig</th>';
+$schema_insert .= "<th>Add\nDig</th>";
 $schema_insert .= '<th>JM</th>';
 $schema_insert .= '<th>Kol.</th>';
 $schema_insert .= '<th>Tr.1</th>';
 $schema_insert .= '<th>Tr.2</th>';
 $schema_insert .= '<th>PD</th>';
-$schema_insert .= '<th>Mjesto ispor.</th>';
-$schema_insert .= '<th>MPC/kom</th>';
-$schema_insert .= '<th>Br. radnog naloga</th>';
+$schema_insert .= "<th>Mjesto\nispor.</th>";
+$schema_insert .= "<th>MPC\n(kom)</th>";
+$schema_insert .= "<th>Br.\nradnog\nnaloga</th>";
 $schema_insert .= '<th>Napomena</th>';
 $schema_insert .= '<th></th>';
 $schema_insert .= '</tr>';
@@ -191,8 +191,8 @@ if (mail($to, $subject, $body, $headers)) {
   mail($email, $title, $nmessage, $header);
 
   // Kopiranje poslatih stavku u novu tabelu koju koristi aplikacija VP e-Narudžbenica
-  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena,dobavljac) 
-  // SELECT lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mjesto_isporuke,mpc,broj_naloga,napomena,mojaopt_optike.korisnici.poloptic FROM mojaopt_narudzbenica.narudzbenica_pol 
+  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mpc,broj_naloga,napomena,komitenti_radnje,dobavljac,mjesto_isporuke) 
+  // SELECT lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mpc,broj_naloga,napomena,mojaopt_narudzbenica.narudzbenica_pol.mjesto_isporuke,mojaopt_optike.korisnici.poloptic,mojaopt_optike.korisnici.mjesto_isporuke FROM mojaopt_narudzbenica.narudzbenica_pol 
   // JOIN mojaopt_optike.korisnici 
   // ON narudzbenica_pol.IDKorisnika = mojaopt_optike.korisnici.ID 
   // WHERE IDKorisnika =?');

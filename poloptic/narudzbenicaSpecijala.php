@@ -16,28 +16,28 @@ $result = $stmt->get_result();
 echo "<div class='naslov'><h1 id='naslovNarudzbenice'>Narudžbenica - Pol Optic</h1><hr></div>";
 echo "<div class='table-wrapper-scroll-y table-hover'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
-<thead><tr><th class='tg-0lax'>Lag-Spec</th>
-<th class='tg-0lax'>OD/OS/OU</th>
+<thead><tr><th class='tg-0lax'>Lag\nSpec</th>
+<th class='tg-0lax'>OD\nOS\nOU</th>
 <th class='tg-0lax'>Vrsta \nsoč.</th>
 <th class='tg-0lax'>Dizajn</th>
 <th class='tg-0lax'>PRL \nOCHT</th>
 <th class='tg-0lax'>Segm.</th>
 <th class='tg-0lax'>Baza</th>
 <th class='tg-0lax'>Index</th>
-<th class='tg-0lax'>Vrsta materijala</th>
+<th class='tg-0lax'>Vrsta\nmaterijala</th>
 <th class='tg-0lax'>&Oslash;</th>
 <th class='tg-0lax'>SPH</th>
 <th class='tg-0lax'>CYL</th>
 <th class='tg-0lax'>Ugao</th>
-<th class='tg-0lax'>Add/Dig</th>
+<th class='tg-0lax'>Add\nDig</th>
 <th class='tg-0lax'>JM</th>
 <th class='tg-0lax'>Kol.</th>
 <th class='tg-0lax'>Tr.1</th>
 <th class='tg-0lax'>Tr.2</th>
 <th class='tg-0lax'>PD</th>
-<th class='tg-0lax'>Mjesto isp.</th>
-<th class='tg-0lax'>MPC/kom</th>
-<th class='tg-0lax'>Br. radnog naloga</th>
+<th class='tg-0lax'>Mjesto\nisp.</th>
+<th class='tg-0lax'>MPC\n(kom)</th>
+<th class='tg-0lax'>Broj\nradnog naloga</th>
 <th class='tg-0lax'>Napomena</th>
 <th class='tg-0lax'></th>
 </tr>

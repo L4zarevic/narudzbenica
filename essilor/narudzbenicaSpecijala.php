@@ -18,8 +18,8 @@ echo "<div class='table-wrapper-scroll-y table-hover'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
 <thead>
 <tr>
-<th class='tg-0lax'>Od/Os/Ou</th>
-<th class='tg-0lax'>Vrsta \nsoč.</th>
+<th class='tg-0lax'>OD\nOS\nOU</th>
+<th class='tg-0lax'>Vrsta\nsoč.</th>
 <th class='tg-0lax'>Dizajn</th>
 <th class='tg-0lax'>PRL/OCHT</th>
 <th class='tg-0lax'>Segm.</th>
@@ -28,16 +28,16 @@ echo "<div class='table-wrapper-scroll-y table-hover'>
 <th class='tg-0lax'>&Oslash;</th>
 <th class='tg-0lax'>SPH</th>
 <th class='tg-0lax'>CYL</th>
-<th class='tg-0lax'>Ugao</th>
-<th class='tg-0lax'>Add/Dig</th>
+<th class='tg-0lax'>Ax</th>
+<th class='tg-0lax'>Add\nDig</th>
 <th class='tg-0lax'>JM</th>
 <th class='tg-0lax'>Kol.</th>
 <th class='tg-0lax'>Tr.1</th>
 <th class='tg-0lax'>Tr.2</th>
 <th class='tg-0lax'>PD</th>
-<th class='tg-0lax'>Mjesto ispor.</th>
-<th class='tg-0lax'>MPC/kom</th>
-<th class='tg-0lax'>Br. radnog naloga</th>
+<th class='tg-0lax'>Mjesto\nispor.</th>
+<th class='tg-0lax'>MPC\n(kom)</th>
+<th class='tg-0lax'>Br.\nradnog\nnaloga</th>
 <th class='tg-0lax'>Napomena</th>
 <th class='tg-0lax'></th>
 </tr>

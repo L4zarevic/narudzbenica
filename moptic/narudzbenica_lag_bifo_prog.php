@@ -19,16 +19,16 @@ echo "<div class='table-wrapper-scroll-y table-hover'>
 <thead>
 <tr>
 <th class='tg-0lax'>OD/OS/OU</th>
-<th class='tg-0lax'>Vrsta sočiva</th>
-<th class='tg-0lax'>Vrsta materijala</th>
+<th class='tg-0lax'>Vrsta \nsočiva</th>
+<th class='tg-0lax'>Vrsta \nmaterijala</th>
 <th class='tg-0lax'>SPH</th>
 <th class='tg-0lax'>CYL</th>
 <th class='tg-0lax'>Add/Dig</th>
 <th class='tg-0lax'>JM</th>
 <th class='tg-0lax'>Količina</th>
-<th class='tg-0lax'>Mjesto ispor.</th>
-<th class='tg-0lax'>MPC/kom</th>
-<th class='tg-0lax'>Broj radnog naloga</th>
+<th class='tg-0lax'>Mjesto\nispor.</th>
+<th class='tg-0lax'>MPC\n(kom)</th>
+<th class='tg-0lax'>Broj\nradnog\nnaloga</th>
 <th class='tg-0lax'>Napomena</th>
 <th class='tg-0lax'></th>
 </tr>
