@@ -39,7 +39,7 @@ switch ($oznaka) {
         $stmt = $conn->prepare('SELECT * FROM `1.59_polycarbonate_hmc` WHERE IDPolja =?');
         break;
     case 6:
-        $stmt = $conn->prepare('SELECT * FROM `1.50_transition_hmc` WHERE IDPolja =?');
+        $stmt = $conn->prepare('SELECT * FROM `1.50_transition_hmc_brown` WHERE IDPolja =?');
         break;
     case 7:
         $stmt = $conn->prepare('SELECT * FROM `1.53_trivex_hmc` WHERE IDPolja =?');
@@ -64,6 +64,9 @@ switch ($oznaka) {
         break;
     case 14:
         $stmt = $conn->prepare('SELECT * FROM `1.50_solea_hc_solea_ultra_backside_gray` WHERE IDPolja =?');
+        break;
+    case 15:
+        $stmt = $conn->prepare('SELECT * FROM `1.50_transition_hmc_gray` WHERE IDPolja =?');
         break;
 }
 

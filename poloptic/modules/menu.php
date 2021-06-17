@@ -16,7 +16,14 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="../poloptic/1.50_CR39_UC_HMC.php">1.50 CR39 UC/HMC</a>
-                <a class="collapse-item" href="../poloptic/1.50_Transition_HMC.php">1.50 Transition HMC</a>
+
+                <a class="collapse-item collapsed" id="transitionCollapse" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" href="#">1.50 Transition HMC <i  class="fas fa-angle-down"></i></a>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#transitionCollapse">
+                    <a class="collapse-item" href="../poloptic/1.50_BlueTech.php">Brown</a>
+                    <a class="collapse-item" href="../poloptic/1.53_Trivex_HMC.php">Gray</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+
                 <a class="collapse-item" href="../poloptic/1.50_BlueTech.php">1.50 Blue Tech</a>
                 <a class="collapse-item" href="../poloptic/1.53_Trivex_HMC.php">1.53 Trivex HMC</a>
                 <a class="collapse-item" href="../poloptic/1.56_Photocromic_HMC.php">1.56 Photocromic HMC</a>
@@ -39,7 +46,7 @@
 
             </div>
         </div>
-        <a class="nav-link collapsed" href="../poloptic/specijala.php" d data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Specijala</span> </a>
+        <a class="nav-link collapsed" href="../poloptic/specijala.php" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-glasses"></i> <span>Specijala</span> </a>
     </li>
     <hr class="sidebar-divider">
     <div class="text-center d-none d-md-inline"> <button class="rounded-circle border-0" id="sidebarToggle"></button> </div>
