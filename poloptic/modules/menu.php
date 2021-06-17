@@ -19,8 +19,8 @@
 
                 <a class="collapse-item collapsed" id="transitionCollapse" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" href="#">1.50 Transition HMC <i  class="fas fa-angle-down"></i></a>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#transitionCollapse">
-                    <a class="collapse-item" href="../poloptic/1.50_BlueTech.php">Brown</a>
-                    <a class="collapse-item" href="../poloptic/1.53_Trivex_HMC.php">Gray</a>
+                    <a class="collapse-item" href="../poloptic/1.50_Transition_HMC_Brown.php">Brown</a>
+                    <a class="collapse-item" href="../poloptic/1.50_Transition_HMC_Gray.php">Gray</a>
                     <div class="dropdown-divider"></div>
                 </div>
 
