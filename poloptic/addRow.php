@@ -33,7 +33,7 @@ switch ($oznaka) {
         $stmt = $conn->prepare('SELECT * FROM `1.60_transition_hmc_brown` WHERE IDPolja =?');
         break;
     case 4:
-        $stmt = $conn->prepare('SELECT * FROM `1.56_photocromic_hmc` WHERE IDPolja =?');
+        $stmt = $conn->prepare('SELECT * FROM `1.56_photocromic_hmc_brown` WHERE IDPolja =?');
         break;
     case 5:
         $stmt = $conn->prepare('SELECT * FROM `1.59_polycarbonate_hmc` WHERE IDPolja =?');
@@ -73,6 +73,9 @@ switch ($oznaka) {
         break;
     case 17:
         $stmt = $conn->prepare('SELECT * FROM `1.60_transition_hmc_gray` WHERE IDPolja =?');
+        break;
+    case 18:
+        $stmt = $conn->prepare('SELECT * FROM `1.56_photocromic_hmc_gray` WHERE IDPolja =?');
         break;
 }
 

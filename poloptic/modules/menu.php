@@ -28,6 +28,14 @@
                 <a style="word-wrap: break-word" class="collapse-item" href="../poloptic/1.50_UltraTech.php">1.50 Ultra Tech/Ultra Glide</a>
                 <a class="collapse-item" href="../poloptic/1.53_Trivex_HMC.php">1.53 Trivex HMC</a>
                 <a class="collapse-item" href="../poloptic/1.56_Photocromic_HMC.php">1.56 Photocromic HMC</a>
+
+                <a class="collapse-item collapsed" id="photocromicCollapse" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" href="#">1.56 Photocromic HMC <i class="fas fa-angle-down"></i></a>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#photocromicCollapse">
+                    <a class="collapse-item" href="../poloptic/1.56_Photocromic_HMC_Brown.php">Brown</a>
+                    <a class="collapse-item" href="../poloptic/1.56_Photocromic_HMC_Gray.php">Gray</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+
                 <a class="collapse-item" href="../poloptic/1.56_SHMC_UV420_AB.php">1.56 SHMC/UV420 AB</a>
                 <a class="collapse-item" href="../poloptic/1.59_Polycarbonate_HMC.php">1.59 Polycarbonate HMC</a>
                 <a class="collapse-item" href="../poloptic/1.60_HMC.php">1.60 HMC</a>
