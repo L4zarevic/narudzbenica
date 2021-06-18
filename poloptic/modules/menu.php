@@ -17,8 +17,8 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="../poloptic/1.50_CR39_UC_HMC.php">1.50 CR39 UC/HMC</a>
 
-                <a class="collapse-item collapsed" id="transitionCollapse" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" href="#">1.50 Transition HMC <i  class="fas fa-angle-down"></i></a>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#transitionCollapse">
+                <a class="collapse-item collapsed" id="transition1Collapse" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" href="#">1.50 Transition HMC <i class="fas fa-angle-down"></i></a>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#transition1Collapse">
                     <a class="collapse-item" href="../poloptic/1.50_Transition_HMC_Brown.php">Brown</a>
                     <a class="collapse-item" href="../poloptic/1.50_Transition_HMC_Gray.php">Gray</a>
                     <div class="dropdown-divider"></div>
@@ -32,7 +32,14 @@
                 <a class="collapse-item" href="../poloptic/1.59_Polycarbonate_HMC.php">1.59 Polycarbonate HMC</a>
                 <a class="collapse-item" href="../poloptic/1.60_HMC.php">1.60 HMC</a>
                 <a class="collapse-item" href="../poloptic/1.60_UV420_AB.php">1.60 UV420 AB</a>
-                <a class="collapse-item" href="../poloptic/1.60_Transition_HMC.php">1.60 Transition HMC</a>
+
+                <a class="collapse-item collapsed" id="transition2Collapse" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix" href="#">1.60 Transition HMC <i class="fas fa-angle-down"></i></a>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#transition2Collapse">
+                    <a class="collapse-item" href="../poloptic/1.60_Transition_HMC_Brown.php">Brown</a>
+                    <a class="collapse-item" href="../poloptic/1.60_Transition_HMC_Gray.php">Gray</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+
                 <a class="collapse-item" href="../poloptic/1.67_HMC_UV420_AB.php">1.67 HMC/UV420 AB</a>
                 <a class="collapse-item" href="../poloptic/1.74_AHMC.php">1.74 AHMC</a>
             </div>
