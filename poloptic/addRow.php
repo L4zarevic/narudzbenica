@@ -68,6 +68,9 @@ switch ($oznaka) {
     case 15:
         $stmt = $conn->prepare('SELECT * FROM `1.50_transition_hmc_gray` WHERE IDPolja =?');
         break;
+    case 16:
+        $stmt = $conn->prepare('SELECT * FROM `1.50_ultratech` WHERE IDPolja =?');
+        break;
 }
 
 //ID polja u grafikonu koji se proslijedi, se provjera u tabeli i na osnovu toga dobijamo naziv tj izabranu dioptriju

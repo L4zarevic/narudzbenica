@@ -25,6 +25,7 @@
                 </div>
 
                 <a class="collapse-item" href="../poloptic/1.50_BlueTech.php">1.50 Blue Tech</a>
+                <a style="word-wrap: break-word" class="collapse-item" href="../poloptic/1.50_UltraTech.php">1.50 Ultra Tech/Ultra Glide</a>
                 <a class="collapse-item" href="../poloptic/1.53_Trivex_HMC.php">1.53 Trivex HMC</a>
                 <a class="collapse-item" href="../poloptic/1.56_Photocromic_HMC.php">1.56 Photocromic HMC</a>
                 <a class="collapse-item" href="../poloptic/1.56_SHMC_UV420_AB.php">1.56 SHMC/UV420 AB</a>
