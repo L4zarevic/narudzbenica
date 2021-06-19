@@ -25,7 +25,7 @@
                 </div>
 
                 <a class="collapse-item" href="../poloptic/1.50_BlueTech.php">1.50 Blue Tech</a>
-                <a style="word-wrap: break-word" class="collapse-item" href="../poloptic/1.50_UltraTech.php">1.50 Ultra Tech/Ultra Glide</a>
+                <a style="word-wrap: break-word" class="collapse-item" href="../poloptic/1.50_UltraTech.php">1.50 Ultra Tech</br>(Ultra Glide)</a>
                 <a class="collapse-item" href="../poloptic/1.53_Trivex_HMC.php">1.53 Trivex HMC</a>
                 <a class="collapse-item" href="../poloptic/1.56_Photocromic_HMC.php">1.56 Photocromic HMC</a>
 
@@ -36,7 +36,7 @@
                     <div class="dropdown-divider"></div>
                 </div>
 
-                <a class="collapse-item" href="../poloptic/1.56_SHMC_UV420_AB.php">1.56 SHMC/UV420 AB</a>
+                <a class="collapse-item" href="../poloptic/1.56_SHMC_UV420_AB.php">1.56 SHMC/UV420 AB</br>(Remove)</a>
                 <a class="collapse-item" href="../poloptic/1.59_Polycarbonate_HMC.php">1.59 Polycarbonate HMC</a>
                 <a class="collapse-item" href="../poloptic/1.60_HMC.php">1.60 HMC</a>
                 <a class="collapse-item" href="../poloptic/1.60_UV420_AB.php">1.60 UV420 AB</a>
@@ -48,7 +48,7 @@
                     <div class="dropdown-divider"></div>
                 </div>
 
-                <a class="collapse-item" href="../poloptic/1.67_HMC_UV420_AB.php">1.67 HMC/UV420 AB</a>
+                <a class="collapse-item" href="../poloptic/1.67_HMC_UV420_AB.php">1.67 HMC/UV420 AB</br>(Remove)</a>
                 <a class="collapse-item" href="../poloptic/1.74_AHMC.php">1.74 AHMC</a>
             </div>
         </div>
