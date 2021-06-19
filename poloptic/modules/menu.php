@@ -27,7 +27,6 @@
                 <a class="collapse-item" href="../poloptic/1.50_BlueTech.php">1.50 Blue Tech</a>
                 <a style="word-wrap: break-word" class="collapse-item" href="../poloptic/1.50_UltraTech.php">1.50 Ultra Tech</br>(Ultra Glide)</a>
                 <a class="collapse-item" href="../poloptic/1.53_Trivex_HMC.php">1.53 Trivex HMC</a>
-                <a class="collapse-item" href="../poloptic/1.56_Photocromic_HMC.php">1.56 Photocromic HMC</a>
 
                 <a class="collapse-item collapsed" id="photocromicCollapse" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" href="#">1.56 Photocromic HMC <i class="fas fa-angle-down"></i></a>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#photocromicCollapse">
