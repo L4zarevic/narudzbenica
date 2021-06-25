@@ -106,15 +106,22 @@ function hoya_access($con, $idKorisnika)
 <style>
     .text {
         position: fixed;
-        top: 35%;
+        top: 32%;
         left: 36%;
         width: 100%;
     }
 
     .cards {
         position: fixed;
-        top: 45%;
+        top: 42%;
         left: 8%;
+        width: 100%;
+    }
+
+    .cards_parts {
+        position: fixed;
+        top: 70%;
+        left: 44%;
         width: 100%;
     }
 
@@ -127,6 +134,16 @@ function hoya_access($con, $idKorisnika)
         margin: 2px 5px;
     }
 
+    .card_parts {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 10%;
+        display: inline-block;
+        padding: 2px 10px;
+        margin: 2px 5px;
+
+    }
+
     .card img {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -134,6 +151,10 @@ function hoya_access($con, $idKorisnika)
 
     .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .parts_title {
+        margin-top: -10%;
     }
 </style>
 
@@ -153,6 +174,16 @@ function hoya_access($con, $idKorisnika)
         </div>
         <div class="card">
             <?php echo hoya_access($con, $idKorisnika); ?>
+        </div>
+    </div>
+    <div class="cards_parts">
+        <div class="card_parts">
+            <a id="parts_icon" href="parts/index.php"><img src="images/sunglasses.svg" alt="Spare parts" style="width:100%">
+                <center>
+                    <div class="parts_title">Rezervni dijelovi</div>
+                </center>
+            </a>
+
         </div>
     </div>
 
