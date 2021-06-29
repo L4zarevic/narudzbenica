@@ -191,16 +191,16 @@ if (mail($to, $subject, $body, $headers)) {
   mail($email, $title, $nmessage, $header);
 
   // Kopiranje poslatih stavku u novu tabelu koju koristi aplikacija VP e-Narudžbenica
-  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mpc,broj_naloga,napomena,komitenti_radnje,dobavljac,mjesto_isporuke) 
-  // SELECT lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mpc,broj_naloga,napomena,mojaopt_narudzbenica.narudzbenica_pol.mjesto_isporuke,mojaopt_optike.korisnici.poloptic,mojaopt_optike.korisnici.mjesto_isporuke FROM mojaopt_narudzbenica.narudzbenica_pol 
-  // JOIN mojaopt_optike.korisnici 
-  // ON narudzbenica_pol.IDKorisnika = mojaopt_optike.korisnici.ID 
-  // WHERE IDKorisnika =?');
-  // $stmt3->bind_param('i', $idKorisnika);
-  // $stmt3->execute();
-  // if (mysqli_error($conn)) {
-  //   die(mysqli_error($conn));
-  // }
+  $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_pol (lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mpc,broj_naloga,napomena,komitenti_radnje,dobavljac,mjesto_isporuke) 
+  SELECT lag_spec,od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,vrsta_materijala,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mpc,broj_naloga,napomena,mojaopt_narudzbenica.narudzbenica_pol.mjesto_isporuke,mojaopt_optike.korisnici.poloptic,mojaopt_optike.korisnici.mjesto_isporuke FROM mojaopt_narudzbenica.narudzbenica_pol 
+  JOIN mojaopt_optike.korisnici 
+  ON narudzbenica_pol.IDKorisnika = mojaopt_optike.korisnici.ID 
+  WHERE IDKorisnika =?');
+  $stmt3->bind_param('i', $idKorisnika);
+  $stmt3->execute();
+  if (mysqli_error($conn)) {f
+    die(mysqli_error($conn));
+  }
   ////////////////////////////////////////////////////////////////////////////////////
 
   //Nakon uspiješne narudžbe, sve stavke za tog korisnika se brišu
