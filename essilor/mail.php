@@ -169,6 +169,19 @@ if (mail($to, $subject, $body, $headers)) {
 
   mail($email, $title, $nmessage, $header);
 
+  // Kopiranje poslatih stavku u novu tabelu koju koristi aplikacija VP e-Narudžbenica
+  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_essilor (od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mpc,broj_naloga,napomena,komitenti_radnje,dobavljac,mjesto_isporuke) 
+  // SELECT od_os_ou,vrsta_sociva,dizajn,visina,segment,baza,indeks,precnik,sph,cyl,ugao,adicija,jm,kolicina,tretman1,tretman2,pd,mpc,broj_naloga,napomena,mojaopt_narudzbenica.narudzbenica_essilor.mjesto_isporuke,mojaopt_optike.korisnici.essilor,mojaopt_optike.korisnici.mjesto_isporuke FROM mojaopt_narudzbenica.narudzbenica_essilor
+  // JOIN mojaopt_optike.korisnici 
+  // ON narudzbenica_essilor.IDKorisnika = mojaopt_optike.korisnici.ID 
+  // WHERE IDKorisnika =?');
+  // $stmt3->bind_param('i', $idKorisnika);
+  // $stmt3->execute();
+  // if (mysqli_error($conn)) {
+  //   die(mysqli_error($conn));
+  // }
+  ////////////////////////////////////////////////////////////////////////////////////
+
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_essilor` WHERE IDKorisnika =?');
   $stmt->bind_param('i', $idKorisnika);
   $stmt->execute();
