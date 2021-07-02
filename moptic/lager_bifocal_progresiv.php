@@ -60,7 +60,7 @@ include '../modules/header.php';
                 <select name="materijal" title="Unesite vrstu materijala za recepturu" class="form-control" id="select3">
                   <option default></option>
                   <option>1.50 HMC</option>
-                  <option>1.56 Photocromic gray HMC</option>
+                  <option>1.56 Photocromic Gray HMC</option>
                 </select>
               </div>
             </div>
