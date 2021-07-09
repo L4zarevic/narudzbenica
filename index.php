@@ -117,7 +117,7 @@ function alcon_access($con, $idKorisnika)
     }
 
     if ($allowed_access == "true") {
-        echo '<a href="alcon/index.php"><img src="images/j&j.svg" alt="Alcon" style="width:100%">';
+        echo '<a href="alcon/index.php"><img src="images/alcon.svg" alt="Alcon" style="width:100%">';
     } else {
         echo '<img src="images/alcon_disabled.png" alt="Alcon" style="width:100%; cursor: not-allowed;">';
     }
@@ -135,7 +135,7 @@ function bausch_lomb_access($con, $idKorisnika)
     }
 
     if ($allowed_access == "true") {
-        echo '<a href="bausch_lomb/index.php"><img src="images/j&j.svg" alt="Bausch Lomb" style="width:100%">';
+        echo '<a href="bausch_lomb/index.php"><img src="images/bausch_and_lomb.svg" alt="Bausch Lomb" style="width:100%">';
     } else {
         echo '<img src="images/bausch_lomb_disabled.png" alt="Bausch Lomb" style="width:100%; cursor: not-allowed;">';
     }
