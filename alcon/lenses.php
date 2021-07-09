@@ -53,7 +53,7 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label id='labelPeriod'>Period:</label></strong><label class="obavezna_polja">*</label>
-                <select name="period" title="" type="text" class="form-control" id="period">
+                <select name="period" title="Izaberite period" type="text" class="form-control" id="period">
                   <option default></option>
                   <option value="dnevna">Dnevna</option>
                   <option value="15dana">15 dana</option>
@@ -67,7 +67,7 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-6">
                 <strong><label id='labelType'>Tip/vrsta:</label></strong><label class="obavezna_polja">*</label>
-                <select name="tip" title="" type="text" class="form-control" id="tip">
+                <select name="tip" title="Izaberite tip/vrstu sočiva" type="text" class="form-control" id="tip">
                   <option></option>
                 </select>
               </div>
@@ -292,14 +292,14 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label id='labelUgao'>Ugao:</label></strong>
-                <input name="ugao" title="" type="text" class="form-control2" id="ugao" />
+                <input name="ugao" title="Unesite" type="text" class="form-control2" id="ugao" />
               </div>
             </div>
 
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label id='labelBc'>BC:</label></strong><label class="obavezna_polja">*</label>
-                <input list="ispisBc" name="bc" title="" type="text" class="form-control2" id="bc" />
+                <input list="ispisBc" name="bc" title="Unesite baznu krivinu" type="text" class="form-control2" id="bc" />
                 <datalist id="ispisBc"></datalist>
               </div>
             </div>
@@ -307,7 +307,7 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label id='labelSize'>TD:</label></strong><label class="obavezna_polja">*</label>
-                <input name="velicina" title="" type="text" class="form-control2" id="velicina" />
+                <input name="velicina" title="Unesite veličinu" type="text" class="form-control2" id="velicina" />
               </div>
             </div>
 
@@ -323,7 +323,7 @@ include '../modules/header.php';
             <div class="rowSpec">
               <div class="form-group col-md-3">
                 <strong><label>Količina</label></strong><label class="obavezna_polja">*</label>
-                <input name="kolicina" maxlength="2" title="Unesite potrebnu količinu.Za 2 ili više komada, stavljajte na početku Ou - Obostrano isto!" type="text" class="form-control2" id="kolicina">
+                <input name="kolicina" maxlength="2" title="Unesite potrebnu količinu" type="text" class="form-control2" id="kolicina">
               </div>
             </div>
 
