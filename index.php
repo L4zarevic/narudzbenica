@@ -16,7 +16,7 @@ mysqli_set_charset($conn, 'utf8');
 
 function moptic_access($con, $idKorisnika)
 {
-    $stmt = $con->prepare('SELECT moptic_access FROM korisnici WHERE ID =?');
+    $stmt = $con->prepare('SELECT moptic_access FROM narudzbenica_pristup WHERE IDKorisnika =?');
     $stmt->bind_param('i', $idKorisnika);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -34,7 +34,7 @@ function moptic_access($con, $idKorisnika)
 
 function poloptic_access($con, $idKorisnika)
 {
-    $stmt = $con->prepare('SELECT poloptic_access FROM korisnici WHERE ID =?');
+    $stmt = $con->prepare('SELECT poloptic_access FROM narudzbenica_pristup WHERE IDKorisnika =?');
     $stmt->bind_param('i', $idKorisnika);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -53,7 +53,7 @@ function poloptic_access($con, $idKorisnika)
 
 function essilor_access($con, $idKorisnika)
 {
-    $stmt = $con->prepare('SELECT essilor_access FROM korisnici WHERE ID =?');
+    $stmt = $con->prepare('SELECT essilor_access FROM narudzbenica_pristup WHERE IDKorisnika =?');
     $stmt->bind_param('i', $idKorisnika);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -71,7 +71,7 @@ function essilor_access($con, $idKorisnika)
 
 function hoya_access($con, $idKorisnika)
 {
-    $stmt = $con->prepare('SELECT hoya_access FROM korisnici WHERE ID =?');
+    $stmt = $con->prepare('SELECT hoya_access FROM narudzbenica_pristup WHERE IDKorisnika =?');
     $stmt->bind_param('i', $idKorisnika);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -84,6 +84,78 @@ function hoya_access($con, $idKorisnika)
         echo '<a href="hoya/index.php"><img src="images/hoya.svg" alt="Hoya" style="width:100%"><div class="container"></div></a>';
     } else {
         echo '<img src="images/hoya_disabled.png" alt="Hoya" style="width:100%; cursor: not-allowed;">';
+    }
+}
+
+function johnson_johnson_access($con, $idKorisnika)
+{
+    $stmt = $con->prepare('SELECT jj_access FROM narudzbenica_pristup WHERE IDKorisnika =?');
+    $stmt->bind_param('i', $idKorisnika);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $allowed_access = "false";
+    while ($row = mysqli_fetch_object($result)) {
+        $allowed_access = $row->jj_access;
+    }
+
+    if ($allowed_access == "true") {
+        echo '<a href="johnson_johnson/index.php"><img src="images/j&j.svg" alt="Johnson & Johnson" style="width:100%">';
+    } else {
+        echo '<img src="images/j&j_disabled.png" alt="Johnson & Johnson" style="width:100%; cursor: not-allowed;">';
+    }
+}
+
+function alcon_access($con, $idKorisnika)
+{
+    $stmt = $con->prepare('SELECT alcon_access FROM narudzbenica_pristup WHERE IDKorisnika =?');
+    $stmt->bind_param('i', $idKorisnika);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $allowed_access = "false";
+    while ($row = mysqli_fetch_object($result)) {
+        $allowed_access = $row->alcon_access;
+    }
+
+    if ($allowed_access == "true") {
+        echo '<a href="alcon/index.php"><img src="images/j&j.svg" alt="Alcon" style="width:100%">';
+    } else {
+        echo '<img src="images/alcon_disabled.png" alt="Alcon" style="width:100%; cursor: not-allowed;">';
+    }
+}
+
+function bausch_lomb_access($con, $idKorisnika)
+{
+    $stmt = $con->prepare('SELECT bausch_lomb_access FROM narudzbenica_pristup WHERE IDKorisnika =?');
+    $stmt->bind_param('i', $idKorisnika);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $allowed_access = "false";
+    while ($row = mysqli_fetch_object($result)) {
+        $allowed_access = $row->bausch_lomb_access;
+    }
+
+    if ($allowed_access == "true") {
+        echo '<a href="bausch_lomb/index.php"><img src="images/j&j.svg" alt="Bausch Lomb" style="width:100%">';
+    } else {
+        echo '<img src="images/bausch_lomb_disabled.png" alt="Bausch Lomb" style="width:100%; cursor: not-allowed;">';
+    }
+}
+
+function rezervni_dijelovi_access($con, $idKorisnika)
+{
+    $stmt = $con->prepare('SELECT rezervni_dijelovi_access FROM narudzbenica_pristup WHERE IDKorisnika =?');
+    $stmt->bind_param('i', $idKorisnika);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $allowed_access = "false";
+    while ($row = mysqli_fetch_object($result)) {
+        $allowed_access = $row->rezervni_dijelovi_access;
+    }
+
+    if ($allowed_access == "true") {
+        echo ' <a id="parts_icon" href="parts/index.php"><img src="images/parts.svg" alt="Rezervni dijelovi" style="width:100%"><center><div class="parts_title">Rezervni dijelovi</div></center>';
+    } else {
+        echo '<img src="images/parts_disabled.png" alt="Rezervni dijelovi" style="width:100%; cursor: not-allowed;" /></br></br><center><div class="parts_title">Rezervni dijelovi</div></center>';
     }
 }
 
@@ -205,29 +277,18 @@ function hoya_access($con, $idKorisnika)
     </div>
     <div class="cards_lenses">
         <div class="card1">
-            <a href="johnson_johnson/index.php"><img src="images/j&j.svg" alt="Johnson & Johnson" style="width:100%">
-                <div class="container"></div>
-            </a>
+            <?php echo johnson_johnson_access($con, $idKorisnika); ?>
         </div>
         <div class="card1">
-            <a href="alcon/index.php"><img src="images/alcon.svg" alt="Alcon" style="width:100%">
-                <div class="container"></div>
-            </a>
+            <?php echo alcon_access($con, $idKorisnika); ?>
         </div>
         <div class="card1">
-            <a href="bausch_lomb/index.php"><img src="images/bausch_and_lomb.svg" alt="Bausch and Lomb" style="width:100%">
-                <div class="container"></div>
-            </a>
+            <?php echo bausch_lomb_access($con, $idKorisnika); ?>
         </div>
     </div>
     <div class="cards_parts">
         <div class="card_parts">
-            <a id="parts_icon" href="parts/index.php"><img src="images/sunglasses.svg" alt="Spare parts" style="width:100%">
-                <center>
-                    <div class="parts_title">Rezervni dijelovi</div>
-                </center>
-            </a>
-
+            <?php echo rezervni_dijelovi_access($con, $idKorisnika); ?>
         </div>
     </div>
 
