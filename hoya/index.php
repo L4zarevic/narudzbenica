@@ -16,7 +16,7 @@ $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
 $con = OpenCon();
-$stmt = $con->prepare('SELECT hoya_access FROM korisnici WHERE ID =?');
+$stmt = $con->prepare('SELECT hoya_access FROM korisnici WHERE IDKorisnika =?');
 $stmt->bind_param('i', $idKorisnika);
 $stmt->execute();
 $result = $stmt->get_result();
