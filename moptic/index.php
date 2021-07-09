@@ -16,7 +16,7 @@ $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
 
 $con = OpenCon();
-$stmt = $con->prepare('SELECT moptic_access FROM korisnici WHERE IDKorisnika =?');
+$stmt = $con->prepare('SELECT moptic_access FROM narudzbenica_pristup WHERE IDKorisnika =?');
 $stmt->bind_param('i', $idKorisnika);
 $stmt->execute();
 $result = $stmt->get_result();
