@@ -738,6 +738,7 @@ include '../modules/header.php';
                   <option value="100" default></option>
                   <option value="100">HC</option>
                   <option value="100">MultiPlus</option>
+                  <option value="100">UltraGlide</option>
                   <option value="100">NanoGlide</option>
                   <option value="100">PolarGlide</option>
                   <option value="100">BlueGlide</option>
@@ -906,6 +907,7 @@ include '../modules/header.php';
                   <option value="100" default></option>
                   <option value="100">HC</option>
                   <option value="100">MultiPlus</option>
+                  <option value="100">UltraGlide</option>
                   <option value="100">NanoGlide</option>
                   <option value="100">PolarGlide</option>
                   <option value="100">BlueGlide</option>
