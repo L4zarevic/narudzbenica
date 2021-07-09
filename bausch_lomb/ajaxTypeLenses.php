@@ -32,9 +32,14 @@ if (isset($_POST['period'])) {
     //Rezultati upita će biti prikazane kao opcije u select box-u.
     //Definišemo praznu opciju kao podrazumijevanu
     echo '<option default></option>';
+    $rb = 0;
     //Ispis pronađenih vrijednosti upita
     while ($row = $result->fetch_object()) {
+        $rb = 1;
         echo "<option value='$row->ID'>$row->tip</option>";
+    }
+    if ($rb == 0) {
+        echo "<option disabled>Za odabrati period nema ponuđenih sočiva</option>";
     }
 }
 
