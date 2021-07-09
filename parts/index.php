@@ -51,7 +51,7 @@ $dataBaseName = $ar[3];
                             <p>Kada kreirate narudžbenicu, potrebno je kliknuti na dugme <i class='fa fa-paper-plane'></i> POŠALJI NARUDŽBU, nakog čega će Vaša narudžbenica biti poslata veleprodaji "M-OPTIC"-a</p>
                         </div>
                         </br>
-                        <div class="companyInfo"> <img id="logo" src="../images/sunglasses.png">
+                        <div class="companyInfo"> <img id="logo" src="../images/parts.svg" alt="logo" style="width: 100%; height: 100%;">
                         </div>
                     </div>
                 </div>
