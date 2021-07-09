@@ -9,31 +9,49 @@ $idKorisnika = $ar[0];
 $dataBaseName = $ar[3];
 $conn = OpenStoreCon($dataBaseName);
 mysqli_set_charset($conn, 'utf8');
-$stmt = $conn->prepare('SELECT * FROM narudzbenica_rez_dijelovi WHERE IDKorisnika =?');
+$stmt = $conn->prepare('SELECT * FROM narudzbenica_jj WHERE IDKorisnika =?');
 $stmt->bind_param('i', $idKorisnika);
 $stmt->execute();
 $result = $stmt->get_result();
-echo "<div class='naslov'><h1 id='naslovNarudzbenice'>Narudžbenica rezervnih dijelova</h1><hr></div>";
+echo "<div class='naslov'><h1 id='naslovNarudzbenice'>Narudžbenica - Johnson & Johnson</h1><hr></div>";
 echo "<div class='table-wrapper-scroll-y table-hover'>
 <table class='narudzbenica-tabela' id='narudzbenica'>
 <thead>
 <tr>
-<th class='tg-0lax'>Brend</th>
-<th class='tg-0lax'>Model</th>
-<th class='tg-0lax'>Veličina</th>
+<th class='tg-0lax'>OD/OS</th>
+<th class='tg-0lax'>Period</th>
+<th class='tg-0lax'>Tip/vrsta</th>
+<th class='tg-0lax'>SPH</th>
+<th class='tg-0lax'>CYL</th>
+<th class='tg-0lax'>Ugao</th>
+<th class='tg-0lax'>BC</th>
+<th class='tg-0lax'>TD</th>
+<th class='tg-0lax'>JM</th>
+<th class='tg-0lax'>Količina</th>
+<th class='tg-0lax'>Mjesto ispor.</th>
+<th class='tg-0lax'>MPC/kom</th>
+<th class='tg-0lax'>Broj radnog naloga</th>
 <th class='tg-0lax'>Napomena</th>
-<th class='tg-0lax'>Mjesto isporuka</th>
 <th class='tg-0lax'></th>
 </tr>
 </thead>
 <tbody>";
 while ($row = mysqli_fetch_object($result)) {
-    echo "<tr id='$row->ID' onclick='updateEntireRowParts()'>";
-    echo "<td>$row->brend</td>";
-    echo "<td>$row->model</td>";
-    echo "<td>$row->velicina</td>";
-    echo "<td>$row->napomena</td>";
+    echo "<tr id='$row->ID' onclick='updateEntireRowLenses()'>";
+    echo "<td>$row->od_os</td>";
+    echo "<td>$row->period</td>";
+    echo "<td>$row->tip</td>";
+    echo "<td>$row->sph</td>";
+    echo "<td>$row->cyl</td>";
+    echo "<td>$row->ugao</td>";
+    echo "<td>$row->bc</td>";
+    echo "<td>$row->td</td>";
+    echo "<td>$row->jm</td>";
+    echo "<td>$row->kolicina</td>";
     echo "<td>$row->mjesto_isporuke</td>";
+    echo "<td>$row->mpc</td>";
+    echo "<td>$row->broj_naloga</td>";
+    echo "<td>$row->napomena</td>";
     echo "<td class='tg-options'><i onclick='deleteRow(event);' id='$row->ID' title='Ukloni stavku' class='fas fa-trash fa-lg'></i></td>";
     echo "</tr>";
 }
