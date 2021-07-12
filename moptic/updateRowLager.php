@@ -19,7 +19,7 @@ $stavka = mysqli_real_escape_string($conn, $_REQUEST['stavka']);
 $arS = explode("###", $stavka, 9);
 $arS[1] = rtrim($arS[1], "###");
 
-$dizajn = $arS[0];
+$vrsta_materijala = $arS[0];
 $sph = $arS[1];
 $cyl = $arS[2];
 $jm = $arS[3];
@@ -42,8 +42,8 @@ while ($row3 = mysqli_fetch_object($result3)) {
 	$mjesto_isporuke = $row3->alias;
 }
 
-$stmt = $conn->prepare('UPDATE narudzbenica_moptic SET IDKorisnika=?,dizajn=?,sph=?,cyl=?,jm=?,kolicina=?,mjesto_isporuke=?,mpc=?,broj_naloga=?,napomena=? WHERE ID=?');
-$stmt->bind_param('isssssssssi', $idKorisnika, $dizajn, $sph, $cyl, $jm, $kolicina, $mjesto_isporuke, $mpc, $broj_naloga, $napomena, $id_stavke);
+$stmt = $conn->prepare('UPDATE narudzbenica_moptic SET IDKorisnika=?,vrsta_materijala=?,sph=?,cyl=?,jm=?,kolicina=?,mjesto_isporuke=?,mpc=?,broj_naloga=?,napomena=? WHERE ID=?');
+$stmt->bind_param('isssssssssi', $idKorisnika, $vrsta_materijala, $sph, $cyl, $jm, $kolicina, $mjesto_isporuke, $mpc, $broj_naloga, $napomena, $id_stavke);
 $stmt->execute();
 if (mysqli_error($conn)) {
 	die(mysqli_error($conn));
