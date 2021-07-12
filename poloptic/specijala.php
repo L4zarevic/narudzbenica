@@ -733,7 +733,7 @@ include '../modules/header.php';
 
             <div class="rowSpec">
               <div class="form-group col-md-5">
-                <strong><label>Tretmani i bojenja #1</label></strong><label id="label_zvjezdica2" class="obavezna_polja">*</label>
+                <strong><label>Tretmani #1</label></strong><label id="label_zvjezdica2" class="obavezna_polja">*</label>
                 <select name="tretman1" class="form-control" id="select15">
                   <option value="100" default></option>
                   <option value="100">HC</option>
@@ -745,13 +745,6 @@ include '../modules/header.php';
                   <option value="100">PureGlide</option>
                   <option value="100">UltraGlide BackSide</option>
                   <option value="100">Mirror/UltraBS</option>
-                  <option value="100" disabled>--- Bojenje ---</option>
-                  <option value="100">Unicolor</option>
-                  <option value="100">Unicolor Hi index</option>
-                  <option value="100">Color po uzorku</option>
-                  <option value="100">Color po uzorku Hi index</option>
-                  <option value="100">Gradient</option>
-                  <option value="100">Gradient Hi index</option>
                   <option value="100" default></option>
 
                   <option value="101" default></option>
@@ -763,13 +756,6 @@ include '../modules/header.php';
                   <option value="101">PureGlide</option>
                   <option value="101">UltraGlide BackSide</option>
                   <option value="101">Mirror/UltraBS</option>
-                  <option value="101" disabled>--- Bojenje ---</option>
-                  <option value="101">Unicolor</option>
-                  <option value="101">Unicolor Hi index</option>
-                  <option value="101">Color po uzorku</option>
-                  <option value="101">Color po uzorku Hi index</option>
-                  <option value="101">Gradient</option>
-                  <option value="101">Gradient Hi index</option>
                   <option value="101" default></option>
 
                   <option value="102" default></option>
@@ -780,13 +766,6 @@ include '../modules/header.php';
                   <option value="102">PureGlide</option>
                   <option value="102">UltraGlide BackSide</option>
                   <option value="102">Mirror/UltraBS</option>
-                  <option value="102" disabled>--- Bojenje ---</option>
-                  <option value="102">Unicolor</option>
-                  <option value="102">Unicolor Hi index</option>
-                  <option value="102">Color po uzorku</option>
-                  <option value="102">Color po uzorku Hi index</option>
-                  <option value="102">Gradient</option>
-                  <option value="102">Gradient Hi index</option>
                   <option value="102" default></option>
 
                   <option value="103" default></option>
@@ -799,13 +778,6 @@ include '../modules/header.php';
                   <option value="103">PureGlide</option>
                   <option value="103">UltraGlide BackSide</option>
                   <option value="103">Mirror/UltraBS</option>
-                  <option value="103" disabled>--- Bojenje ---</option>
-                  <option value="103">Unicolor</option>
-                  <option value="103">Unicolor Hi index</option>
-                  <option value="103">Color po uzorku</option>
-                  <option value="103">Color po uzorku Hi index</option>
-                  <option value="103">Gradient</option>
-                  <option value="103">Gradient Hi index</option>
                   <option value="103" default></option>
 
                   <option value="104" default></option>
@@ -817,13 +789,6 @@ include '../modules/header.php';
                   <option value="104">PureGlide</option>
                   <option value="104">UltraGlide BackSide</option>
                   <option value="104">Mirror/UltraBS</option>
-                  <option value="104" disabled>--- Bojenje ---</option>
-                  <option value="104">Unicolor</option>
-                  <option value="104">Unicolor Hi index</option>
-                  <option value="104">Color po uzorku</option>
-                  <option value="104">Color po uzorku Hi index</option>
-                  <option value="104">Gradient</option>
-                  <option value="104">Gradient Hi index</option>
                   <option value="104" default></option>
 
                   <option value="105" default></option>
@@ -835,13 +800,6 @@ include '../modules/header.php';
                   <option value="105">PureGlide</option>
                   <option value="105">UltraGlide BackSide</option>
                   <option value="105">Mirror/UltraBS</option>
-                  <option value="105" disabled>--- Bojenje ---</option>
-                  <option value="105">Unicolor</option>
-                  <option value="105">Unicolor Hi index</option>
-                  <option value="105">Color po uzorku</option>
-                  <option value="105">Color po uzorku Hi index</option>
-                  <option value="105">Gradient</option>
-                  <option value="105">Gradient Hi index</option>
                   <option value="105" default></option>
 
                   <option value="107" default></option>
@@ -852,13 +810,6 @@ include '../modules/header.php';
                   <option value="107">PureGlide</option>
                   <option value="107">UltraGlide BackSide</option>
                   <option value="107">Mirror/UltraBS</option>
-                  <option value="107" disabled>--- Bojenje ---</option>
-                  <option value="107">Unicolor</option>
-                  <option value="107">Unicolor Hi index</option>
-                  <option value="107">Color po uzorku</option>
-                  <option value="107">Color po uzorku Hi index</option>
-                  <option value="107">Gradient</option>
-                  <option value="107">Gradient Hi index</option>
                   <option value="107" default></option>
 
                   <option value="108" default></option>
@@ -869,13 +820,6 @@ include '../modules/header.php';
                   <option value="108">PureGlide</option>
                   <option value="108">UltraGlide BackSide</option>
                   <option value="108">Mirror/UltraBS</option>
-                  <option value="108" disabled>--- Bojenje ---</option>
-                  <option value="108">Unicolor</option>
-                  <option value="108">Unicolor Hi index</option>
-                  <option value="108">Color po uzorku</option>
-                  <option value="108">Color po uzorku Hi index</option>
-                  <option value="108">Gradient</option>
-                  <option value="108">Gradient Hi index</option>
                   <option value="108" default></option>
 
                   <option value="109" default></option>
@@ -887,13 +831,6 @@ include '../modules/header.php';
                   <option value="109">PureGlide</option>
                   <option value="109">UltraGlide BackSide</option>
                   <option value="109">Mirror/UltraBS</option>
-                  <option value="109" disabled>--- Bojenje ---</option>
-                  <option value="109">Unicolor</option>
-                  <option value="109">Unicolor Hi index</option>
-                  <option value="109">Color po uzorku</option>
-                  <option value="109">Color po uzorku Hi index</option>
-                  <option value="109">Gradient</option>
-                  <option value="109">Gradient Hi index</option>
                   <option value="109" default></option>
                 </select>
               </div>
