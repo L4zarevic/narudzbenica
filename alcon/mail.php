@@ -153,16 +153,16 @@ if (mail($to, $subject, $body, $headers)) {
   mail($email, $title, $nmessage, $header);
 
   // Kopiranje poslatih stavku u novu tabelu koju koristi aplikacija VP e-Narudžbenica
-  // $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_moptic (od_os_ou,vrsta_sociva,vrsta_materijala,sph,cyl,adicija,jm,kolicina,komitenti_radnje,mpc,broj_naloga,napomena) 
-  // SELECT od_os_ou,vrsta_sociva,vrsta_materijala,sph,cyl,adicija,jm,kolicina,narudzbenica_moptic.mjesto_isporuke,mpc,broj_naloga,napomena FROM mojaopt_narudzbenica.narudzbenica_moptic
-  // JOIN mojaopt_optike.korisnici 
-  // ON narudzbenica_moptic.IDKorisnika = mojaopt_optike.korisnici.ID 
-  // WHERE IDKorisnika =?');
-  // $stmt3->bind_param('i', $idKorisnika);
-  // $stmt3->execute();
-  // if (mysqli_error($conn)) {
-  //   die(mysqli_error($conn));
-  // }
+  $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_alcon (od_os,tip,sph,cyl,ugao,bc,td,jm,kolicina,mpc,broj_naloga,napomena,komitenti_radnje,dobavljac,mjesto_isporuke) 
+  SELECT od_os,tip,sph,cyl,ugao,bc,td,jm,kolicina,mpc,broj_naloga,napomena,mojaopt_narudzbenica.narudzbenica_alcon.mjesto_isporuke,mojaopt_optike.korisnici.alcon,mojaopt_optike.korisnici.mjesto_isporuke FROM mojaopt_narudzbenica.narudzbenica_alcon
+  JOIN mojaopt_optike.korisnici 
+  ON narudzbenica_alcon.IDKorisnika = mojaopt_optike.korisnici.ID 
+  WHERE IDKorisnika =?');
+  $stmt3->bind_param('i', $idKorisnika);
+  $stmt3->execute();
+  if (mysqli_error($conn)) {
+    die(mysqli_error($conn));
+  }
   ////////////////////////////////////////////////////////////////////////////////////
 
   $stmt = $conn->prepare('DELETE FROM `narudzbenica_alcon` WHERE IDKorisnika =?');
