@@ -152,7 +152,7 @@ if (mail($to, $subject, $body, $headers)) {
 
   mail($email, $title, $nmessage, $header);
 
-  // Kopiranje poslatih stavku u novu tabelu koju koristi aplikacija VP e-Narudžbenica
+  // Kopiranje poslatih stavki u novu tabelu koju koristi aplikacija VP e-Narudžbenica
   $stmt3 = $conn->prepare('INSERT INTO mojaopt_vpnarudzbenica.narudzbenica_alcon (od_os,tip,sph,cyl,ugao,bc,td,jm,kolicina,mpc,broj_naloga,napomena,komitenti_radnje,dobavljac,mjesto_isporuke) 
   SELECT od_os,tip,sph,cyl,ugao,bc,td,jm,kolicina,mpc,broj_naloga,napomena,mojaopt_narudzbenica.narudzbenica_alcon.mjesto_isporuke,mojaopt_optike.korisnici.alcon,mojaopt_optike.korisnici.mjesto_isporuke FROM mojaopt_narudzbenica.narudzbenica_alcon
   JOIN mojaopt_optike.korisnici 
