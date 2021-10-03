@@ -71,18 +71,11 @@ include '../modules/header.php';
                 <select name="sph" title="Unesite Sfernu dioptriju sa popisa" class="form-control" id="select11">
                   <option default></option>
                   <option> 0.00</option>
-                  <option>+0.25</option>
-                  <option>+0.50</option>
-                  <option>+0.75</option>
-                  <option>+1.00</option>
-                  <option>+1.25</option>
-                  <option>+1.50</option>
-                  <option>+1.75</option>
-                  <option>+2.00</option>
-                  <option>+2.25</option>
-                  <option>+2.50</option>
-                  <option>+2.75</option>
-                  <option>+3.00</option>
+                  <?php
+                  for ($x = 0.25; $x <= 3.00; $x = $x + 0.25) {
+                    echo  "<option>+" . sprintf('%0.2f', $x) . "</option>";
+                  }
+                  ?>
                 </select>
               </div>
             </div>
@@ -93,15 +86,11 @@ include '../modules/header.php';
                 <strong><label>Add / Dig.</label></strong>
                 <select name="add" title="Dodajte adiciju ili digresiju za office progresive" class="form-control" id="select13">
                   <option default></option>
-                  <option>1.00</option>
-                  <option>1.25</option>
-                  <option>1.50</option>
-                  <option>1.75</option>
-                  <option>2.00</option>
-                  <option>2.25</option>
-                  <option>2.50</option>
-                  <option>2.75</option>
-                  <option>3.00</option>
+                  <?php
+                  for ($x = 1.00; $x <= 3.00; $x = $x + 0.25) {
+                    echo  "<option>+" . sprintf('%0.2f', $x) . "</option>";
+                  }
+                  ?>
                 </select>
               </div>
             </div>
