@@ -571,6 +571,17 @@ include '../modules/header.php';
                   <option value="105">UltraGlide BackSide</option>
                   <option value="105">Mirror/UltraBS</option>
                   <option value="105" default></option>
+                  
+                  <option value="106" default></option>
+                  <option value="106">MultiPlus</option>
+                  <option value="106">UltraGlide</option>
+                  <option value="106">NanoGlide</option>
+                  <option value="106">PolarGlide</option>
+                  <option value="106">BlueGlide</option>
+                  <option value="106">PureGlide</option>
+                  <option value="106">UltraGlide BackSide</option>
+                  <option value="106">Mirror/UltraBS</option>
+                  <option value="106" default></option>
 
                   <option value="107" default></option>
                   <option value="107">UltraGlide</option>
@@ -719,6 +730,17 @@ include '../modules/header.php';
                   <option value="105">Gradient</option>
                   <option value="105">Gradient Hi index</option>
                   <option value="105" default></option>
+                  
+                  <option value="106" default></option>
+                  <option value="106">MultiPlus</option>
+                  <option value="106">UltraGlide</option>
+                  <option value="106">NanoGlide</option>
+                  <option value="106">PolarGlide</option>
+                  <option value="106">BlueGlide</option>
+                  <option value="106">PureGlide</option>
+                  <option value="106">UltraGlide BackSide</option>
+                  <option value="106">Mirror/UltraBS</option>
+                  <option value="106" default></option>
 
                   <option value="107" default></option>
                   <option value="107">UltraGlide</option>
